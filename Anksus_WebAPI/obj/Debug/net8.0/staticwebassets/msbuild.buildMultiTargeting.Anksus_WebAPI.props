@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Anksus_WebAPI.props" />
+</Project>
