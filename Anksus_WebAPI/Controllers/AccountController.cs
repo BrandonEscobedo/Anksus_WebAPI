@@ -2,11 +2,13 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal;
+using Microsoft.AspNetCore.Identity.UI.V5.Pages.Account.Internal;
 using Microsoft.AspNetCore.Mvc;
-
+using TestAnskus.Shared;
+using TestAnskus.Shared.AutorizacionDTO;
 namespace Anksus_WebAPI.Server.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Account")]
     [ApiController]
     public class AccountController : ControllerBase
     {
@@ -17,15 +19,16 @@ namespace Anksus_WebAPI.Server.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Crear([FromBody] RegisterModel model)
+        public async Task<IActionResult> Crear([FromBody] RegisterModelA model)
         {
-            var newUser = new AplicationUser { UserName = model.Input.Email, Email = model.Input.Email };
-            var result = await _userManager.CreateAsync(newUser, model.Input.Password!);
+            var newUser = new AplicationUser { UserName = model.Email, Email = model.Email, IdImagenPerfil = 1 };
+            var result = await _userManager.CreateAsync(newUser, model.Password!);
             if (!result.Succeeded)
             {
                 var errors = result.Errors.Select(x => x.Description);
-                return Ok(new IdentityResult {Succeeded=false,Errors=errors });
+                return Ok(new RegisterResult { Successful = false, Errors = errors });
             }
+            return Ok(new RegisterResult { Successful = true });
 
 
         }

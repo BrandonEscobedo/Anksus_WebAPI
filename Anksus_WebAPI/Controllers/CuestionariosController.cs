@@ -77,6 +77,7 @@ namespace Anksus_WebAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateCuestionario(CuestionarioDTO cuestionario)
         {
+            var user =await _userManager.GetUserAsync(User);
             var responseAPI = new ResponseAPI<int>();
             try
             {
@@ -84,7 +85,7 @@ namespace Anksus_WebAPI.Controllers
                 Cuestionario cuest = new Cuestionario()
                 {
                     IdCategoria = cuestionario.IdCategoria,
-                    IdUsuario = cuestionario.IdUsuario,
+                    IdUsuario = user!.Id,
                     Estado = cuestionario.Estado,
                     Publico = cuestionario.Publico,
                     Titulo = cuestionario.Titulo

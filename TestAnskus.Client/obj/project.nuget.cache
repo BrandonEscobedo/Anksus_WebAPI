@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+LX/Z68gS9+2/GBr7fc580HwcmPrLZEpbOkiG6kei1omRmqBII9LmbY+lVX3P9OOkYaQe2SmyMb8jGEBHxqxPA==",
+  "dgSpecHash": "G1lVQ+YJiRwhi2VSIzhi2WXnzMWd/rH3ZfXWTkPsLrliXHFWV9XVbv2Qg/DvOVyPxRJRO0rd7FAWLbXXWpqncA==",
   "success": true,
   "projectFilePath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Client\\TestAnskus.Client.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\jesus\\.nuget\\packages\\blazored.localstorage\\4.4.0\\blazored.localstorage.4.4.0.nupkg.sha512",
     "C:\\Users\\jesus\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.5.0\\currietechnologies.razor.sweetalert2.5.5.0.nupkg.sha512",
     "C:\\Users\\jesus\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.1\\microsoft.aspnetcore.authorization.8.0.1.nupkg.sha512",
     "C:\\Users\\jesus\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.1\\microsoft.aspnetcore.components.8.0.1.nupkg.sha512",

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Anksus_WebAPI.Migrations
+namespace Anksus_WebAPI.Server.Migrations
 {
     [DbContext(typeof(TestAnskusContext))]
     partial class TestAnskusContextModelSnapshot : ModelSnapshot
@@ -46,8 +46,7 @@ namespace Anksus_WebAPI.Migrations
 
                     b.Property<int>("IdImagenPerfil")
                         .HasColumnType("int")
-                        .HasColumnName("id_imagen_perfil")
-                        .HasAnnotation("Relational:JsonPropertyName", "imagen");
+                        .HasColumnName("id_imagen_perfil");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -199,8 +198,6 @@ namespace Anksus_WebAPI.Migrations
                         .HasName("PK__imagenes__27CC26894DE81741");
 
                     b.ToTable("imagenes_perfil");
-
-                    b.HasAnnotation("Relational:JsonPropertyName", "imagen");
                 });
 
             modelBuilder.Entity("Anksus_WebAPI.Models.dbModels.ParticipanteEnCuestionario", b =>
@@ -390,10 +387,12 @@ namespace Anksus_WebAPI.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<int>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("ProviderKey")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -429,10 +428,12 @@ namespace Anksus_WebAPI.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
@@ -445,10 +446,10 @@ namespace Anksus_WebAPI.Migrations
             modelBuilder.Entity("Anksus_WebAPI.Models.dbModels.AplicationUser", b =>
                 {
                     b.HasOne("Anksus_WebAPI.Models.dbModels.ImagenesPerfil", "IdImagenPerfilNavigation")
-                        .WithMany("Usuarios")
+                        .WithMany()
                         .HasForeignKey("IdImagenPerfil")
-                        .IsRequired()
-                        .HasConstraintName("FK_AspNetUsers_imagenes_perfil_id_imagen_perfil");
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("IdImagenPerfilNavigation");
                 });
@@ -599,11 +600,6 @@ namespace Anksus_WebAPI.Migrations
             modelBuilder.Entity("Anksus_WebAPI.Models.dbModels.CuestionarioActivo", b =>
                 {
                     b.Navigation("ParticipanteEnCuestionarios");
-                });
-
-            modelBuilder.Entity("Anksus_WebAPI.Models.dbModels.ImagenesPerfil", b =>
-                {
-                    b.Navigation("Usuarios");
                 });
 
             modelBuilder.Entity("Anksus_WebAPI.Models.dbModels.Pregunta", b =>

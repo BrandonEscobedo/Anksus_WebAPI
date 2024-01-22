@@ -1086,3 +1086,8 @@ C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\compressed\vn4atj3jt5.gz
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\compressed\aemthkbeud.gz
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\compressed\nwo1ddrgdm.gz
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\wwwroot\_framework\Blazored.LocalStorage.wasm
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\wwwroot\_framework\Blazored.LocalStorage.wasm.gz
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\Blazored.LocalStorage.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\webcil\Blazored.LocalStorage.wasm
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\compressed\z7yuyudyx5.gz
