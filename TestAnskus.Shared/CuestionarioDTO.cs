@@ -15,15 +15,15 @@ namespace Anksus_WebAPI.Models.DTO
         public int IdCategoria { get; set; }
 
         [Column("estado")]
-        public bool? Estado { get; set; }
+        public bool Estado { get; set; }=false;
 
         [Column("titulo")]
         [StringLength(60)]
-        [Required(ErrorMessage ="El campo {0} es requerido.")]
+        //[Required(ErrorMessage ="El campo {0} es requerido.")]
         public string? Titulo { get; set; }
 
         [Column("publico")]
-        public bool? Publico { get; set; }
+        public bool Publico { get; set; } = false;
 
         
     }

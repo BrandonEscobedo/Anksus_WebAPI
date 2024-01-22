@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace TestAnskus.Shared
 {
-    internal class ResponseAPI
+    public class ResponseAPI<T>
     {
         public bool EsCorrecto {  get; set; }
-        public string  Valor { get; set; }
-        public string mensaje { get; set; }
+        public T? Valor { get; set; }
+        public string? mensaje { get; set; }
     }
 }

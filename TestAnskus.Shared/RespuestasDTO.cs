@@ -15,7 +15,7 @@ namespace Anksus_WebAPI.Models.DTO
         [Column("respuesta")]
         [StringLength(200)]
       
-        public string Respuesta { get; set; } = null!;
+        public string respuesta { get; set; } = null!;
 
         [Column("R_correcta")]
         public bool RCorrecta { get; set; }

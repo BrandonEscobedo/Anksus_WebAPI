@@ -1,0 +1,59 @@
+﻿@inject ICuestionariosService _CuestionarioService
+@inject ICategoriaService _CategoriasService
+@inject IIdContainer _IdConteiner
+@inject IDialogService DialogService
+
+<MudDialog>
+<DialogContent>
+
+    <MudInputLabel>Titulo</MudInputLabel>
+    <input type="text" @bind-value="cuestionarioDTO.Titulo" />
+
+    <input type="text" @bind-value="cuestionarioDTO.IdUsuario" />
+    <MudSelect @bind-Value="cuestionarioDTO.IdCategoria" Label="Categoria">
+@foreach (var item in listaCategorias)
+{
+    <MudSelectItem Value="@item.IdCategoria">@item.Categoria</MudSelectItem>
+}
+</MudSelect>
+
+</DialogContent>
+<DialogActions>
+    <MudButton OnClick="Cancel">Cancel</MudButton>
+    <MudButton Color="Color.Primary" OnClick="GuardarEditarCuestionario">Ok</MudButton>
+</DialogActions>
+</MudDialog>
+@code {
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+    void Cancel() => MudDialog.Cancel();
+
+    public CuestionarioDTO cuestionarioDTO { get; set; } = new CuestionarioDTO();
+    public List<CategoriasDTO> listaCategorias = new List<CategoriasDTO>();
+    protected override async Task OnInitializedAsync()
+    {
+        listaCategorias = await _CategoriasService.GetAllCategorias();
+    }
+    public async Task GuardarEditarCuestionario()
+    {
+        int id = 0;
+        cuestionarioDTO.Estado = false;
+        cuestionarioDTO.Publico = false;
+        if (_IdConteiner.idCuestionario == 0)
+        {
+            id = await _CuestionarioService.CreateCuestionario(cuestionarioDTO);
+            if(id!=0)
+            {
+                MudDialog.Close();
+                _IdConteiner.SetIdCuestionario(id);
+
+            }
+        }
+        else
+
+        {
+            cuestionarioDTO.IdCuestionario = _IdConteiner.idCuestionario;
+            await _CuestionarioService.EditCuestionario(cuestionarioDTO);
+        }
+
+    }
+}

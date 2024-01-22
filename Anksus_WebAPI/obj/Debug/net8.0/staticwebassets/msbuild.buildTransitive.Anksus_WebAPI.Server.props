@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Anksus_WebAPI.Server.props" />
+</Project>

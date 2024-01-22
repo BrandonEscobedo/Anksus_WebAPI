@@ -1,0 +1,65 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\b3hr5b8rfj.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\appsettings.Development.json",
+      "PackagePath": "staticwebassets\\appsettings.Development.json"
+    },
+    {
+      "Id": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\appsettings.json",
+      "PackagePath": "staticwebassets\\appsettings.json"
+    },
+    {
+      "Id": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TestAnskus.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.TestAnskus.Client.props",
+      "PackagePath": "build\\TestAnskus.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.TestAnskus.Client.props",
+      "PackagePath": "buildMultiTargeting\\TestAnskus.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.TestAnskus.Client.props",
+      "PackagePath": "buildTransitive\\TestAnskus.Client.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

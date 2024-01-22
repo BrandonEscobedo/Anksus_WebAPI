@@ -18,7 +18,6 @@ public partial class ImagenesPerfil
     [Column("imagen")]
     [StringLength(500)]
     public string Imagen { get; set; } = null!;
-    [InverseProperty("IdImagenPerfilNavigation")]
-    public virtual ICollection<AplicationUser> Usuarios { get; set; } = new List<AplicationUser>();
+
 
 }

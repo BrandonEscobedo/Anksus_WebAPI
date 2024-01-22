@@ -14,12 +14,12 @@ namespace Anksus_WebAPI.Models.dbModels
         {
             Cuestionarios = new HashSet<Cuestionario>();
         }
-        [JsonPropertyName("imagen")]
+
         [Column("id_imagen_perfil")]
 
         public int IdImagenPerfil { get; set; } = 1;
 
-        [JsonPropertyName("imagen")]
+
         [ForeignKey("IdImagenPerfil")]
         public virtual ImagenesPerfil IdImagenPerfilNavigation { get; set; } = null!;
         [InverseProperty("IdUsuarioNavigation")]

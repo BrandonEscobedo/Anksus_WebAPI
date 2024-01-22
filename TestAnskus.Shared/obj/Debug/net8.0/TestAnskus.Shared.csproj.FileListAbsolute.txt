@@ -9,3 +9,4 @@ C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Shared\
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Shared\obj\Debug\net8.0\refint\TestAnskus.Shared.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Shared\obj\Debug\net8.0\TestAnskus.Shared.pdb
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Shared\obj\Debug\net8.0\ref\TestAnskus.Shared.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Shared\obj\Debug\net8.0\TestAnskus.Shared.sourcelink.json

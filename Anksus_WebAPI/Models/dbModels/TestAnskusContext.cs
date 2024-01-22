@@ -32,7 +32,6 @@ public partial class TestAnskusContext : IdentityDbContext<AplicationUser,Identi
     public virtual DbSet<Respuesta> Respuestas { get; set; }
 
 
-    public virtual DbSet<AplicationUser> Usuarios { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -103,9 +102,7 @@ public partial class TestAnskusContext : IdentityDbContext<AplicationUser,Identi
             entity.HasOne(d => d.IdPreguntaNavigation).WithMany(p => p.Respuesta).HasConstraintName("FK_respuesta_pregunta");
         });
 
-        modelBuilder.Entity<AplicationUser>().HasOne(x => x.IdImagenPerfilNavigation).WithMany(x => x.Usuarios).HasConstraintName("FK_AspNetUsers_imagenes_perfil_id_imagen_perfil")
-            ;
-
+       
         OnModelCreatingPartial(modelBuilder);
 
 

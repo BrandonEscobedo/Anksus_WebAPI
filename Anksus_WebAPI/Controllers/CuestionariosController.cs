@@ -6,17 +6,21 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Anksus_WebAPI.Models.dbModels;
+using Microsoft.AspNetCore.Identity;
+using Anksus_WebAPI.Models.DTO;
+using TestAnskus.Shared;
 
 namespace Anksus_WebAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Cuestionarios")]
     [ApiController]
     public class CuestionariosController : ControllerBase
     {
         private readonly TestAnskusContext _context;
-
-        public CuestionariosController(TestAnskusContext context)
+        private readonly UserManager<AplicationUser> _userManager;
+        public CuestionariosController(TestAnskusContext context,UserManager<AplicationUser> userManager)
         {
+            _userManager = userManager;
             _context = context;
         }
 
@@ -28,59 +32,85 @@ namespace Anksus_WebAPI.Controllers
         }
 
         // GET: api/Cuestionarios/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Cuestionario>> GetCuestionario(int id)
-        {
-            var cuestionario = await _context.Cuestionarios.FindAsync(id);
+        //[HttpGet("{id}")]
+        //public async Task<ActionResult<Cuestionario>> GetCuestionario(int id)
+        //{
 
-            if (cuestionario == null)
-            {
-                return NotFound();
-            }
-
-            return cuestionario;
-        }
+        //}
 
         // PUT: api/Cuestionarios/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCuestionario(int id, Cuestionario cuestionario)
+        public async Task<IActionResult> EditCuestionario(int id, CuestionarioDTO cuestionarioDTO)
         {
-            if (id != cuestionario.IdCuestionario)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(cuestionario).State = EntityState.Modified;
-
+            var responseAPI = new ResponseAPI<int>();
             try
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!CuestionarioExists(id))
+                var Cuestionario = await _context.Cuestionarios.FirstOrDefaultAsync(e => e.IdCuestionario==id);
+                if (Cuestionario != null) 
                 {
-                    return NotFound();
+                    Cuestionario.Titulo=cuestionarioDTO.Titulo;
+                    Cuestionario.IdCategoria = cuestionarioDTO.IdCategoria;
+                    Cuestionario.Publico = cuestionarioDTO.Publico;
+                    _context.Update(Cuestionario);
+                    await _context.SaveChangesAsync();
+                    responseAPI.EsCorrecto = true;
+                    responseAPI.Valor = Cuestionario.IdCuestionario;
                 }
                 else
                 {
-                    throw;
+                    responseAPI.EsCorrecto = false;
+                    responseAPI.mensaje = "Cuestionario no encontrado";
                 }
             }
+            catch (Exception ex)
+            {
+                responseAPI.EsCorrecto = false;
+                responseAPI.mensaje = "Error al actualizar de tipo: "+ex.Message;
+            }
 
-            return NoContent();
+            return Ok(responseAPI);
         }
 
         // POST: api/Cuestionarios
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Cuestionario>> PostCuestionario(Cuestionario cuestionario)
+        public async Task<IActionResult> CreateCuestionario(CuestionarioDTO cuestionario)
         {
-            _context.Cuestionarios.Add(cuestionario);
-            await _context.SaveChangesAsync();
+            var responseAPI = new ResponseAPI<int>();
+            try
+            {
+               
+                Cuestionario cuest = new Cuestionario()
+                {
+                    IdCategoria = cuestionario.IdCategoria,
+                    IdUsuario = cuestionario.IdUsuario,
+                    Estado = cuestionario.Estado,
+                    Publico = cuestionario.Publico,
+                    Titulo = cuestionario.Titulo
 
-            return CreatedAtAction("GetCuestionario", new { id = cuestionario.IdCuestionario }, cuestionario);
+                };
+
+                _context.Cuestionarios.Add(cuest);
+                await _context.SaveChangesAsync();
+                if (cuest.IdCuestionario != 0)
+                {
+                    responseAPI.EsCorrecto = true;
+                    responseAPI.Valor = cuest.IdCuestionario;
+                }
+                else
+                {
+                    responseAPI.EsCorrecto = true;
+                    responseAPI.mensaje = "No guardado";
+                }
+            }
+            catch(Exception ex)
+            {
+                responseAPI.EsCorrecto = false;
+                responseAPI.mensaje = ex.Message;
+            }
+            return Ok(responseAPI);
+          
         }
 
         // DELETE: api/Cuestionarios/5
