@@ -12,9 +12,11 @@ namespace Anksus_WebAPI.Server.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-       public readonly UserManager<AplicationUser> _userManager;
+      
+        public readonly UserManager<AplicationUser> _userManager;
         public AccountController(UserManager<AplicationUser> userManager)
         {
+      
             _userManager = userManager;
         }
 

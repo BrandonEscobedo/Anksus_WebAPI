@@ -9,6 +9,7 @@ using Anksus_WebAPI.Models.dbModels;
 using Microsoft.AspNetCore.Identity;
 using Anksus_WebAPI.Models.DTO;
 using TestAnskus.Shared;
+using System.Security.Claims;
 
 namespace Anksus_WebAPI.Controllers
 {
@@ -77,15 +78,16 @@ namespace Anksus_WebAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateCuestionario(CuestionarioDTO cuestionario)
         {
-            var user =await _userManager.GetUserAsync(User);
+        
             var responseAPI = new ResponseAPI<int>();
             try
             {
-               
+                int id = Convert.ToInt32(HttpContext.User.FindFirstValue("Id"));
+                var user = await _userManager.GetUserAsync(User);   
                 Cuestionario cuest = new Cuestionario()
                 {
                     IdCategoria = cuestionario.IdCategoria,
-                    IdUsuario = user!.Id,
+                    IdUsuario = id,
                     Estado = cuestionario.Estado,
                     Publico = cuestionario.Publico,
                     Titulo = cuestionario.Titulo

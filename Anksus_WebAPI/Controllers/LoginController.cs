@@ -16,16 +16,26 @@ namespace Anksus_WebAPI.Server.Controllers
     {
         private readonly IConfiguration _configuration;
         private readonly SignInManager<AplicationUser> _signInManager;
-        public LoginController(IConfiguration configuration,SignInManager<AplicationUser> signInManager)
+        private readonly UserManager<AplicationUser> _userManager;
+        public LoginController(IConfiguration configuration,
+            SignInManager<AplicationUser> signInManager,
+            UserManager<AplicationUser> userManager)
         {
             _configuration = configuration;
             _signInManager = signInManager;
+            _userManager = userManager;
         }
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] LoginModelA login)
         {
             var result = await _signInManager.PasswordSignInAsync(login.Email!, login.Password!, false, false);
             if (!result.Succeeded) return BadRequest(new LoginResult { Successful = false, Error = "Username And Password Are invalid." });
+            var user = await _userManager.FindByEmailAsync(login.Email!);
+            if (user != null)
+            {
+                await _signInManager.SignInAsync(user, isPersistent: false);
+
+            }
             var claims = new[]
             {
                 new Claim(ClaimTypes.Name,login.Email!)
@@ -33,6 +43,8 @@ namespace Anksus_WebAPI.Server.Controllers
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSecurityKey"]!));
             var creds= new SigningCredentials(key,SecurityAlgorithms.HmacSha256);
             var expiry = DateTime.Now.AddDays(Convert.ToInt32(_configuration["JwtExpiryInDays"]));
+        
+       
             var token = new JwtSecurityToken
                 (
                 _configuration["JwtIssuer"],
@@ -40,7 +52,7 @@ namespace Anksus_WebAPI.Server.Controllers
                 claims,
                 expires:expiry,
                 signingCredentials:creds
-                );
+                );         
             return Ok(new LoginResult { Successful=true,Token= new JwtSecurityTokenHandler().WriteToken(token)});
         }
     }

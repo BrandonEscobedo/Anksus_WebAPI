@@ -17,25 +17,23 @@ builder.Services.AddRazorComponents().AddInteractiveWebAssemblyComponents();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDefaultIdentity<AplicationUser>()
-    .AddEntityFrameworkStores<TestAnskusContext>();
-
+builder.Services.AddIdentityCore<AplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
+    .AddEntityFrameworkStores<TestAnskusContext>().AddDefaultUI();
 //builder.Services.AddIdentity<AplicationUser, IdentityRole<int>>(options => options.SignIn.RequireConfirmedAccount = true)
 //    .AddEntityFrameworkStores<TestAnskusContext>().AddApiEndpoints().AddDefaultTokenProviders();
 //builder.Services.AddAuthorization();
-
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options =>
+    .AddJwtBearer(options =>    
     {
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuer = true,
-            ValidateAudience=true,
+            ValidateAudience = true,
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
             ValidIssuer = builder.Configuration["JwtIssuer"],
             ValidAudience = builder.Configuration["JwtAudience"],
-            IssuerSigningKey=new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSecurityKey"]!))
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSecurityKey"]!))
         };
     });
 var app = builder.Build();
@@ -43,16 +41,13 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseWebAssemblyDebugging();
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.MapIdentityApi<AplicationUser>();
-app.MapRazorComponents<TestAnskusContext>().AddInteractiveWebAssemblyRenderMode().AddAdditionalAssemblies();
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseCors(c => c.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 app.UseBlazorFrameworkFiles();
 app.MapControllers();
-
 app.Run();
