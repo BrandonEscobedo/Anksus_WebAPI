@@ -1,7 +1,11 @@
 ﻿################################################################################
 # Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
 ################################################################################
-
+/.vs/Anksus_WebAPI/.vs
+/.vs/Anksus_WebAPI/
+/Anksus_WebAPI/.vs/
+.vs/
+/.vs
 /.vs/Anksus_WebAPI/FileContentIndex/0eddcf34-9b97-4389-9c44-639279720628.vsidx
 /.vs/Anksus_WebAPI/FileContentIndex/19c6b0a1-4791-40f7-b1f6-f6950308a0f9.vsidx
 /.vs/Anksus_WebAPI/FileContentIndex/63fc99c1-4b24-4434-a96d-4aa9f2838971.vsidx
@@ -23,3 +27,5 @@
 /.vs/Anksus_WebAPI/FileContentIndex/56a71c10-65c5-43e6-bcf7-c8e5f8086aa4.vsidx
 /.vs/Anksus_WebAPI/FileContentIndex/624f55cd-5bcf-4b8a-bb33-3bb4a11f7878.vsidx
 /.vs/Anksus_WebAPI/FileContentIndex/a96ba04c-098b-4f09-af5b-8ce3f436e106.vsidx
+/.vs/Anksus_WebAPI/config/applicationhost.config
+/.vs/Anksus_WebAPI/config/applicationhost.config

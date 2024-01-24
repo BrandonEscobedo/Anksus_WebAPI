@@ -10,3 +10,15 @@ C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Shared\
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Shared\obj\Debug\net8.0\TestAnskus.Shared.pdb
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Shared\obj\Debug\net8.0\ref\TestAnskus.Shared.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Shared\obj\Debug\net8.0\TestAnskus.Shared.sourcelink.json
+C:\Users\brand\OneDrive\Documentos\AnskUsWebApi\TestAnskus.Shared\bin\Debug\net8.0\TestAnskus.Shared.deps.json
+C:\Users\brand\OneDrive\Documentos\AnskUsWebApi\TestAnskus.Shared\bin\Debug\net8.0\TestAnskus.Shared.dll
+C:\Users\brand\OneDrive\Documentos\AnskUsWebApi\TestAnskus.Shared\bin\Debug\net8.0\TestAnskus.Shared.pdb
+C:\Users\brand\OneDrive\Documentos\AnskUsWebApi\TestAnskus.Shared\obj\Debug\net8.0\TestAnskus.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brand\OneDrive\Documentos\AnskUsWebApi\TestAnskus.Shared\obj\Debug\net8.0\TestAnskus.Shared.AssemblyInfoInputs.cache
+C:\Users\brand\OneDrive\Documentos\AnskUsWebApi\TestAnskus.Shared\obj\Debug\net8.0\TestAnskus.Shared.AssemblyInfo.cs
+C:\Users\brand\OneDrive\Documentos\AnskUsWebApi\TestAnskus.Shared\obj\Debug\net8.0\TestAnskus.Shared.csproj.CoreCompileInputs.cache
+C:\Users\brand\OneDrive\Documentos\AnskUsWebApi\TestAnskus.Shared\obj\Debug\net8.0\TestAnskus.Shared.dll
+C:\Users\brand\OneDrive\Documentos\AnskUsWebApi\TestAnskus.Shared\obj\Debug\net8.0\refint\TestAnskus.Shared.dll
+C:\Users\brand\OneDrive\Documentos\AnskUsWebApi\TestAnskus.Shared\obj\Debug\net8.0\TestAnskus.Shared.pdb
+C:\Users\brand\OneDrive\Documentos\AnskUsWebApi\TestAnskus.Shared\obj\Debug\net8.0\ref\TestAnskus.Shared.dll
+C:\Users\brand\OneDrive\Documentos\AnskUsWebApi\TestAnskus.Shared\obj\Debug\net8.0\TestAnskus.Shared.sourcelink.json
