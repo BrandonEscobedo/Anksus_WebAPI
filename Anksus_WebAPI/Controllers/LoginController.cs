@@ -31,14 +31,10 @@ namespace Anksus_WebAPI.Server.Controllers
             var result = await _signInManager.PasswordSignInAsync(login.Email!, login.Password!, false, false);
             if (!result.Succeeded) return BadRequest(new LoginResult { Successful = false, Error = "Username And Password Are invalid." });
             var user = await _userManager.FindByEmailAsync(login.Email!);
-            if (user != null)
+            var claims = new List<Claim>
             {
-                await _signInManager.SignInAsync(user, isPersistent: false);
-
-            }
-            var claims = new[]
-            {
-                new Claim(ClaimTypes.Name,login.Email!)
+                new Claim(ClaimTypes.Name,login.Email!),
+                new Claim("Id","1")
             };
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSecurityKey"]!));
             var creds= new SigningCredentials(key,SecurityAlgorithms.HmacSha256);

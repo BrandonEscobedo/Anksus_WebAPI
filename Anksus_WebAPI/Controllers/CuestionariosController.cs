@@ -82,12 +82,25 @@ namespace Anksus_WebAPI.Controllers
             var responseAPI = new ResponseAPI<int>();
             try
             {
-                int id = Convert.ToInt32(HttpContext.User.FindFirstValue("Id"));
-                var user = await _userManager.GetUserAsync(User);   
+                var a = User.Identity?.IsAuthenticated;
+                var nameIdentifier = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                int userId = int.Parse(nameIdentifier);
+                var userEmailClaim2 =Convert.ToInt32(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+                //obj['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier']
+                var userIDd = Convert.ToInt32(HttpContext.User.FindFirstValue("Id"));
+                var usesrIDd =HttpContext.User.FindFirstValue("Id");
+                var b = await _userManager.GetUserAsync(User);
+                //int id = Convert.ToInt32(HttpContext.User.FindFirstValue("Id"));
+                //var user = await _userManager.GetUserAsync(User);
+                //var a = User.FindFirstValue("Id");
+                //var d = User?.Identity?.IsAuthenticated;
+                //ClaimsIdentity? identity = HttpContext.User?.Identity as ClaimsIdentity;               
+                //int? userId = int.Parse(identity.FindFirst("Id").Value);
+                //var userIDd =Convert.ToInt32( HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier));
                 Cuestionario cuest = new Cuestionario()
                 {
                     IdCategoria = cuestionario.IdCategoria,
-                    IdUsuario = id,
+                    IdUsuario = 123,
                     Estado = cuestionario.Estado,
                     Publico = cuestionario.Publico,
                     Titulo = cuestionario.Titulo
