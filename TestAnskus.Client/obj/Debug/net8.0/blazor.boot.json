@@ -1,15 +1,15 @@
 {
   "mainAssemblyName": "TestAnskus.Client",
   "resources": {
-    "hash": "sha256-eBA/uLVMa8JR+bA7He/Yz0POyCoBtLij8VLK4JDtyP4=",
+    "hash": "sha256-knvQA2Hip1m48RTGOEFIE66HRixw0n4QtFl8ZdZvGlc=",
     "jsModuleNative": {
-      "dotnet.native.8.0.1.np5vrdlscf.js": "sha256-SGOlISx+3G4kkvpC9Uq3qoPGsnjxGmW61QBev0lyI5U="
+      "dotnet.native.8.0.0.waxgg2iirl.js": "sha256-LjLDIz9+J7uuiwMlQ4HbNx2BnSpphOtO2MwkoI28vdI="
     },
     "jsModuleRuntime": {
-      "dotnet.runtime.8.0.1.1p2j3r20ia.js": "sha256-HZOoaGpz9ekMa/oSmeApSKp3DXNdVUq2UBqsTIIiN8A="
+      "dotnet.runtime.8.0.0.00u4sfppc4.js": "sha256-WdSX3HQvnBYF0KJLZoOyHvTzMHetaob6PV0Kn2K+QXw="
     },
     "wasmNative": {
-      "dotnet.native.wasm": "sha256-dqpunZywlYy86b4O6ZjONasmG+4FH0P17FZ0OIf/lIg="
+      "dotnet.native.wasm": "sha256-Vr6ZXKoP77zgabrMIxQ1GbOkrxfx5XGqHO0odLhUIMY="
     },
     "icu": {
       "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
@@ -219,12 +219,12 @@
       "mscorlib.wasm": "sha256-EpWTfh4m/hEcXRFYMCR9YeYHwdUJgcm1laBaxWfq2S4=",
       "netstandard.wasm": "sha256-2kH24/YfHmU3B4eYRyRmiwebYROM4+B9eDWKvMnUdP8=",
       "System.Private.CoreLib.wasm": "sha256-CsySKiP7HYY1pS8LTDE60EkqiX5oHb3WoEZHDNd1yK0=",
-      "TestAnskus.Shared.wasm": "sha256-gQZU6+4hCrznRFiHNEhSgzfp40FuQXTxnLslQICBNEk=",
-      "TestAnskus.Client.wasm": "sha256-mfMxaGPD4ICAWKRRRaYtdufAJEeCSvehWkrgS2mEiLw="
+      "TestAnskus.Shared.wasm": "sha256-crybsRZpBHqsjbkxH5HXshE2IY3Kpw+x2dGoz76wwiI=",
+      "TestAnskus.Client.wasm": "sha256-8DkpeCHNNYJTfhrukaR5DgjFcGoEUzjAwqvrCO+znpU="
     },
     "pdb": {
-      "TestAnskus.Shared.pdb": "sha256-CDGprloeFgI9Je5zl1YkDnEixzZrZxhGQFRDXya0308=",
-      "TestAnskus.Client.pdb": "sha256-djvijDh7xXkQRMX01gYaL5+VSKrk7lu0olC4ZQnwYAA="
+      "TestAnskus.Shared.pdb": "sha256-fJhYjD0jfOvsAr1dB/mJtXxJHPk5o13AXV3nEMJmo+M=",
+      "TestAnskus.Client.pdb": "sha256-m3tDteTcXoOMD6ASqMCuvxTw/8N6xhUvN10Lm7lBmDg="
     }
   },
   "cacheBootResources": true,
