@@ -72,13 +72,9 @@ namespace Anksus_WebAPI.Controllers
 
             return Ok(responseAPI);
         }
-
-        // POST: api/Cuestionarios
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<IActionResult> CreateCuestionario(CuestionarioDTO cuestionario)
         {
-        
             var responseAPI = new ResponseAPI<int>();
             try
             {
@@ -92,9 +88,7 @@ namespace Anksus_WebAPI.Controllers
                     Estado = cuestionario.Estado,
                     Publico = cuestionario.Publico,
                     Titulo = cuestionario.Titulo
-
                 };
-
                 _context.Cuestionarios.Add(cuest);
                 await _context.SaveChangesAsync();
                 if (cuest.IdCuestionario != 0)

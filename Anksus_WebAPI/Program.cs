@@ -18,8 +18,9 @@ builder.Services.AddRazorComponents().AddInteractiveWebAssemblyComponents();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpContextAccessor();
-builder.Services.AddIdentity<AplicationUser,IdentityRole<int>>(options => options.SignIn.RequireConfirmedAccount = false)
-    .AddEntityFrameworkStores<TestAnskusContext>().AddDefaultUI();
+builder.Services.AddDefaultIdentity<AplicationUser>().AddEntityFrameworkStores<TestAnskusContext>();
+//builder.Services.AddIdentity<AplicationUser,IdentityRole<int>>(options => options.SignIn.RequireConfirmedAccount = false)
+//    .AddEntityFrameworkStores<TestAnskusContext>().AddDefaultUI();
 //builder.Services.AddIdentity<AplicationUser, IdentityRole<int>>(options => options.SignIn.RequireConfirmedAccount = true)
 //    .AddEntityFrameworkStores<TestAnskusContext>().AddApiEndpoints().AddDefaultTokenProviders();
 

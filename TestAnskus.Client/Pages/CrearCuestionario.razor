@@ -63,8 +63,8 @@
 
     protected override async Task OnInitializedAsync()
     {
-        _IdConteiner.idCuestionario = 0;
-        _IdConteiner.idPregunta = 0;
+       _IdConteiner.idCuestionario = 0;
+       _IdConteiner.idPregunta = 0;
         ListaRespuestasDTOs.Add(new RespuestasDTO
             {
                 IdPregunta=75,
@@ -72,7 +72,8 @@
                 RCorrecta = false
             });
 
-    }
+    }  
+ 
     public async Task AgregarPreguntaLista(int id)
     {
         var pregunta = await _preguntasService.GetPreguntas(id);

@@ -13,71 +13,71 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = TestAnskus.Client
 build_property.RootNamespace = TestAnskus.Client
-build_property.ProjectDir = C:\Users\brand\OneDrive\Documentos\AnskUsWebApi\TestAnskus.Client\
+build_property.ProjectDir = C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = false
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\brand\OneDrive\Documentos\AnskUsWebApi\TestAnskus.Client
+build_property.MSBuildProjectDirectory = C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/brand/OneDrive/Documentos/AnskUsWebApi/TestAnskus.Client/App.razor]
+[C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/brand/OneDrive/Documentos/AnskUsWebApi/TestAnskus.Client/Layout/LoginDisplay.razor]
+[C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Layout/LoginDisplay.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XExvZ2luRGlzcGxheS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/brand/OneDrive/Documentos/AnskUsWebApi/TestAnskus.Client/Layout/MainLayout.razor]
+[C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/brand/OneDrive/Documentos/AnskUsWebApi/TestAnskus.Client/Layout/NavMenu.razor]
+[C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/brand/OneDrive/Documentos/AnskUsWebApi/TestAnskus.Client/Layout/RedirectToLogin.razor]
+[C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Layout/RedirectToLogin.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XFJlZGlyZWN0VG9Mb2dpbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/brand/OneDrive/Documentos/AnskUsWebApi/TestAnskus.Client/Pages/Authentication.razor]
+[C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Pages/Authentication.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/brand/OneDrive/Documentos/AnskUsWebApi/TestAnskus.Client/Pages/Counter.razor]
+[C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/brand/OneDrive/Documentos/AnskUsWebApi/TestAnskus.Client/Pages/CrearCuestionario.razor]
+[C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Pages/CrearCuestionario.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXJDdWVzdGlvbmFyaW8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/brand/OneDrive/Documentos/AnskUsWebApi/TestAnskus.Client/Pages/Home.razor]
+[C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/brand/OneDrive/Documentos/AnskUsWebApi/TestAnskus.Client/Pages/Login.razor]
+[C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/brand/OneDrive/Documentos/AnskUsWebApi/TestAnskus.Client/Pages/Logout.razor]
+[C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Pages/Logout.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/brand/OneDrive/Documentos/AnskUsWebApi/TestAnskus.Client/Pages/MdCrearCuestionario.razor]
+[C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Pages/MdCrearCuestionario.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWRDcmVhckN1ZXN0aW9uYXJpby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/brand/OneDrive/Documentos/AnskUsWebApi/TestAnskus.Client/Pages/Register.razor]
+[C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Pages/Register.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/brand/OneDrive/Documentos/AnskUsWebApi/TestAnskus.Client/Pages/Weather.razor]
+[C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Pages/Weather.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2VhdGhlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/brand/OneDrive/Documentos/AnskUsWebApi/TestAnskus.Client/_Imports.razor]
+[C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

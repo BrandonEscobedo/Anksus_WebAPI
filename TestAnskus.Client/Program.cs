@@ -19,10 +19,10 @@ builder.Services.AddMudServices();
 builder.Services.AddBlazoredLocalStorage();
 builder.Services.AddAuthorizationCore();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://localhost:7150/") });
-builder.Services.AddOidcAuthentication(options =>
-{
-    builder.Configuration.Bind("Local", options.ProviderOptions);
-});
+//builder.Services.AddOidcAuthentication(options =>
+//{
+//    builder.Configuration.Bind("Local", options.ProviderOptions);
+//});
 builder.Services.AddScoped<ICuestionariosService, CuestionariosService>();
 builder.Services.AddScoped<ICategoriaService, CategoriasService>();
 builder.Services.AddScoped<IPreguntasService, PreguntasService>();
