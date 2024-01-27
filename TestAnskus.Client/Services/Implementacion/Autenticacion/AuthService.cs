@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Components.Authorization;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
+using System.Security.Principal;
 using System.Text;
 using System.Text.Json;
 using TestAnskus.Client.Services.Interfaces.Autenticacion;
@@ -30,8 +31,7 @@ namespace TestAnskus.Client.Services.Implementacion.Autenticacion
             {
              return new RegisterResult { Successful = false, Errors = new List<string> { "Ocurrio un error Al registrar el usuario." } };
             }
-            return new RegisterResult { Successful = true, Errors = new List<string> { "Cuenta Creada Correctamente" } }; 
-                
+            return new RegisterResult { Successful = true, Errors = new List<string> { "Cuenta Creada Correctamente" } };                
         }
         public async Task<LoginResult> Login(LoginModelA loginModel)
         {
@@ -43,6 +43,7 @@ namespace TestAnskus.Client.Services.Implementacion.Autenticacion
             if (!response.IsSuccessStatusCode)
             {
                 return loginresult!;
+               
             }
             await _localStorageService.SetItemAsync("authToken", loginresult!.Token);
             ((CustomAuthenticationStateProvider)_authenticationStateProvider).MarkUserAsAuthenticated(loginModel.Email!);

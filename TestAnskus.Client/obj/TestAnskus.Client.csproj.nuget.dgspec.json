@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\TestAnskus.Client.csproj": {}
+    "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Client\\TestAnskus.Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\TestAnskus.Client.csproj": {
+    "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Client\\TestAnskus.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\TestAnskus.Client.csproj",
+        "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Client\\TestAnskus.Client.csproj",
         "projectName": "TestAnskus.Client",
-        "projectPath": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\TestAnskus.Client.csproj",
-        "packagesPath": "C:\\Users\\brand\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\",
+        "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Client\\TestAnskus.Client.csproj",
+        "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Client\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\brand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Shared\\TestAnskus.Shared.csproj": {
-                "projectPath": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Shared\\TestAnskus.Shared.csproj"
+              "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj": {
+                "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj"
               }
             }
           }
@@ -121,17 +125,21 @@
         }
       }
     },
-    "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Shared\\TestAnskus.Shared.csproj": {
+    "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Shared\\TestAnskus.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj",
         "projectName": "TestAnskus.Shared",
-        "projectPath": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Shared\\TestAnskus.Shared.csproj",
-        "packagesPath": "C:\\Users\\brand\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Shared\\obj\\",
+        "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj",
+        "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Shared\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\brand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -172,7 +180,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -32,16 +32,12 @@ namespace Anksus_WebAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Cuestionario>>> GetCuestionarios()
         {
-            return await _context.Cuestionarios.ToListAsync();
-        }
-
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetCuestionario(int id)
-        {
             var responseAPI = new ResponseAPI<List<CuestionarioDTO>>();
-            try 
+            try
             {
-              var cuestionarios= _mapper.Map<List<CuestionarioDTO>>( await _context.Cuestionarios.Where(e => e.IdUsuario == id).ToListAsync());
+                var email = User.Identity?.Name;
+                var user = await _userManager.FindByEmailAsync(email!);
+                var cuestionarios = _mapper.Map<List<CuestionarioDTO>>(await _context.Cuestionarios.Where(e => e.IdUsuario == user!.Id).ToListAsync());
                 if (cuestionarios != null)
                 {
                     responseAPI.Valor = cuestionarios;
@@ -49,13 +45,13 @@ namespace Anksus_WebAPI.Controllers
                 }
                 else
                 {
-                    responseAPI.mensaje = "Este usuario no tiene Cuestionarios";
+                    responseAPI.mensaje = "Este usuario no tiene Cuestionarios Aun.";
                     responseAPI.EsCorrecto = false;
                 }
             }
             catch (Exception ex)
             {
-                responseAPI.mensaje = "Ha ocurrido un error de tipo: " + ex.Message ;
+                responseAPI.mensaje = "Ha ocurrido un error de tipo: " + ex.Message;
                 responseAPI.EsCorrecto = false;
             }
 
