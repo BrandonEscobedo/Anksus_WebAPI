@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Rn0b0PQOrcSE99rCYP2ojtbkOGqr6hAwmsUhkmoTLho=",
+  "Hash": "aCpt6uOSenC0JU1ZdF2Xi2UXCVk6hXnvfJvPEcYVWrg=",
   "Source": "TestAnskus.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -812,7 +812,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\brand\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.0\\runtimes\\browser-wasm\\native\\dotnet.js"
+      "OriginalItemSpec": "C:\\Users\\brand\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.1\\runtimes\\browser-wasm\\native\\dotnet.js"
     },
     {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map",
@@ -831,15 +831,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\brand\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.0\\runtimes\\browser-wasm\\native\\dotnet.js.map"
+      "OriginalItemSpec": "C:\\Users\\brand\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.1\\runtimes\\browser-wasm\\native\\dotnet.js.map"
     },
     {
-      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.0.waxgg2iirl.js",
+      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.1.02iwsoi8yp.js",
       "SourceId": "TestAnskus.Client",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/dotnet.native.8.0.0.waxgg2iirl.js",
+      "RelativePath": "_framework/dotnet.native.8.0.1.02iwsoi8yp.js",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -850,7 +850,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\brand\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.0\\runtimes\\browser-wasm\\native\\dotnet.native.js"
+      "OriginalItemSpec": "C:\\Users\\brand\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.1\\runtimes\\browser-wasm\\native\\dotnet.native.js"
     },
     {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm",
@@ -869,15 +869,15 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\brand\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.0\\runtimes\\browser-wasm\\native\\dotnet.native.wasm"
+      "OriginalItemSpec": "C:\\Users\\brand\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.1\\runtimes\\browser-wasm\\native\\dotnet.native.wasm"
     },
     {
-      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.0.00u4sfppc4.js",
+      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.1.xqvt9yzq1h.js",
       "SourceId": "TestAnskus.Client",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/dotnet.runtime.8.0.0.00u4sfppc4.js",
+      "RelativePath": "_framework/dotnet.runtime.8.0.1.xqvt9yzq1h.js",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -888,7 +888,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\brand\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.0\\runtimes\\browser-wasm\\native\\dotnet.runtime.js"
+      "OriginalItemSpec": "C:\\Users\\brand\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.1\\runtimes\\browser-wasm\\native\\dotnet.runtime.js"
     },
     {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map",
@@ -907,7 +907,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\brand\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.0\\runtimes\\browser-wasm\\native\\dotnet.runtime.js.map"
+      "OriginalItemSpec": "C:\\Users\\brand\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.1\\runtimes\\browser-wasm\\native\\dotnet.runtime.js.map"
     },
     {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat",
@@ -926,7 +926,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\brand\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.0\\runtimes\\browser-wasm\\native\\icudt_CJK.dat"
+      "OriginalItemSpec": "C:\\Users\\brand\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.1\\runtimes\\browser-wasm\\native\\icudt_CJK.dat"
     },
     {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat",
@@ -945,7 +945,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\brand\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.0\\runtimes\\browser-wasm\\native\\icudt_EFIGS.dat"
+      "OriginalItemSpec": "C:\\Users\\brand\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.1\\runtimes\\browser-wasm\\native\\icudt_EFIGS.dat"
     },
     {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat",
@@ -964,7 +964,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\brand\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.0\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
+      "OriginalItemSpec": "C:\\Users\\brand\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.1\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
     },
     {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.wasm",
@@ -4843,23 +4843,23 @@
       "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\webcil\\WindowsBase.wasm"
     },
     {
-      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\00u4sfppc4.gz",
+      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\02iwsoi8yp.gz",
       "SourceId": "TestAnskus.Client",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/dotnet.runtime.8.0.0.00u4sfppc4.js.gz",
+      "RelativePath": "_framework/dotnet.native.8.0.1.02iwsoi8yp.js.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.0.00u4sfppc4.js",
+      "RelatedAsset": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.1.02iwsoi8yp.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.0.00u4sfppc4.js"
+      "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.1.02iwsoi8yp.js"
     },
     {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\02va99t4kx.gz",
@@ -4976,25 +4976,6 @@
       "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Threading.Tasks.Parallel.wasm"
     },
     {
-      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\1guldti9o5.gz",
-      "SourceId": "TestAnskus.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.native.wasm.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm"
-    },
-    {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\1lvd8ew83z.gz",
       "SourceId": "TestAnskus.Client",
       "SourceType": "Computed",
@@ -5012,25 +4993,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Runtime.Serialization.Formatters.wasm"
-    },
-    {
-      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\1tyr9swelt.gz",
-      "SourceId": "TestAnskus.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt_EFIGS.dat.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat"
     },
     {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\1ucuc6pkfm.gz",
@@ -5565,25 +5527,6 @@
       "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Reflection.Metadata.wasm"
     },
     {
-      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\695x2iqahv.gz",
-      "SourceId": "TestAnskus.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt_CJK.dat.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat"
-    },
-    {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\6djlwpel5i.gz",
       "SourceId": "TestAnskus.Client",
       "SourceType": "Computed",
@@ -5869,6 +5812,25 @@
       "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.Csp.wasm"
     },
     {
+      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\8x5sk5vr55.gz",
+      "SourceId": "TestAnskus.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt_EFIGS.dat.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat"
+    },
+    {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\942huh4jxr.gz",
       "SourceId": "TestAnskus.Client",
       "SourceType": "Computed",
@@ -5981,6 +5943,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Collections.Concurrent.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\9zgg5dqqc7.gz",
+      "SourceId": "TestAnskus.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.js.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js"
     },
     {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\a525dytkz1.gz",
@@ -6190,25 +6171,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Net.Sockets.wasm"
-    },
-    {
-      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\btyrl0uq4f.gz",
-      "SourceId": "TestAnskus.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt_no_CJK.dat.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat"
     },
     {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\c1i58n0b1t.gz",
@@ -6629,6 +6591,25 @@
       "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Formats.Asn1.wasm"
     },
     {
+      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\fp768hray0.gz",
+      "SourceId": "TestAnskus.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt_no_CJK.dat.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat"
+    },
+    {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\fveyapdap7.gz",
       "SourceId": "TestAnskus.Client",
       "SourceType": "Computed",
@@ -6874,6 +6855,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Extensions.Localization.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\hhu2mbdjl0.gz",
+      "SourceId": "TestAnskus.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt_CJK.dat.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat"
     },
     {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\hojbgpajar.gz",
@@ -7446,6 +7446,25 @@
       "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Principal.wasm"
     },
     {
+      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\md5o3y6gqi.gz",
+      "SourceId": "TestAnskus.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.native.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm"
+    },
+    {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\me5dcwj9ed.gz",
       "SourceId": "TestAnskus.Client",
       "SourceType": "Computed",
@@ -7807,25 +7826,6 @@
       "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.IO.Pipes.wasm"
     },
     {
-      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\pvzf3k31mv.gz",
-      "SourceId": "TestAnskus.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.js.map.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map"
-    },
-    {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\pyedr76xft.gz",
       "SourceId": "TestAnskus.Client",
       "SourceType": "Computed",
@@ -7881,25 +7881,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Net.Http.wasm"
-    },
-    {
-      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\qrjohf3l3t.gz",
-      "SourceId": "TestAnskus.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.runtime.js.map.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map"
     },
     {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\qx4giy7ci7.gz",
@@ -7995,6 +7976,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Collections.Specialized.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\s0wrmyd4ci.gz",
+      "SourceId": "TestAnskus.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.runtime.js.map.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map"
     },
     {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\s4s9773rr2.gz",
@@ -8548,25 +8548,6 @@
       "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Memory.wasm"
     },
     {
-      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\waxgg2iirl.gz",
-      "SourceId": "TestAnskus.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.native.8.0.0.waxgg2iirl.js.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.0.waxgg2iirl.js",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.0.waxgg2iirl.js"
-    },
-    {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\wk7yn1l7ji.gz",
       "SourceId": "TestAnskus.Client",
       "SourceType": "Computed",
@@ -8622,25 +8603,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\netstandard.wasm"
-    },
-    {
-      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\wn9kuanqli.gz",
-      "SourceId": "TestAnskus.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.js.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js"
     },
     {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\x0dbld614e.gz",
@@ -8757,6 +8719,25 @@
       "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Net.HttpListener.wasm"
     },
     {
+      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\xqvt9yzq1h.gz",
+      "SourceId": "TestAnskus.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.runtime.8.0.1.xqvt9yzq1h.js.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.1.xqvt9yzq1h.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.1.xqvt9yzq1h.js"
+    },
+    {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\xtn7s4vygv.gz",
       "SourceId": "TestAnskus.Client",
       "SourceType": "Computed",
@@ -8850,6 +8831,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\yq55ofm2a7.gz",
+      "SourceId": "TestAnskus.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.js.map.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map"
     },
     {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\z6p9z84w4l.gz",

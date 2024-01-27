@@ -62,8 +62,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/brand/OneDrive/Documentos/proyecto anskus/TestAnskus.Client/Pages/CrearEditarCuestionarios/Component.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXJFZGl0YXJDdWVzdGlvbmFyaW9zXENvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/brand/OneDrive/Documentos/proyecto anskus/TestAnskus.Client/Pages/CrearEditarCuestionarios/CrearCuestionario.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXJFZGl0YXJDdWVzdGlvbmFyaW9zXENyZWFyQ3Vlc3Rpb25hcmlvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/brand/OneDrive/Documentos/proyecto anskus/TestAnskus.Client/Pages/CrearEditarCuestionarios/CuestionariosUsuario.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXJFZGl0YXJDdWVzdGlvbmFyaW9zXEN1ZXN0aW9uYXJpb3NVc3VhcmlvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/brand/OneDrive/Documentos/proyecto anskus/TestAnskus.Client/Pages/CrearEditarCuestionarios/MdCrearCuestionario.razor]
