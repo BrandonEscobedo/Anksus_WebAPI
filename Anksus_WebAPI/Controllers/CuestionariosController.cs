@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Identity;
 using Anksus_WebAPI.Models.DTO;
 using TestAnskus.Shared;
 using System.Security.Claims;
+using AutoMapper;
 
 namespace Anksus_WebAPI.Controllers
 {
@@ -19,8 +20,10 @@ namespace Anksus_WebAPI.Controllers
     {
         private readonly TestAnskusContext _context;
         private readonly UserManager<AplicationUser> _userManager;
-        public CuestionariosController(TestAnskusContext context,UserManager<AplicationUser> userManager)
+        private readonly IMapper _mapper;
+        public CuestionariosController(TestAnskusContext context,UserManager<AplicationUser> userManager,IMapper mapper)
         {
+            _mapper=mapper;
             _userManager = userManager;
             _context = context;
         }
@@ -32,12 +35,32 @@ namespace Anksus_WebAPI.Controllers
             return await _context.Cuestionarios.ToListAsync();
         }
 
-        // GET: api/Cuestionarios/5
-        //[HttpGet("{id}")]
-        //public async Task<ActionResult<Cuestionario>> GetCuestionario(int id)
-        //{
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetCuestionario(int id)
+        {
+            var responseAPI = new ResponseAPI<List<CuestionarioDTO>>();
+            try 
+            {
+              var cuestionarios= _mapper.Map<List<CuestionarioDTO>>( await _context.Cuestionarios.Where(e => e.IdUsuario == id).ToListAsync());
+                if (cuestionarios != null)
+                {
+                    responseAPI.Valor = cuestionarios;
+                    responseAPI.EsCorrecto = true;
+                }
+                else
+                {
+                    responseAPI.mensaje = "Este usuario no tiene Cuestionarios";
+                    responseAPI.EsCorrecto = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                responseAPI.mensaje = "Ha ocurrido un error de tipo: " + ex.Message ;
+                responseAPI.EsCorrecto = false;
+            }
 
-        //}
+            return Ok(responseAPI);
+        }
 
         // PUT: api/Cuestionarios/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754

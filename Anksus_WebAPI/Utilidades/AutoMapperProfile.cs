@@ -9,6 +9,7 @@ namespace Anksus_WebAPI.Server.Utilidades
         public AutoMapperProfile() 
         {
             CreateMap<Pregunta, PreguntasDTO>().ForMember(e=>e.Pregunta,x=>x.MapFrom(d=>d.Pregunta1));
+            CreateMap<Cuestionario, CuestionarioDTO>();
         }
     }
 }

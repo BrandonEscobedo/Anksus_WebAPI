@@ -12,7 +12,6 @@ public partial class ImagenesPerfil
 {
     [Key]
     [Column("id_imagen")]
-    [JsonPropertyName("imagen")]
     public int IdImagen { get; set; }
 
     [Column("imagen")]
