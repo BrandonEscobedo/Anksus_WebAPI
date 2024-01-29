@@ -26,7 +26,6 @@ namespace TestAnskus.Client.Services.Implementacion
             {
                 return response.Valor!;
             }
-            else
             {
                 throw new Exception(response.mensaje);
             }

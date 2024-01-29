@@ -37,4 +37,8 @@
     <ProjectReference Include="..\TestAnskus.Shared\TestAnskus.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>
