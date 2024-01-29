@@ -1,7 +1,6 @@
 ﻿@page "/MisCuestionarios"
-@using TestAnskus.Shared
 @inject ICuestionariosService _cuestionarioService;
-@inject ICuestionarioAService _CuestionarioActivoService;
+@inject ICuestionarioAService  _CuestionarioActivoService;
 @inject NavigationManager NavigationManager;
 @if (cuestionarios == null)
 {
@@ -40,18 +39,18 @@ else
     }
     private async Task IniciarCuestionario(int id )
     {
-        try
+        var result = await _CuestionarioActivoService.ActivarCuestionario(id);
+
+        if (result.EsCorrecto == true)
         {
-            var result = await _CuestionarioActivoService.ActivarCuestionario(id);
-            if (result.EsCorrecto)
-            {
-                NavigationManager.NavigateTo("");
-            }
+            NavigationManager.NavigateTo("/CuestionarioActivo");
         }
-        catch (Exception ex)
+        else if (result.EsCorrecto == false && result.Valor != 0)
         {
-            
+            Console.WriteLine("Tiene un cuestionario activo");
+            NavigationManager.NavigateTo("/MisCuestionarios");
+
         }
-      
+
     }
 }

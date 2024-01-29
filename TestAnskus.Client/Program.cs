@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Components.Authorization;
 using TestAnskus.Client.Utility;
 using TestAnskus.Client.Services.Interfaces.Autenticacion;
 using TestAnskus.Client.Services.Implementacion.Autenticacion;
+using TestAnskus.Client.Services.Interfaces.CuestionarioActivo;
+using TestAnskus.Client.Services.Implementacion.CuestionarioActivo;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -30,4 +32,5 @@ builder.Services.AddScoped<IIdContainer,IdConteiner>();
 builder.Services.AddScoped<AuthenticationStateProvider,CustomAuthenticationStateProvider>();
 builder.Services.AddScoped<IRespuestasService,RespuestasService>();
 builder.Services.AddScoped<IAuthService,AuthService>();
+builder.Services.AddScoped<ICuestionarioAService,CuestionarioAService>();
 await builder.Build().RunAsync();

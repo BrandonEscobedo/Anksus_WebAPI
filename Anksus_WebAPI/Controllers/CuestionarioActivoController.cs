@@ -40,7 +40,7 @@ namespace Anksus_WebAPI.Server.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateCuestionarioActivo(int idcuestionario)
         {
-            var responseAPI = new ResponseAPI<object>();
+            var responseAPI = new ResponseAPI<int>();
             try
             {
             
@@ -61,20 +61,21 @@ namespace Anksus_WebAPI.Server.Controllers
                     {
                         _context.CuestionarioActivos.Add(cuestionarioA);
                        await _context.SaveChangesAsync();
-                        responseAPI.EsCorrecto = true;
+                        responseAPI.EsCorrecto = true;                       
                         responseAPI.Valor = cuestionarioA.Codigo;
                     }
                     else
                     {
                         responseAPI.mensaje = "Ya tienes Un Cuestionario Activo";
                         responseAPI.EsCorrecto = false;
-                        responseAPI.Valor = cuestionarioA;
+                        responseAPI.Valor = cuestionarioA.Codigo;
                     }
                 }
                 return Ok(responseAPI);
             }
             catch(Exception ex)
             {
+                responseAPI.EsCorrecto = false;
                 throw new Exception ("Se ha generado una exepcion al activar este cuestionario." +ex.Message);
             }
         }

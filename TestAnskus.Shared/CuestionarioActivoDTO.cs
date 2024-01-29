@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestAnskus.Shared
 {
-    internal class ResponseIniciarCuestionario
+    public class CuestionarioActivoDTO
     {
-       
-
     }
 }
