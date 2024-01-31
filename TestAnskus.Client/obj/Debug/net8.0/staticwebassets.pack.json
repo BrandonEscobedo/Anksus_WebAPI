@@ -29,12 +29,32 @@
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
+      "Id": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\wwwroot\\css\\index.css",
+      "PackagePath": "staticwebassets\\css\\index.css"
+    },
+    {
       "Id": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
       "Id": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\wwwroot\\img\\EmpiezaYa1.png",
+      "PackagePath": "staticwebassets\\img\\EmpiezaYa1.png"
+    },
+    {
+      "Id": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\wwwroot\\img\\EmpiezaYa2.png",
+      "PackagePath": "staticwebassets\\img\\EmpiezaYa2.png"
+    },
+    {
+      "Id": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\wwwroot\\img\\Logo.png",
+      "PackagePath": "staticwebassets\\img\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\wwwroot\\img\\fondo-sala.jpg",
+      "PackagePath": "staticwebassets\\img\\fondo-sala.jpg"
     },
     {
       "Id": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\wwwroot\\index.html",

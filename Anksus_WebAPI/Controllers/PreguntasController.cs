@@ -63,26 +63,28 @@ namespace Anksus_WebAPI.Server.Controllers
 
         // PUT: api/Preguntas/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutPregunta(int id, Pregunta pregunta)
+        [HttpPut]
+        public async Task<IActionResult> PutPregunta( PreguntasDTO PreguntaDTO)
         {
-            if (id != pregunta.IdPregunta)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(pregunta).State = EntityState.Modified;
-
+            var responseAPI = new ResponseAPI<int>();
             try
             {
-                await _context.SaveChangesAsync();
+                var pregunta = _context.Preguntas.Find(PreguntaDTO.IdPregunta);
+                if(pregunta != null)
+                {
+                    pregunta.Pregunta1 = PreguntaDTO.Pregunta;
+                    _context.Preguntas.Update(pregunta);
+                    await _context.SaveChangesAsync();
+                    responseAPI.EsCorrecto = true;
+                }
+                else { responseAPI.EsCorrecto = false; responseAPI.mensaje = "Ocurrio un error al encontrar la pregunta."; }
             }
-            catch (DbUpdateConcurrencyException)
+            catch (Exception ex)
             {
-
+                responseAPI.mensaje = "error al editar pregunta en :" + ex.Message;
             }
 
-            return NoContent();
+            return Ok(responseAPI);
         }
 
         // POST: api/Preguntas

@@ -8,8 +8,6 @@
 
     <MudInputLabel>Titulo</MudInputLabel>
     <input type="text" @bind-value="cuestionarioDTO.Titulo" />
-
-    <input type="text" @bind-value="cuestionarioDTO.IdUsuario" />
     <MudSelect @bind-Value="cuestionarioDTO.IdCategoria" Label="Categoria">
 @foreach (var item in listaCategorias)
 {

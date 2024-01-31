@@ -134,14 +134,24 @@ namespace Anksus_WebAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCuestionario(int id)
         {
-            var cuestionario = await _context.Cuestionarios.FindAsync(id);
-            if (cuestionario == null)
+            var responseAPI = new ResponseAPI<int>();
+            try
             {
-                return NotFound();
-            }
+        var cuestionario = await _context.Cuestionarios.FindAsync(id);
+                    if (cuestionario != null)
+                    {
+                   _context.Cuestionarios.Remove(cuestionario);
+                    await _context.SaveChangesAsync();
+                    }
 
-            _context.Cuestionarios.Remove(cuestionario);
-            await _context.SaveChangesAsync();
+                   
+            }
+            catch(Exception ex)
+            {
+                responseAPI.EsCorrecto = false;
+                responseAPI.mensaje="Hubo un error al eliminar el cuestionario de tipo: " +ex.Message;
+            }
+            
 
             return NoContent();
         }

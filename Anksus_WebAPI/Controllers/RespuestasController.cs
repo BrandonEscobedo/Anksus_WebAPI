@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Anksus_WebAPI.Models.dbModels;
 using Anksus_WebAPI.Models.DTO;
 using TestAnskus.Shared;
+using AutoMapper;
 
 namespace Anksus_WebAPI.Server.Controllers
 {
@@ -16,9 +17,10 @@ namespace Anksus_WebAPI.Server.Controllers
     public class RespuestasController : ControllerBase
     {
         private readonly TestAnskusContext _context;
-
-        public RespuestasController(TestAnskusContext context)
+        private readonly IMapper _mapper;
+        public RespuestasController(TestAnskusContext context, IMapper mapper)
         {
+            _mapper= mapper;
             _context = context;
         }
 
@@ -46,65 +48,33 @@ namespace Anksus_WebAPI.Server.Controllers
         // PUT: api/Respuestas/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutRespuesta(int id, Respuesta respuesta)
+        public async Task<IActionResult> PutRespuesta(List<RespuestasDTO> respuestasDTO)
         {
-            if (id != respuesta.IdRespuesta)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(respuesta).State = EntityState.Modified;
-
+            var responseAPI = new ResponseAPI<int>();
             try
             {
-                await _context.SaveChangesAsync();
+      
             }
-            catch (DbUpdateConcurrencyException)
+            catch (Exception ex)
             {
-                if (!RespuestaExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                responseAPI.mensaje = "Ocurrio un error al editar la pregunta de tipo: " + ex.Message;
+                responseAPI.EsCorrecto = false;
             }
-
-            return NoContent();
+            return Ok(responseAPI);
         }
 
         // POST: api/Respuestas
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<IActionResult> CreateRespuestas(List<RespuestasDTO> respuestaDTO)
+        public async Task<IActionResult> CreateRespuestas( List<RespuestasDTO> respuestaDTO)
         {
             var responseAPI = new ResponseAPI<int>();
-
-            int id =0;
             try
             {
-                foreach(var respuesta in respuestaDTO)
-                {
-                    var nuevaRespuesta = new Respuesta
-                    {
-                        Respuesta1=respuesta.respuesta,
-                        RCorrecta=respuesta.RCorrecta,
-                        IdPregunta=respuesta.IdPregunta
-                    };
-                    _context.Respuestas.AddRange(nuevaRespuesta);
-                    await _context.SaveChangesAsync();
-                    id = nuevaRespuesta.IdRespuesta;
-                }
-                if (id != 0)
-                {
-                    responseAPI.EsCorrecto = true;
-                }
-                else
-                {
-                    responseAPI.EsCorrecto = true;
-                    responseAPI.mensaje = "No guardado";
-                }
+                var respuestaS = _mapper.Map<Respuesta>(respuestaDTO);
+                _context.Respuestas.AddRange(respuestaS);
+                await _context.SaveChangesAsync();
+                
 
             }
             catch(Exception Ex)

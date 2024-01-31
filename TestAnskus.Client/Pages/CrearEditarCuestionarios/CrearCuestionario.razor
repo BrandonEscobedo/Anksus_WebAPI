@@ -3,53 +3,49 @@
 @inject IDialogService DialogService
 @inject IIdContainer _IdConteiner
 @inject IRespuestasService _RespuestasService
-<h2>Crear Cuestionario</h2>
+
 <MudButton @onclick="OpenDialog" Variant="Variant.Filled" Color="Color.Primary">
     Guardar Cuestionario
 </MudButton>
 <div class="container-fluid m-0">
     <div class="row">
+        <!-- Primera sección (izquierda) -->
         <div class="col-md-2 bg-white custom-left-section p-3">
-
-            @foreach (var pregunta in ListaPreguntas)
-            {
-                <div class="mt-3 añadirPreguntas">
-                    <input type="button" class="form-control" @bind-value="pregunta.Pregunta" />
-                    <button @onclick="() => EliminarPregunta(pregunta)">Eliminar</button>
-
-                </div>
-            }
+            <!-- Barra de navegación izquierda -->
+            <ul id="questionList" class="list-group">
+                @foreach (var pregunta in ListaPreguntas)
+                {
+                        <input type="button" class="form-control" @bind-value="pregunta.Pregunta" />
+                        <button @onclick="() => EliminarPregunta(pregunta)">Eliminar</button>                   
+                }
+            </ul>
             <div class="mt-3">
-                <button id="addFunctionButton" @onclick="GuardarEditarPregunta" class="btn btn-primary mt-2">Agregar Pregunta</button>
+                <div class="mt-3">
+                    <button id="addFunctionButton" @onclick="GuardarEditarPregunta" class="btn btn-primary mt-2">Agregar Pregunta</button>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="col-md-10 bg-white p-4">
-    <h3>Escribe la pregunta</h3>
-    <input type="text" @bind-value="preguntasDTO.Pregunta" class="form-control" placeholder="Pregunta">
-    <label>Agregar Respuestas</label>
-
-    <div class="mt-3">
-        <div class="row">
-            @foreach (RespuestasDTO respuestas in ListaRespuestasDTOs)
-            {
-                <div class="col-6">
-                    <div class="input-group">
-                        <input type="text" @bind-value="respuestas.respuesta" class=" form-control">
-                        <input id="eye1" type="checkbox" class="form-check-input" />
-                        <button @onclick="() => EliminarRespuesta(respuestas)">Eliminar</button>
+        <!-- Segunda sección (derecha) -->
+        <div class="col-md-10 bg-white p-4">
+            <h3>Escribe la pregunta</h3>
+            <input type="text" @bind-value="preguntasDTO.Pregunta" class="form-control" placeholder="Pregunta">
+                @foreach (RespuestasDTO respuestas in ListaRespuestasDTOs)
+                {
+                    <div class="col-6">
+                        <div class="input-group">
+                            <input type="text" @bind-value="respuestas.respuesta" class=" form-control" 
+                            placeholder="Agrega tu respuesta">
+                            <input id="eye1" type="checkbox" @bind-value="respuestas.RCorrecta" class="form-check-input" />
+                            <button class="btn-danger" @onclick="() => EliminarRespuesta(respuestas)">Eliminar</button>
+                        </div>
                     </div>
-                </div>
-            }
+                }
+            <button class="add-options mt-3 btn btn-success" @onclick="AgregarRespuesta">
+                Agregar más opciones
+            </button>
         </div>
     </div>
-
 </div>
-
-
-<button @onclick="AgregarRespuesta">Agregar Respuesta</button>
-<button @onclick="GuardarRespuestas">Guardar Respuesta</button>
 @code {
     List<PreguntasDTO> ListaPreguntas { get; set; } = new List<PreguntasDTO>();
     List<RespuestasDTO> ListaRespuestasDTOs { get; set; } = new List<RespuestasDTO>();
@@ -59,21 +55,18 @@
         var options = new DialogOptions { CloseOnEscapeKey = true };
         DialogService.Show<MdCrearCuestionario>("Simple Dialog", options);
     }
-
-
     protected override async Task OnInitializedAsync()
     {
-       _IdConteiner.idCuestionario = 0;
-       _IdConteiner.idPregunta = 0;
+        _IdConteiner.idCuestionario = 0;
+        _IdConteiner.idPregunta = 0;
         ListaRespuestasDTOs.Add(new RespuestasDTO
             {
-                IdPregunta=75,
-                respuesta = "Respuesta inicial",
+                IdPregunta=0,
+                respuesta = "",
                 RCorrecta = false
             });
-
     }  
- 
+
     public async Task AgregarPreguntaLista(int id)
     {
         var pregunta = await _preguntasService.GetPreguntas(id);
@@ -87,9 +80,10 @@
         if (idpregunta != 0)
         {
             _IdConteiner.SetIdPregunta(idpregunta);
+            await GuardarRespuestas();
             await AgregarPreguntaLista(idpregunta);
+            await CleanRespuestas();
         }
-
     }
     public void EliminarRespuesta(RespuestasDTO respuesta)
     {
@@ -112,17 +106,34 @@
                 RCorrecta = false
             });
     }
+    public async Task CleanRespuestas()
+    {
+        ListaRespuestasDTOs.Clear();
+        ListaRespuestasDTOs.Add(new RespuestasDTO
+            {
+                IdPregunta = 0,
+                respuesta = "",
+                RCorrecta = false
+            });
+   
+    }
     public async Task CambiarID(int id)
     {
         foreach (var respuesta in ListaRespuestasDTOs)
         {
-            respuesta.IdPregunta = id;       
+            respuesta.IdPregunta = id;
+
         }
+
     }
+
     public async Task GuardarRespuestas()
     {
         await CambiarID(_IdConteiner.idPregunta);
+        ListaRespuestasDTOs.RemoveAll(r => r.respuesta.Length == 0);
         await _RespuestasService.CreateRespuestas(ListaRespuestasDTOs);
 
     }
 }
+
+   

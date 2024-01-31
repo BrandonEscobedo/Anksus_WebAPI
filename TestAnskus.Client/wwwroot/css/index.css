@@ -1,0 +1,33 @@
+﻿.body-index {
+    background-color: #e7e7e7;
+  max-height:100%;
+    max-width:100%;
+}
+
+.navbar-logo {
+    max-height: 40px;
+}
+
+.btn-sign-up {
+    box-shadow: 2px 2px 3px rgb(85, 85, 85);
+    border-radius: 5px;
+    background-color: #00FF00;
+    color: #fff;
+    padding: 7px 9px;
+    display: inline-block;
+}
+
+    .btn-sign-up:hover {
+        background-color: #00FF00;
+        color: #ffffff;
+    }
+
+.blue-background {
+    background-color: #01458a;
+    padding: 20px;
+}
+
+#derechos {
+    color: #000;
+    font-size: 15px;
+}
