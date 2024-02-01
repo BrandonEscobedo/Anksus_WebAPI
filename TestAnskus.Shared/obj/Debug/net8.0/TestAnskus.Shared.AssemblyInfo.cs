@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TestAnskus.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91ec2da5b80d946fd8aff855ebbaaab952f87712")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+efcdd79568e4da3a08c5440735bd72ada81f0243")]
 [assembly: System.Reflection.AssemblyProductAttribute("TestAnskus.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TestAnskus.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

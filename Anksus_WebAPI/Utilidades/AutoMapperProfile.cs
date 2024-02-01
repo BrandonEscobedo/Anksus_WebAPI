@@ -10,7 +10,7 @@ namespace Anksus_WebAPI.Server.Utilidades
         {
             CreateMap<Pregunta, PreguntasDTO>().ForMember(e=>e.Pregunta,x=>x.MapFrom(d=>d.Pregunta1));
             CreateMap<Cuestionario, CuestionarioDTO>();
-            CreateMap<Respuesta, RespuestasDTO>();
+            CreateMap<RespuestasDTO, Respuesta>().ForMember(e => e.Respuesta1, x => x.MapFrom(d => d.respuesta));
         }
     }
 }

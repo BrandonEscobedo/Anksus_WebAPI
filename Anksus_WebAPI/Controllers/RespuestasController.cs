@@ -23,15 +23,11 @@ namespace Anksus_WebAPI.Server.Controllers
             _mapper= mapper;
             _context = context;
         }
-
-        // GET: api/Respuestas
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Respuesta>>> GetRespuestas()
         {
             return await _context.Respuestas.ToListAsync();
         }
-
-        // GET: api/Respuestas/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Respuesta>> GetRespuesta(int id)
         {
@@ -45,37 +41,49 @@ namespace Anksus_WebAPI.Server.Controllers
             return respuesta;
         }
 
-        // PUT: api/Respuestas/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
+     
+        [HttpPut]
         public async Task<IActionResult> PutRespuesta(List<RespuestasDTO> respuestasDTO)
         {
             var responseAPI = new ResponseAPI<int>();
             try
             {
-      
+                var ListaRespuestas= _mapper.Map<List<Respuesta>>(respuestasDTO);
+                _context.Respuestas.UpdateRange(ListaRespuestas);
+                await _context.SaveChangesAsync();
+                responseAPI.EsCorrecto = true;
             }
-            catch (Exception ex)
+            catch (DbUpdateException)
             {
-                responseAPI.mensaje = "Ocurrio un error al editar la pregunta de tipo: " + ex.Message;
                 responseAPI.EsCorrecto = false;
+                responseAPI.mensaje = "Error al actualizar los datos";
+            }
+            catch (Exception Ex)
+            {
+                responseAPI.EsCorrecto = false;
+                responseAPI.mensaje = "No guardado " + Ex.Message;
             }
             return Ok(responseAPI);
         }
 
-        // POST: api/Respuestas
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+       
         [HttpPost]
         public async Task<IActionResult> CreateRespuestas( List<RespuestasDTO> respuestaDTO)
         {
             var responseAPI = new ResponseAPI<int>();
             try
             {
-                var respuestaS = _mapper.Map<Respuesta>(respuestaDTO);
+                var respuestaS = _mapper.Map<List<Respuesta>>(respuestaDTO);
                 _context.Respuestas.AddRange(respuestaS);
                 await _context.SaveChangesAsync();
+                responseAPI.EsCorrecto=true;
                 
 
+            }
+            catch (DbUpdateException)
+            {
+                responseAPI.EsCorrecto = false;
+                responseAPI.mensaje = "Error al guardar los datos";
             }
             catch(Exception Ex)
             {

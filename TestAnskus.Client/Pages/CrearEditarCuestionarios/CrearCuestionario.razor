@@ -48,8 +48,9 @@
 </div>
 @code {
     List<PreguntasDTO> ListaPreguntas { get; set; } = new List<PreguntasDTO>();
-    List<RespuestasDTO> ListaRespuestasDTOs { get; set; } = new List<RespuestasDTO>();
+    List<RespuestasDTO> ListaRespuestasDTOs { get; set; } = new List<RespuestasDTO> ();
     public PreguntasDTO preguntasDTO { get; set; } = new PreguntasDTO();
+
     private void OpenDialog()
     {
         var options = new DialogOptions { CloseOnEscapeKey = true };
@@ -57,7 +58,7 @@
     }
     protected override async Task OnInitializedAsync()
     {
-        _IdConteiner.idCuestionario = 0;
+        _IdConteiner.idCuestionario = preguntasDTO.IdCuestionario;
         _IdConteiner.idPregunta = 0;
         ListaRespuestasDTOs.Add(new RespuestasDTO
             {
@@ -66,7 +67,6 @@
                 RCorrecta = false
             });
     }  
-
     public async Task AgregarPreguntaLista(int id)
     {
         var pregunta = await _preguntasService.GetPreguntas(id);
