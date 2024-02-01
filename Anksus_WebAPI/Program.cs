@@ -1,5 +1,6 @@
 
 using Anksus_WebAPI.Models.dbModels;
+using Anksus_WebAPI.Server.Hubs;
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -9,6 +10,7 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddSignalR();
 builder.Services.AddDbContext<TestAnskusContext>(options =>
 options.UseSqlServer(connectionString));
 builder.Services.AddControllers();
@@ -19,11 +21,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddDefaultIdentity<AplicationUser>().AddEntityFrameworkStores<TestAnskusContext>();
-//builder.Services.AddIdentity<AplicationUser,IdentityRole<int>>(options => options.SignIn.RequireConfirmedAccount = false)
-//    .AddEntityFrameworkStores<TestAnskusContext>().AddDefaultUI();
-//builder.Services.AddIdentity<AplicationUser, IdentityRole<int>>(options => options.SignIn.RequireConfirmedAccount = true)
-//    .AddEntityFrameworkStores<TestAnskusContext>().AddApiEndpoints().AddDefaultTokenProviders();
-
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>    
     {
@@ -41,7 +38,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddAuthorization();
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -53,4 +49,5 @@ app.UseAuthorization();
 app.UseCors(c => c.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 app.UseBlazorFrameworkFiles();
 app.MapControllers();
+app.MapHub<CuestionarioHub>("/ChatCuest");
 app.Run();

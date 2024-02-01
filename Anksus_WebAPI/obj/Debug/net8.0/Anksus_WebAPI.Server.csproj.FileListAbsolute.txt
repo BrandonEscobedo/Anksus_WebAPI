@@ -865,3 +865,7 @@ C:\Users\brand\OneDrive\Documentos\proyecto anskus\Anksus_WebAPI\obj\Debug\net8.
 C:\Users\brand\OneDrive\Documentos\proyecto anskus\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.pdb
 C:\Users\brand\OneDrive\Documentos\proyecto anskus\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.genruntimeconfig.cache
 C:\Users\brand\OneDrive\Documentos\proyecto anskus\Anksus_WebAPI\obj\Debug\net8.0\ref\Anksus_WebAPI.Server.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Owin.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Owin.Security.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Owin.dll

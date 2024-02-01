@@ -27,6 +27,36 @@ namespace Anksus_WebAPI.Controllers
             _userManager = userManager;
             _context = context;
         }
+        [HttpGet("{id}")]
+        public async Task<ActionResult<IEnumerable<Cuestionario>>> GetCuestionarios(int id)
+        {
+            var responseAPI = new ResponseAPI<List<CuestionarioDTO>>();
+            try
+            {          
+                var cuestionarios = _mapper.Map<List<CuestionarioDTO>>(await _context.Cuestionarios
+                    .Where(e => e.IdCuestionario == id)
+                    .Include(o => o.Pregunta)
+                    .ThenInclude(x=>x.Respuesta)                   
+                    .ToListAsync());
+                if (cuestionarios != null)
+                {
+                    responseAPI.Valor = cuestionarios;
+                    responseAPI.EsCorrecto = true;
+                }
+                else
+                {
+                    responseAPI.mensaje = "Este usuario no tiene Cuestionarios Aun.";
+                    responseAPI.EsCorrecto = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                responseAPI.mensaje = "Ha ocurrido un error de tipo: " + ex.Message;
+                responseAPI.EsCorrecto = false;
+            }
+
+            return Ok(responseAPI);
+        }
 
         // GET: api/Cuestionarios
         [HttpGet]
@@ -37,7 +67,9 @@ namespace Anksus_WebAPI.Controllers
             {
                 var email = User.Identity?.Name;
                 var user = await _userManager.FindByEmailAsync(email!);
-                var cuestionarios = _mapper.Map<List<CuestionarioDTO>>(await _context.Cuestionarios.Where(e => e.IdUsuario == user!.Id).ToListAsync());
+                var cuestionarios = _mapper.Map<List<CuestionarioDTO>>(await _context.Cuestionarios
+                    .Where(e => e.IdUsuario == user!.Id)
+                    .Include(o=>o.Pregunta).ToListAsync());
                 if (cuestionarios != null)
                 {
                     responseAPI.Valor = cuestionarios;

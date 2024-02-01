@@ -21,6 +21,6 @@ namespace Anksus_WebAPI.Models.DTO
         [Column("estado")]
         public bool? Estado { get; set; }
 
-
+        public virtual ICollection<RespuestasDTO> Respuesta { get; set; } = new List<RespuestasDTO>();
     }
 }

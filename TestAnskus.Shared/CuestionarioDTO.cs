@@ -25,6 +25,6 @@ namespace Anksus_WebAPI.Models.DTO
         [Column("publico")]
         public bool Publico { get; set; } = false;
 
-        
+        public virtual ICollection<PreguntasDTO> Pregunta { get; set; } = new List<PreguntasDTO>();
     }
 }
