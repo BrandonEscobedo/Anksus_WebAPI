@@ -869,3 +869,7 @@ C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Owin.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Owin.Security.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Owin.dll
+C:\Users\brand\OneDrive\Documentos\proyecto anskus\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\brand\OneDrive\Documentos\proyecto anskus\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Owin.dll
+C:\Users\brand\OneDrive\Documentos\proyecto anskus\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Owin.Security.dll
+C:\Users\brand\OneDrive\Documentos\proyecto anskus\Anksus_WebAPI\bin\Debug\net8.0\Owin.dll
