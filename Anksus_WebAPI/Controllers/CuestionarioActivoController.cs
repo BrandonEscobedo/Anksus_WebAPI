@@ -9,6 +9,7 @@ using Anksus_WebAPI.Models.dbModels;
 using Microsoft.AspNetCore.Identity;
 using TestAnskus.Shared;
 using Anksus_WebAPI.Models.DTO;
+using Anksus_WebAPI.Server.Servicios;
 
 namespace Anksus_WebAPI.Server.Controllers
 {
@@ -37,13 +38,16 @@ namespace Anksus_WebAPI.Server.Controllers
 
             return cuestionarioActivo;
         }
-        [HttpPost]
+    
+ 
+
+    [HttpPost]
         public async Task<IActionResult> CreateCuestionarioActivo(int idcuestionario)
         {
             var responseAPI = new ResponseAPI<int>();
             try
             {
-            
+                RandomCodeService codigoRandom = new RandomCodeService(_context);
                 var cuestionario = await _context.Cuestionarios.FindAsync(idcuestionario);
                 var user = await _userManager.FindByEmailAsync(User.Identity!.Name!) ?? throw new Exception("Usuario no Encontrado");
                 if (cuestionario!=null && cuestionario.Estado==false)
@@ -54,7 +58,7 @@ namespace Anksus_WebAPI.Server.Controllers
                     {
                         IdCuestionario = idcuestionario,
                         IdUsuario = user!.Id,
-                        Codigo = 123,
+                        Codigo =await codigoRandom.GenerarCodigo() ,
                     };
                   
                     if (CuestionarioActivo == null)

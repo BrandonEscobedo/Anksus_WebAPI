@@ -1,0 +1,9 @@
+﻿<h3>IngresarNombre</h3>
+
+<input type="text" @bind="nombre" placeholder="Ingresa un nombre"/>
+<button>Aceptar</button>
+@code {
+    [Parameter]
+    public int codigo { get; set; }
+    private string nombre { get; set; }
+}

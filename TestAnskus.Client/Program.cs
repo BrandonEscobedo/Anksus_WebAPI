@@ -12,6 +12,8 @@ using TestAnskus.Client.Services.Interfaces.Autenticacion;
 using TestAnskus.Client.Services.Implementacion.Autenticacion;
 using TestAnskus.Client.Services.Interfaces.CuestionarioActivo;
 using TestAnskus.Client.Services.Implementacion.CuestionarioActivo;
+using TestAnskus.Client.Services.Interfaces.Hub;
+using TestAnskus.Client.Services.Implementacion.Hub;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -33,4 +35,5 @@ builder.Services.AddScoped<AuthenticationStateProvider,CustomAuthenticationState
 builder.Services.AddScoped<IRespuestasService,RespuestasService>();
 builder.Services.AddScoped<IAuthService,AuthService>();
 builder.Services.AddScoped<ICuestionarioAService,CuestionarioAService>();
+builder.Services.AddScoped<IHubConnectionService, HubConnecionService>();
 await builder.Build().RunAsync();

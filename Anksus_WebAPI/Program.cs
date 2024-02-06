@@ -1,6 +1,7 @@
 
 using Anksus_WebAPI.Models.dbModels;
 using Anksus_WebAPI.Server.Hubs;
+using Anksus_WebAPI.Server.Hubs.Notificaciones;
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -11,6 +12,8 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddSignalR();
+builder.Services.AddHostedService<ServerTimeN>();
+builder.Services.AddCors();
 builder.Services.AddDbContext<TestAnskusContext>(options =>
 options.UseSqlServer(connectionString));
 builder.Services.AddControllers();
@@ -44,10 +47,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 app.UseHttpsRedirection();
+app.MapHub<CuestionarioHub>("ChatCuest");
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseCors(c => c.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 app.UseBlazorFrameworkFiles();
 app.MapControllers();
-app.MapHub<CuestionarioHub>("/ChatCuest");
 app.Run();

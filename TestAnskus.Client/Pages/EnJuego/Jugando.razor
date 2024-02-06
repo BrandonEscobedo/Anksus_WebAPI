@@ -1,7 +1,61 @@
 ﻿@page "/CuestionarioActivo"
+@implements IAsyncDisposable
+@inject AuthenticationStateProvider _authenticationStateProvider
+@inject NavigationManager NavigationM
+@inject HttpClient _httpclient
 <h3>Jugando</h3>
 
+<div>
+    <input type="text" placeholder="Manda un mensaje" @bind="msg"/>
+<button @onclick="EnviarMensaje">Enviar</button>
+</div>
 
+
+<div class="row">
+    <div class="col-12">
+        @foreach(var t in usuarios)
+        {
+            <p>@t</p>
+        }
+    </div>
+</div>
 @code {
+    private HubConnection hubConnection;
+    private string msg;
+    private readonly List<String> usuarios = new();
+    [Inject]
+    private SignalRService  signalRService { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+      await  IniciarHub();
+    }
+    private async Task EnviarMensaje()
+    {
+        if(hubConnection is not null)
+        {
+          await hubConnection.InvokeAsync("IngresarUsuario", msg);
+
+        }
+    }
+    public async Task IniciarHub()
+    {
+        hubConnection = new HubConnectionBuilder()
+     .WithUrl("https://localhost:7150/ChatCuest")
+     .Build();
+        hubConnection.On<string>("ReceiveMensaje", receivetext =>
+        {
+            texts.Add(receivetext);
+            InvokeAsync(StateHasChanged);
+        });
+        await hubConnection.StartAsync();
+    }
+    public async ValueTask DisposeAsync()
+    {
+        if(hubConnection is not null)
+        {
+            await hubConnection.DisposeAsync();
+
+        }
+    }
 
 }

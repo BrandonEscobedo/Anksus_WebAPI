@@ -1,20 +1,57 @@
-﻿using Anksus_WebAPI.Models.dbModels;
+﻿using Anksus_WebAPI.Controllers;
+using Anksus_WebAPI.Models.dbModels;
+using Anksus_WebAPI.Models.DTO;
 using Microsoft.AspNetCore.SignalR;
 using TestAnskus.Shared;
 
 namespace Anksus_WebAPI.Server.Hubs
 {
-    public class CuestionarioHub:Hub
+    public class CuestionarioHub:Hub<InotificationClient>
     {
-        public async Task JoinCuestionario(ParticipanteEnCuestDTO participante)
+        static int count = 0;
+        private readonly TestAnskusContext _context;
+     private static   List<ParticipanteEnCuestDTO> Participantes = new List<ParticipanteEnCuestDTO>();
+        public CuestionarioHub(TestAnskusContext context)
         {
-            await Clients.All.SendAsync("ReciveMessage","admin", $"{participante.Nombre} se ha unido");
+            _context = context;
         }
-        public async Task JoinSpecificCuestionario(ParticipanteEnCuestDTO participante)
-        {
-            await Groups.AddToGroupAsync(Context.ConnectionId, participante.codigo);
-            await Clients.Group(participante.codigo).SendAsync("ReciveMessage", "admin", $"{participante.Nombre} ha entrado {participante.codigo}");
 
+        public override async Task OnConnectedAsync()
+        {
+            count++;
+            await Clients.All.UpdatesClientsCount(count);
+            await Clients.Client(Context.ConnectionId).receiveNotificacion($"Thank you for connecting {Context.User?.Identity?.Name}");
+            await base.OnConnectedAsync();
+            
+        }
+        public override async Task OnDisconnectedAsync(Exception? exception)
+        {
+            count--;
+            await Clients.All.UpdatesClientsCount(count);
+            await  base.OnDisconnectedAsync(exception);
+        }
+        public async Task IngresarUsuario(string participante,string codigo)
+        {
+            
+            ParticipanteEnCuestDTO p = new ParticipanteEnCuestDTO
+            {
+                
+                codigo=Context.ConnectionId,
+                Nombre = participante
+            };
+             Participantes.Add(p);
+            await Groups.AddToGroupAsync(Context.ConnectionId, codigo );
+            await Clients.Group(codigo).UsuarioConectado( participante);
+            var TotalParticipantes = Participantes.Where(x => x.codigo == codigo).Select(u=>u.Nombre).ToList();
+            await Clients.Caller.UsuariosEnLaSala(TotalParticipantes);
         }
     }
+}
+public  interface InotificationClient
+    {
+    Task UpdatesClientsCount(int count);
+    Task UsuariosEnLaSala(List<string> usuarios);
+    Task UsuarioConectado(string nombre);
+    Task ReceiveMensaje(string mensaje);
+    Task receiveNotificacion(string messege);
 }
