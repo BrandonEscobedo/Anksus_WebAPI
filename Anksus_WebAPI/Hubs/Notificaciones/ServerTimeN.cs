@@ -18,15 +18,15 @@ namespace Anksus_WebAPI.Server.Hubs.Notificaciones
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            using var timer = new PeriodicTimer(Period);
-            while (!stoppingToken.IsCancellationRequested && 
-                    await timer.WaitForNextTickAsync(stoppingToken))
-            {
-                var datetime = DateTime.Now;
-                _logger.LogInformation("Executing {Service} {Time}",nameof(ServerTimeN),datetime);
-                await _context.Clients.User(ClaimTypes.Name)
-                    .receiveNotificacion($"Server time ={datetime}");
-            }
+            //using var timer = new PeriodicTimer(Period);
+            //while (!stoppingToken.IsCancellationRequested && 
+            //        await timer.WaitForNextTickAsync(stoppingToken))
+            //{
+            //    var datetime = DateTime.Now;
+            //    _logger.LogInformation("Executing {Service} {Time}",nameof(ServerTimeN),datetime);
+            //    await _context.Clients.User(ClaimTypes.Name)
+            //        .receiveNotificacion($"Server time ={datetime}");
+            //}
         }
     }
 }

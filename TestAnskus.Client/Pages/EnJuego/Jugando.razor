@@ -3,59 +3,39 @@
 @inject AuthenticationStateProvider _authenticationStateProvider
 @inject NavigationManager NavigationM
 @inject HttpClient _httpclient
+@inject HubConnecionService HubService
 <h3>Jugando</h3>
-
-<div>
-    <input type="text" placeholder="Manda un mensaje" @bind="msg"/>
-<button @onclick="EnviarMensaje">Enviar</button>
-</div>
-
-
-<div class="row">
-    <div class="col-12">
-        @foreach(var t in usuarios)
-        {
-            <p>@t</p>
-        }
-    </div>
-</div>
+<p> @participantes Participantes</p>
+@foreach()
 @code {
-    private HubConnection hubConnection;
-    private string msg;
-    private readonly List<String> usuarios = new();
-    [Inject]
-    private SignalRService  signalRService { get; set; }
+    int participantes;
+    private List<ParticipanteEnCuestDTO> participantesList = new List<ParticipanteEnCuestDTO>();
+
     protected override async Task OnInitializedAsync()
     {
-      await  IniciarHub();
+        HubService.OnUpdateCount += OnUpdateUsersCount;
+        HubService.participante += ParticipanteRecived;
+        await HubService.IniciarConexion();        
     }
-    private async Task EnviarMensaje()
+    private async void Add(ParticipanteEnCuestDTO participante)
     {
-        if(hubConnection is not null)
-        {
-          await hubConnection.InvokeAsync("IngresarUsuario", msg);
-
-        }
+       await HubService.SendMessage(participante);
     }
-    public async Task IniciarHub()
+    void OnUpdateUsersCount(int count)
     {
-        hubConnection = new HubConnectionBuilder()
-     .WithUrl("https://localhost:7150/ChatCuest")
-     .Build();
-        hubConnection.On<string>("ReceiveMensaje", receivetext =>
-        {
-            texts.Add(receivetext);
-            InvokeAsync(StateHasChanged);
-        });
-        await hubConnection.StartAsync();
+        participantes = count;
+        StateHasChanged();
+    }
+    void ParticipanteRecived(ParticipanteEnCuestDTO participante)
+    {
+        participantesList.Add(participante);
+        StateHasChanged();
     }
     public async ValueTask DisposeAsync()
     {
-        if(hubConnection is not null)
-        {
-            await hubConnection.DisposeAsync();
-
-        }
+        HubService.OnUpdateCount -= OnUpdateUsersCount;
+        HubService.participante -= ParticipanteRecived;
+        await HubService.DisposeAsync();
     }
 
 }

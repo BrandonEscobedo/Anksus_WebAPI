@@ -30,26 +30,32 @@ namespace Anksus_WebAPI.Server.Hubs
             await Clients.All.UpdatesClientsCount(count);
             await  base.OnDisconnectedAsync(exception);
         }
+        public async Task Sendusuario(ParticipanteEnCuestDTO participante)
+        {
+            await Clients.All.receiveParticipante(participante);
+        }
         public async Task IngresarUsuario(string participante,string codigo)
         {
             
-            ParticipanteEnCuestDTO p = new ParticipanteEnCuestDTO
-            {
+            //ParticipanteEnCuestDTO p = new ParticipanteEnCuestDTO
+            //{
                 
-                codigo=Context.ConnectionId,
-                Nombre = participante
-            };
-             Participantes.Add(p);
-            await Groups.AddToGroupAsync(Context.ConnectionId, codigo );
-            await Clients.Group(codigo).UsuarioConectado( participante);
-            var TotalParticipantes = Participantes.Where(x => x.codigo == codigo).Select(u=>u.Nombre).ToList();
-            await Clients.Caller.UsuariosEnLaSala(TotalParticipantes);
+            //    codigo=Context.ConnectionId,
+            //    Nombre = participante
+            //};
+            // Participantes.Add(p);
+            //await Groups.AddToGroupAsync(Context.ConnectionId, codigo );
+            //await Clients.Group(codigo).UsuarioConectado( participante);
+            //var TotalParticipantes = Participantes.Where(x => x.codigo == codigo).Select(u=>u.Nombre).ToList();
+            //await Clients.Caller.UsuariosEnLaSala(TotalParticipantes);
         }
     }
 }
 public  interface InotificationClient
     {
+    Task Sendusuario();
     Task UpdatesClientsCount(int count);
+    Task receiveParticipante(ParticipanteEnCuestDTO participante);
     Task UsuariosEnLaSala(List<string> usuarios);
     Task UsuarioConectado(string nombre);
     Task ReceiveMensaje(string mensaje);
