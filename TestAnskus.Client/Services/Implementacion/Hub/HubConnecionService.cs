@@ -20,11 +20,11 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
             _navigationManager = navigationManager;
         }
 
-        public async Task SendMessage(string  participante,int codigo)
+        public async Task NewUser(string  participante,int codigo)
         {
-            await _hubConnection.SendAsync("IngresarUsuario", participante,codigo);
-            
-        }
+            await  _hubConnection.SendAsync("IngresarUsuario", participante, codigo);
+             
+            }
         public async Task IniciarConexion()
         {
             if (_hubConnection is null)
@@ -36,13 +36,14 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
             _hubConnection.On<ParticipanteEnCuestDTO>("receiveParticipante", usuario => participante?.Invoke(usuario));
             _hubConnection.On<int>("UpdatesClientsCount",count=>OnUpdateCount(count));
             await _hubConnection.StartAsync();
-                await _hubConnection.InvokeAsync()
             }
+            
 
         }
         public async Task<bool> VerificarCodigo(int code)
         {
-            var result = await _httpClient.GetFromJsonAsync<bool>($"api/ParticipantesEnCuestionario/{code}");
+            var result = await _httpClient.
+                GetFromJsonAsync<bool>($"api/ParticipantesEnCuestionario/{code}");
             return result;
         }
 

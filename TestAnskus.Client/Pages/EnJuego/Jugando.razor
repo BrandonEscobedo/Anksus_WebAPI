@@ -4,7 +4,11 @@
 @inject NavigationManager NavigationM
 @inject HttpClient _httpclient
 @inject HubConnecionService HubService
-<h3>Jugando</h3>
+@if (code != null)
+{
+    <h3></h3>
+
+}
 <p> @participantes Participantes</p>
 <div class="row">
     <input type="text" @bind="nombre"  placeholder="Ingresa Nombre" />
@@ -38,7 +42,8 @@
     {
         if (!String.IsNullOrEmpty(nombre))
         {
-            await HubService.SendMessage(nombre, 10);
+           var result= await HubService.NewUser(nombre, 10);
+
             nombre = "";
         }
         

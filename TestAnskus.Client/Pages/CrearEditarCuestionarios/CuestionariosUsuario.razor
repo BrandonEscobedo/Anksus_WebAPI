@@ -41,7 +41,7 @@ else
     private async Task IniciarCuestionario(int id )
     {
         var result = await _CuestionarioActivoService.ActivarCuestionario(id);
-
+       
         if (result.EsCorrecto == true)
         {
             int code = result.Valor;

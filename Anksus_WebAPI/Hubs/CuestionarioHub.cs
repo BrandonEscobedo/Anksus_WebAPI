@@ -25,14 +25,19 @@ namespace Anksus_WebAPI.Server.Hubs
             await Clients.All.UsuariosEnLaSala(Participantes.Select(p => p.Nombre).ToList());
             await base.OnConnectedAsync();
             
-        }     
-      
-      public  Task JoinRoom(int code)
+        }
+        //protected override void Dispose(bool disposing)
+        //{
+        //    var cuest = _context.CuestionarioActivos.Where(x => x.IdCuestionario == id).FirstOrDefault();
+        //    _context.CuestionarioActivos.Remove(cuest);
+        //    base.Dispose(disposing);
+        //}
+        public  async Task JoinRoom(int code)
         {
            
-          return Groups.AddToGroupAsync(Context.ConnectionId, code.ToString());
+          await Groups.AddToGroupAsync(Context.ConnectionId, code.ToString());
             
-        }
+        }            
         public override async Task OnDisconnectedAsync(Exception? exception)
         {
             count--;
@@ -40,17 +45,26 @@ namespace Anksus_WebAPI.Server.Hubs
             await  base.OnDisconnectedAsync(exception);
         }
         public async Task IngresarUsuario(string nombre, int codigo)
-        {
-            ParticipanteEnCuestDTO p = new ParticipanteEnCuestDTO
+           {
+            var responseAPI = new ResponseAPI<ParticipanteEnCuestDTO>();
+            if (!Participantes.Select(x => x.Nombre == nombre).Any())
             {
-
-                codigo = codigo,
-                Nombre = nombre
-            };
-            Participantes.Add(p);
-            await Groups.AddToGroupAsync(Context.ConnectionId, codigo.ToString());
-            await Clients.Group(codigo.ToString()).receiveParticipante(p);
-            await Clients.Group(codigo.ToString()).UsuariosEnLaSala(GetParticipantesName());
+                ParticipanteEnCuestDTO p = new ParticipanteEnCuestDTO
+                {
+                    codigo = codigo,
+                    Nombre = nombre
+                };
+                Participantes.Add(p);
+                await JoinRoom(codigo);
+                await Clients.Group(codigo.ToString()).receiveParticipante(p);
+                await Clients.Group(codigo.ToString()).UsuariosEnLaSala(GetParticipantesName());
+                responseAPI.Valor = p;
+            }
+            else
+            {
+                responseAPI.EsCorrecto = false;
+                responseAPI.mensaje = "Ya existe este nombre";
+            }
         }
         private List<string> GetParticipantesName()
         {
