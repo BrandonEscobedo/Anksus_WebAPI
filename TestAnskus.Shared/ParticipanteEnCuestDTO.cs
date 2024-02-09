@@ -13,7 +13,7 @@ namespace TestAnskus.Shared
         public int IdPeC { get; set; }   
         public string Nombre { get; set; } = null!;
         public int? Puntos { get; set; }
-        public string codigo { get; set; } =string.Empty;
+        public int codigo { get; set; } 
         public int? CantidadPacertadas { get; set; }
     }
 }

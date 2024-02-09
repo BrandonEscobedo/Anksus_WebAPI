@@ -32,10 +32,11 @@ namespace Anksus_WebAPI.Server.Servicios
         {
             Random random = new Random();
             int codigo = await GenerarCodigoAleatorio(random, 4);
-            while (_context.CuestionarioActivos.Where(x => x.Codigo != codigo).Any())
+            do
             {
                 codigo = await GenerarCodigoAleatorio(random, 4);
             }
+            while (_context.CuestionarioActivos.Where(x => x.Codigo == codigo).Any());
             return codigo;
         }
     }

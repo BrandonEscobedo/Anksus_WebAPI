@@ -1,6 +1,8 @@
 ﻿using Anksus_WebAPI.Controllers;
 using Anksus_WebAPI.Models.dbModels;
 using Anksus_WebAPI.Models.DTO;
+using Anksus_WebAPI.Server.Hubs.Implementacion;
+using Anksus_WebAPI.Server.Servicios;
 using Microsoft.AspNetCore.SignalR;
 using TestAnskus.Shared;
 
@@ -9,19 +11,26 @@ namespace Anksus_WebAPI.Server.Hubs
     public class CuestionarioHub:Hub<InotificationClient>
     {
         static int count = 0;
+        static int code = 0;
         private readonly TestAnskusContext _context;
-     private static   List<ParticipanteEnCuestDTO> Participantes = new List<ParticipanteEnCuestDTO>();
-        public CuestionarioHub(TestAnskusContext context)
+        private static   List<ParticipanteEnCuestDTO> Participantes = new List<ParticipanteEnCuestDTO>();
+        public CuestionarioHub(TestAnskusContext context  )
         {
             _context = context;
         }
-
         public override async Task OnConnectedAsync()
         {
             count++;
             await Clients.All.UpdatesClientsCount(count);
-            await Clients.Client(Context.ConnectionId).receiveNotificacion($"Thank you for connecting {Context.User?.Identity?.Name}");
+            await Clients.All.UsuariosEnLaSala(Participantes.Select(p => p.Nombre).ToList());
             await base.OnConnectedAsync();
+            
+        }     
+      
+      public  Task JoinRoom(int code)
+        {
+           
+          return Groups.AddToGroupAsync(Context.ConnectionId, code.ToString());
             
         }
         public override async Task OnDisconnectedAsync(Exception? exception)
@@ -30,24 +39,22 @@ namespace Anksus_WebAPI.Server.Hubs
             await Clients.All.UpdatesClientsCount(count);
             await  base.OnDisconnectedAsync(exception);
         }
-        public async Task Sendusuario(ParticipanteEnCuestDTO participante)
+        public async Task IngresarUsuario(string nombre, int codigo)
         {
-            await Clients.All.receiveParticipante(participante);
+            ParticipanteEnCuestDTO p = new ParticipanteEnCuestDTO
+            {
+
+                codigo = codigo,
+                Nombre = nombre
+            };
+            Participantes.Add(p);
+            await Groups.AddToGroupAsync(Context.ConnectionId, codigo.ToString());
+            await Clients.Group(codigo.ToString()).receiveParticipante(p);
+            await Clients.Group(codigo.ToString()).UsuariosEnLaSala(GetParticipantesName());
         }
-        public async Task IngresarUsuario(string participante,string codigo)
+        private List<string> GetParticipantesName()
         {
-            
-            //ParticipanteEnCuestDTO p = new ParticipanteEnCuestDTO
-            //{
-                
-            //    codigo=Context.ConnectionId,
-            //    Nombre = participante
-            //};
-            // Participantes.Add(p);
-            //await Groups.AddToGroupAsync(Context.ConnectionId, codigo );
-            //await Clients.Group(codigo).UsuarioConectado( participante);
-            //var TotalParticipantes = Participantes.Where(x => x.codigo == codigo).Select(u=>u.Nombre).ToList();
-            //await Clients.Caller.UsuariosEnLaSala(TotalParticipantes);
+            return Participantes.Select(x => x.Nombre).ToList();
         }
     }
 }

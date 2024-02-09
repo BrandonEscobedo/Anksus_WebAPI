@@ -38,4 +38,8 @@
     <ProjectReference Include="..\TestAnskus.Shared\TestAnskus.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Hubs\Interfaz\" />
+  </ItemGroup>
+
 </Project>

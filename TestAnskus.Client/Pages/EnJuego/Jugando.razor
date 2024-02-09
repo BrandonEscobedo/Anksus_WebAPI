@@ -1,4 +1,4 @@
-﻿@page "/CuestionarioActivo"
+﻿@page "/CuestionarioActivo/{code}"
 @implements IAsyncDisposable
 @inject AuthenticationStateProvider _authenticationStateProvider
 @inject NavigationManager NavigationM
@@ -6,20 +6,42 @@
 @inject HubConnecionService HubService
 <h3>Jugando</h3>
 <p> @participantes Participantes</p>
-@foreach()
+<div class="row">
+    <input type="text" @bind="nombre"  placeholder="Ingresa Nombre" />
+    <button @onclick="IngresarUsuario">Ingresar</button>
+</div>
+@foreach(var participante in participantesList)
+{
+    <p>@participante.Nombre</p>
+}
 @code {
+    [Parameter]
+    public string code { get; set; }
     int participantes;
     private List<ParticipanteEnCuestDTO> participantesList = new List<ParticipanteEnCuestDTO>();
-
+    string nombre="";
+    [Parameter]
+    public int id { get; set; }
     protected override async Task OnInitializedAsync()
     {
         HubService.OnUpdateCount += OnUpdateUsersCount;
         HubService.participante += ParticipanteRecived;
-        await HubService.IniciarConexion();        
+        HubService.usuariosSala += UsuariosEnSala;
+        await HubService.IniciarConexion();   
     }
-    private async void Add(ParticipanteEnCuestDTO participante)
+    private void UsuariosEnSala(List<string> nombres)
     {
-       await HubService.SendMessage(participante);
+        participantesList = nombres.Select(nombre => new ParticipanteEnCuestDTO { Nombre = nombre, codigo =Convert.ToInt32( code )}).ToList();
+        StateHasChanged();
+    }
+    private async Task IngresarUsuario()
+    {
+        if (!String.IsNullOrEmpty(nombre))
+        {
+            await HubService.SendMessage(nombre, 10);
+            nombre = "";
+        }
+        
     }
     void OnUpdateUsersCount(int count)
     {

@@ -8,8 +8,9 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
 {
     public class HubConnecionService:IAsyncDisposable
     {
-          HubConnection _hubConnection;
+        HubConnection _hubConnection;
         public event Action<ParticipanteEnCuestDTO> participante;
+        public event Action<List<string>> usuariosSala;
         public event Action<int> OnUpdateCount;
         public HttpClient _httpClient;
         private readonly NavigationManager _navigationManager;
@@ -18,25 +19,26 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
             _httpClient = httpClient;
             _navigationManager = navigationManager;
         }
-        public async Task IngresarSala(string codigo, string nombre)
-        {
-            _navigationManager.NavigateTo($"CuestionarioActivo");
-        }
-        public async Task SendMessage(ParticipanteEnCuestDTO participante)
-        {
-            if (_httpClient is not null) return;
-            await _hubConnection.SendAsync("Sendusuario",participante);
 
+        public async Task SendMessage(string  participante,int codigo)
+        {
+            await _hubConnection.SendAsync("IngresarUsuario", participante,codigo);
+            
         }
         public async Task IniciarConexion()
         {
-            if (_hubConnection is not null) return;
+            if (_hubConnection is null)
+            {
             _hubConnection = new HubConnectionBuilder()
             .WithUrl("https://localhost:7150/ChatCuest")
             .Build();
+            _hubConnection.On<List<string>>("UsuariosEnLaSala", usuarios => usuariosSala?.Invoke(usuarios));
             _hubConnection.On<ParticipanteEnCuestDTO>("receiveParticipante", usuario => participante?.Invoke(usuario));
             _hubConnection.On<int>("UpdatesClientsCount",count=>OnUpdateCount(count));
             await _hubConnection.StartAsync();
+                await _hubConnection.InvokeAsync()
+            }
+
         }
         public async Task<bool> VerificarCodigo(int code)
         {
@@ -46,7 +48,7 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
 
         public async ValueTask DisposeAsync()
         {
-            if(_hubConnection is not null)
+            if(_hubConnection != null)
             {
                 await _hubConnection.DisposeAsync();
             }

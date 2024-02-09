@@ -44,7 +44,8 @@ else
 
         if (result.EsCorrecto == true)
         {
-            NavigationManager.NavigateTo("/CuestionarioActivo");
+            int code = result.Valor;
+            NavigationManager.NavigateTo($"/CuestionarioActivo/{result.Valor}");
         }
         else if (result.EsCorrecto == false && result.Valor != 0)
         {

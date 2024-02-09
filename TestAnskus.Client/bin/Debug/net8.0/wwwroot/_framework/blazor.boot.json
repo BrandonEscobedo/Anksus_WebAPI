@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "TestAnskus.Client",
   "resources": {
-    "hash": "sha256-wEJHJuwBwhnTz2YUrWRzQEjOJ0UEk9LraJEjW1oXxqQ=",
+    "hash": "sha256-ngDniftEbTlJRba8xtGQRCasoqu5PQS/jTgP97lI8kc=",
     "jsModuleNative": {
       "dotnet.native.8.0.1.np5vrdlscf.js": "sha256-SGOlISx+3G4kkvpC9Uq3qoPGsnjxGmW61QBev0lyI5U="
     },
@@ -227,12 +227,12 @@
       "mscorlib.wasm": "sha256-EpWTfh4m/hEcXRFYMCR9YeYHwdUJgcm1laBaxWfq2S4=",
       "netstandard.wasm": "sha256-2kH24/YfHmU3B4eYRyRmiwebYROM4+B9eDWKvMnUdP8=",
       "System.Private.CoreLib.wasm": "sha256-CsySKiP7HYY1pS8LTDE60EkqiX5oHb3WoEZHDNd1yK0=",
-      "TestAnskus.Shared.wasm": "sha256-GLsCEsHLWrlfZb4VAHVX4a0TUSPE8n0hSd0eBbJVJw8=",
-      "TestAnskus.Client.wasm": "sha256-G24H/nF+azuvazW1YH4DfikCiLdK9JklIXn5U592r6U="
+      "TestAnskus.Shared.wasm": "sha256-93Ltb1vxicwasIdtAHKrP5OBHaPQmEEBGhvO8wn/rY0=",
+      "TestAnskus.Client.wasm": "sha256-cNlRC7hNTeb8Kj4+doH/6H0pEZW4Y59O+1Ky+JuH8IQ="
     },
     "pdb": {
-      "TestAnskus.Shared.pdb": "sha256-uIJQh5zGmmh+vCT+Hr1dcutEGG7ajs3dT9U1Z5dS4e0=",
-      "TestAnskus.Client.pdb": "sha256-n8Eqwoy7scHMS6mDpoJEPwnwsQcJMgx6k2lHQuvQwbs="
+      "TestAnskus.Shared.pdb": "sha256-PrUBqT3gM7nLyFLpkKwUF9UmAXCSRiVRFlFlElkvdY4=",
+      "TestAnskus.Client.pdb": "sha256-kLGm8UXJKHt4/NUv+L3iDxMvkdxof+CBlP/6oBRRmrM="
     }
   },
   "cacheBootResources": true,

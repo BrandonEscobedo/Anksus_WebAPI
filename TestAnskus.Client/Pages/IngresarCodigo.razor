@@ -1,19 +1,17 @@
 ﻿@page "/IngresarCodigo"
-@inject IHubConnectionService _IHubConnectionService
+@inject HubConnecionService _IHubConnectionService
+@inject NavigationManager NavigationManager
 <input type="text"class="" @bind-value="code" placeholder="Ingresa el Codigo"/>
 <button @onclick="IsCodeValid"> Aceptar </button>
 
 @code {
     public int code = 0;
- 
+
     private async Task IsCodeValid()
     {
         if (await _IHubConnectionService.VerificarCodigo(code) == true)
         {
-           
-            Console.WriteLine("Correcto");
-        }
-      
-           
+            NavigationManager.NavigateTo("/CuestionarioActivo/code");
+        }        
     }
 }

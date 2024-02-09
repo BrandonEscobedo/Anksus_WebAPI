@@ -10,6 +10,9 @@ using Microsoft.AspNetCore.Identity;
 using TestAnskus.Shared;
 using Anksus_WebAPI.Models.DTO;
 using Anksus_WebAPI.Server.Servicios;
+using Anksus_WebAPI.Server.Hubs.Implementacion;
+using Microsoft.AspNetCore.SignalR;
+using Anksus_WebAPI.Server.Hubs;
 
 namespace Anksus_WebAPI.Server.Controllers
 {
@@ -19,12 +22,13 @@ namespace Anksus_WebAPI.Server.Controllers
     {
         private readonly TestAnskusContext _context;
         private readonly UserManager<AplicationUser> _userManager;
-        
 
-        public CuestionarioActivoController(TestAnskusContext context,UserManager<AplicationUser> userManager)
+        public CuestionarioActivoController(TestAnskusContext context, UserManager<AplicationUser> userManager)
         {
             _userManager = userManager;
             _context = context;
+            
+          
         }
         [HttpGet("{id}")]
         public async Task<ActionResult<CuestionarioActivo>> GetCuestionarioActivo(int id)
@@ -58,11 +62,12 @@ namespace Anksus_WebAPI.Server.Controllers
                     {
                         IdCuestionario = idcuestionario,
                         IdUsuario = user!.Id,
-                        Codigo =await codigoRandom.GenerarCodigo() ,
+                        Codigo = 0
                     };
-                  
-                    if (CuestionarioActivo == null)
+
+                    if (CuestionarioActivo == null)              
                     {
+                        cuestionarioA.Codigo = await codigoRandom.GenerarCodigo();
                         _context.CuestionarioActivos.Add(cuestionarioA);
                        await _context.SaveChangesAsync();
                         responseAPI.EsCorrecto = true;                       
