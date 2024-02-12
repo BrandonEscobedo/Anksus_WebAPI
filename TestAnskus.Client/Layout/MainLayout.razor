@@ -9,3 +9,12 @@
 <MudThemeProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
+@code{
+    [Inject]
+    HubConnection hubConnection {get;set;}
+    protected override async Task OnInitializedAsync() => await IniciarHub();
+
+    async Task IniciarHub(){
+        await hubConnection.StartAsync();
+    }
+}

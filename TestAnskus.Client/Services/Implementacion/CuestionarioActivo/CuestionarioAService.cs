@@ -12,23 +12,23 @@ namespace TestAnskus.Client.Services.Implementacion.CuestionarioActivo
         {
             _httpClient = httpClient;
         }
-        public async Task<ResponseAPI<int>> ActivarCuestionario(int idcuestionario)
+        public async Task<ResponseAPI<CuestionarioActivoDTO>> ActivarCuestionario(int idcuestionario)
         {
             var result = await _httpClient.
-                PostAsJsonAsync($"/api/CuestionarioActivo?idcuestionario={idcuestionario}", new {});
-            var response = await result.Content.ReadFromJsonAsync<ResponseAPI<int>>();
+            PostAsJsonAsync($"/api/CuestionarioActivo?idcuestionario={idcuestionario}", new {});
+            var response = await result.Content.ReadFromJsonAsync<ResponseAPI<CuestionarioActivoDTO>>();
             if (response!.EsCorrecto)
             {
-                return new ResponseAPI<int> { EsCorrecto=true,Valor=response.Valor};
+                return new ResponseAPI<CuestionarioActivoDTO> {EsCorrecto=true,Valor=response.Valor };
             }
             else
             {
-                return new ResponseAPI<int> { EsCorrecto = false, Valor = response.Valor };
+                return new ResponseAPI<CuestionarioActivoDTO> { EsCorrecto = false, Valor = response.Valor };
             }
 
         }
 
-        public Task<ResponseAPI<int>> FinalizarCuestionario(int id)
+        public Task<ResponseAPI<CuestionarioActivoDTO>> FinalizarCuestionario(int id)
         {
             throw new NotImplementedException();
         }

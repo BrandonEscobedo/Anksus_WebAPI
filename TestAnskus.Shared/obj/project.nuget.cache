@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WSK2PL5Jw9ugowcDxGiu7MM0pIq2+y8Y8G62CCbeKoN2EtP8oCZSXtK66gHKCN7o2YJom3a9+ThL0K24tnphCg==",
+  "dgSpecHash": "bEuMdYqmABisZDWqVVeaK6cjKaCuG8hU6hbcQF3jsp62c9PT9V7WI/MTQYcL4CjAW9iyW9j53tShusOTJwDdZw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Shared\\TestAnskus.Shared.csproj",
+  "projectFilePath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -6,39 +6,38 @@ using TestAnskus.Shared;
 
 namespace TestAnskus.Client.Services.Implementacion.Hub
 {
-    public class HubConnecionService:IAsyncDisposable
+    public class HubConnecionService : IAsyncDisposable
     {
         HubConnection _hubConnection;
         public event Action<ParticipanteEnCuestDTO> participante;
-        public event Action<List<string>> usuariosSala;
+        public event Action<List<ParticipanteEnCuestDTO>> usuariosSala;
         public event Action<int> OnUpdateCount;
+        public HashSet<Action<ParticipanteEnCuestDTO>> name = new();
         public HttpClient _httpClient;
         private readonly NavigationManager _navigationManager;
-        public HubConnecionService(HttpClient httpClient, NavigationManager navigationManager)
-        {     
+        public HubConnecionService(HttpClient httpClient, NavigationManager navigationManager,HubConnection hubConnection)
+        {
             _httpClient = httpClient;
             _navigationManager = navigationManager;
-        }
-
-        public async Task NewUser(string  participante,int codigo)
-        {
-            await  _hubConnection.SendAsync("IngresarUsuario", participante, codigo);
-             
-            }
-        public async Task IniciarConexion()
-        {
-            if (_hubConnection is null)
+            _hubConnection= hubConnection;
+            _hubConnection.On<ParticipanteEnCuestDTO>("NewParticipante", part =>
             {
-            _hubConnection = new HubConnectionBuilder()
-            .WithUrl("https://localhost:7150/ChatCuest")
-            .Build();
-            _hubConnection.On<List<string>>("UsuariosEnLaSala", usuarios => usuariosSala?.Invoke(usuarios));
-            _hubConnection.On<ParticipanteEnCuestDTO>("receiveParticipante", usuario => participante?.Invoke(usuario));
-            _hubConnection.On<int>("UpdatesClientsCount",count=>OnUpdateCount(count));
-            await _hubConnection.StartAsync();
+                participante?.Invoke(part);
+                Console.Write("Usuario Agregado", part);
             }
-            
+            );
+            _hubConnection.On<List<ParticipanteEnCuestDTO>>("getUsers", users =>
+            {
+                usuariosSala?.Invoke(users);
+                Console.WriteLine(users);
+            });
+          }
 
+        public async Task NewRom(string codigo) => await _hubConnection.InvokeAsync("CreateRoom", codigo);
+        public async Task AddUserToRoom(ParticipanteEnCuestDTO participante) => await _hubConnection.SendAsync("AddUserToRoom", participante);
+        public async Task GetUsers(int code)
+        {
+            await _hubConnection.SendAsync("GetUsersByRoom", code);
         }
         public async Task<bool> VerificarCodigo(int code)
         {
@@ -47,11 +46,21 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
             return result;
         }
 
-        public async ValueTask DisposeAsync()
+        public async ValueTask DisposeAsync( )
         {
-            if(_hubConnection != null)
+            if(_hubConnection.ConnectionId !=null)
             {
-                await _hubConnection.DisposeAsync();
+                try
+                {
+                    await _hubConnection.StopAsync();
+                }
+                finally
+                {
+                    await _hubConnection.DisposeAsync();
+                    _hubConnection = null!;
+
+                }
+
             }
         }
     }

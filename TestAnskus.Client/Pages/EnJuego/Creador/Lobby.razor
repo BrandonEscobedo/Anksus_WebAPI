@@ -1,0 +1,32 @@
+﻿@page "/Lobby/{code:int}/id={id}"
+@page "/Lobby/{code:int}"
+@inject HubConnecionService HubServices
+@inject NavigationManager navigationManager
+<h1>Participantes.</h1>
+@foreach (var participante in participantesActivos)
+{
+    <p>@participante.Nombre</p>
+}
+
+@code {
+    int cantidad = 0;
+    [Parameter]
+    public int code { get; set; } 
+    [Parameter]
+    public string id { get; set; }
+    [CascadingParameter]
+    private ParticipanteEnCuestDTO? participante { get; set; }
+    private List<ParticipanteEnCuestDTO> participantesActivos = new();
+
+    private async Task GetUsers()
+    {
+     await HubServices.GetUsers( code);
+    }
+  
+    private async Task EntrarSesion()
+    {
+        participante.codigo = code;
+        await HubServices.AddUserToRoom(participante);
+    }
+
+}

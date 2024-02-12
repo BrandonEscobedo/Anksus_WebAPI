@@ -8,5 +8,7 @@ namespace TestAnskus.Shared
 {
     public class CuestionarioActivoDTO
     {
+        public int idcuestionario { get; set; }
+        public int codigo { get; set; }
     }
 }

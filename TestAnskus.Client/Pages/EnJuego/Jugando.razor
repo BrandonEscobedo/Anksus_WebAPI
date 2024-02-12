@@ -1,14 +1,9 @@
-﻿@page "/CuestionarioActivo/{code}"
+﻿@page "/CuestionarioActivo"
 @implements IAsyncDisposable
 @inject AuthenticationStateProvider _authenticationStateProvider
 @inject NavigationManager NavigationM
 @inject HttpClient _httpclient
 @inject HubConnecionService HubService
-@if (code != null)
-{
-    <h3></h3>
-
-}
 <p> @participantes Participantes</p>
 <div class="row">
     <input type="text" @bind="nombre"  placeholder="Ingresa Nombre" />
@@ -20,18 +15,16 @@
 }
 @code {
     [Parameter]
-    public string code { get; set; }
+    public string code { get; set; }  
+    [Parameter]
+    public string id { get; set; }
     int participantes;
     private List<ParticipanteEnCuestDTO> participantesList = new List<ParticipanteEnCuestDTO>();
     string nombre="";
-    [Parameter]
-    public int id { get; set; }
     protected override async Task OnInitializedAsync()
     {
         HubService.OnUpdateCount += OnUpdateUsersCount;
         HubService.participante += ParticipanteRecived;
-        HubService.usuariosSala += UsuariosEnSala;
-        await HubService.IniciarConexion();   
     }
     private void UsuariosEnSala(List<string> nombres)
     {
@@ -42,7 +35,6 @@
     {
         if (!String.IsNullOrEmpty(nombre))
         {
-           var result= await HubService.NewUser(nombre, 10);
 
             nombre = "";
         }

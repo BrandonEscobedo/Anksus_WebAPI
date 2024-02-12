@@ -9,7 +9,8 @@ namespace TestAnskus.Client.Services.Implementacion
         public void SetIdCuestionario(int id)
         {
             idCuestionario = id;
-        } 
+        }
+ 
         public void SetIdPregunta(int id)
         {
             idPregunta = id;

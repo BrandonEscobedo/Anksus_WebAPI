@@ -48,7 +48,7 @@ namespace Anksus_WebAPI.Server.Controllers
     [HttpPost]
         public async Task<IActionResult> CreateCuestionarioActivo(int idcuestionario)
         {
-            var responseAPI = new ResponseAPI<int>();
+            var responseAPI = new ResponseAPI<object>();
             try
             {
                 RandomCodeService codigoRandom = new RandomCodeService(_context);
@@ -70,14 +70,17 @@ namespace Anksus_WebAPI.Server.Controllers
                         cuestionarioA.Codigo = await codigoRandom.GenerarCodigo();
                         _context.CuestionarioActivos.Add(cuestionarioA);
                        await _context.SaveChangesAsync();
-                        responseAPI.EsCorrecto = true;                       
-                        responseAPI.Valor = cuestionarioA.Codigo;
+                        responseAPI.EsCorrecto = true;
+                        CuestionarioActivoDTO cuestionarioActivoDTO = new CuestionarioActivoDTO();
+                        cuestionarioActivoDTO.idcuestionario = cuestionarioA.IdCuestionario;
+                        cuestionarioActivoDTO.codigo = cuestionarioA.Codigo;
+                        responseAPI.Valor = cuestionarioActivoDTO;
                     }
                     else
                     {
                         responseAPI.mensaje = "Ya tienes Un Cuestionario Activo";
                         responseAPI.EsCorrecto = false;
-                        responseAPI.Valor = cuestionarioA.Codigo;
+                        responseAPI.Valor = CuestionarioActivo.Codigo;
                     }
                 }
                 return Ok(responseAPI);

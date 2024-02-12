@@ -10,75 +10,53 @@ namespace Anksus_WebAPI.Server.Hubs
 {
     public class CuestionarioHub:Hub<InotificationClient>
     {
-        static int count = 0;
-        static int code = 0;
+       
         private readonly TestAnskusContext _context;
-        private static   List<ParticipanteEnCuestDTO> Participantes = new List<ParticipanteEnCuestDTO>();
+        private static Dictionary<string, List<ParticipanteEnCuestDTO>> SalaUsuario = new();
         public CuestionarioHub(TestAnskusContext context  )
         {
             _context = context;
-        }
-        public override async Task OnConnectedAsync()
+        }    
+        public async Task CreateRoom(string code)
         {
-            count++;
-            await Clients.All.UpdatesClientsCount(count);
-            await Clients.All.UsuariosEnLaSala(Participantes.Select(p => p.Nombre).ToList());
-            await base.OnConnectedAsync();
-            
+            if(!SalaUsuario.ContainsKey(code))
+            {
+                SalaUsuario[code] = new List<ParticipanteEnCuestDTO>();
+            }
+            var codigo = Context.GetHttpContext()!.Request.Query["id"];
+            await Groups.AddToGroupAsync(Context.ConnectionId, code);
         }
-        //protected override void Dispose(bool disposing)
-        //{
-        //    var cuest = _context.CuestionarioActivos.Where(x => x.IdCuestionario == id).FirstOrDefault();
-        //    _context.CuestionarioActivos.Remove(cuest);
-        //    base.Dispose(disposing);
-        //}
-        public  async Task JoinRoom(int code)
+        public async Task AddUserToRoom(ParticipanteEnCuestDTO participante)
         {
-           
-          await Groups.AddToGroupAsync(Context.ConnectionId, code.ToString());
-            
-        }            
+            if (!SalaUsuario[participante.codigo.ToString()].Where(x=>x.Nombre==participante.Nombre).Any())
+            {
+                SalaUsuario[participante.codigo.ToString()].Add(participante);
+                await Clients.Group(participante.codigo.ToString()).NewParticipante(participante);
+            }
+            return;
+          
+
+        }
+        public async Task GetUsersByRoom(int code)
+        {
+            await Clients.Group(code.ToString()).getUsers(code);
+        }
+        public async Task RemoveRoom(int code)
+        {
+             SalaUsuario.Remove(code.ToString());
+        }
         public override async Task OnDisconnectedAsync(Exception? exception)
         {
-            count--;
-            await Clients.All.UpdatesClientsCount(count);
+            
             await  base.OnDisconnectedAsync(exception);
         }
-        public async Task IngresarUsuario(string nombre, int codigo)
-           {
-            var responseAPI = new ResponseAPI<ParticipanteEnCuestDTO>();
-            if (!Participantes.Select(x => x.Nombre == nombre).Any())
-            {
-                ParticipanteEnCuestDTO p = new ParticipanteEnCuestDTO
-                {
-                    codigo = codigo,
-                    Nombre = nombre
-                };
-                Participantes.Add(p);
-                await JoinRoom(codigo);
-                await Clients.Group(codigo.ToString()).receiveParticipante(p);
-                await Clients.Group(codigo.ToString()).UsuariosEnLaSala(GetParticipantesName());
-                responseAPI.Valor = p;
-            }
-            else
-            {
-                responseAPI.EsCorrecto = false;
-                responseAPI.mensaje = "Ya existe este nombre";
-            }
-        }
-        private List<string> GetParticipantesName()
-        {
-            return Participantes.Select(x => x.Nombre).ToList();
-        }
+
     }
 }
-public  interface InotificationClient
+public interface InotificationClient
     {
-    Task Sendusuario();
-    Task UpdatesClientsCount(int count);
-    Task receiveParticipante(ParticipanteEnCuestDTO participante);
+    Task NewParticipante(ParticipanteEnCuestDTO participante);
     Task UsuariosEnLaSala(List<string> usuarios);
-    Task UsuarioConectado(string nombre);
-    Task ReceiveMensaje(string mensaje);
-    Task receiveNotificacion(string messege);
+    Task getUsers(int code);
+
 }

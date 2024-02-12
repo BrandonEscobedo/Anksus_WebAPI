@@ -14,6 +14,7 @@ using TestAnskus.Client.Services.Interfaces.CuestionarioActivo;
 using TestAnskus.Client.Services.Implementacion.CuestionarioActivo;
 using TestAnskus.Client.Services.Interfaces.Hub;
 using TestAnskus.Client.Services.Implementacion.Hub;
+using Microsoft.AspNetCore.SignalR.Client;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -36,4 +37,12 @@ builder.Services.AddScoped<IRespuestasService,RespuestasService>();
 builder.Services.AddScoped<IAuthService,AuthService>();
 builder.Services.AddScoped<ICuestionarioAService,CuestionarioAService>();
 builder.Services.AddScoped< HubConnecionService>();
+builder.Services.AddScoped(sp =>
+{
+    return new HubConnectionBuilder()
+   .WithUrl("https://localhost:7150/ChatCuest")
+   .WithAutomaticReconnect()
+   .Build();
+
+});
 await builder.Build().RunAsync();

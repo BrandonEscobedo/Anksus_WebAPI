@@ -2,6 +2,7 @@
 @inject ICuestionariosService _cuestionarioService;
 @inject ICuestionarioAService  _CuestionarioActivoService;
 @inject NavigationManager NavigationManager;
+@inject HubConnecionService HubService
 @if (cuestionarios == null)
 {
     <h1> Cargando Cuestionarios...</h1>
@@ -34,20 +35,20 @@ else
 }
 @code {
     List<CuestionarioDTO>? cuestionarios;
+
     protected override async Task OnInitializedAsync()
     {
         cuestionarios = await _cuestionarioService.GetCuestionario();
     }
     private async Task IniciarCuestionario(int id )
     {
-        var result = await _CuestionarioActivoService.ActivarCuestionario(id);
-       
+        var result  = await _CuestionarioActivoService.ActivarCuestionario(id);
         if (result.EsCorrecto == true)
         {
-            int code = result.Valor;
-            NavigationManager.NavigateTo($"/CuestionarioActivo/{result.Valor}");
+            await HubService.NewRom(result.Valor.codigo.ToString());
+            NavigationManager.NavigateTo($"/Lobby/{result.Valor!.codigo}/id={result.Valor.idcuestionario.ToString()}");
         }
-        else if (result.EsCorrecto == false && result.Valor != 0)
+        else if (result.EsCorrecto == false && result.Valor?.codigo != 0)
         {
             Console.WriteLine("Tiene un cuestionario activo");
             NavigationManager.NavigateTo("/MisCuestionarios");
