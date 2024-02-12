@@ -14,16 +14,16 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
         public event Action<int> OnUpdateCount;
         public HashSet<Action<ParticipanteEnCuestDTO>> name = new();
         public HttpClient _httpClient;
-        private readonly NavigationManager _navigationManager;
-        public HubConnecionService(HttpClient httpClient, NavigationManager navigationManager,HubConnection hubConnection)
+        private readonly NavigationManager navigationManager;
+        public HubConnecionService(HttpClient httpClient, HubConnection hubConnection, NavigationManager navigationManager)
         {
             _httpClient = httpClient;
-            _navigationManager = navigationManager;
-            _hubConnection= hubConnection;
+            _hubConnection = hubConnection;
             _hubConnection.On<ParticipanteEnCuestDTO>("NewParticipante", part =>
             {
                 participante?.Invoke(part);
                 Console.Write("Usuario Agregado", part);
+
             }
             );
             _hubConnection.On<List<ParticipanteEnCuestDTO>>("getUsers", users =>
@@ -31,13 +31,22 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
                 usuariosSala?.Invoke(users);
                 Console.WriteLine(users);
             });
-          }
+            this.navigationManager = navigationManager;
+        }
 
         public async Task NewRom(string codigo) => await _hubConnection.InvokeAsync("CreateRoom", codigo);
-        public async Task AddUserToRoom(ParticipanteEnCuestDTO participante) => await _hubConnection.SendAsync("AddUserToRoom", participante);
+        public async Task AddUserToRoom(ParticipanteEnCuestDTO participante)
+        {
+            bool result = await _hubConnection.InvokeAsync<bool>("AddUserToRoom", participante);
+            if (result == true)
+            {
+                navigationManager.NavigateTo("/Sala");
+            }
+        }
         public async Task GetUsers(int code)
         {
-            await _hubConnection.SendAsync("GetUsersByRoom", code);
+           await _hubConnection.SendAsync("GetUsersByRoom", code);
+          
         }
         public async Task<bool> VerificarCodigo(int code)
         {

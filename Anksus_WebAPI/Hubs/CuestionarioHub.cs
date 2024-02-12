@@ -9,8 +9,7 @@ using TestAnskus.Shared;
 namespace Anksus_WebAPI.Server.Hubs
 {
     public class CuestionarioHub:Hub<InotificationClient>
-    {
-       
+    {       
         private readonly TestAnskusContext _context;
         private static Dictionary<string, List<ParticipanteEnCuestDTO>> SalaUsuario = new();
         public CuestionarioHub(TestAnskusContext context  )
@@ -26,20 +25,21 @@ namespace Anksus_WebAPI.Server.Hubs
             var codigo = Context.GetHttpContext()!.Request.Query["id"];
             await Groups.AddToGroupAsync(Context.ConnectionId, code);
         }
-        public async Task AddUserToRoom(ParticipanteEnCuestDTO participante)
+        public async Task<bool> AddUserToRoom(ParticipanteEnCuestDTO participante)
         {
+            bool resultado = false;
             if (!SalaUsuario[participante.codigo.ToString()].Where(x=>x.Nombre==participante.Nombre).Any())
             {
                 SalaUsuario[participante.codigo.ToString()].Add(participante);
                 await Clients.Group(participante.codigo.ToString()).NewParticipante(participante);
+                resultado = true;
             }
-            return;
-          
+            return resultado;
 
         }
         public async Task GetUsersByRoom(int code)
         {
-            await Clients.Group(code.ToString()).getUsers(code);
+           await  Clients.Group(code.ToString()).getUsers(code);
         }
         public async Task RemoveRoom(int code)
         {
