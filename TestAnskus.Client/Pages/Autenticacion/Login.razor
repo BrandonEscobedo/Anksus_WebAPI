@@ -1,8 +1,8 @@
 ﻿@page "/login"
+@using TestAnskus.Client.Pages.ComponentsBase
 @inject IAuthService AuthService
 @inject NavigationManager NavigationManager
-@inherits MainLayout
-<body class="bg-secondary m-5">
+@layout Base
     @if (ShowErrors)
     {
         <div class="alert alert-danger" role="alert">
@@ -39,7 +39,6 @@
             </div>
         </div>
     </div>
-</body>
 
 @code {
 

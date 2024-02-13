@@ -2,11 +2,8 @@
 @page "/Lobby/{code:int}"
 @inject HubConnecionService HubServices
 @inject NavigationManager navigationManager
-<h1>Participantes.</h1>
-@foreach (var participante in participantesActivos)
-{
-    <p>@participante.Nombre</p>
-}
+<h1>Participantes: @ParticipantesCount</h1>
+
 
 @code {
     int cantidad = 0;
@@ -17,12 +14,23 @@
     [CascadingParameter]
     private ParticipanteEnCuestDTO? participante { get; set; }
     private List<ParticipanteEnCuestDTO> participantesActivos = new();
+    private int ParticipantesCount = 0;
 
+    protected override async Task OnInitializedAsync()
+    {
+
+        await HubServices.GetUsers(code);        
+    }
+ 
     private async Task GetUsers()
     {
-     await HubServices.GetUsers( code);
+        await HubServices.GetUsers( code);
     }
-  
+    private async Task ObtenerJugadores()
+    {
+        var response =  HubServices.GetUsers(code);
+    }
+
     private async Task EntrarSesion()
     {
         participante.codigo = code;

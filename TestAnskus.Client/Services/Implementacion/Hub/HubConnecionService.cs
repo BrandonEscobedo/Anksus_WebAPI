@@ -26,14 +26,17 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
 
             }
             );
-            _hubConnection.On<List<ParticipanteEnCuestDTO>>("getUsers", users =>
+            _hubConnection.On<List<ParticipanteEnCuestDTO>>("UsuariosEnLaSala", users =>
             {
-                usuariosSala?.Invoke(users);
+                OnUpdateCount?.Invoke(users);
                 Console.WriteLine(users);
             });
             this.navigationManager = navigationManager;
         }
-
+        public async Task CountUpdate(Action<int> onUpdate)
+        {
+            OnUpdateCount += onUpdate;
+        }
         public async Task NewRom(string codigo) => await _hubConnection.InvokeAsync("CreateRoom", codigo);
         public async Task AddUserToRoom(ParticipanteEnCuestDTO participante)
         {
@@ -41,6 +44,7 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
             if (result == true)
             {
                 navigationManager.NavigateTo("/Sala");
+                
             }
         }
         public async Task GetUsers(int code)

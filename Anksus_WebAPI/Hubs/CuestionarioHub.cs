@@ -15,7 +15,8 @@ namespace Anksus_WebAPI.Server.Hubs
         public CuestionarioHub(TestAnskusContext context  )
         {
             _context = context;
-        }    
+        }
+
         public async Task CreateRoom(string code)
         {
             if(!SalaUsuario.ContainsKey(code))
@@ -24,23 +25,22 @@ namespace Anksus_WebAPI.Server.Hubs
             }
             var codigo = Context.GetHttpContext()!.Request.Query["id"];
             await Groups.AddToGroupAsync(Context.ConnectionId, code);
+            await Clients.Group(code).UsuariosEnLaSala(SalaUsuario[code.ToString()].Count);
         }
         public async Task<bool> AddUserToRoom(ParticipanteEnCuestDTO participante)
         {
-            bool resultado = false;
-            if (!SalaUsuario[participante.codigo.ToString()].Where(x=>x.Nombre==participante.Nombre).Any())
+            bool result = false;
+            if (!SalaUsuario[participante.codigo.ToString()].Where(x => x.Nombre == participante.Nombre).Any())
             {
                 SalaUsuario[participante.codigo.ToString()].Add(participante);
                 await Clients.Group(participante.codigo.ToString()).NewParticipante(participante);
-                resultado = true;
+                await Clients.Group(participante.codigo.ToString()).UsuariosEnLaSala(SalaUsuario[participante.codigo.ToString()].Count);
+                result=  true;
             }
-            return resultado;
+            return result;
 
         }
-        public async Task GetUsersByRoom(int code)
-        {
-           await  Clients.Group(code.ToString()).getUsers(code);
-        }
+
         public async Task RemoveRoom(int code)
         {
              SalaUsuario.Remove(code.ToString());
@@ -50,13 +50,20 @@ namespace Anksus_WebAPI.Server.Hubs
             
             await  base.OnDisconnectedAsync(exception);
         }
-
+        public async Task CountUsersByRoom(int code)
+        {
+            await Clients.Group(code.ToString()).CountUsers(code);
+        }
+        
+     
+             
     }
 }
 public interface InotificationClient
     {
     Task NewParticipante(ParticipanteEnCuestDTO participante);
-    Task UsuariosEnLaSala(List<string> usuarios);
+    Task UsuariosEnLaSala(int count);
     Task getUsers(int code);
+    Task CountUsers(int code);
 
 }
