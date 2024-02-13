@@ -21,30 +21,29 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
             _hubConnection = hubConnection;
             _hubConnection.On<ParticipanteEnCuestDTO>("NewParticipante", part =>
             {
+              
                 participante?.Invoke(part);
                 Console.Write("Usuario Agregado", part);
 
             }
             );
-            _hubConnection.On<List<ParticipanteEnCuestDTO>>("UsuariosEnLaSala", users =>
+            _hubConnection.On<int>("UsuariosEnLaSala", count =>
             {
-                OnUpdateCount?.Invoke(users);
-                Console.WriteLine(users);
+                OnUpdateCount?.Invoke(count);
+                Console.WriteLine(count);
             });
             this.navigationManager = navigationManager;
         }
-        public async Task CountUpdate(Action<int> onUpdate)
-        {
-            OnUpdateCount += onUpdate;
-        }
+        public async Task CountUpdate(int onUpdate) => OnUpdateCount?.Invoke(onUpdate);
+
         public async Task NewRom(string codigo) => await _hubConnection.InvokeAsync("CreateRoom", codigo);
         public async Task AddUserToRoom(ParticipanteEnCuestDTO participante)
         {
             bool result = await _hubConnection.InvokeAsync<bool>("AddUserToRoom", participante);
             if (result == true)
             {
+                await CountUpdate(1);
                 navigationManager.NavigateTo("/Sala");
-                
             }
         }
         public async Task GetUsers(int code)

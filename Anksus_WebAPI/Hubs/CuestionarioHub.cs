@@ -4,6 +4,7 @@ using Anksus_WebAPI.Models.DTO;
 using Anksus_WebAPI.Server.Hubs.Implementacion;
 using Anksus_WebAPI.Server.Servicios;
 using Microsoft.AspNetCore.SignalR;
+using System.Collections.Concurrent;
 using TestAnskus.Shared;
 
 namespace Anksus_WebAPI.Server.Hubs
@@ -11,7 +12,8 @@ namespace Anksus_WebAPI.Server.Hubs
     public class CuestionarioHub:Hub<InotificationClient>
     {       
         private readonly TestAnskusContext _context;
-        private static Dictionary<string, List<ParticipanteEnCuestDTO>> SalaUsuario = new();
+        
+        private static ConcurrentDictionary<string, List<ParticipanteEnCuestDTO>> SalaUsuario = new();
         public CuestionarioHub(TestAnskusContext context  )
         {
             _context = context;
@@ -34,7 +36,8 @@ namespace Anksus_WebAPI.Server.Hubs
             {
                 SalaUsuario[participante.codigo.ToString()].Add(participante);
                 await Clients.Group(participante.codigo.ToString()).NewParticipante(participante);
-                await Clients.Group(participante.codigo.ToString()).UsuariosEnLaSala(SalaUsuario[participante.codigo.ToString()].Count);
+               
+                var a = Clients.Group(participante.codigo.ToString()).CountUsers(participante.codigo);
                 result=  true;
             }
             return result;
@@ -43,7 +46,10 @@ namespace Anksus_WebAPI.Server.Hubs
 
         public async Task RemoveRoom(int code)
         {
-             SalaUsuario.Remove(code.ToString());
+             SalaUsuario.TryRemove(code.ToString(),out _);
+            var cuest = _context.CuestionarioActivos.Where(x => x.Codigo == code).FirstOrDefault();
+             _context.CuestionarioActivos.Remove(cuest!);
+            await _context.SaveChangesAsync();
         }
         public override async Task OnDisconnectedAsync(Exception? exception)
         {

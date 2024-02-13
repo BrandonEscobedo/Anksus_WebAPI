@@ -3,10 +3,13 @@
 @inject HubConnecionService HubServices
 @inject NavigationManager navigationManager
 <h1>Participantes: @ParticipantesCount</h1>
-
+@foreach (var participante in participantesActivos)
+{
+    <li>@participante.Nombre</li>
+}
 
 @code {
-    int cantidad = 0;
+    int UserCount;
     [Parameter]
     public int code { get; set; } 
     [Parameter]
@@ -18,17 +21,17 @@
 
     protected override async Task OnInitializedAsync()
     {
-
         await HubServices.GetUsers(code);        
     }
- 
-    private async Task GetUsers()
+
+    private void UpdateUserCount(int count)
     {
-        await HubServices.GetUsers( code);
+        UserCount = count;
+        StateHasChanged();
     }
-    private async Task ObtenerJugadores()
+    private void UpdateUsersCount(ParticipanteEnCuestDTO participante)
     {
-        var response =  HubServices.GetUsers(code);
+        participantesActivos.Add(participante);
     }
 
     private async Task EntrarSesion()
