@@ -18,7 +18,7 @@ namespace Anksus_WebAPI.Server.Hubs
         {
             _context = context;
         }
-
+         
         public async Task CreateRoom(string code)
         {
             if(!SalaUsuario.ContainsKey(code))
