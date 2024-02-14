@@ -9,10 +9,8 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
     public class HubConnecionService : IAsyncDisposable
     {
         HubConnection _hubConnection;
-        public event Action<ParticipanteEnCuestDTO> participante;
-        public event Action<List<ParticipanteEnCuestDTO>> usuariosSala;
+        public event Action<ParticipanteEnCuestDTO> NewParticipante;
         public event Action<int> OnUpdateCount;
-        public HashSet<Action<ParticipanteEnCuestDTO>> name = new();
         public HttpClient _httpClient;
         private readonly NavigationManager navigationManager;
         public HubConnecionService(HttpClient httpClient, HubConnection hubConnection, NavigationManager navigationManager)
@@ -21,16 +19,11 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
             _hubConnection = hubConnection;
             _hubConnection.On<ParticipanteEnCuestDTO>("NewParticipante", part =>
             {
-                participante?.Invoke(part);
+                NewParticipante?.Invoke(part);
                 Console.Write("Usuario Agregado", part);
-
             }
             );
-            _hubConnection.On<List<ParticipanteEnCuestDTO>>("getUsers", users =>
-            {
-                usuariosSala?.Invoke(users);
-                Console.WriteLine(users);
-            });
+
             this.navigationManager = navigationManager;
         }
 
@@ -55,7 +48,7 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
             return result;
         }
 
-        public async ValueTask DisposeAsync( )
+        public async ValueTask DisposeAsync()
         {
             if(_hubConnection.ConnectionId !=null)
             {

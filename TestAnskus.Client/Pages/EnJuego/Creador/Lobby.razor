@@ -1,6 +1,7 @@
 ﻿@page "/Lobby/{code:int}/{id}"
 @page "/Lobby/{code:int}"
 @inject HubConnecionService HubServices
+@implements IAsyncDisposable
 @inject NavigationManager navigationManager
 <h1>Participantes.</h1>
 @foreach (var participante in participantesActivos)
@@ -20,13 +21,28 @@
 
     private async Task GetUsers()
     {
-     await HubServices.GetUsers( code);
+        await HubServices.GetUsers( code);
     }
-  
+
+    protected override Task OnInitializedAsync()
+    {
+        HubServices.NewParticipante += HandleruserJoin;
+
+        return base.OnInitializedAsync();
+    }
     private async Task EntrarSesion()
     {
         participante.codigo = code;
         await HubServices.AddUserToRoom(participante);
+    }
+    private void HandleruserJoin(ParticipanteEnCuestDTO participante)
+    {
+        participantesActivos.Add(participante);
+        StateHasChanged();
+    }
+    public async ValueTask DisposeAsync()
+    {
+        
     }
 
 }

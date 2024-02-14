@@ -24,7 +24,6 @@
     protected override async Task OnInitializedAsync()
     {
         HubService.OnUpdateCount += OnUpdateUsersCount;
-        HubService.participante += ParticipanteRecived;
     }
     private void UsuariosEnSala(List<string> nombres)
     {
@@ -53,7 +52,6 @@
     public async ValueTask DisposeAsync()
     {
         HubService.OnUpdateCount -= OnUpdateUsersCount;
-        HubService.participante -= ParticipanteRecived;
         await HubService.DisposeAsync();
     }
 

@@ -24,7 +24,7 @@ namespace Anksus_WebAPI.Server.Hubs
             }
             var codigo = Context.GetHttpContext()!.Request.Query["id"];
             await Groups.AddToGroupAsync(Context.ConnectionId, code);
-        }
+        }   
         public async Task<bool> AddUserToRoom(ParticipanteEnCuestDTO participante)
         {
             bool resultado = false;

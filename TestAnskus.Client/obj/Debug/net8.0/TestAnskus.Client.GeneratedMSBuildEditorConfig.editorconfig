@@ -58,6 +58,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/brand/OneDrive/Documentos/proyecto anskus/TestAnskus.Client/Pages/ComponentsBase/ComponentBaseLogin.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c0Jhc2VcQ29tcG9uZW50QmFzZUxvZ2luLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/brand/OneDrive/Documentos/proyecto anskus/TestAnskus.Client/Pages/CrearEditarCuestionarios/CrearCuestionario.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXJFZGl0YXJDdWVzdGlvbmFyaW9zXENyZWFyQ3Vlc3Rpb25hcmlvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
