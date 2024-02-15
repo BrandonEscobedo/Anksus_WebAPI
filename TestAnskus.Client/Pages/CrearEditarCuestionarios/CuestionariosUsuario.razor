@@ -44,8 +44,8 @@ else
         var result  = await _CuestionarioActivoService.ActivarCuestionario(id);
         if (result.EsCorrecto == true)
         {
-            await HubService.NewRom(result.Valor.codigo.ToString());
-            _NavigationManager.NavigateTo($"/Lobby/{result.Valor!.codigo}/id={result.Valor.idcuestionario.ToString()}");
+            await HubService.NewRom(result.Valor!.codigo);
+            _NavigationManager.NavigateTo($"/Lobby/{result.Valor!.codigo}");
         }
         else if (result.EsCorrecto == false && result.Valor?.codigo != 0)
         {

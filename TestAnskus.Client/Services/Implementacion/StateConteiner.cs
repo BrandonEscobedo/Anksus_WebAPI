@@ -7,7 +7,7 @@ namespace TestAnskus.Client.Services.Implementacion
     {
         public ParticipanteEnCuestDTO Participante { get; set; }
 
-        public event Action StateChange;
+        public event Action? StateChange;
 
         public void SetValor(ParticipanteEnCuestDTO participante)
         {

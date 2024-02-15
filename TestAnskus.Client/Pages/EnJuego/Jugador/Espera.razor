@@ -1,9 +1,24 @@
 ﻿@page "/Sala"
+@inject IStateConteiner StateConteiner
+@implements IAsyncDisposable
+@inject HubConnecionService HubServices
 <h1>Esperando</h1>
-
+<h2>@StateConteiner.Participante.Nombre</h2>
 @code{
-    [Parameter]
-    public ParticipanteEnCuestDTO? participanteActual { get; set; }
 
-
+    protected override void OnInitialized()
+    {
+        HubServices.removeParticipante += HandlerUserLeft;
+        StateConteiner.StateChange += StateHasChanged;
+    }
+    public async ValueTask DisposeAsync()
+    {
+        StateConteiner.StateChange -= StateHasChanged;
+        await HubServices.UserLeft(StateConteiner.Participante);
+    }
+       private void HandlerUserLeft(ParticipanteEnCuestDTO participante)
+        {
+            // participantesActivos = participantesActivos.Where(p => p.Nombre != participante.Nombre).ToList();
+            // StateHasChanged();
+        }
 }

@@ -42,7 +42,7 @@ namespace Anksus_WebAPI.Server.Hubs
         {
            await  Clients.Group(code.ToString()).getUsers(code);
         }
-        public async Task UserLeftRoom(ParticipanteEnCuestDTO participante)
+        public async Task UserLeftRoomUserLeftRoom(ParticipanteEnCuestDTO participante)
         {
             if (SalaUsuario.ContainsKey(participante.codigo))
             {

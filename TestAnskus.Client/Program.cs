@@ -36,6 +36,7 @@ builder.Services.AddScoped<AuthenticationStateProvider,CustomAuthenticationState
 builder.Services.AddScoped<IRespuestasService,RespuestasService>();
 builder.Services.AddScoped<IAuthService,AuthService>();
 builder.Services.AddScoped<ICuestionarioAService,CuestionarioAService>();
+builder.Services.AddScoped<IStateConteiner,StateConteiner>();
 builder.Services.AddScoped< HubConnecionService>();
 builder.Services.AddScoped(sp =>
 {

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using System.Net.Http.Json;
+using TestAnskus.Client.Services.Interfaces;
 using TestAnskus.Client.Services.Interfaces.Hub;
 using TestAnskus.Shared;
 
@@ -13,8 +14,12 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
         public event Action<ParticipanteEnCuestDTO> removeParticipante;
         public event Action<int> OnUpdateCount;
         public HttpClient _httpClient;
+        private readonly List<ParticipanteEnCuestDTO> participantesActivos = new();
+        public IReadOnlyList<ParticipanteEnCuestDTO> ParticipantesActivos => participantesActivos;
+        public event Action<List<ParticipanteEnCuestDTO>> ParticipanteList;
+        private readonly IStateConteiner _stateConteiner;
         private readonly NavigationManager navigationManager;
-        public HubConnecionService(HttpClient httpClient, HubConnection hubConnection, NavigationManager navigationManager)
+        public HubConnecionService(HttpClient httpClient, HubConnection hubConnection, NavigationManager navigationManager, IStateConteiner stateConteiner)
         {
             _httpClient = httpClient;
             _hubConnection = hubConnection;
@@ -29,14 +34,20 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
             });
 
             this.navigationManager = navigationManager;
+           _stateConteiner = stateConteiner;
         }
-
-        public async Task NewRom(string codigo) => await _hubConnection.InvokeAsync("CreateRoom", codigo);
+        private void ActualizarParticipantes(List<ParticipanteEnCuestDTO> participantes)
+        {
+            
+        }
+        public async Task NewRom(int codigo) => await _hubConnection.InvokeAsync("CreateRoom", codigo);
         public async Task AddUserToRoom(ParticipanteEnCuestDTO participante)
         {
             bool result = await _hubConnection.InvokeAsync<bool>("AddUserToRoom", participante);
             if (result == true)
             {
+                _stateConteiner.SetValor(participante);
+                participantesActivos.Add(participante);
                 navigationManager.NavigateTo("/Sala");
             }
         }
@@ -48,6 +59,7 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
         public async Task UserLeft(ParticipanteEnCuestDTO participante)
         {
             await _hubConnection.SendAsync("UserLeftRoom", participante);
+            participantesActivos.Remove(participante);
         }
         public async Task<bool> VerificarCodigo(int code)
         {
