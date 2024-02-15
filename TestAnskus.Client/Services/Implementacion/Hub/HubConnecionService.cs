@@ -10,6 +10,7 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
     {
         HubConnection _hubConnection;
         public event Action<ParticipanteEnCuestDTO> NewParticipante;
+        public event Action<ParticipanteEnCuestDTO> removeParticipante;
         public event Action<int> OnUpdateCount;
         public HttpClient _httpClient;
         private readonly NavigationManager navigationManager;
@@ -20,9 +21,12 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
             _hubConnection.On<ParticipanteEnCuestDTO>("NewParticipante", part =>
             {
                 NewParticipante?.Invoke(part);
-                Console.Write("Usuario Agregado", part);
             }
             );
+            _hubConnection.On<ParticipanteEnCuestDTO>("RemoveUser", part =>
+            {
+                removeParticipante?.Invoke(part);
+            });
 
             this.navigationManager = navigationManager;
         }
@@ -40,6 +44,10 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
         {
            await _hubConnection.SendAsync("GetUsersByRoom", code);
           
+        }
+        public async Task UserLeft(ParticipanteEnCuestDTO participante)
+        {
+            await _hubConnection.SendAsync("UserLeftRoom", participante);
         }
         public async Task<bool> VerificarCodigo(int code)
         {
