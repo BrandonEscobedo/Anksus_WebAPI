@@ -12,7 +12,6 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
         HubConnection _hubConnection;
         public event Action<ParticipanteEnCuestDTO> NewParticipante;
         public event Action<ParticipanteEnCuestDTO> removeParticipante;
-        public event Action<int> OnUpdateCount;
         public HttpClient _httpClient;
         private readonly List<ParticipanteEnCuestDTO> participantesActivos = new();
         public IReadOnlyList<ParticipanteEnCuestDTO> ParticipantesActivos => participantesActivos;
@@ -36,10 +35,8 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
             this.navigationManager = navigationManager;
            _stateConteiner = stateConteiner;
         }
-        private void ActualizarParticipantes(List<ParticipanteEnCuestDTO> participantes)
-        {
-            
-        }
+     
+        
         public async Task NewRom(int codigo) => await _hubConnection.InvokeAsync("CreateRoom", codigo);
         public async Task AddUserToRoom(ParticipanteEnCuestDTO participante)
         {
@@ -58,8 +55,12 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
         }
         public async Task UserLeft(ParticipanteEnCuestDTO participante)
         {
-            await _hubConnection.SendAsync("UserLeftRoom", participante);
+            await _hubConnection.SendAsync("UserLeftRoomUserLeftRoom", participante);
             participantesActivos.Remove(participante);
+        }
+        public async Task RemoveRoom(int codigo)
+        {
+            await _hubConnection.SendAsync("RemoveRoom", codigo);
         }
         public async Task<bool> VerificarCodigo(int code)
         {
@@ -70,20 +71,20 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
 
         public async ValueTask DisposeAsync()
         {
-            if(_hubConnection.ConnectionId !=null)
-            {
-                try
-                {
-                    await _hubConnection.StopAsync();
-                }
-                finally
-                {
-                    await _hubConnection.DisposeAsync();
-                    _hubConnection = null!;
+            //if (_hubConnection.ConnectionId != null)
+            //{
+            //    try
+            //    {
+            //        await _hubConnection.StopAsync();
+            //    }
+            //    finally
+            //    {
+            //        await _hubConnection.DisposeAsync();
+            //        _hubConnection = null!;
 
-                }
+            //    }
 
-            }
+            //}
         }
     }
 }

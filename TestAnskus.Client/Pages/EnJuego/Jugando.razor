@@ -21,10 +21,9 @@
     int participantes;
     private List<ParticipanteEnCuestDTO> participantesList = new List<ParticipanteEnCuestDTO>();
     string nombre="";
-    protected override async Task OnInitializedAsync()
-    {
-        HubService.OnUpdateCount += OnUpdateUsersCount;
-    }
+    private bool _isNavigating = false;
+
+   
     private void UsuariosEnSala(List<string> nombres)
     {
         participantesList = nombres.Select(nombre => new ParticipanteEnCuestDTO { Nombre = nombre, codigo =Convert.ToInt32( code )}).ToList();
@@ -51,7 +50,6 @@
     }
     public async ValueTask DisposeAsync()
     {
-        HubService.OnUpdateCount -= OnUpdateUsersCount;
         await HubService.DisposeAsync();
     }
 

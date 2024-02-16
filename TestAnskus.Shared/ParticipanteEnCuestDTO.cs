@@ -10,10 +10,15 @@ namespace TestAnskus.Shared
 {
     public class ParticipanteEnCuestDTO
     {    
-        public int IdPeC { get; set; }   
+        public Guid IdPeC { get; set; }   
         public string Nombre { get; set; } = null!;
         public int? Puntos { get; set; }
         public int codigo { get; set; } 
         public int? CantidadPacertadas { get; set; }
+
+        public ParticipanteEnCuestDTO()
+        {
+            IdPeC = Guid.NewGuid();
+        }
     }
 }

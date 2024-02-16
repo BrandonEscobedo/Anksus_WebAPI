@@ -23,7 +23,6 @@ namespace Anksus_WebAPI.Server.Hubs
             {
                 SalaUsuario[code] = new List<ParticipanteEnCuestDTO>();
             }
-            var codigo = Context.GetHttpContext()!.Request.Query["id"];
             await Groups.AddToGroupAsync(Context.ConnectionId, code.ToString());
         }   
         public async Task<bool> AddUserToRoom(ParticipanteEnCuestDTO participante)
@@ -46,14 +45,29 @@ namespace Anksus_WebAPI.Server.Hubs
         {
             if (SalaUsuario.ContainsKey(participante.codigo))
             {
-                SalaUsuario[participante.codigo].Remove(participante);
+            var result=   SalaUsuario[participante.codigo]
+                    .FirstOrDefault(x=>x.IdPeC==participante.IdPeC);
+                if (result != null)
+                {
+                    SalaUsuario[participante.codigo].Remove(result);
+                    await Clients.Group(participante.codigo.ToString()).RemoveUser(participante);
+
+                }
             }
-            await Clients.Group(participante.codigo.ToString()).RemoveUser(participante);
 
         }
         public async Task RemoveRoom(int code)
         {
-             SalaUsuario.TryRemove(code,out _);
+          bool result =   SalaUsuario.TryRemove(code,out _);
+            if (result)
+            {
+               var cuestionario= _context.CuestionarioActivos.Where(x => x.Codigo == code).FirstOrDefault();
+                if (cuestionario != null)
+                {
+                    _context.CuestionarioActivos.Remove(cuestionario);
+                     await _context.SaveChangesAsync();
+                }
+            }
         }
         public override async Task OnDisconnectedAsync(Exception? exception)
         {

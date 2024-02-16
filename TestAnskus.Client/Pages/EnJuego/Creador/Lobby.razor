@@ -1,10 +1,34 @@
-﻿@page "/Lobby/{code:int}"
-
+﻿@page "/Lobby/{codigo:int}"
 @inject HubConnecionService HubServices
 @implements IAsyncDisposable
 @inject NavigationManager navigationManager
-<h1>Participantes.</h1>
-@foreach (var participante in participantesActivos)
-{
-    <p>@participante.Nombre</p>
-}
+@layout ComponentsBase.ComponentBaseLogin
+<link rel="stylesheet" href="css/codigo.css" />
+<div class="lobby">
+    <div class="lobby__info">
+        <h2>Codigo de la partida</h2>
+            <p>@codigo</p>       
+    </div>
+    <div class="lobby__status">
+        <div class="player__counter">
+            <img src="./img/user.png" alt="">
+            <p class="counter">@participantesActivos.Count()</p>
+        </div>
+        <div class="lobby__actions">
+            <button class="cancelar">Salir</button>
+            <button class="comenzar">Comenzar</button>
+        </div>
+    </div>
+    <div class="activePlayers">
+        <h1>Jugadores activos</h1>
+        <div class="activePlayers__grid">
+            @foreach (var participante in participantesActivos)
+            {
+                <h3 class="jugador">
+                    @participante.Nombre
+                </h3>
+            }            
+        </div>
+    </div>
+</div>
+

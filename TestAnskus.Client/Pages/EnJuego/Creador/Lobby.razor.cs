@@ -6,14 +6,14 @@ namespace TestAnskus.Client.Pages.EnJuego.Creador
     public partial class Lobby
     {
         [Parameter]
-        public int code { get; set; }
+        public int codigo { get; set; }
      
 
         private IReadOnlyList<ParticipanteEnCuestDTO> participantesActivos;
 
         protected override async Task OnInitializedAsync()
         {
-            await HubServices.GetUsers(code);
+            await HubServices.GetUsers(codigo);
             HubServices.NewParticipante += HandleruserJoin;
             HubServices.removeParticipante += HandlerUserLeft;
             participantesActivos = HubServices.ParticipantesActivos;
@@ -35,6 +35,7 @@ namespace TestAnskus.Client.Pages.EnJuego.Creador
         {
             HubServices.NewParticipante -= HandleruserJoin;
             HubServices.removeParticipante -= HandlerUserLeft;
+            await HubServices.RemoveRoom(codigo);
         }
     }
 }
