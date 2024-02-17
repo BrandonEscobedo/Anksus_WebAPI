@@ -2,6 +2,7 @@
 using Anksus_WebAPI.Models.dbModels;
 using Anksus_WebAPI.Models.DTO;
 using Anksus_WebAPI.Server.Hubs.Implementacion;
+using Anksus_WebAPI.Server.Hubs.Notificaciones;
 using Anksus_WebAPI.Server.Servicios;
 using Microsoft.AspNetCore.SignalR;
 using System.Collections.Concurrent;
@@ -12,11 +13,13 @@ namespace Anksus_WebAPI.Server.Hubs
     public class CuestionarioHub:Hub<InotificationClient>
     {       
         private readonly TestAnskusContext _context;
+        private readonly IServerTImeServices _serverTimeN;
         private static ConcurrentDictionary<int, List<ParticipanteEnCuestDTO>> SalaUsuario = new();
-        public CuestionarioHub(TestAnskusContext context  )
+        public CuestionarioHub(TestAnskusContext context, IServerTImeServices serverTimeN)
         {
             _context = context;
-        }    
+            _serverTimeN = serverTimeN;
+        }
         public async Task CreateRoom(int code)
         {
             if(!SalaUsuario.ContainsKey(code))
@@ -69,6 +72,10 @@ namespace Anksus_WebAPI.Server.Hubs
                 }
             }
         }
+        public async Task IniciarTarea(int code)
+        {
+            _serverTimeN.Star(code);
+        }
         public override async Task OnDisconnectedAsync(Exception? exception)
         {
             
@@ -79,6 +86,7 @@ namespace Anksus_WebAPI.Server.Hubs
 }
 public interface InotificationClient
     {
+    Task MensajePrueba(string mensaje); 
     Task RemoveUser(ParticipanteEnCuestDTO participante);
     Task NewParticipante(ParticipanteEnCuestDTO participante);
     Task UsuariosEnLaSala(List<string> usuarios);

@@ -12,8 +12,9 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddSignalR();
-builder.Services.AddHostedService<ServerTimeN>();
+builder.Services.AddHostedService<ServerTimeN   >();
 builder.Services.AddCors();
+builder.Services.AddSingleton<IServerTImeServices, ServerTimeN>();
 builder.Services.AddDbContext<TestAnskusContext>(options =>
 options.UseSqlServer(connectionString));
 builder.Services.AddControllers();

@@ -14,6 +14,9 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
         public event Action<ParticipanteEnCuestDTO> removeParticipante;
         public HttpClient _httpClient;
         private readonly List<ParticipanteEnCuestDTO> participantesActivos = new();
+        private string mensaje = "";
+        public string MensajeCliente => mensaje;
+        public event Action<string> Mensajerecibido;
         public IReadOnlyList<ParticipanteEnCuestDTO> ParticipantesActivos => participantesActivos;
         public event Action<List<ParticipanteEnCuestDTO>> ParticipanteList;
         private readonly IStateConteiner _stateConteiner;
@@ -31,7 +34,12 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
             {
                 removeParticipante?.Invoke(part);
             });
-
+            _hubConnection.On<string>("MensajePrueba", msg =>
+            {
+                mensaje = msg;
+                Mensajerecibido?.Invoke(msg);
+                
+            });
             this.navigationManager = navigationManager;
            _stateConteiner = stateConteiner;
         }
@@ -69,6 +77,10 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
             return result;
         }
 
+        public async Task IniciarTarea(int code)
+        {
+            await _hubConnection.SendAsync("IniciarTarea", code);
+        }
         public async ValueTask DisposeAsync()
         {
             //if (_hubConnection.ConnectionId != null)

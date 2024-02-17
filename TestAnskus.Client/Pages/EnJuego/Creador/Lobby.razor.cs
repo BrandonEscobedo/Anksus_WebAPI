@@ -7,7 +7,7 @@ namespace TestAnskus.Client.Pages.EnJuego.Creador
     {
         [Parameter]
         public int codigo { get; set; }
-     
+        private string mensaje = "";
 
         private IReadOnlyList<ParticipanteEnCuestDTO> participantesActivos;
 
@@ -16,6 +16,7 @@ namespace TestAnskus.Client.Pages.EnJuego.Creador
             await HubServices.GetUsers(codigo);
             HubServices.NewParticipante += HandleruserJoin;
             HubServices.removeParticipante += HandlerUserLeft;
+            HubServices.Mensajerecibido += ActualizarMensaje;
             participantesActivos = HubServices.ParticipantesActivos;
         }
 
@@ -30,7 +31,16 @@ namespace TestAnskus.Client.Pages.EnJuego.Creador
             participantesActivos = participantesActivos.Where(p => p.Nombre != participante.Nombre).ToList();
             StateHasChanged();
         }
+        private void ActualizarMensaje(string msg)
+        {
+            mensaje = msg;
+            StateHasChanged();
+        }
+        private async Task IniciarTarea(int code)
+        {
+            await HubServices.IniciarTarea(code);
 
+        }
         public async ValueTask DisposeAsync()
         {
             HubServices.NewParticipante -= HandleruserJoin;
