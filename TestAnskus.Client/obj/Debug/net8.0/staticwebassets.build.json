@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jzqfgDgTTcGIZvaC1acgkO2x7Ap85sfuInxWPTfZrJw=",
+  "Hash": "k0L55orgFFfC2jKG5VLJ38xsUOHM04hJzo1hp2fe87A=",
   "Source": "TestAnskus.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -9572,6 +9572,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\wwwroot\\js\\Alerts.js",
+      "SourceId": "TestAnskus.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "js/Alerts.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Alerts.js"
     },
     {
       "Identity": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\wwwroot\\sample-data\\weather.json",

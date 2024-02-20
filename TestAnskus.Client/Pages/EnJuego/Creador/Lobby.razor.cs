@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
+using MudBlazor;
 using TestAnskus.Shared;
 
 namespace TestAnskus.Client.Pages.EnJuego.Creador
@@ -8,11 +10,13 @@ namespace TestAnskus.Client.Pages.EnJuego.Creador
         [Parameter]
         public int codigo { get; set; }
         private string mensaje = "";
+        
 
         private IReadOnlyList<ParticipanteEnCuestDTO> participantesActivos;
 
         protected override async Task OnInitializedAsync()
         {
+            
             await HubServices.GetUsers(codigo);
             HubServices.NewParticipante += HandleruserJoin;
             HubServices.removeParticipante += HandlerUserLeft;
@@ -20,8 +24,14 @@ namespace TestAnskus.Client.Pages.EnJuego.Creador
             participantesActivos = HubServices.ParticipantesActivos;
         }
 
+        async Task ShowConfirmation()
+        {
+            DialogService di = new DialogService();
+        }
+     
         private void HandleruserJoin(ParticipanteEnCuestDTO participante)
         {
+           
             participantesActivos = participantesActivos.Append(participante).ToList();
             StateHasChanged();
         }
@@ -41,11 +51,20 @@ namespace TestAnskus.Client.Pages.EnJuego.Creador
             await HubServices.IniciarTarea(code);
 
         }
+
         public async ValueTask DisposeAsync()
         {
-            HubServices.NewParticipante -= HandleruserJoin;
-            HubServices.removeParticipante -= HandlerUserLeft;
-            await HubServices.RemoveRoom(codigo);
+         bool confirmed=   await JSRuntime.InvokeAsync<bool>("confirmClose","Si sales ahora la sesión se eliminara.");
+            if(confirmed==true)
+            {
+                HubServices.NewParticipante -= HandleruserJoin;
+                HubServices.removeParticipante -= HandlerUserLeft;
+                await HubServices.RemoveRoom(codigo);
+            }
+            else { return ; }
+            
+
         }
+  
     }
 }

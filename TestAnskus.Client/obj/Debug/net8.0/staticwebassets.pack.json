@@ -73,6 +73,10 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
+      "Id": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\wwwroot\\js\\Alerts.js",
+      "PackagePath": "staticwebassets\\js\\Alerts.js"
+    },
+    {
       "Id": "C:\\Users\\brand\\OneDrive\\Documentos\\proyecto anskus\\TestAnskus.Client\\wwwroot\\sample-data\\weather.json",
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },

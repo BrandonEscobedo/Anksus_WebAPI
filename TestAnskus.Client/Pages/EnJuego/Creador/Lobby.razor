@@ -2,6 +2,7 @@
 @inject HubConnecionService HubServices
 @implements IAsyncDisposable
 @inject NavigationManager navigationManager
+@inject IJSRuntime JSRuntime
 @layout ComponentsBase.ComponentBaseLogin
 <link rel="stylesheet" href="css/codigo.css" />
 <div class="lobby">
@@ -30,6 +31,7 @@
             }            
             <p>@mensaje</p>
         </div>
+        <button @onclick="ShowConfirmation">Da click</button>
     </div>
 </div>
 

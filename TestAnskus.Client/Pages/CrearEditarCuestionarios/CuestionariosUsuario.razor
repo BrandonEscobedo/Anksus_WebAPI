@@ -3,6 +3,7 @@
 @inject ICuestionarioAService  _CuestionarioActivoService;
 @inject NavigationManager _NavigationManager;
 @inject HubConnecionService HubService
+
 @if (cuestionarios == null)
 {
     <h1> Cargando Cuestionarios...</h1>
@@ -34,7 +35,7 @@ else
 }
 @code {
     List<CuestionarioDTO>? cuestionarios;
-
+    
     protected override async Task OnInitializedAsync()
     {
         cuestionarios = await _cuestionarioService.GetCuestionario();

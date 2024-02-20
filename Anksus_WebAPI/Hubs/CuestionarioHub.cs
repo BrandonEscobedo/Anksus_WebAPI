@@ -42,6 +42,7 @@ namespace Anksus_WebAPI.Server.Hubs
         }
         public async Task GetUsersByRoom(int code)
         {
+
            await  Clients.Group(code.ToString()).getUsers(code);
         }
         public async Task UserLeftRoomUserLeftRoom(ParticipanteEnCuestDTO participante)

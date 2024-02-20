@@ -45,6 +45,8 @@
     </div>
 </div>
 @code {
+    [Parameter]
+   public int id { get; set; } = 0;
     List<PreguntasDTO> ListaPreguntas { get; set; } = new List<PreguntasDTO>();
     List<RespuestasDTO> ListaRespuestasDTOs { get; set; } = new List<RespuestasDTO> ();
     public PreguntasDTO preguntasDTO { get; set; } = new PreguntasDTO();
@@ -55,8 +57,8 @@
         DialogService.Show<MdCrearCuestionario>("Simple Dialog", options);
     }
     protected override async Task OnInitializedAsync()
-    { 
-      
+    {
+         _IdConteiner.idCuestionario = id;
         ListaRespuestasDTOs.Add(new RespuestasDTO
             {
                 IdPregunta=0,
