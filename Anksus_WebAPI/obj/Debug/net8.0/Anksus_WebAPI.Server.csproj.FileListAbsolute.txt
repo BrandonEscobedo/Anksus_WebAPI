@@ -873,3 +873,10 @@ C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\obj\
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.pdb
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.genruntimeconfig.cache
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\ref\Anksus_WebAPI.Server.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\StackExchange.Redis.dll

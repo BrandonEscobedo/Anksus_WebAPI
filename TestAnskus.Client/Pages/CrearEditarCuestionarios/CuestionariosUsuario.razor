@@ -46,7 +46,6 @@ else
         if (result.EsCorrecto == true)
         {
             await HubService.NewRom(result.Valor!.codigo);
-            _NavigationManager.NavigateTo($"/Lobby/{result.Valor!.codigo}");
         }
         else if (result.EsCorrecto == false && result.Valor?.codigo != 0)
         {

@@ -15,6 +15,12 @@ builder.Services.AddSignalR();
 builder.Services.AddHostedService<ServerTimeN   >();
 builder.Services.AddCors();
 builder.Services.AddSingleton<IServerTImeServices, ServerTimeN>();
+builder.Services.AddStackExchangeRedisCache(redisOp =>
+{
+    var connection = builder.Configuration
+    .GetConnectionString("Redis");
+    redisOp.Configuration = connection;
+});
 builder.Services.AddDbContext<TestAnskusContext>(options =>
 options.UseSqlServer(connectionString));
 builder.Services.AddControllers();

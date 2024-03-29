@@ -43,9 +43,16 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
             this.navigationManager = navigationManager;
            _stateConteiner = stateConteiner;
         }
-     
-        
-        public async Task NewRom(int codigo) => await _hubConnection.InvokeAsync("CreateRoom", codigo);
+
+
+        public async Task NewRom(int codigo) 
+        {
+            bool result = await _hubConnection.InvokeAsync<bool>("CreateRoom", codigo.ToString());
+            if(result)
+            {
+                navigationManager.NavigateTo($"/Lobby/{codigo}");
+            }
+        }
         public async Task AddUserToRoom(ParticipanteEnCuestDTO participante)
         {
             bool result = await _hubConnection.InvokeAsync<bool>("AddUserToRoom", participante);
