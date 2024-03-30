@@ -11,6 +11,11 @@
         <h2>Codigo de la partida</h2>
             <p>@codigo</p>       
     </div>
+    @foreach(var item in cuestionario)
+    {
+        
+        <p>@item.Titulo</p>
+    }
     <div class="lobby__status">
         <div class="player__counter">
             <img src="./img/user.png" alt="">
@@ -18,7 +23,7 @@
         </div>
         <div class="lobby__actions">
             <button class="cancelar">Salir</button>
-            <button @onclick="()=>IniciarTarea(codigo)" class="comenzar">Comenzar</button>
+            <button  class="comenzar">Comenzar</button>
         </div>
     </div>
     <div class="activePlayers">

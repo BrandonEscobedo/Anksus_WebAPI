@@ -14,11 +14,12 @@ namespace TestAnskus.Client.Services.Implementacion.CuestionarioActivo
         }
         public async Task<ResponseAPI<CuestionarioActivoDTO>> ActivarCuestionario(int idcuestionario)
         {
-            var result = await _httpClient.
+            var result = await _httpClient. 
             PostAsJsonAsync($"/api/CuestionarioActivo?idcuestionario={idcuestionario}", new {});
             var response = await result.Content.ReadFromJsonAsync<ResponseAPI<CuestionarioActivoDTO>>();
             if (response!.EsCorrecto)
             {
+                
                 return new ResponseAPI<CuestionarioActivoDTO> {EsCorrecto=true,Valor=response.Valor };
             }
             else

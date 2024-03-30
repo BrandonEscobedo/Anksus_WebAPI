@@ -28,9 +28,9 @@ namespace Anksus_WebAPI.Controllers
             _context = context;
         }
         [HttpGet("{id}")]
-        public async Task<ActionResult<IEnumerable<Cuestionario>>> GetCuestionarios(int id)
+        public async Task<ActionResult<Cuestionario>> GetCuestionarios(int id)
         {
-            var responseAPI = new ResponseAPI<List<CuestionarioDTO>>();
+            var responseAPI = new ResponseAPI<CuestionarioDTO>();
             try
             {          
                 var cuestionarios = _mapper.Map<List<CuestionarioDTO>>(await _context.Cuestionarios
@@ -40,8 +40,7 @@ namespace Anksus_WebAPI.Controllers
                     .ToListAsync());
                 if (cuestionarios != null)
                 {
-                    responseAPI.Valor = cuestionarios;
-                    responseAPI.EsCorrecto = true;
+                    return Ok(cuestionarios);
                 }
                 else
                 {

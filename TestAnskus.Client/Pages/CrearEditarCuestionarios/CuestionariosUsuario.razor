@@ -45,7 +45,7 @@ else
         var result  = await _CuestionarioActivoService.ActivarCuestionario(id);
         if (result.EsCorrecto == true)
         {
-            await HubService.NewRom(result.Valor!.codigo);
+            await HubService.NewRom(result.Valor!.codigo,result.Valor!.idcuestionario);
         }
         else if (result.EsCorrecto == false && result.Valor?.codigo != 0)
         {

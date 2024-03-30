@@ -17,6 +17,7 @@ namespace Anksus_WebAPI.Server.Hubs
         private readonly TestAnskusContext _context;
         private readonly IDistributedCache _distributedCache;
         //private static ConcurrentDictionary<int, List<ParticipanteEnCuestDTO>> SalaUsuario = new();
+        CuestionarioDTO cuestionario = new();
         public CuestionarioHub(TestAnskusContext context , IDistributedCache distributedCache)
         {
             _context = context;
@@ -33,7 +34,7 @@ namespace Anksus_WebAPI.Server.Hubs
             bool resultado = await _distributedCache.AddUserToRoomCache(participante.codigo.ToString(), participante);
 
             if (resultado)
-            {
+            {             
                 await Clients.Group(participante.codigo.ToString()).NewParticipante(participante);
 
             }

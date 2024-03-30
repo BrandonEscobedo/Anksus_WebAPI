@@ -26,5 +26,10 @@ namespace Anksus_WebAPI.Models.DTO
         public bool Publico { get; set; } = false;
 
         public virtual ICollection<PreguntasDTO> Pregunta { get; set; } = new List<PreguntasDTO>();
+
+        public static implicit operator CuestionarioDTO(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

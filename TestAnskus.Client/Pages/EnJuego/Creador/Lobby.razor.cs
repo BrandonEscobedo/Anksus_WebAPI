@@ -1,6 +1,10 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using Anksus_WebAPI.Models.DTO;
+using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using MudBlazor;
+using MudBlazor.Extensions;
+using System.Net.Http.Json;
+using System.Text.Json.Serialization;
 using TestAnskus.Shared;
 
 namespace TestAnskus.Client.Pages.EnJuego.Creador
@@ -10,17 +14,22 @@ namespace TestAnskus.Client.Pages.EnJuego.Creador
         [Parameter]
         public int codigo { get; set; }
         private string mensaje = "";
+        private List<CuestionarioDTO> cuestionario= new();
         
-
         private IReadOnlyList<ParticipanteEnCuestDTO> participantesActivos;
 
         protected override async Task OnInitializedAsync()
         {
-            
+
+            var response = await JSRuntime.InvokeAsync<string> ("sessionStorage.getItem", "Llave");
+            if (!string.IsNullOrEmpty(response))
+            {
+               cuestionario = System.Text.Json.JsonSerializer.Deserialize<List<CuestionarioDTO>>(response) ?? throw  new Exception("No existe el cuestionario");
+             
+            }
             await HubServices.GetUsers(codigo);
             HubServices.NewParticipante += HandleruserJoin;
             HubServices.removeParticipante += HandlerUserLeft;
-            HubServices.Mensajerecibido += ActualizarMensaje;
             participantesActivos = HubServices.ParticipantesActivos;
         }
 
@@ -41,17 +50,6 @@ namespace TestAnskus.Client.Pages.EnJuego.Creador
             participantesActivos = participantesActivos.Where(p => p.Nombre != participante.Nombre).ToList();
             StateHasChanged();
         }
-        private void ActualizarMensaje(string msg)
-        {
-            mensaje = msg;
-            StateHasChanged();
-        }
-        private async Task IniciarTarea(int code)
-        {
-            await HubServices.IniciarTarea(code);
-
-        }
-
         public async ValueTask DisposeAsync()
         {
          bool confirmed=   await JSRuntime.InvokeAsync<bool>("confirmClose","Si sales ahora la sesión se eliminara.");
