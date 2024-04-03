@@ -45,12 +45,23 @@ namespace TestAnskus.Client.Services.Implementacion.Autenticacion
                 return loginresult!;
                
             }
+
             await _localStorageService.SetItemAsync("authToken", loginresult!.Token);
             ((CustomAuthenticationStateProvider)_authenticationStateProvider).MarkUserAsAuthenticated(loginModel.Email!);
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", loginresult.Token);
             return loginresult!;
         }
 
+        //public async Task<bool> IsTokenExpired()
+        //{
+
+        //    var token =await _localStorageService.GetItemAsync<string>("authToken");
+        //    if (string.IsNullOrEmpty(token))
+        //    {
+        //        return true ;
+        //    }
+        //    var a = new JwtSecurityTokenHandler();
+        //}
         public async Task Logout()
         {
             await _localStorageService.RemoveItemAsync("authToken");

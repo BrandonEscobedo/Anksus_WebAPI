@@ -3,9 +3,9 @@
     @Body
 </div>
 <script type="text/javascript">
-    function confirmClose(mensaje) {
-        return confirm(mensaje);
-    }
+    window.addEventListener('beforeunload', (e) => {
+        e.returnValue = 'Estas seguro';
 
+    });
 
 </script>

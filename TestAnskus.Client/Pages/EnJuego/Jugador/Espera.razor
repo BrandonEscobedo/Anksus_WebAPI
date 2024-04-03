@@ -26,7 +26,6 @@
 
     protected override void OnInitialized()
     {
-        StateConteiner.StateChange += StateHasChanged;
     }
     protected override void OnAfterRender(bool firstRender)
     {
@@ -34,7 +33,6 @@
     }
     public async ValueTask DisposeAsync()
     {
-        StateConteiner.StateChange -= StateHasChanged;
         await HubServices.UserLeft(StateConteiner.Participante);
     }
 }

@@ -43,36 +43,22 @@ namespace Anksus_WebAPI.Server.Hubs
         }
         public async Task GetUsersByRoom(int code)
         {
-
             await Clients.Group(code.ToString()).getUsers(code);
         }
         public async Task UserLeftRoomUserLeftRoom(ParticipanteEnCuestDTO participante)
         {
-            //if (SalaUsuario.ContainsKey(participante.codigo))
-            //{
-            //    var result = SalaUsuario[participante.codigo]
-            //            .FirstOrDefault(x => x.IdPeC == participante.IdPeC);
-            //    if (result != null)
-            //    {
-            //        SalaUsuario[participante.codigo].Remove(result);
-            //        await Clients.Group(participante.codigo.ToString()).RemoveUser(participante);
-
-            //    }
-            //}
-
+            await _distributedCache.RemoveUserFromRoom( participante.codigo.ToString(),participante);
         }
-        public async Task RemoveRoom(int code)
+        public void RemoveRoom(int code)
         {
-            //bool result = SalaUsuario.TryRemove(code, out _);
-            //if (result)
-            //{
-            //    var cuestionario = _context.CuestionarioActivos.Where(x => x.Codigo == code).FirstOrDefault();
-            //    if (cuestionario != null)
-            //    {
-            //        _context.CuestionarioActivos.Remove(cuestionario);
-            //        await _context.SaveChangesAsync();
-            //    }
-            //}
+            
+                var cuestionario = _context.CuestionarioActivos.Where(x => x.Codigo == code).FirstOrDefault();
+                if (cuestionario != null)
+                {
+                    _context.CuestionarioActivos.Remove(cuestionario);
+                    _context.SaveChangesAsync();
+                }
+            
         }
 
         public override async Task OnDisconnectedAsync(Exception? exception)

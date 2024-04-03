@@ -1,0 +1,25 @@
+﻿@page "/Iniciando"
+ @layout ComponentsBase.ComponentBaseLogin
+<p>@segundos</p>
+<p>Iniciando. !Preparate!.</p>
+@code {
+    @using System.Timers;
+    private Timer Timer = new Timer(1000); 
+    private int segundos = 10;
+    protected override void OnInitialized()
+    {
+        if (Timer.Enabled == false) Timer.Enabled = true;
+        Timer.Elapsed += TimerEvent;
+        
+    }
+    private async void TimerEvent(object source, ElapsedEventArgs e)
+    {
+        segundos = segundos - 1;
+        if (segundos == 0)
+        {
+            Timer.Enabled = false;
+            Timer.Dispose();
+        }
+        StateHasChanged();
+    }
+}

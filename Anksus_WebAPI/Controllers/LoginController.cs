@@ -37,7 +37,7 @@ namespace Anksus_WebAPI.Server.Controllers
             };
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSecurityKey"]!));
             var creds= new SigningCredentials(key,SecurityAlgorithms.HmacSha256);
-            var expiry = DateTime.Now.AddDays(Convert.ToInt32(_configuration["JwtExpiryInDays"]));
+            var expiry = DateTime.Now.AddDays(1);
                 
         
             var token = new JwtSecurityToken

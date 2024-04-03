@@ -9,35 +9,29 @@ using TestAnskus.Shared;
 
 namespace TestAnskus.Client.Pages.EnJuego.Creador
 {
-    public partial class Lobby
+    public partial class Lobby: IDisposable
     {
         [Parameter]
         public int codigo { get; set; }
         private string mensaje = "";
         private List<CuestionarioDTO> cuestionario= new();
-        
-        private IReadOnlyList<ParticipanteEnCuestDTO> participantesActivos;
+
+        private IReadOnlyList<ParticipanteEnCuestDTO>? participantesActivos;
 
         protected override async Task OnInitializedAsync()
         {
-
-            var response = await JSRuntime.InvokeAsync<string> ("sessionStorage.getItem", "Llave");
-            if (!string.IsNullOrEmpty(response))
-            {
-               cuestionario = System.Text.Json.JsonSerializer.Deserialize<List<CuestionarioDTO>>(response) ?? throw  new Exception("No existe el cuestionario");
-             
-            }
+            cuestionario = _StateContainer.GetCuestionario();
             await HubServices.GetUsers(codigo);
             HubServices.NewParticipante += HandleruserJoin;
             HubServices.removeParticipante += HandlerUserLeft;
-            participantesActivos = HubServices.ParticipantesActivos;
+            participantesActivos = HubServices.partipantesEnCuestionario;
         }
 
-        async Task ShowConfirmation()
+
+     private void Iniciar()
         {
-            DialogService di = new DialogService();
+            navigationManager.NavigateTo("/Iniciando");
         }
-     
         private void HandleruserJoin(ParticipanteEnCuestDTO participante)
         {
            
@@ -50,19 +44,12 @@ namespace TestAnskus.Client.Pages.EnJuego.Creador
             participantesActivos = participantesActivos.Where(p => p.Nombre != participante.Nombre).ToList();
             StateHasChanged();
         }
-        public async ValueTask DisposeAsync()
-        {
-         bool confirmed=   await JSRuntime.InvokeAsync<bool>("confirmClose","Si sales ahora la sesión se eliminara.");
-            if(confirmed==true)
-            {
-                HubServices.NewParticipante -= HandleruserJoin;
-                HubServices.removeParticipante -= HandlerUserLeft;
-                await HubServices.RemoveRoom(codigo);
-            }
-            else { return ; }
-            
 
+
+
+        public void Dispose()
+        {
+         HubServices.RemoveRoom(codigo);
         }
-  
     }
 }

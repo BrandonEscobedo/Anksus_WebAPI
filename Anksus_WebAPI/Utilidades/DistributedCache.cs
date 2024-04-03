@@ -43,15 +43,19 @@ namespace Anksus_WebAPI.Server.Utilidades
             }
             return false;
         }
-
-        public static async Task<T> GetUserRoom<T>(this IDistributedCache distributedCache,string RoomCode)
+        public static async Task RemoveUserFromRoom(this IDistributedCache distributedCache,string roomCode, ParticipanteEnCuestDTO participante)
         {
-            var jsonData=await distributedCache.GetStringAsync(RoomCode);
-            if(jsonData  is  null)
+            var Room = await distributedCache.GetStringAsync(roomCode);
+            if (Room != null)
             {
-                return default(T);
+                var List = JsonSerializer.Deserialize<List<ParticipanteEnCuestDTO>>(Room);
+                if (List != null)
+                {
+                    List.Remove(participante);
+                    var jsonData=JsonSerializer.Serialize(List);
+                    await distributedCache.SetStringAsync(roomCode, jsonData);
+                }
             }
-            return JsonSerializer.Deserialize<T>(jsonData);
-        }
+        }    
     }
 }

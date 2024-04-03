@@ -1,9 +1,7 @@
 ﻿@page "/Lobby/{codigo:int}"
 @inject HubConnecionService HubServices
-@implements IAsyncDisposable
 @inject NavigationManager navigationManager
-@inject IJSRuntime JSRuntime
-
+@inject IStateConteiner _StateContainer
 @layout ComponentsBase.ComponentBaseLogin
 <link rel="stylesheet" href="css/codigo.css" />
 <div class="lobby">
@@ -14,16 +12,16 @@
     @foreach(var item in cuestionario)
     {
         
-        <p>@item.Titulo</p>
+        <p>Titulo: @item.Titulo</p>
     }
     <div class="lobby__status">
         <div class="player__counter">
             <img src="./img/user.png" alt="">
-            <p class="counter">@participantesActivos.Count()</p>
+            <p class="counter">@participantesActivos?.Count()</p>
         </div>
         <div class="lobby__actions">
             <button class="cancelar">Salir</button>
-            <button  class="comenzar">Comenzar</button>
+            <button @onclick="Iniciar" class="comenzar">Comenzar</button>
         </div>
     </div>
     <div class="activePlayers">
@@ -37,7 +35,6 @@
             }            
             <p>@mensaje</p>
         </div>
-        <button @onclick="ShowConfirmation">Da click</button>
     </div>
 </div>
 

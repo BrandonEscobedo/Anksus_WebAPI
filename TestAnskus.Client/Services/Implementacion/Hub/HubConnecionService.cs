@@ -16,17 +16,14 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
         public event Action<ParticipanteEnCuestDTO> NewParticipante;
         public event Action<ParticipanteEnCuestDTO> removeParticipante;
         public HttpClient _httpClient;
-        private readonly List<ParticipanteEnCuestDTO> participantesActivos = new();
-        public IReadOnlyList<ParticipanteEnCuestDTO> ParticipantesActivos => participantesActivos;
-        public event Action<List<ParticipanteEnCuestDTO>> ParticipanteList;
+        public List<ParticipanteEnCuestDTO> partipantesEnCuestionario=new();
         private readonly IStateConteiner _stateConteiner;
         private readonly NavigationManager navigationManager;
-        private readonly IJSRuntime _jSRuntime;
         public HubConnecionService(HttpClient httpClient,
             HubConnection hubConnection,
             NavigationManager navigationManager,
-            IStateConteiner stateConteiner,
-            IJSRuntime jSRuntime)
+            IStateConteiner stateConteiner
+             )
         {
             _httpClient = httpClient;
             _hubConnection = hubConnection;
@@ -41,7 +38,6 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
             });
             this.navigationManager = navigationManager;
             _stateConteiner = stateConteiner;
-            _jSRuntime = jSRuntime;
         }
 
 
@@ -50,13 +46,12 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
             bool result = await _hubConnection.InvokeAsync<bool>("CreateRoom", codigo.ToString());
             if(result)
             {
-                List<CuestionarioDTO> response = await _httpClient.GetFromJsonAsync<List<CuestionarioDTO>>($"api/Cuestionarios/{idcuestionario}") ?? throw new Exception("Error al encontrar el cuestionario");
-                if (response != null)
+                var Cuestionario = await _httpClient.GetFromJsonAsync<List<CuestionarioDTO>>($"api/Cuestionarios/{idcuestionario}") ?? throw new Exception("Error al encontrar el cuestionario");
+                if(Cuestionario != null)
                 {
-                    var responseJson = System.Text.Json.JsonSerializer.Serialize<List<CuestionarioDTO>>(response);
-                    await _jSRuntime.InvokeVoidAsync("sessionStorage.setItem", "Llave", responseJson);
-                    navigationManager.NavigateTo($"/Lobby/{codigo}");
-                }             
+                    _stateConteiner.SetCuestionario(Cuestionario);
+                }
+                navigationManager.NavigateTo($"/Lobby/{codigo}");                         
             }
         }
         public async Task AddUserToRoom(ParticipanteEnCuestDTO participante)
@@ -64,8 +59,8 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
             bool result = await _hubConnection.InvokeAsync<bool>("AddUserToRoom", participante);
             if (result == true)
             {
-                _stateConteiner.SetValor(participante);
-                participantesActivos.Add(participante);
+                _stateConteiner.SetParticipante(participante);
+                partipantesEnCuestionario.Add(participante);
                 navigationManager.NavigateTo("/Sala");
             }
         }
@@ -77,16 +72,16 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
         public async Task UserLeft(ParticipanteEnCuestDTO participante)
         {
             await _hubConnection.SendAsync("UserLeftRoomUserLeftRoom", participante);
-            participantesActivos.Remove(participante);
+            partipantesEnCuestionario.Remove(participante);
         }
-        public async Task RemoveRoom(int codigo)
+        public void RemoveRoom(int codigo)
         {
-            await _hubConnection.SendAsync("RemoveRoom", codigo);
+             _hubConnection.SendAsync("RemoveRoom", codigo);
         }
         public async Task<bool> VerificarCodigo(int code)
-        {
+        {   
             var result = await _httpClient.
-                GetFromJsonAsync<bool>($"api/ParticipantesEnCuestionario/{code}");
+            GetFromJsonAsync<bool>($"api/ParticipantesEnCuestionario/{code}");
             return result;
         }
         public async ValueTask DisposeAsync()
