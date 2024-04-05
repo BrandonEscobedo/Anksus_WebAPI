@@ -9,32 +9,29 @@
         <h2>Codigo de la partida</h2>
             <p>@codigo</p>       
     </div>
+    <ListaUsuarios></ListaUsuarios>
     @foreach(var item in cuestionario)
     {
         
         <p>Titulo: @item.Titulo</p>
     }
+    @if(mostrarComponenteHijo)
+    {
+       
+    <Pregunta OnContadorFinalizado="ContadorFinalizadoHandler" />
+    }
+    <button @onclick="MostrarComponenteHijo">Mostrar </button>
     <div class="lobby__status">
         <div class="player__counter">
             <img src="./img/user.png" alt="">
-            <p class="counter">@participantesActivos?.Count()</p>
+            @* <p class="counter">@participantesActivos?.Count()</p> *@
         </div>
         <div class="lobby__actions">
             <button class="cancelar">Salir</button>
-            <button @onclick="Iniciar" class="comenzar">Comenzar</button>
+            <button @onclick="Iniciar"  class="comenzar">Comenzar</button>
         </div>
     </div>
-    <div class="activePlayers">
-        <h1>Jugadores activos</h1>
-        <div class="activePlayers__grid">
-            @foreach (var participante in participantesActivos)
-            {
-                <h3 class="jugador">
-                    @participante.Nombre
-                </h3>
-            }            
-            <p>@mensaje</p>
-        </div>
-    </div>
+    <p>@mensaje</p>
+
 </div>
 

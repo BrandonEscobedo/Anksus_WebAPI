@@ -1,24 +1,77 @@
-﻿@page "/Iniciando"
- @layout ComponentsBase.ComponentBaseLogin
+﻿@page "/Playing"
+@layout ComponentsBase.ComponentBaseLogin
+ @inject IStateConteiner _StateContainer
+ 
 <p>@segundos</p>
 <p>Iniciando. !Preparate!.</p>
+
+@foreach(var cuestionario in _StateContainer.preguntas)
+{
+    <p></p>
+}
+
+<h3>Rankings de Jugadores</h3>
+
+<ul>
+    @foreach (var jugador in Jugadores.OrderByDescending(j => j.Puntaje))
+    {
+        <li>@jugador.Nombre: @jugador.Puntaje</li>
+    }
+</ul>
+
 @code {
     @using System.Timers;
     private Timer Timer = new Timer(1000); 
     private int segundos = 10;
-    protected override void OnInitialized()
+    [Parameter]  public EventCallback OnContadorFinalizado { get; set; }
+    protected override async Task OnInitializedAsync()
     {
         if (Timer.Enabled == false) Timer.Enabled = true;
         Timer.Elapsed += TimerEvent;
-        
+        Jugadores = new List<Jugador>
+        {
+            new Jugador { Nombre = "Jugador1", Puntaje = 100 },
+            new Jugador { Nombre = "Jugador2", Puntaje = 90 },
+            new Jugador { Nombre = "Jugador3", Puntaje = 80 },
+            new Jugador { Nombre = "Jugador4", Puntaje = 70 }
+        };
+        await ActualizarPuntajes();
+       
     }
-    private async void TimerEvent(object source, ElapsedEventArgs e)
+
+    private List<Jugador> Jugadores { get; set; }
+    private async Task ActualizarPuntajes()
+    {
+        while (true)
+        {
+            await Task.Delay(100); // Esperamos 2 segundos
+
+            // Actualizamos los puntajes de los jugadores
+            foreach (var jugador in Jugadores)
+            {
+                jugador.Puntaje += new Random().Next(1, 11);
+                if (jugador.Puntaje >= 1000) break;
+            }
+
+            // Actualizamos la interfaz de usuario
+            StateHasChanged();
+        }
+    }
+
+    // Definimos la clase Jugador
+    public class Jugador
+    {
+        public string Nombre { get; set; }
+        public int Puntaje { get; set; }
+    }
+    private async void TimerEvent(object source, System.Timers.ElapsedEventArgs e)
     {
         segundos = segundos - 1;
         if (segundos == 0)
         {
             Timer.Enabled = false;
             Timer.Dispose();
+           await OnContadorFinalizado.InvokeAsync();
         }
         StateHasChanged();
     }

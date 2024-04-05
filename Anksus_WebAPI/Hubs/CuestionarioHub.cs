@@ -16,8 +16,6 @@ namespace Anksus_WebAPI.Server.Hubs
     {
         private readonly TestAnskusContext _context;
         private readonly IDistributedCache _distributedCache;
-        //private static ConcurrentDictionary<int, List<ParticipanteEnCuestDTO>> SalaUsuario = new();
-        CuestionarioDTO cuestionario = new();
         public CuestionarioHub(TestAnskusContext context , IDistributedCache distributedCache)
         {
             _context = context;
@@ -41,13 +39,10 @@ namespace Anksus_WebAPI.Server.Hubs
             return resultado;
 
         }
-        public async Task GetUsersByRoom(int code)
-        {
-            await Clients.Group(code.ToString()).getUsers(code);
-        }
         public async Task UserLeftRoomUserLeftRoom(ParticipanteEnCuestDTO participante)
         {
             await _distributedCache.RemoveUserFromRoom( participante.codigo.ToString(),participante);
+            await Clients.Group(participante.codigo.ToString()).RemoveUser(participante);
         }
         public void RemoveRoom(int code)
         {

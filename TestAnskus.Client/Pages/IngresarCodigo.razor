@@ -1,5 +1,5 @@
 ﻿@page "/IngresarCodigo"
-@inject HubConnecionService _IHubConnectionService
+@inject ICuestionarioAService _CuestionarioAService
 @inject NavigationManager NavigationManager
 @inject IIdContainer  _idconteiner
 @layout ComponentsBase.ComponentBaseLogin
@@ -23,7 +23,7 @@
     public bool Mostrar = false;
     private async Task IsCodeValid()
     {
-        var result= await _IHubConnectionService.VerificarCodigo(code);
+        var result = await _CuestionarioAService.VerificarCodigo(code);
         if (result == true)
         {
             NavigationManager.NavigateTo($"/Entrar/{code}");

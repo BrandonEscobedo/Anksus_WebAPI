@@ -28,7 +28,12 @@ namespace TestAnskus.Client.Services.Implementacion.CuestionarioActivo
             }
 
         }
-
+        public async Task<bool> VerificarCodigo(int code)
+        {
+            var result = await _httpClient.
+            GetFromJsonAsync<bool>($"api/ParticipantesEnCuestionario/{code}");
+            return result;
+        }
         public Task<ResponseAPI<CuestionarioActivoDTO>> FinalizarCuestionario(int id)
         {
             throw new NotImplementedException();

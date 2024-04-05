@@ -50,15 +50,8 @@ namespace Anksus_WebAPI.Server.Controllers
                     responseAPI.mensaje = "Ha ocurrido un error de tipo: " + ex.Message;
                 }
                 return Ok(responseAPI);
-
-
-
             }
         }
-
-
-
-
 
     }
 }

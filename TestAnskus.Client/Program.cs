@@ -1,4 +1,3 @@
-using CurrieTechnologies.Razor.SweetAlert2;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using TestAnskus.Client;
@@ -12,10 +11,8 @@ using TestAnskus.Client.Services.Interfaces.Autenticacion;
 using TestAnskus.Client.Services.Implementacion.Autenticacion;
 using TestAnskus.Client.Services.Interfaces.CuestionarioActivo;
 using TestAnskus.Client.Services.Implementacion.CuestionarioActivo;
-using TestAnskus.Client.Services.Interfaces.Hub;
 using TestAnskus.Client.Services.Implementacion.Hub;
 using Microsoft.AspNetCore.SignalR.Client;
-
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");

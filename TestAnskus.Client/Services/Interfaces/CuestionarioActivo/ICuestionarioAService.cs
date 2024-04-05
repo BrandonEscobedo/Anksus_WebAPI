@@ -6,6 +6,6 @@ namespace TestAnskus.Client.Services.Interfaces.CuestionarioActivo
     {
         public  Task<ResponseAPI<CuestionarioActivoDTO>> ActivarCuestionario(int id);
         public  Task<ResponseAPI<CuestionarioActivoDTO>> FinalizarCuestionario(int id);
-
+        public  Task<bool> VerificarCodigo(int code);
     }
 }

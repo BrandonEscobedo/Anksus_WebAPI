@@ -5,11 +5,16 @@ namespace TestAnskus.Client.Services.Interfaces
 {
     public interface IStateConteiner
     {
-        event Action  StateChange;
+        public event Action<ParticipanteEnCuestDTO>? StateChange;
         event Action? Omitir;
-        event  Action<int>? StatePregunta;
-      
-        ParticipanteEnCuestDTO Participante { get; set; } 
+        event Action<int>? StatePregunta;
+        List<ParticipanteEnCuestDTO> participanteEnCuest { get; }
+        ParticipanteEnCuestDTO Participante { get; set; }
+        List<CuestionarioDTO> Cuestionario { get; }
+        public List<PreguntasDTO> preguntas { get;  } 
+        public List<RespuestasDTO> respuestas { get;  } 
+        public void RemoveParticipante(ParticipanteEnCuestDTO participante);
+        public void AddParticipante(ParticipanteEnCuestDTO participante);
         void SetParticipante(ParticipanteEnCuestDTO participante);
         public List<CuestionarioDTO> GetCuestionario();
         void SetCuestionario(List<CuestionarioDTO> cuestionario);
@@ -17,6 +22,6 @@ namespace TestAnskus.Client.Services.Interfaces
         void ChangeState(int pregunta);
 
 
-       
+
     }
 }

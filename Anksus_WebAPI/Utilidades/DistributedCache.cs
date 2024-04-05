@@ -51,7 +51,12 @@ namespace Anksus_WebAPI.Server.Utilidades
                 var List = JsonSerializer.Deserialize<List<ParticipanteEnCuestDTO>>(Room);
                 if (List != null)
                 {
-                    List.Remove(participante);
+                    var user = List.Where(x => x.IdPeC == participante.IdPeC).FirstOrDefault();
+                    if (user != null)
+                    {
+                        List.Remove(user);
+                    }
+
                     var jsonData=JsonSerializer.Serialize(List);
                     await distributedCache.SetStringAsync(roomCode, jsonData);
                 }

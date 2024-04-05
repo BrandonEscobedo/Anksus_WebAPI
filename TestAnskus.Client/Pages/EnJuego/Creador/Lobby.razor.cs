@@ -11,41 +11,29 @@ namespace TestAnskus.Client.Pages.EnJuego.Creador
 {
     public partial class Lobby: IDisposable
     {
-        [Parameter]
+        
+       [Parameter]
         public int codigo { get; set; }
         private string mensaje = "";
+        private bool mostrarComponenteHijo = false;
+
         private List<CuestionarioDTO> cuestionario= new();
-
-        private IReadOnlyList<ParticipanteEnCuestDTO>? participantesActivos;
-
         protected override async Task OnInitializedAsync()
         {
-            cuestionario = _StateContainer.GetCuestionario();
-            await HubServices.GetUsers(codigo);
-            HubServices.NewParticipante += HandleruserJoin;
-            HubServices.removeParticipante += HandlerUserLeft;
-            participantesActivos = HubServices.partipantesEnCuestionario;
+            cuestionario = _StateContainer.GetCuestionario();      
         }
-
-
-     private void Iniciar()
+        private void MostrarComponenteHijo()
         {
-            navigationManager.NavigateTo("/Iniciando");
+            mostrarComponenteHijo = true;
         }
-        private void HandleruserJoin(ParticipanteEnCuestDTO participante)
+        private void  ContadorFinalizadoHandler()
+        {
+            mensaje = "Listo";
+        }
+        private void Iniciar()
         {
            
-            participantesActivos = participantesActivos.Append(participante).ToList();
-            StateHasChanged();
         }
-
-        private void HandlerUserLeft(ParticipanteEnCuestDTO participante)
-        {
-            participantesActivos = participantesActivos.Where(p => p.Nombre != participante.Nombre).ToList();
-            StateHasChanged();
-        }
-
-
 
         public void Dispose()
         {
@@ -53,3 +41,4 @@ namespace TestAnskus.Client.Pages.EnJuego.Creador
         }
     }
 }
+
