@@ -1,0 +1,34 @@
+﻿@page "/PreguntaActual"
+@layout ComponentsBase.ComponentBaseLogin
+@inject NavigationManager _navigationManager
+<h3>PreguntaCreador</h3>
+<Pregunta OnSiguiente="@Siguiente">
+
+</Pregunta>
+<p>@segundos</p>
+@code {
+    @using System.Timers
+    private Timer TimerSiguiente = new Timer(1000);
+    private int segundos = 5;
+    protected override async Task OnInitializedAsync()
+    {
+        TimerSiguiente.Elapsed += TimerEv2ent;
+    }
+    private async Task Siguiente()
+    {
+        TimerSiguiente.Enabled = true;
+    }
+    private async void TimerEv2ent(object source, System.Timers.ElapsedEventArgs e)
+    {
+
+        segundos = segundos - 1;
+        if (segundos == 0)
+        {
+            TimerSiguiente.Enabled = false;
+            _navigationManager.NavigateTo("/RankingCreador");
+            TimerSiguiente.Dispose();
+        }
+        StateHasChanged();
+
+    }
+}

@@ -1,30 +1,37 @@
 ﻿@page "/ListaUsuarios"
 @layout ComponentsBase.ComponentBaseLogin
- @inject IStateConteiner _StateContainer
-
+@inject IStateConteiner _StateContainer
 <div class="activePlayers">
     <h1>Jugadores activos</h1>
     <div class="activePlayers__grid">
-        @foreach (var participante in participantesActivos)
+        @if (participantesActivos != null)
         {
-            <h3 class="jugador">
-                @participante.Nombre
-            </h3>
+            @foreach (var participante in participantesActivos)
+            {
+                <h3 class="jugador">
+                    @participante.Nombre
+                </h3>
+            }
         }
-
+        else
+        {
+            <h3>Esperando Jugadores..</h3>
+        }
     </div>
 </div>
 @code {
     private IReadOnlyList<ParticipanteEnCuestDTO>? participantesActivos { get; set; }
+
     protected override void OnInitialized()
     {
         participantesActivos = _StateContainer.participanteEnCuest;
-        _StateContainer.StateChange += HandleruserJoin;
+        _StateContainer.OnAgregarUsuario += HandleruserJoin;
+       
     }
 
-        private void HandleruserJoin(ParticipanteEnCuestDTO participante )
-        {
-            StateHasChanged();
-        }
-
+    private void HandleruserJoin(ParticipanteEnCuestDTO participante)
+    {
+        StateHasChanged();
+    }
+  
 }

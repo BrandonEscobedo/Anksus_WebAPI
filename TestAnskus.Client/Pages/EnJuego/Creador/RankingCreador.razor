@@ -1,0 +1,13 @@
+﻿@page "/RankingCreador"
+@inject HubConnecionService hubConnectionServices
+@layout ComponentsBase.ComponentBaseLogin
+<button @onclick="SiguientePregunta" >Siguiente</button>
+<Ranking></Ranking>
+@code {
+
+    private async Task SiguientePregunta()
+    {
+        await hubConnectionServices.SiguientePreguntaUsuarios();
+    }
+
+}

@@ -19,6 +19,8 @@ namespace Anksus_WebAPI.Server.Utilidades
             await distributedCache.SetStringAsync(RoomCode,jsonData,options);
             return true;
         }
+
+
         public static async Task<bool> AddUserToRoomCache( this IDistributedCache distributedCache,string RoomCode,ParticipanteEnCuestDTO participante)
         {
             var Room=await distributedCache.GetStringAsync(RoomCode);
@@ -38,8 +40,7 @@ namespace Anksus_WebAPI.Server.Utilidades
                         await distributedCache.SetStringAsync(RoomCode, jsonData);
                         return true;
                     } 
-                }
-              
+                }             
             }
             return false;
         }

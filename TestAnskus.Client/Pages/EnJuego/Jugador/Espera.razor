@@ -2,6 +2,8 @@
 @inject IStateConteiner StateConteiner
 @implements IAsyncDisposable
 @inject HubConnecionService HubServices
+@inject IStateConteiner _StateContainer
+@inject NavigationManager _NavigationManager
 @layout ComponentsBase.ComponentBaseLogin
 <link rel="stylesheet" href="css/codigo.css" />
 <div class="lobby">
@@ -19,20 +21,21 @@
             </h3>
         </div>
     </div>
-
-
 </div>
 @code{
-
     protected override void OnInitialized()
     {
+        _StateContainer.OnSiguientePregunta += OnA;
     }
-    protected override void OnAfterRender(bool firstRender)
+    private void OnA(int idpregunta)
     {
-        base.OnAfterRender(firstRender);
+        _StateContainer.IdPregunta = idpregunta;
+        _NavigationManager.NavigateTo($"/Playing");
     }
+
+
     public async ValueTask DisposeAsync()
     {
-        await HubServices.UserLeft(StateConteiner.Participante);
+       
     }
 }

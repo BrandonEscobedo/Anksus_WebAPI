@@ -11,7 +11,7 @@
     </h3>
     <div class="FormConteiner">
         <input type="text" @bind-value="code" placeholder="Codigo">
-        <input type="submit" @onclick="IsCodeValid" value="Aceptar">
+        <input   type="submit" @onclick="IsCodeValid" value="Aceptar">
     </div>
 
 
@@ -19,6 +19,7 @@
     <h1>Haz click arriba o pregunta al creador del juego para que te unas a la diversion</h1>
 </div>
 @code {
+    
     public int code;
     public bool Mostrar = false;
     private async Task IsCodeValid()

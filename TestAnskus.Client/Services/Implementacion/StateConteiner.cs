@@ -1,36 +1,39 @@
 ﻿using Anksus_WebAPI.Models.DTO;
 using Microsoft.AspNetCore.Components;
+using TestAnskus.Client.Pages.ComponentsBase;
 using TestAnskus.Client.Pages.EnJuego.Compartido;
+using TestAnskus.Client.Services.Implementacion.Hub;
 using TestAnskus.Client.Services.Interfaces;
 using TestAnskus.Shared;
 
 namespace TestAnskus.Client.Services.Implementacion
-{
-     
-   
+{ 
+
     public class StateConteiner : IStateConteiner
     {
-        
         public ParticipanteEnCuestDTO Participante { get; set; } = new();
-        public event Action<ParticipanteEnCuestDTO>? StateChange;
+        public event Action<ParticipanteEnCuestDTO>? OnAgregarUsuario;
         public event Action? Omitir;
-        public event Action<int>? StatePregunta;
+        public event Action<int>? OnSiguientePregunta;
+        public event Action OnIniciarCuestionario;
+        public int IdPregunta { get; set; } = 0;
+        public int codigo { get; set; } = 0;
         public List<ParticipanteEnCuestDTO> participanteEnCuest { get; set; } = new();
         public List<CuestionarioDTO> Cuestionario { get; set; } = new();
-        public List<PreguntasDTO> preguntas { get; set; }= new();
-        public List<RespuestasDTO> respuestas { get; set; }= new();
+        public List<PreguntasDTO> preguntas { get; set; } = new();
+
         private readonly NavigationManager _navigationManager;
 
         public StateConteiner(NavigationManager navigationManager)
         {
             _navigationManager = navigationManager;
         }
-
-        public int CantidadPreguntas=0;
+        
+            public int CantidadPreguntas=0;
             public void AddParticipante(ParticipanteEnCuestDTO participante)
-            {
+        {    
             participanteEnCuest.Add(participante);
-            StateChange?.Invoke(participante);
+            OnAgregarUsuario?.Invoke(participante);
         }
         public void RemoveParticipante(ParticipanteEnCuestDTO participante)
         {
@@ -40,48 +43,58 @@ namespace TestAnskus.Client.Services.Implementacion
             if (user != null)
             {
                 participanteEnCuest.Remove(user);
-                StateChange?.Invoke(participante);
+                OnAgregarUsuario?.Invoke(participante);
             }   
+            
         }
-        public void SepararObjetos(List<CuestionarioDTO> cuestionarios)
+        public void ChangeState(int pregunta)
         {
-            foreach(var preguntasCuest in cuestionarios)
-            {
-                preguntas = preguntasCuest.Pregunta.ToList();
-                foreach (var preg in preguntasCuest.Pregunta)
-                {
-                    respuestas=preg.Respuesta.ToList();
-                }
-            }
+            OnSiguientePregunta?.Invoke(pregunta);
         }
-        public void SiguientePregunta(int NumeroPregunta)
+
+        public async Task CrearPreguntas(List<PreguntasDTO> Preguntas)
         {
-            ChangeState(NumeroPregunta);
+            preguntas=Preguntas;
         }
-        public void SetCuestionario(List<CuestionarioDTO> cuestionario)
+        public async Task IniciarCuestionario(List<PreguntasDTO> Preguntas)
+        {
+                
+                preguntas = Preguntas;
+                OnSiguientePregunta?.Invoke(preguntas.First().IdPregunta);
+               
+        }
+
+        public async Task SetCuestionario(List<CuestionarioDTO> cuestionario, int codigo)
         {
             Cuestionario = cuestionario;
-            SepararObjetos(cuestionario);
-            CantidadPreguntas = cuestionario.Count();
+            this.codigo = codigo;
         }
+
         public List<CuestionarioDTO> GetCuestionario()
         {
             return Cuestionario;
         }
-
-        private void IniciarCuestionario()
+        public async Task<DatosPregunta> IndiceSiguientePregunta()
         {
-            _navigationManager.NavigateTo("");
+            DatosPregunta datos = new DatosPregunta { Idpregunta = preguntas.First().IdPregunta, CodigoRoom = codigo };
+          
+            return datos;
         }
-
-        private void ChangeState(int pregunta) => StatePregunta?.Invoke(pregunta);
+        public async Task SiguientePregunta(int idpregunta)
+        {
+            this.IdPregunta = idpregunta;
+            OnSiguientePregunta?.Invoke(idpregunta);
+          
+        }
         public void SetParticipante(ParticipanteEnCuestDTO participante)
         {
             Participante = participante;
         }
-        void IStateConteiner.ChangeState(int pregunta)
-        {
-            throw new NotImplementedException();
-        }
+
     }    
+    public class DatosPregunta
+    {
+        public int Idpregunta { get; set; }
+        public int CodigoRoom { get; set; }
+    }
 }

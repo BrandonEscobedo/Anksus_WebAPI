@@ -1,68 +1,28 @@
-﻿@page "/Playing"
+﻿@page "/Pregunta"
 @layout ComponentsBase.ComponentBaseLogin
- @inject IStateConteiner _StateContainer
- 
-<p>@segundos</p>
-<p>Iniciando. !Preparate!.</p>
-
-@foreach(var cuestionario in _StateContainer.preguntas)
+@inject IStateConteiner _StateContainer
+@inject NavigationManager _NavigationManager
+@foreach (var preguntas in _StateContainer.preguntas.Where(x=>x.IdPregunta==idPregunta))
 {
-    <p></p>
-}
-
-<h3>Rankings de Jugadores</h3>
-
-<ul>
-    @foreach (var jugador in Jugadores.OrderByDescending(j => j.Puntaje))
+    <p>pregunta: @preguntas.Pregunta</p>
+    @foreach(var respuestas in preguntas.Respuesta)
     {
-        <li>@jugador.Nombre: @jugador.Puntaje</li>
+        <button type="button" class="btn btn-success">respuestas: @respuestas.respuesta</button>
     }
-</ul>
-
+}
+<p>@segundos</p>
 @code {
-    @using System.Timers;
-    private Timer Timer = new Timer(1000); 
+@using System.Timers
+    public int idPregunta { get; set; } = 0;
+    private Timer Timer = new Timer(1000);
     private int segundos = 10;
-    [Parameter]  public EventCallback OnContadorFinalizado { get; set; }
+    [Parameter]
+    public EventCallback OnSiguiente { get; set; }
     protected override async Task OnInitializedAsync()
     {
+        idPregunta = _StateContainer.IdPregunta;
         if (Timer.Enabled == false) Timer.Enabled = true;
         Timer.Elapsed += TimerEvent;
-        Jugadores = new List<Jugador>
-        {
-            new Jugador { Nombre = "Jugador1", Puntaje = 100 },
-            new Jugador { Nombre = "Jugador2", Puntaje = 90 },
-            new Jugador { Nombre = "Jugador3", Puntaje = 80 },
-            new Jugador { Nombre = "Jugador4", Puntaje = 70 }
-        };
-        await ActualizarPuntajes();
-       
-    }
-
-    private List<Jugador> Jugadores { get; set; }
-    private async Task ActualizarPuntajes()
-    {
-        while (true)
-        {
-            await Task.Delay(100); // Esperamos 2 segundos
-
-            // Actualizamos los puntajes de los jugadores
-            foreach (var jugador in Jugadores)
-            {
-                jugador.Puntaje += new Random().Next(1, 11);
-                if (jugador.Puntaje >= 1000) break;
-            }
-
-            // Actualizamos la interfaz de usuario
-            StateHasChanged();
-        }
-    }
-
-    // Definimos la clase Jugador
-    public class Jugador
-    {
-        public string Nombre { get; set; }
-        public int Puntaje { get; set; }
     }
     private async void TimerEvent(object source, System.Timers.ElapsedEventArgs e)
     {
@@ -71,8 +31,9 @@
         {
             Timer.Enabled = false;
             Timer.Dispose();
-           await OnContadorFinalizado.InvokeAsync();
+            await OnSiguiente.InvokeAsync();                                   
         }
+
         StateHasChanged();
     }
 }

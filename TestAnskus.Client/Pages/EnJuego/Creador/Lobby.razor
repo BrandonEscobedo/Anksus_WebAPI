@@ -2,6 +2,7 @@
 @inject HubConnecionService HubServices
 @inject NavigationManager navigationManager
 @inject IStateConteiner _StateContainer
+
 @layout ComponentsBase.ComponentBaseLogin
 <link rel="stylesheet" href="css/codigo.css" />
 <div class="lobby">
@@ -15,23 +16,17 @@
         
         <p>Titulo: @item.Titulo</p>
     }
-    @if(mostrarComponenteHijo)
-    {
-       
-    <Pregunta OnContadorFinalizado="ContadorFinalizadoHandler" />
-    }
-    <button @onclick="MostrarComponenteHijo">Mostrar </button>
     <div class="lobby__status">
         <div class="player__counter">
             <img src="./img/user.png" alt="">
             @* <p class="counter">@participantesActivos?.Count()</p> *@
         </div>
         <div class="lobby__actions">
-            <button class="cancelar">Salir</button>
+            <button  @onclick="Salir" class="cancelar">Salir</button>
             <button @onclick="Iniciar"  class="comenzar">Comenzar</button>
         </div>
     </div>
-    <p>@mensaje</p>
+  
 
 </div>
 
