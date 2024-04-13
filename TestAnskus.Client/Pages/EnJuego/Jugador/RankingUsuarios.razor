@@ -9,9 +9,9 @@
         _StateContainer.OnSiguientePregunta += SiguientePregunta;
      
     }
-    private void SiguientePregunta(int idpregunta)
+    private void SiguientePregunta(PreguntasDTO pregunta, string? titulo)
     {
-        _StateContainer.IdPregunta = idpregunta;
+        _StateContainer.pregunta = pregunta;
         _NavigationManager.NavigateTo("/Pregunta");
     }
 

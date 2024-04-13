@@ -11,22 +11,17 @@
             <p>@codigo</p>       
     </div>
     <ListaUsuarios></ListaUsuarios>
-    @foreach(var item in cuestionario)
-    {
         
-        <p>Titulo: @item.Titulo</p>
-    }
+        <p>Titulo: @cuestionario.Titulo</p>
+    
     <div class="lobby__status">
         <div class="player__counter">
             <img src="./img/user.png" alt="">
-            @* <p class="counter">@participantesActivos?.Count()</p> *@
         </div>
         <div class="lobby__actions">
             <button  @onclick="Salir" class="cancelar">Salir</button>
             <button @onclick="Iniciar"  class="comenzar">Comenzar</button>
         </div>
     </div>
-  
-
 </div>
 

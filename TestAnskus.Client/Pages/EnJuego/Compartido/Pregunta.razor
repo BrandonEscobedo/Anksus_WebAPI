@@ -2,28 +2,27 @@
 @layout ComponentsBase.ComponentBaseLogin
 @inject IStateConteiner _StateContainer
 @inject NavigationManager _NavigationManager
-@foreach (var preguntas in _StateContainer.preguntas.Where(x=>x.IdPregunta==idPregunta))
+<p>@pregunta.Pregunta</p>
+
+@foreach (var preguntas in pregunta.Respuesta)
 {
-    <p>pregunta: @preguntas.Pregunta</p>
-    @foreach(var respuestas in preguntas.Respuesta)
-    {
-        <button type="button" class="btn btn-success">respuestas: @respuestas.respuesta</button>
-    }
+    <button type="button" class="btn btn-success">respuesta: @preguntas.respuesta</button>
 }
 <p>@segundos</p>
 @code {
 @using System.Timers
-    public int idPregunta { get; set; } = 0;
+    private PreguntasDTO pregunta = new();
     private Timer Timer = new Timer(1000);
     private int segundos = 10;
     [Parameter]
     public EventCallback OnSiguiente { get; set; }
     protected override async Task OnInitializedAsync()
     {
-        idPregunta = _StateContainer.IdPregunta;
+        pregunta = _StateContainer.pregunta;
         if (Timer.Enabled == false) Timer.Enabled = true;
         Timer.Elapsed += TimerEvent;
     }
+    
     private async void TimerEvent(object source, System.Timers.ElapsedEventArgs e)
     {
         segundos = segundos - 1;
@@ -36,4 +35,5 @@
 
         StateHasChanged();
     }
+
 }

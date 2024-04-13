@@ -27,10 +27,16 @@
     {
         _StateContainer.OnSiguientePregunta += OnA;
     }
-    private void OnA(int idpregunta)
+    private void OnA(PreguntasDTO pregunta, string? titulo)
     {
-        _StateContainer.IdPregunta = idpregunta;
-        _NavigationManager.NavigateTo($"/Playing");
+        _StateContainer.pregunta = pregunta;
+        if (titulo != null)
+        {
+            _StateContainer.titulo = titulo;
+
+        }
+        _NavigationManager.NavigateTo("/Titulo/Jugador");
+
     }
 
 

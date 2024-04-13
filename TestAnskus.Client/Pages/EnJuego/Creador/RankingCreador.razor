@@ -1,10 +1,24 @@
 ﻿@page "/RankingCreador"
 @inject HubConnecionService hubConnectionServices
+@inject IStateConteiner _StateContainer
+@inject NavigationManager _NavigationManager
 @layout ComponentsBase.ComponentBaseLogin
+
 <button @onclick="SiguientePregunta" >Siguiente</button>
 <Ranking></Ranking>
 @code {
 
+    protected override void OnInitialized()
+    {
+        _StateContainer.OnSiguientePregunta += SiguientePregunta;
+
+    }
+
+    private void SiguientePregunta(PreguntasDTO pregunta, string? titulo)
+    {
+        _StateContainer.pregunta = pregunta;
+        _NavigationManager.NavigateTo("/Pregunta");
+    }
     private async Task SiguientePregunta()
     {
         await hubConnectionServices.SiguientePreguntaUsuarios();

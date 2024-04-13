@@ -14,14 +14,23 @@ namespace TestAnskus.Client.Pages.EnJuego.Creador
         
        [Parameter]
         public int codigo { get; set; }
-        private List<CuestionarioDTO> cuestionario= new();
-        protected override async Task OnInitializedAsync()
+        private CuestionarioDTO cuestionario= new();
+        protected override void OnInitialized()
         {
-            cuestionario = _StateContainer.GetCuestionario();      
+            cuestionario = _StateContainer.GetCuestionario();
+            _StateContainer.OnSiguientePregunta +=OnsiguientePregunta;
+        }
+        private void  OnsiguientePregunta(PreguntasDTO pregunta, string? titulo)
+        {
+            _StateContainer.pregunta = pregunta;
+            if (!string.IsNullOrEmpty(titulo))
+            {       
+                navigationManager.NavigateTo("/Titulo/Creador");
+            }
         }
         private async Task Iniciar()
         {
-          await  HubServices.IniciarCuestionarioByRoom(codigo);
+          await  HubServices.SiguientePreguntaUsuarios();
         }
         private void Salir()
         {

@@ -17,10 +17,9 @@
     private async Task Siguiente()
     {
         TimerSiguiente.Enabled = true;
-    }
+    }   
     private async void TimerEv2ent(object source, System.Timers.ElapsedEventArgs e)
     {
-
         segundos = segundos - 1;
         if (segundos == 0)
         {

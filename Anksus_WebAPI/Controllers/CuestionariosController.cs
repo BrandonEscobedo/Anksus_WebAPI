@@ -32,12 +32,12 @@ namespace Anksus_WebAPI.Controllers
         {
             var responseAPI = new ResponseAPI<CuestionarioDTO>();
             try
-            {          
-                var cuestionarios = _mapper.Map<List<CuestionarioDTO>>(await _context.Cuestionarios
+            {
+                var cuestionarios = _mapper.Map<CuestionarioDTO>(await _context.Cuestionarios
                     .Where(e => e.IdCuestionario == id)
                     .Include(o => o.Pregunta)
-                    .ThenInclude(x=>x.Respuesta)                   
-                    .ToListAsync());
+                    .ThenInclude(x=>x.Respuesta)
+                    .FirstOrDefaultAsync());
                 if (cuestionarios != null)
                 {
                     return Ok(cuestionarios);

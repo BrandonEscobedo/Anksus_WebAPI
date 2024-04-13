@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Jh8ezURIPziUxQA0hcPMZ1I75ovu8j/5Sxdt+wdtIfY=",
+  "Hash": "ksmCd6tpSJCqimXUJKHkGyKDTgJ3mmzDTPQGBC8Cz9k=",
   "Source": "TestAnskus.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -682,10 +682,10 @@
       "OriginalItemSpec": "C:\\Users\\jesus\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.1\\staticwebassets\\AuthenticationService.js"
     },
     {
-      "Identity": "C:\\Users\\jesus\\.nuget\\packages\\mudblazor\\6.12.0\\staticwebassets\\MudBlazor.min.css",
+      "Identity": "C:\\Users\\jesus\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\MudBlazor.min.css",
       "SourceId": "MudBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\jesus\\.nuget\\packages\\mudblazor\\6.12.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\jesus\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\",
       "BasePath": "_content/MudBlazor",
       "RelativePath": "MudBlazor.min.css",
       "AssetKind": "All",
@@ -698,13 +698,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\jesus\\.nuget\\packages\\mudblazor\\6.12.0\\staticwebassets\\MudBlazor.min.css"
+      "OriginalItemSpec": "C:\\Users\\jesus\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\MudBlazor.min.css"
     },
     {
-      "Identity": "C:\\Users\\jesus\\.nuget\\packages\\mudblazor\\6.12.0\\staticwebassets\\MudBlazor.min.js",
+      "Identity": "C:\\Users\\jesus\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\MudBlazor.min.js",
       "SourceId": "MudBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\jesus\\.nuget\\packages\\mudblazor\\6.12.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\jesus\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\",
       "BasePath": "_content/MudBlazor",
       "RelativePath": "MudBlazor.min.js",
       "AssetKind": "All",
@@ -717,7 +717,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\jesus\\.nuget\\packages\\mudblazor\\6.12.0\\staticwebassets\\MudBlazor.min.js"
+      "OriginalItemSpec": "C:\\Users\\jesus\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\MudBlazor.min.js"
     },
     {
       "Identity": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json",

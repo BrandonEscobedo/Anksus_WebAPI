@@ -82,8 +82,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW5KdWVnb1xDb21wYXJ0aWRvXExpc3RhVXN1YXJpb3MucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Pages/EnJuego/Compartido/Playing.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW5KdWVnb1xDb21wYXJ0aWRvXFBsYXlpbmcucmF6b3I=
+[C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Pages/EnJuego/Compartido/MostrarTitulo.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW5KdWVnb1xDb21wYXJ0aWRvXE1vc3RyYXJUaXR1bG8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Pages/EnJuego/Compartido/Pregunta.razor]
@@ -106,6 +106,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW5KdWVnb1xDcmVhZG9yXFJhbmtpbmdDcmVhZG9yLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Pages/EnJuego/Creador/TItuloCreador.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW5KdWVnb1xDcmVhZG9yXFRJdHVsb0NyZWFkb3IucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Pages/EnJuego/Jugador/Entrar.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW5KdWVnb1xKdWdhZG9yXEVudHJhci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -114,8 +118,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW5KdWVnb1xKdWdhZG9yXEVzcGVyYS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Pages/EnJuego/Jugador/Playing.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW5KdWVnb1xKdWdhZG9yXFBsYXlpbmcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Pages/EnJuego/Jugador/RankingUsuarios.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW5KdWVnb1xKdWdhZG9yXFJhbmtpbmdVc3Vhcmlvcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Pages/EnJuego/Jugador/TituloJugador.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW5KdWVnb1xKdWdhZG9yXFRpdHVsb0p1Z2Fkb3IucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/jesus/OneDrive/Documentos/programas c\#/Anksus_WebAPI/TestAnskus.Client/Pages/EnJuego/Jugando.razor]
