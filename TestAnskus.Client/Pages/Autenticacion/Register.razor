@@ -1,6 +1,6 @@
 ﻿@page "/register"
 @using TestAnskus.Client.Pages.ComponentsBase
-@inject IAuthService AuthService
+@inject IAccountServices accountservices
 @inject NavigationManager NavigationManager
 @layout ComponentBaseLogin
 
@@ -56,25 +56,34 @@
 
 @code {
 
-    private RegisterModelA RegisterModel = new RegisterModelA();
+    private CreateAccountDTO RegisterModel { get; set; } = new ();
     private bool ShowErrors;
-    private IEnumerable<string>? Errors;
+    private string Errors="";
 
     private async Task HandleRegistration()
     {
+        try
+        {
+            ShowErrors = false;
+
+            var response = await accountservices.CreateAccountAsync(RegisterModel);
+            if (response.Flag)
+            {
+                NavigationManager.NavigateTo("/login");
+
+            }
+            else
+            {
+                Errors = response.Message;
+                ShowErrors = true;
+            }
+        }catch
+        {
+
+            
+        }
         ShowErrors = false;
 
-        var result = await AuthService.Register(RegisterModel);
-
-        if (result.Successful)
-        {
-            NavigationManager.NavigateTo("/login");
-        }
-        else
-        {
-            Errors = result.Errors;
-            ShowErrors = true;
-        }
     }
 
 }

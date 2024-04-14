@@ -1,6 +1,5 @@
 ﻿using Anksus_WebAPI.Models.DTO;
 using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Authorization;
 using System.Net.Http.Json;
 using TestAnskus.Client.Services.Interfaces;
 using TestAnskus.Shared;
@@ -11,10 +10,9 @@ namespace TestAnskus.Client.Services.Implementacion
     public class CuestionariosService : ICuestionariosService
     {
         private readonly HttpClient _httpClient;
-        private readonly AuthenticationStateProvider _authenticationStateProvider;
-        public CuestionariosService(HttpClient httpClient, AuthenticationStateProvider authenticationState) 
+        public CuestionariosService(HttpClient httpClient) 
         {
-        _authenticationStateProvider = authenticationState;
+     
         _httpClient = httpClient;
         }
         public async Task<int> CreateCuestionario(CuestionarioDTO cuestionario)
@@ -53,9 +51,8 @@ namespace TestAnskus.Client.Services.Implementacion
 
         public async Task<List<CuestionarioDTO>> GetCuestionario()
         {
-            var authenticationState = await _authenticationStateProvider.GetAuthenticationStateAsync();
-            if (authenticationState.User.Identity!.IsAuthenticated)
-            {
+          
+           
                 var result = await _httpClient.GetFromJsonAsync<ResponseAPI<List<CuestionarioDTO>>>($"api/Cuestionarios/");
                 if (result!.EsCorrecto)
                 {
@@ -65,11 +62,8 @@ namespace TestAnskus.Client.Services.Implementacion
                 {
                     throw new Exception(result.mensaje);
                 }
-            }
-            else
-            {
-                return new List<CuestionarioDTO>();
-            }
+            
+           
         }
     }
 }

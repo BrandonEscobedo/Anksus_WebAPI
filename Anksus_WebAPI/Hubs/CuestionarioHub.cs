@@ -63,12 +63,12 @@ namespace Anksus_WebAPI.Server.Hubs
             int? code = (int?)Context.Items["Codigo"];
             if (code != null && code != 0)
             {
-                var cuestionario = _context.CuestionarioActivos.Where(x => x.Codigo == code).FirstOrDefault();
-                if (cuestionario != null)
-                {
-                    _context.CuestionarioActivos.Remove(cuestionario);
-                    await _context.SaveChangesAsync();
-                }
+                //var cuestionario = _context.CuestionarioActivos.Where(x => x.Codigo == code).FirstOrDefault();
+                //if (cuestionario != null)
+                //{
+                //    _context.CuestionarioActivos.Remove(cuestionario);
+                //    await _context.SaveChangesAsync();
+                //}
             }
             else
             {

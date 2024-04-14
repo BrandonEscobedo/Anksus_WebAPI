@@ -1,8 +1,12 @@
-﻿ @using TestAnskus.Client.Pages
+﻿ @using anskus.Application.Extensions
 <AuthorizeView>
     <Authorized>
-        Hello, @context.User.Identity?.Name!
-       <a href="Logout">Log Out</a>
+        @if(clientAuthState!=null && clientAuthState.Result.User.Identity!.IsAuthenticated)
+        {
+         <p> @clientAuthState.Result.User.Identity.Name</p>
+            <a href="Logout">Log Out</a>
+        }
+       
     </Authorized>
     
     <NotAuthorized >
@@ -18,3 +22,7 @@
 
     </NotAuthorized>
 </AuthorizeView>
+@code {
+    [CascadingParameter]
+    public Task<AuthenticationState>? clientAuthState { get; set; }
+      }
