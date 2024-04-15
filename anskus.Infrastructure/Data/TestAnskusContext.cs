@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using anskus.Application.Data;
 using anskus.Domain.Entity.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;

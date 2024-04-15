@@ -1,6 +1,9 @@
 ﻿using Anksus_WebAPI.Models.dbModels;
 using anskus.Application.Contracts;
+using anskus.Application.Data;
+using anskus.Application.Services;
 using anskus.Infrastructure.Repository;
+using anskus.Infrastructure.Repository.CuestionariosServices;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -42,6 +45,8 @@ namespace anskus.Infrastructure.DependencyInjection
             services.AddAuthorization();
 
             services.AddScoped<IAccountUser, AccountRepository>();
+            services.AddScoped<ICuestionarioRepository, CuestionarioRepository>();
+            services.AddScoped<IPreguntasRepository, PreguntasRepository>();
             return services;
         }
     }

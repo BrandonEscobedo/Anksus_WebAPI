@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestAnskus.Shared
+namespace anskus.Application.DTOs.Cuestionarios
 {
     public class CategoriasDTO
     {

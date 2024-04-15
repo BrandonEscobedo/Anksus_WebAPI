@@ -6,9 +6,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Anksus_WebAPI.Models.dbModels;
-using Anksus_WebAPI.Models.DTO;
-using TestAnskus.Shared;
+using anskus.Application.DTOs.Cuestionarios;
 using AutoMapper;
+using anskus.Application.Services;
+using anskus.Application.DTOs.Response;
 
 namespace Anksus_WebAPI.Server.Controllers
 {
@@ -16,49 +17,44 @@ namespace Anksus_WebAPI.Server.Controllers
     [ApiController]
     public class PreguntasController : ControllerBase
     {
-        private readonly TestAnskusContext _context;
         private readonly IMapper _mapper;
-        public PreguntasController(TestAnskusContext context,IMapper mapper)
+        private readonly IPreguntasRepository _preguntasRepository;
+        public PreguntasController(IMapper mapper, IPreguntasRepository preguntasRepository )
         {
-            _mapper=mapper;
-            _context = context;
+            _mapper = mapper;
+            _preguntasRepository = preguntasRepository;
         }
 
         // GET: api/Preguntas
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Pregunta>>> GetPreguntas()
-        {
-            return await _context.Preguntas.ToListAsync();
-        }
 
         // GET: api/Preguntas/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPregunta(int id)
         {
-            var responseAPi = new ResponseAPI<PreguntasDTO>();
-            try
-            {
+        //    var responseAPi = new ResponseAPI<PreguntasDTO>();
+        //    try
+        //    {
                 
-                var pregunta = await _context.Preguntas.FindAsync(id);
-                if (pregunta != null)
-                {
-                    var preguntaDTO = _mapper.Map<PreguntasDTO>(pregunta);
-                    responseAPi.EsCorrecto = true;
-                    responseAPi.Valor = preguntaDTO;
-                }
-                else
-                {
-                    responseAPi.EsCorrecto = false;
-                    responseAPi.mensaje = "Error al obtener pregunta";
-                }
+        //        var pregunta = await _context.Preguntas.FindAsync(id);
+        //        if (pregunta != null)
+        //        {
+        //            var preguntaDTO = _mapper.Map<PreguntasDTO>(pregunta);
+        //            responseAPi.EsCorrecto = true;
+        //            responseAPi.Valor = preguntaDTO;
+        //        }
+        //        else
+        //        {
+        //            responseAPi.EsCorrecto = false;
+        //            responseAPi.mensaje = "Error al obtener pregunta";
+        //        }
                 
-            }
-            catch (Exception ex)
-            {
-                responseAPi.EsCorrecto = false;
-                responseAPi.mensaje = "Error al obtener pregunta generado por: "+ex.Message;
-            }
-            return Ok(responseAPi);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        responseAPi.EsCorrecto = false;
+        //        responseAPi.mensaje = "Error al obtener pregunta generado por: "+ex.Message;
+        //    }
+            return Ok();
         }
 
         // PUT: api/Preguntas/5
@@ -66,91 +62,88 @@ namespace Anksus_WebAPI.Server.Controllers
         [HttpPut]
         public async Task<IActionResult> PutPregunta( PreguntasDTO PreguntaDTO)
         {
-            var responseAPI = new ResponseAPI<int>();
-            try
-            {
-                var pregunta = _context.Preguntas.Find(PreguntaDTO.IdPregunta);
-                if(pregunta != null)
-                {
-                    pregunta.Pregunta1 = PreguntaDTO.Pregunta;
-                    _context.Preguntas.Update(pregunta);
-                    await _context.SaveChangesAsync();
-                    responseAPI.EsCorrecto = true;
-                }
-                else { responseAPI.EsCorrecto = false; responseAPI.mensaje = "Ocurrio un error al encontrar la pregunta."; }
-            }
-            catch (Exception ex)
-            {
-                responseAPI.mensaje = "error al editar pregunta en :" + ex.Message;
-            }
+            //var responseAPI = new ResponseAPI<int>();
+            //try
+            //{
+            //    var pregunta = _context.Preguntas.Find(PreguntaDTO.IdPregunta);
+            //    if(pregunta != null)
+            //    {
+            //        pregunta.Pregunta1 = PreguntaDTO.Pregunta;
+            //        _context.Preguntas.Update(pregunta);
+            //        await _context.SaveChangesAsync();
+            //        responseAPI.EsCorrecto = true;
+            //    }
+            //    else { responseAPI.EsCorrecto = false; responseAPI.mensaje = "Ocurrio un error al encontrar la pregunta."; }
+            //}
+            //catch (Exception ex)
+            //{
+            //    responseAPI.mensaje = "error al editar pregunta en :" + ex.Message;
+            //}
 
-            return Ok(responseAPI);
+            return Ok();
         }
 
         // POST: api/Preguntas
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-            [HttpPost]
-            public async Task<IActionResult>  CreatePreguntas(PreguntasDTO _pregunta)
-            {
-            var responseAPI = new ResponseAPI<int>();
-            try
-            {
-            Pregunta pregunta = new Pregunta()
-            {
-            IdCuestionario = _pregunta.IdCuestionario,
-            Pregunta1 = _pregunta.Pregunta,
-            Estado = false
+        [HttpPost]
+        public async Task<GeneralResponse> CreatePreguntas(PreguntasDTO _pregunta) =>
+            await _preguntasRepository.Add(_pregunta);
+            //var responseAPI = new ResponseAPI<int>();
+            //try
+            //{
+            //Pregunta pregunta = new Pregunta()
+            //{
+            //IdCuestionario = _pregunta.IdCuestionario,
+            //Pregunta1 = _pregunta.Pregunta,
+            //Estado = false
 
-            };
-            _context.Preguntas.Add(pregunta);
-            await _context.SaveChangesAsync();
-            if (pregunta.IdPregunta != 0)
-            {
-            responseAPI.EsCorrecto = true;
-            responseAPI.Valor = pregunta.IdPregunta;
-            }
-            else
-            {
-            responseAPI.EsCorrecto = true;
-            responseAPI.mensaje = "No guardado";
-            }
-            }
-            catch(Exception ex)
-            {
-            responseAPI.EsCorrecto = false;
-            responseAPI.mensaje = "No guardado "  +ex.Message;
+            //};
+            //_context.Preguntas.Add(pregunta);
+            //await _context.SaveChangesAsync();
+            //if (pregunta.IdPregunta != 0)
+            //{
+            //responseAPI.EsCorrecto = true;
+            //responseAPI.Valor = pregunta.IdPregunta;
+            //}
+            //else
+            //{
+            //responseAPI.EsCorrecto = true;
+            //responseAPI.mensaje = "No guardado";
+            //}
+            //}
+            //catch(Exception ex)
+            //{
+            //responseAPI.EsCorrecto = false;
+            //responseAPI.mensaje = "No guardado "  +ex.Message;
 
-            }
-            return Ok(responseAPI);
-
-        }
-
+            //}
+            //return Ok(responseAPI);
             // DELETE: api/Preguntas/5
             [HttpDelete("{id}")]
             public async Task<IActionResult> DeletePregunta(int id)
             {
-                var responseAPI = new ResponseAPI<int>();
-            try
-            {
-                var pregunta = await _context.Preguntas.FindAsync(id);
-                if(pregunta != null )
-                {
-                    _context.Remove(pregunta);
-                    await _context.SaveChangesAsync();
-                    responseAPI.EsCorrecto = true;
-                }
-                else
-                {
-                    responseAPI.EsCorrecto = false;
-                    responseAPI.mensaje = "Pregunta no encontrada";
-                }
-            }
-            catch (Exception ex)
-            {
-                responseAPI.EsCorrecto = false;
-                responseAPI.mensaje = "Error generado por "  +ex.Message;
-            }
-            return Ok(responseAPI);  
+            //    var responseAPI = new ResponseAPI<int>();
+            //try
+            //{
+            //    var pregunta = await _context.Preguntas.FindAsync(id);
+            //    if(pregunta != null )
+            //    {
+            //        _context.Remove(pregunta);
+            //        await _context.SaveChangesAsync();
+            //        responseAPI.EsCorrecto = true;
+            //    }
+            //    else
+            //    {
+            //        responseAPI.EsCorrecto = false;
+            //        responseAPI.mensaje = "Pregunta no encontrada";
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    responseAPI.EsCorrecto = false;
+            //    responseAPI.mensaje = "Error generado por "  +ex.Message;
+            //}
+            return Ok();  
             }
         }
 }

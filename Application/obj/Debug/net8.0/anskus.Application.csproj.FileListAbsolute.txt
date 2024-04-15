@@ -11,3 +11,6 @@ C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Application\obj\De
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Application\obj\Debug\net8.0\refint\anskus.Application.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Application\obj\Debug\net8.0\anskus.Application.pdb
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Application\obj\Debug\net8.0\ref\anskus.Application.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Application\bin\Debug\net8.0\anskus.Domain.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Application\bin\Debug\net8.0\anskus.Domain.pdb
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Application\obj\Debug\net8.0\anskus.Application.csproj.CopyComplete

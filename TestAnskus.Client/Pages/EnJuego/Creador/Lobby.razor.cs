@@ -1,11 +1,10 @@
-﻿using Anksus_WebAPI.Models.DTO;
-using Microsoft.AspNetCore.Components;
+﻿using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using MudBlazor;
 using MudBlazor.Extensions;
 using System.Net.Http.Json;
 using System.Text.Json.Serialization;
-using TestAnskus.Shared;
+using anskus.Application.DTOs.Cuestionarios;
 
 namespace TestAnskus.Client.Pages.EnJuego.Creador
 {

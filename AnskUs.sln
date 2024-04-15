@@ -5,15 +5,13 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anksus_WebAPI.Server", "Anksus_WebAPI\Anksus_WebAPI.Server.csproj", "{40A53DDF-6000-4FB8-8E2F-7BA4FE5BE872}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAnskus.Shared", "TestAnskus.Shared\TestAnskus.Shared.csproj", "{881BDA18-B322-4FB6-AC69-C01029266283}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAnskus.Client", "TestAnskus.Client\TestAnskus.Client.csproj", "{E29CD563-06E1-4951-8527-EFFA0D97239E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "anskus.Application", "Application\anskus.Application.csproj", "{F07B5DF7-C894-46B4-9BE8-7E5B9F89E50B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "anskus.Application", "Application\anskus.Application.csproj", "{F07B5DF7-C894-46B4-9BE8-7E5B9F89E50B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "anskus.Domain", "anskus.Domain\anskus.Domain.csproj", "{31326E93-C2EC-41DA-8852-9CAB85335060}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "anskus.Domain", "anskus.Domain\anskus.Domain.csproj", "{31326E93-C2EC-41DA-8852-9CAB85335060}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "anskus.Infrastructure", "anskus.Infrastructure\anskus.Infrastructure.csproj", "{F0E06745-E93E-4EC2-A96A-FB82709D94EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "anskus.Infrastructure", "anskus.Infrastructure\anskus.Infrastructure.csproj", "{F0E06745-E93E-4EC2-A96A-FB82709D94EF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{D057B318-6258-4D34-94D4-267A42FBD78C}"
 EndProject
@@ -27,10 +25,6 @@ Global
 		{40A53DDF-6000-4FB8-8E2F-7BA4FE5BE872}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40A53DDF-6000-4FB8-8E2F-7BA4FE5BE872}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40A53DDF-6000-4FB8-8E2F-7BA4FE5BE872}.Release|Any CPU.Build.0 = Release|Any CPU
-		{881BDA18-B322-4FB6-AC69-C01029266283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{881BDA18-B322-4FB6-AC69-C01029266283}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{881BDA18-B322-4FB6-AC69-C01029266283}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{881BDA18-B322-4FB6-AC69-C01029266283}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E29CD563-06E1-4951-8527-EFFA0D97239E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E29CD563-06E1-4951-8527-EFFA0D97239E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E29CD563-06E1-4951-8527-EFFA0D97239E}.Release|Any CPU.ActiveCfg = Release|Any CPU

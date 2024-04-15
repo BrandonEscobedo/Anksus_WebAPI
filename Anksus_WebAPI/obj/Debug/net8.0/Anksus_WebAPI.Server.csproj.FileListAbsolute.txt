@@ -870,9 +870,7 @@ C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\anskus.Application.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\anskus.Domain.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\anskus.Infrastructure.dll
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\TestAnskus.Shared.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\anskus.Infrastructure.pdb
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\TestAnskus.Shared.pdb
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\anskus.Application.pdb
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\anskus.Domain.pdb
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.csproj.AssemblyReference.cache

@@ -198,7 +198,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj": {
+                "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

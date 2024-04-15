@@ -7,19 +7,19 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal;
 using Microsoft.AspNetCore.Identity.UI.V5.Pages.Account.Internal;
 using Microsoft.AspNetCore.Mvc;
-using TestAnskus.Shared;
-using TestAnskus.Shared.AutorizacionDTO;
+using anskus.Application.DTOs.Cuestionarios;
 namespace Anksus_WebAPI.Server.Controllers
 {
     [Route("api/Account")]
     [ApiController]
-    public class AccountController(IAccountUser account) : ControllerBase
+    public class AccountController(IAccountUser account   ) : ControllerBase
     {
-      
+     
 
         [HttpPost("identity/create")]
         public async Task<ActionResult<GeneralResponse>> Crear(CreateAccountDTO model)
         {
+            
             if (!ModelState.IsValid) 
                 return BadRequest("El modelo no puede ser nulo");
 

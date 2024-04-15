@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "TestAnskus.Client",
   "resources": {
-    "hash": "sha256-C+KOFLOnLk+nqgyN/GjMTk8B7N2icn6sadVLi80XQFM=",
+    "hash": "sha256-VN0kGdQ3sAnO78FAHhNdFc3HXL0pLqbK/+Xf+uIIwzM=",
     "jsModuleNative": {
       "dotnet.native.8.0.1.np5vrdlscf.js": "sha256-SGOlISx+3G4kkvpC9Uq3qoPGsnjxGmW61QBev0lyI5U="
     },
@@ -26,6 +26,8 @@
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-lwyBcK/BXyUbOChoXwuJPA9Gr9sMUxVHvuo7M8KWfrA=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-MfJvwVqFhOyDaEGOyNxWfiAfa/ewRnueSODBzu8KuXA=",
       "Microsoft.AspNetCore.Connections.Abstractions.wasm": "sha256-aMkSCU/5fczZXdBmacV0REU3wmJ7sYhTGJwXVvwodVk=",
+      "Microsoft.AspNetCore.Cryptography.Internal.wasm": "sha256-80pqRlgKKs/RA+ungOEL8gafCOAXYF/TvjK0WRh7pSY=",
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation.wasm": "sha256-e8RvWeoMtCWI26n+5tByGLFLTm4bKC39h9XFC2l36Dc=",
       "Microsoft.AspNetCore.Http.Connections.Client.wasm": "sha256-trFE6h9V2CRkRBTY7GMpslMJ6E6Bw95Ka9RQBpqUicc=",
       "Microsoft.AspNetCore.Http.Connections.Common.wasm": "sha256-c3miMk4hzH60E43x8aUjyhmSFEcZp3dBMIF2BcwQXow=",
       "Microsoft.AspNetCore.Metadata.wasm": "sha256-WqXwQkujGiES/0Dqpa6SChJqSetdki7dySrknprHqvc=",
@@ -33,6 +35,10 @@
       "Microsoft.AspNetCore.SignalR.Client.Core.wasm": "sha256-DKuJiHsvpmYc2plaLizq7A78ye7E4pT2hiKjwh5YZdU=",
       "Microsoft.AspNetCore.SignalR.Common.wasm": "sha256-jBP1SNhHNP+1t62GCLZAffBnX9s3te5WDJldvqzpT8M=",
       "Microsoft.AspNetCore.SignalR.Protocols.Json.wasm": "sha256-EdillcgvmsGu5obexv7jrn4D3RiVs7winMOuzdwuiBA=",
+      "Microsoft.EntityFrameworkCore.wasm": "sha256-KtwSidIRU4ieMHnzF3g7hqH1RI/dYjsi64a2gmZbToQ=",
+      "Microsoft.EntityFrameworkCore.Abstractions.wasm": "sha256-RRqJ9Jzw1nddtq710Cb6ODUsoAr23kzbi7F5Mk9XozY=",
+      "Microsoft.Extensions.Caching.Abstractions.wasm": "sha256-ygxx8pKlN4YllvAX2HADU+dKWSOZRMNfSP4nHkPMH+8=",
+      "Microsoft.Extensions.Caching.Memory.wasm": "sha256-K0Qzxs1gptgogO6juGZzfFp3Q7gUtMCJbo7ateym6cw=",
       "Microsoft.Extensions.Configuration.wasm": "sha256-D3lFRW3fffkHDUD1foQ+RbXGW/c6wUmn8EcUeR3EudQ=",
       "Microsoft.Extensions.Configuration.Abstractions.wasm": "sha256-unB88+o4lg6R7UUQPOk180DU0C+rnJChZVQhmZlxlOg=",
       "Microsoft.Extensions.Configuration.Binder.wasm": "sha256-gs7s3XiHSWiIiJjvMolRLxqxw7skKdnBEr1ZQIN54/A=",
@@ -47,6 +53,8 @@
       "Microsoft.Extensions.FileProviders.Physical.wasm": "sha256-MS+zB0xkKhKk/QdE32ZwKtdlrLMLI/y2NAKPUWhcBVg=",
       "Microsoft.Extensions.FileSystemGlobbing.wasm": "sha256-AnWUKd0qJ8ZNKkRC0AFK2cjjszB7reXiP+bXdIi8bic=",
       "Microsoft.Extensions.Http.wasm": "sha256-fJ6xhlNDZyWo3kmb+j3AyFDKebIgpTGbVmgeEk/YoM4=",
+      "Microsoft.Extensions.Identity.Core.wasm": "sha256-j5pULoLdwGEMCfVcSlkT+VqMjSv5FtgqT4W/uJfmF6w=",
+      "Microsoft.Extensions.Identity.Stores.wasm": "sha256-IxTZVSHdxjq+S8LRCpSvX6hEkf+Akt/AMhVAA9uTTmg=",
       "Microsoft.Extensions.Localization.wasm": "sha256-csBUd4QuytZ4vFjfWtJaYptncxX/miKR5lPhAB9gefg=",
       "Microsoft.Extensions.Localization.Abstractions.wasm": "sha256-N6ZBgmVtKuTLyVca1QduGSfIrtLeu8VDZTMjHhRoW0Q=",
       "Microsoft.Extensions.Logging.wasm": "sha256-QDMSh39nPLZCMpm63jqyJs/BgWFiNwSmch7DFnRBe6A=",
@@ -232,14 +240,14 @@
       "mscorlib.wasm": "sha256-EpWTfh4m/hEcXRFYMCR9YeYHwdUJgcm1laBaxWfq2S4=",
       "netstandard.wasm": "sha256-2kH24/YfHmU3B4eYRyRmiwebYROM4+B9eDWKvMnUdP8=",
       "System.Private.CoreLib.wasm": "sha256-CsySKiP7HYY1pS8LTDE60EkqiX5oHb3WoEZHDNd1yK0=",
-      "anskus.Application.wasm": "sha256-l1R79d4vbuEWrhB5nMp9TvGOFbBOmdcYROHFz8QcgtA=",
-      "TestAnskus.Shared.wasm": "sha256-qk1ACiGwRzPo3fiS4oVXq76dodEIfcPTgYYYAsHA5uI=",
-      "TestAnskus.Client.wasm": "sha256-n4ZvSFNwXQfJYdv4gTo2dsoz2CnrFM1khdqpTIyYZ2w="
+      "anskus.Application.wasm": "sha256-FeqypjjVqVB01QSzRiK81P+5SVp06EZdnWXFf8CSqy4=",
+      "anskus.Domain.wasm": "sha256-fwYANjMWrMExPiSRrOF1cjmp/+MjAoKBbiib9jnSR88=",
+      "TestAnskus.Client.wasm": "sha256-rC4Fyi4wgXn4vyIN5uz47UjiiJSF9FZIxSA5LUb0Ipc="
     },
     "pdb": {
-      "anskus.Application.pdb": "sha256-1Lz6nkvyqizb/CYPkz6pEgwB73zeFzhOGqqD5HSiZRo=",
-      "TestAnskus.Shared.pdb": "sha256-x7/SZ5T4Q6MyXDRp6xVCviV2FfAAeuklfmLS08gUC/Y=",
-      "TestAnskus.Client.pdb": "sha256-sJESBrjKJgMo9weqYjVyXl/B8NrSY4+bg4xP6nzXdLE="
+      "anskus.Application.pdb": "sha256-wh52+EMQ+hcz9gta7oMSmb/yAq3gtMF8yxp9fhJk+Sw=",
+      "anskus.Domain.pdb": "sha256-vfvj9VksCYhcr2P20JWcBc708qiRJraXKCLk9PYWztE=",
+      "TestAnskus.Client.pdb": "sha256-7d7P2n/GuRn5cUukbjlK+j7G2UxWn6HDuJVr2IwOT/s="
     }
   },
   "cacheBootResources": true,

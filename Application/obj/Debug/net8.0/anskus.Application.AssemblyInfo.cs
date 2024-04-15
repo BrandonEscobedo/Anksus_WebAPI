@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("anskus.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c348a17bab6e82da1121a0a265c70b3389f3276")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ca72f29de1599f1b258012351af069b7260c23e")]
 [assembly: System.Reflection.AssemblyProductAttribute("anskus.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("anskus.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

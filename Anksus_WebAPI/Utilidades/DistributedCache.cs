@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Caching.Distributed;
 using System.Text.Json;
-using TestAnskus.Shared;
+using anskus.Application.DTOs.Cuestionarios;
 
 namespace Anksus_WebAPI.Server.Utilidades
 {

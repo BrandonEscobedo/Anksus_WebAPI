@@ -1,6 +1,6 @@
 ﻿using System.Net.Http.Json;
 using TestAnskus.Client.Services.Interfaces;
-using TestAnskus.Shared;
+using anskus.Application.DTOs.Cuestionarios;
 
 namespace TestAnskus.Client.Services.Implementacion
 {

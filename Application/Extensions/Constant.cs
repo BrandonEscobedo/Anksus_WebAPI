@@ -11,6 +11,8 @@ namespace anskus.Application.Extensions
         public const string BrowserStorageKey = "x=key";
         public const string HttpClientName= "TestAnskusClient";
         public const string HttpClientHadersSchame = "Beaer";
+        public const string AddCuestionario = "api/Cuestionarios";
+        public const string AddPregunta = "api/Preguntas";
         public const string RegisterRoute = "api/account/identity/Create";
         public const string LoginRoute = "api/Account/identity/Login";
         public const string RefreshTokenRoute = "api/Account/identity/Refresh-token";

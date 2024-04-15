@@ -1,10 +1,5 @@
-﻿using Anksus_WebAPI.Models.DTO;
-using Microsoft.AspNetCore.Components;
-using TestAnskus.Client.Pages.ComponentsBase;
-using TestAnskus.Client.Pages.EnJuego.Compartido;
-using TestAnskus.Client.Services.Implementacion.Hub;
-using TestAnskus.Client.Services.Interfaces;
-using TestAnskus.Shared;
+﻿using TestAnskus.Client.Services.Interfaces;
+using anskus.Application.DTOs.Cuestionarios;
 
 namespace TestAnskus.Client.Services.Implementacion
 {

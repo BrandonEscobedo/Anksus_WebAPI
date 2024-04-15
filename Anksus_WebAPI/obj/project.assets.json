@@ -3741,7 +3741,8 @@
           "Microsoft.Extensions.DependencyInjection": "9.0.0-preview.3.24172.9",
           "Microsoft.Extensions.Http": "9.0.0-preview.3.24172.9",
           "NetcodeHub.Packages.Extensions.LocalStorage": "1.0.0",
-          "System.IdentityModel.Tokens.Jwt": "7.5.1"
+          "System.IdentityModel.Tokens.Jwt": "7.5.1",
+          "anskus.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/anskus.Application.dll": {}
@@ -3782,16 +3783,6 @@
         },
         "runtime": {
           "bin/placeholder/anskus.Infrastructure.dll": {}
-        }
-      },
-      "TestAnskus.Shared/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "compile": {
-          "bin/placeholder/TestAnskus.Shared.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/TestAnskus.Shared.dll": {}
         }
       }
     }
@@ -10150,11 +10141,6 @@
       "type": "project",
       "path": "../anskus.Infrastructure/anskus.Infrastructure.csproj",
       "msbuildProject": "../anskus.Infrastructure/anskus.Infrastructure.csproj"
-    },
-    "TestAnskus.Shared/1.0.0": {
-      "type": "project",
-      "path": "../TestAnskus.Shared/TestAnskus.Shared.csproj",
-      "msbuildProject": "../TestAnskus.Shared/TestAnskus.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -10169,7 +10155,6 @@
       "Microsoft.Extensions.Caching.StackExchangeRedis >= 9.0.0-preview.2.24128.4",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 9.0.0-preview.3.24207.3",
       "Swashbuckle.AspNetCore >= 6.4.0",
-      "TestAnskus.Shared >= 1.0.0",
       "anskus.Infrastructure >= 1.0.0"
     ]
   },
@@ -10207,9 +10192,6 @@
           "projectReferences": {
             "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\anskus.Infrastructure\\anskus.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\anskus.Infrastructure\\anskus.Infrastructure.csproj"
-            },
-            "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj": {
-              "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj"
             }
           }
         }

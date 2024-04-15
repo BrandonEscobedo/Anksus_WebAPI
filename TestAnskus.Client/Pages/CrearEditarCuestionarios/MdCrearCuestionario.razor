@@ -1,19 +1,19 @@
-﻿@inject ICuestionariosService _CuestionarioService
-@inject ICategoriaService _CategoriasService
-@inject IIdContainer _IdConteiner
-@inject IDialogService DialogService
+﻿@inject ICuestionarioService _CuestionarioService
 
+@inject IDialogService DialogService
+@using System.Security.Claims
+@using anskus.Application.Cuestionarios
 <MudDialog>
 <DialogContent>
 
     <MudInputLabel>Titulo</MudInputLabel>
     <input type="text" @bind-value="cuestionarioDTO.Titulo" />
-    <MudSelect @bind-Value="cuestionarioDTO.IdCategoria" Label="Categoria">
+@*     <MudSelect @bind-Value="cuestionarioDTO.IdCategoria" Label="Categoria">
 @foreach (var item in listaCategorias)
 {
     <MudSelectItem Value="@item.IdCategoria">@item.Categoria</MudSelectItem>
 }
-</MudSelect>
+</MudSelect> *@
 
 </DialogContent>
 <DialogActions>
@@ -24,34 +24,46 @@
 @code {
     [CascadingParameter] MudDialogInstance MudDialog { get; set; }
     void Cancel() => MudDialog.Cancel();
+    [Inject] AuthenticationStateProvider AuthStateProvider { get; set; }
+
 
     public CuestionarioDTO cuestionarioDTO { get; set; } = new CuestionarioDTO();
     public List<CategoriasDTO> listaCategorias = new List<CategoriasDTO>();
     protected override async Task OnInitializedAsync()
     {
-        listaCategorias = await _CategoriasService.GetAllCategorias();
+        var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity.IsAuthenticated)
+        {
+            var userEmail = user.FindFirst(ClaimTypes.Email)?.Value;
+            // Usa el userEmail según necesites
+        }
+        // listaCategorias = await _CategoriasService.GetAllCategorias();
     }
     public async Task GuardarEditarCuestionario()
     {
-        int id = 0;
-        cuestionarioDTO.Estado = false;
-        cuestionarioDTO.Publico = false;
-        if (_IdConteiner.idCuestionario == 0)
-        {
-            id = await _CuestionarioService.CreateCuestionario(cuestionarioDTO);
-            if(id!=0)
-            {
-                MudDialog.Close();
-                _IdConteiner.SetIdCuestionario(id);
 
-            }
-        }
-        else
+        await _CuestionarioService.Add(cuestionarioDTO);
+        // int id = 0;
+        // cuestionarioDTO.Estado = false;
+        // cuestionarioDTO.Publico = false;
+        // if (_IdConteiner.idCuestionario == 0)
+        // {
+        //     id = await _CuestionarioService.CreateCuestionario(cuestionarioDTO);
+        //     if(id!=0)
+        //     {
+        //         MudDialog.Close();
+        //         _IdConteiner.SetIdCuestionario(id);
 
-        {
-            cuestionarioDTO.IdCuestionario = _IdConteiner.idCuestionario;
-            await _CuestionarioService.EditCuestionario(cuestionarioDTO);
-        }
+        //     }
+        // }
+        // else
+
+        // {
+        //     cuestionarioDTO.IdCuestionario = _IdConteiner.idCuestionario;
+        //     await _CuestionarioService.EditCuestionario(cuestionarioDTO);
+        // }
 
     }
 }

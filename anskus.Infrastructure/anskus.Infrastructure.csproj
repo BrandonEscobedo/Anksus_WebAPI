@@ -22,5 +22,8 @@
 	  <ProjectReference Include="..\anskus.Domain\anskus.Domain.csproj" />
 	  <ProjectReference Include="..\Application\anskus.Application.csproj" />
 	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Repository\HubConnection\" />
+	</ItemGroup>
 
 </Project>

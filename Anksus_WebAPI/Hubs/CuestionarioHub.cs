@@ -1,10 +1,9 @@
 ﻿using Anksus_WebAPI.Models.dbModels;
-using Anksus_WebAPI.Models.DTO;
 using Anksus_WebAPI.Server.Utilidades;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Caching.Distributed;
+using anskus.Application.DTOs.Cuestionarios;
 
-using TestAnskus.Shared;
 namespace Anksus_WebAPI.Server.Hubs
 {
     public class CuestionarioHub : Hub<InotificationClient>

@@ -40,8 +40,9 @@ namespace anskus.Infrastructure.Repository
                 var creds = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
                 var userClaims = new[]
                 {
-                    new Claim(ClaimTypes.Name,user.Email),
-                    new Claim(ClaimTypes.Email,user.Email)
+                    new Claim(ClaimTypes.Name,user.Email!),
+                    new Claim(ClaimTypes.Email,user.Email),
+                   
                 };
                 var expiry = DateTime.Now.AddDays(1);
                 var token = new JwtSecurityToken

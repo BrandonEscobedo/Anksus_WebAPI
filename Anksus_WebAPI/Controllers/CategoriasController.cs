@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Anksus_WebAPI.Models.dbModels;
-using TestAnskus.Shared;
+using anskus.Application.DTOs.Cuestionarios;
 
 namespace Anksus_WebAPI.Server.Controllers
 {

@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace Anksus_WebAPI.Models.DTO
+namespace anskus.Application.DTOs.Cuestionarios
 {
     public class PreguntasDTO
     {

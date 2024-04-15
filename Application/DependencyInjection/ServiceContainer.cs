@@ -1,4 +1,5 @@
-﻿using anskus.Application.Extensions;
+﻿using anskus.Application.Cuestionarios;
+using anskus.Application.Extensions;
 using anskus.Application.Services;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,6 +18,8 @@ namespace anskus.Application.DependencyInjection
             services.AddScoped<Extensions.LocalStorageServices>();
             services.AddScoped<HttpClientServices>();
             services.AddScoped<AuthenticationStateProvider, CustomAuthenticationProvider>();
+            services.AddScoped<ICuestionarioService, CuestionarioService>();
+            services.AddScoped<IPreguntasService, PreguntasService>();
             services.AddTransient<CustomHttpHandler>();
             services.AddCascadingAuthenticationState();
             services.AddHttpClient("TestAnskusClient", client =>
