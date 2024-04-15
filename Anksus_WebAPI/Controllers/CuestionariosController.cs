@@ -1,19 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
 using Anksus_WebAPI.Models.dbModels;
-using Microsoft.AspNetCore.Identity;
 using anskus.Application.DTOs.Cuestionarios;
-using System.Security.Claims;
 using AutoMapper;
-using anskus.Application.Cuestionarios;
 using anskus.Application.Services;
 using anskus.Application.DTOs.Response;
-
 namespace Anksus_WebAPI.Controllers
 {
     [Route("api/Cuestionarios")]
@@ -26,12 +16,12 @@ namespace Anksus_WebAPI.Controllers
         {
             //var user = HttpContext.User.FindFirst(ClaimTypes.Email)?.Value;
           
-            if (user == null)
+            if (cuestionario.Email == null)
             {
                 return Unauthorized();
             }
 
-            return Ok(await cuestionarioRepository.Add(cuestionario, user)) ;
+            return Ok(await cuestionarioRepository.Add(cuestionario)) ;
         }                     
         [HttpGet("{id}")]
         public async Task<ActionResult<Cuestionario>> GetCuestionarios(int id)

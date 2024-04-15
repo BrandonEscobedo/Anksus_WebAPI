@@ -19,9 +19,9 @@ using anskus.Domain.CuestionariosInterface;
             this.userManager = userManager;
         }
 
-        public async Task<GeneralResponse> Add(CuestionarioDTO cuestionario, string email)
+        public async Task<GeneralResponse> Add(CuestionarioDTO cuestionario)
             {
-            var userid = userManager.FindByEmailAsync(email);
+            var userid = userManager.FindByEmailAsync(cuestionario.Email!) ?? throw new Exception("NO se encontro el usuario");
           
             Cuestionario cuestionario1 = new Cuestionario()
             {

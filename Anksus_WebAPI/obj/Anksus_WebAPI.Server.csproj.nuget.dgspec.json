@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj": {}
+    "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj": {
+    "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj",
+        "projectUniqueName": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj",
         "projectName": "Anksus_WebAPI.Server",
-        "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj",
-        "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\Anksus_WebAPI\\obj\\",
+        "projectPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj",
+        "packagesPath": "C:\\Users\\brand\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\Anksus_WebAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\brand\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\anskus.Infrastructure\\anskus.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\anskus.Infrastructure\\anskus.Infrastructure.csproj"
+              "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Infrastructure\\anskus.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Infrastructure\\anskus.Infrastructure.csproj"
               }
             }
           }
@@ -114,21 +110,17 @@
         }
       }
     },
-    "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj": {
+    "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj",
         "projectName": "anskus.Domain",
-        "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj",
-        "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\anskus.Domain\\obj\\",
+        "projectPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj",
+        "packagesPath": "C:\\Users\\brand\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\brand\\Source\\Repos\\Anksus_WebAPI\\anskus.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\brand\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -183,21 +175,17 @@
         }
       }
     },
-    "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\anskus.Infrastructure\\anskus.Infrastructure.csproj": {
+    "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Infrastructure\\anskus.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\anskus.Infrastructure\\anskus.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Infrastructure\\anskus.Infrastructure.csproj",
         "projectName": "anskus.Infrastructure",
-        "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\anskus.Infrastructure\\anskus.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\anskus.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Infrastructure\\anskus.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\brand\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\brand\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -211,11 +199,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj": {
-                "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj"
+              "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj": {
+                "projectPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj"
               },
-              "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\Application\\anskus.Application.csproj": {
-                "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\Application\\anskus.Application.csproj"
+              "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\Application\\anskus.Application.csproj": {
+                "projectPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\Application\\anskus.Application.csproj"
               }
             }
           }
@@ -281,21 +269,17 @@
         }
       }
     },
-    "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\Application\\anskus.Application.csproj": {
+    "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\Application\\anskus.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\Application\\anskus.Application.csproj",
+        "projectUniqueName": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\Application\\anskus.Application.csproj",
         "projectName": "anskus.Application",
-        "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\Application\\anskus.Application.csproj",
-        "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\Application\\obj\\",
+        "projectPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\Application\\anskus.Application.csproj",
+        "packagesPath": "C:\\Users\\brand\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\brand\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -309,8 +293,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj": {
-                "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj"
+              "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj": {
+                "projectPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj"
               }
             }
           }

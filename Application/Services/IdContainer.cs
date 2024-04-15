@@ -1,8 +1,7 @@
-﻿using TestAnskus.Client.Services.Interfaces;
-
-namespace TestAnskus.Client.Services.Implementacion
+﻿using anskus.Application.Cuestionarios;
+namespace anskus.Application.Services
 {
-    public class IdConteiner : IIdContainer
+    public class IdContainer:IIdContainer
     {
         public int idCuestionario { get; set; } = 0;
         public int idPregunta { get; set; } = 0;
@@ -10,7 +9,7 @@ namespace TestAnskus.Client.Services.Implementacion
         {
             idCuestionario = id;
         }
- 
+
         public void SetIdPregunta(int id)
         {
             idPregunta = id;

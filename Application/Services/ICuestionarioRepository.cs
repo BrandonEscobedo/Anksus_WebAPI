@@ -11,7 +11,7 @@ namespace anskus.Application.Services
 {
     public interface ICuestionarioRepository
     {
-         Task<GeneralResponse> Add(CuestionarioDTO cuestionario, string id);
+        GeneralResponse Add ( CuestionarioDTO cuestionario);
         void Update(Cuestionario cuestionario);
         void Delete(int id);
         Task<Cuestionario> GeyByIdAsync(int id);

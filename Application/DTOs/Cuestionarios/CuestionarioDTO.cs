@@ -21,6 +21,7 @@ namespace anskus.Application.DTOs.Cuestionarios
         [StringLength(60)]
         //[Required(ErrorMessage ="El campo {0} es requerido.")]
         public string? Titulo { get; set; }
+        public string? Email { get; set; }
 
         [Column("publico")]
         public bool Publico { get; set; } = false;

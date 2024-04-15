@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace anskus.Infrastructure.Migrations
 {
     [DbContext(typeof(TestAnskusContext))]
-    [Migration("20240414063319_init")]
-    partial class init
+    [Migration("20240415154014_lap")]
+    partial class lap
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

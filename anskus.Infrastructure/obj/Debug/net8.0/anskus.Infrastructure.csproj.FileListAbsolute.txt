@@ -18,3 +18,23 @@ C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Infrastruct
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Infrastructure\obj\Debug\net8.0\anskus.Infrastructure.pdb
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Infrastructure\obj\Debug\net8.0\anskus.Infrastructure.genruntimeconfig.cache
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Infrastructure\obj\Debug\net8.0\ref\anskus.Infrastructure.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\anskus.Infrastructure\bin\Debug\net8.0\anskus.Infrastructure.deps.json
+C:\Users\brand\Source\Repos\Anksus_WebAPI\anskus.Infrastructure\bin\Debug\net8.0\anskus.Infrastructure.runtimeconfig.json
+C:\Users\brand\Source\Repos\Anksus_WebAPI\anskus.Infrastructure\bin\Debug\net8.0\anskus.Infrastructure.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\anskus.Infrastructure\bin\Debug\net8.0\anskus.Infrastructure.pdb
+C:\Users\brand\Source\Repos\Anksus_WebAPI\anskus.Infrastructure\bin\Debug\net8.0\anskus.Application.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\anskus.Infrastructure\bin\Debug\net8.0\anskus.Domain.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\anskus.Infrastructure\bin\Debug\net8.0\anskus.Domain.pdb
+C:\Users\brand\Source\Repos\Anksus_WebAPI\anskus.Infrastructure\bin\Debug\net8.0\anskus.Application.pdb
+C:\Users\brand\Source\Repos\Anksus_WebAPI\anskus.Infrastructure\obj\Debug\net8.0\anskus.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\brand\Source\Repos\Anksus_WebAPI\anskus.Infrastructure\obj\Debug\net8.0\anskus.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brand\Source\Repos\Anksus_WebAPI\anskus.Infrastructure\obj\Debug\net8.0\anskus.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\brand\Source\Repos\Anksus_WebAPI\anskus.Infrastructure\obj\Debug\net8.0\anskus.Infrastructure.AssemblyInfo.cs
+C:\Users\brand\Source\Repos\Anksus_WebAPI\anskus.Infrastructure\obj\Debug\net8.0\anskus.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\brand\Source\Repos\Anksus_WebAPI\anskus.Infrastructure\obj\Debug\net8.0\anskus.Infrastructure.sourcelink.json
+C:\Users\brand\Source\Repos\Anksus_WebAPI\anskus.Infrastructure\obj\Debug\net8.0\anskus.Infrastructure.csproj.CopyComplete
+C:\Users\brand\Source\Repos\Anksus_WebAPI\anskus.Infrastructure\obj\Debug\net8.0\anskus.Infrastructure.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\anskus.Infrastructure\obj\Debug\net8.0\refint\anskus.Infrastructure.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\anskus.Infrastructure\obj\Debug\net8.0\anskus.Infrastructure.pdb
+C:\Users\brand\Source\Repos\Anksus_WebAPI\anskus.Infrastructure\obj\Debug\net8.0\anskus.Infrastructure.genruntimeconfig.cache
+C:\Users\brand\Source\Repos\Anksus_WebAPI\anskus.Infrastructure\obj\Debug\net8.0\ref\anskus.Infrastructure.dll
