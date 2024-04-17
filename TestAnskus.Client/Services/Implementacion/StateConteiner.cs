@@ -3,7 +3,7 @@ using anskus.Application.DTOs.Cuestionarios;
 
 namespace TestAnskus.Client.Services.Implementacion
 {
-    public class StateConteiner : IStateConteiner
+    public class StateConteiner : TestAnskus.Client.Services.Interfaces.IStateConteiner
     {
         public ParticipanteEnCuestDTO Participante { get; set; } = new();
         public event Action<ParticipanteEnCuestDTO>? OnAgregarUsuario;

@@ -11,13 +11,21 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-
+using System.Reflection;
+using anskus.Domain;
+using anskus.Domain.Cuestionarios;
+using anskus.Application.DependencyInjection;
 namespace anskus.Infrastructure.DependencyInjection
 {
     public  static class ServiceContainer
     {
         public static IServiceCollection AddInfrastructureService(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddMediatR(config =>
+            {
+                config.RegisterServicesFromAssemblyContaining<AppicationAssemblyReference>();
+            });
+
             services.AddDbContext<TestAnskusContext>(o => o.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
             services.AddIdentityCore<ApplicationUser>()
                 .AddEntityFrameworkStores<TestAnskusContext>()
@@ -43,8 +51,10 @@ namespace anskus.Infrastructure.DependencyInjection
     });
             services.AddAuthentication();
             services.AddAuthorization();
-
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddScoped<IAccountUser, AccountRepository>();
+            services.AddScoped<IDbContext>(sp=>sp.GetRequiredService<TestAnskusContext>());
+            services.AddScoped<IUnitOfWork>(sp=>sp.GetRequiredService<TestAnskusContext>());
             services.AddScoped<ICuestionarioRepository, CuestionarioRepository>();
             services.AddScoped<IPreguntasRepository, PreguntasRepository>();
             return services;

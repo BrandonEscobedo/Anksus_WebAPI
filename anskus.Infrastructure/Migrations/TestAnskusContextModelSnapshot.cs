@@ -121,41 +121,31 @@ namespace anskus.Infrastructure.Migrations
                 {
                     b.Property<int>("IdCuestionario")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("id_cuestionario");
+                        .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdCuestionario"));
-
-                    b.Property<bool>("Estado")
-                        .HasColumnType("bit")
-                        .HasColumnName("estado");
 
                     b.Property<int>("IdCategoria")
                         .HasColumnType("int");
 
                     b.Property<int>("IdUsuario")
-                        .HasColumnType("int")
-                        .HasColumnName("id_usuario");
+                        .HasColumnType("int");
 
                     b.Property<bool>("Publico")
-                        .HasColumnType("bit")
-                        .HasColumnName("publico");
+                        .HasColumnType("bit");
 
                     b.Property<string>("Titulo")
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(60)
                         .HasColumnType("nvarchar(60)")
-                        .HasDefaultValue("title")
-                        .HasColumnName("titulo");
+                        .HasDefaultValue("title");
 
                     b.HasKey("IdCuestionario")
                         .HasName("PK__cuestion__4A5CFD1B822640FC");
 
-                    b.HasIndex(new[] { "IdCategoria" }, "IX_cuestionarios_IdCategoria");
+                    b.HasIndex("IdCategoria");
 
-                    b.HasIndex(new[] { "IdUsuario" }, "IX_cuestionarios_id_usuario");
-
-                    b.ToTable("cuestionarios");
+                    b.ToTable("Cuestionarios");
                 });
 
             modelBuilder.Entity("Anksus_WebAPI.Models.dbModels.CuestionarioActivo", b =>
@@ -209,15 +199,10 @@ namespace anskus.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdPregunta"));
 
-                    b.Property<bool>("Estado")
-                        .HasColumnType("bit")
-                        .HasColumnName("estado");
-
                     b.Property<int>("IdCuestionario")
-                        .HasColumnType("int")
-                        .HasColumnName("id_cuestionario");
+                        .HasColumnType("int");
 
-                    b.Property<string>("Pregunta1")
+                    b.Property<string>("pregunta")
                         .IsRequired()
                         .HasMaxLength(400)
                         .IsUnicode(false)
@@ -249,7 +234,7 @@ namespace anskus.Infrastructure.Migrations
                         .HasColumnType("bit")
                         .HasColumnName("R_correcta");
 
-                    b.Property<string>("Respuesta1")
+                    b.Property<string>("respuesta")
                         .IsRequired()
                         .HasMaxLength(200)
                         .IsUnicode(false)
@@ -432,6 +417,7 @@ namespace anskus.Infrastructure.Migrations
                     b.HasOne("Anksus_WebAPI.Models.dbModels.Categoria", "IdCategoriaNavigation")
                         .WithMany("Cuestionarios")
                         .HasForeignKey("IdCategoria")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("FK_cuestionario_categoria");
 
@@ -458,13 +444,13 @@ namespace anskus.Infrastructure.Migrations
 
             modelBuilder.Entity("Anksus_WebAPI.Models.dbModels.Pregunta", b =>
                 {
-                    b.HasOne("Anksus_WebAPI.Models.dbModels.Cuestionario", "IdCuestionarioNavigation")
+                    b.HasOne("Anksus_WebAPI.Models.dbModels.Cuestionario", "cuestionario")
                         .WithMany("Pregunta")
                         .HasForeignKey("IdCuestionario")
                         .IsRequired()
                         .HasConstraintName("FK_preguntas_cuestionario");
 
-                    b.Navigation("IdCuestionarioNavigation");
+                    b.Navigation("cuestionario");
                 });
 
             modelBuilder.Entity("Anksus_WebAPI.Models.dbModels.Respuesta", b =>

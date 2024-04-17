@@ -29,13 +29,13 @@ namespace anskus.Application.Services
                 return new GeneralResponse(false, ex.Message);
             }
         }
-
+        
         public async Task<LoginResponse> LoginAccountAsync(LoginDTO model)
         {
             try
             {
                 var publicClient = httpClientServices.GetPublicClient();
-                var response = await publicClient.PostAsJsonAsync(Constant.LoginRoute, model);
+                var response = await publicClient.PostAsJsonAsync("https://localhost:7150/"+Constant.LoginRoute, model);
                 string error = CheckResponseStatus(response);
                 if (!string.IsNullOrEmpty(error))
                     return new LoginResponse(Flag: false, error);

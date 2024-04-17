@@ -1,5 +1,6 @@
 ﻿using anskus.Application.DTOs.Cuestionarios;
 using anskus.Application.DTOs.Response;
+using anskus.Application.DTOs.Response.Cuestionarios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace anskus.Application.Cuestionarios
 {
     public interface ICuestionarioService
     {
-        public  Task<GeneralResponse> Add(CuestionarioDTO cuestionario);
+        public  Task<int> Add(CuestionarioDTO cuestionario);
+        public  Task<CuestionarioResponse> Update(CuestionarioDTO cuestionario);
     }
 }

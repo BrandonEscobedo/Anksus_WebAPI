@@ -6,7 +6,7 @@ using System.Xml.Linq;
 namespace Anksus_WebAPI.Models.dbModels
 {
     [Index("IdImagenPerfil", Name = "IX_AspNetUsers_id_imagen_perfil")]
-   public class ApplicationUser:IdentityUser
+   public class ApplicationUser:IdentityUser 
     {
        public string? Name { get; set; }
 

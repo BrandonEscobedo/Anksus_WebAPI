@@ -7,10 +7,5 @@ using System.Threading.Tasks;
 
 namespace anskus.Application.DTOs
 {
-    public class ResponseAPi<T>
-    {
-        public T? Valor { get; set; }
-        public GeneralResponse? response { get; set; }
-
-    }
+    public record ResponseAPi<T>(T? Valor, bool Flag = false, string Message = null!);
 }

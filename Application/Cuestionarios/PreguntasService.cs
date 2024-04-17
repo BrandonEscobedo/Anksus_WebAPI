@@ -1,5 +1,6 @@
 ﻿using anskus.Application.DTOs.Cuestionarios;
 using anskus.Application.DTOs.Response;
+using anskus.Application.DTOs.Response.Cuestionarios;
 using anskus.Application.Extensions;
 using System.Net.Http.Json;
 
@@ -20,12 +21,22 @@ namespace anskus.Application.Cuestionarios
             else
                 return null!;
         }
-        private static GeneralResponse ErrorOperation(string message) => new(false, message);
-        public async Task<GeneralResponse> Add(PreguntasDTO preguntas)
+        private static PreguntasResponse ErrorOperation(string message) => new(null, false, message);
+        public async Task<PreguntasResponse> Add(PreguntasDTO pregunta)
         {
-            var result = await (await PrivateClient()).PostAsJsonAsync(Constant.AddPregunta, preguntas);
+            var result = await (await PrivateClient()).PostAsJsonAsync(Constant.AddPregunta, pregunta);
+
             if (!string.IsNullOrEmpty(CheckResponseStatus(result))) return ErrorOperation(CheckResponseStatus(result));
-            return await result.Content.ReadFromJsonAsync<GeneralResponse>() ?? throw new Exception("No se encontro nada");
+            return await result.Content.ReadFromJsonAsync<PreguntasResponse>() ?? throw new Exception("No se encontro nada");
+        }
+        public Task<PreguntasResponse> GetPreguntas(int pregunta)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<PreguntasResponse> DeletePregunta(int pregunta)
+        {
+            throw new NotImplementedException();
         }
     }
 

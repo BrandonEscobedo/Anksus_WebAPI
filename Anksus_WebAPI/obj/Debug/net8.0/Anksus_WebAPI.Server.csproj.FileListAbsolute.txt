@@ -600,7 +600,6 @@ C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Anksus_WebAPI.Server.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Anksus_WebAPI.Server.pdb
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\AutoMapper.dll
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\BCrypt.Net-Next.dll
@@ -1210,3 +1209,6 @@ C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\refint\
 C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.pdb
 C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.genruntimeconfig.cache
 C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\ref\Anksus_WebAPI.Server.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\MediatR.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\libman.json

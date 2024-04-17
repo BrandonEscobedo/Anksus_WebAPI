@@ -20,12 +20,12 @@ public partial class Respuesta
     [Column("respuesta")]
     [StringLength(200)]
     [Unicode(false)]
-    public string Respuesta1 { get; set; } = null!;
+    public string respuesta { get; set; } = null!;
 
     [Column("R_correcta")]
     public bool RCorrecta { get; set; }
 
     [ForeignKey("IdPregunta")]
     [InverseProperty("Respuesta")]
-    public virtual Pregunta IdPreguntaNavigation { get; set; } = null!;
+    public virtual Pregunta? IdPreguntaNavigation { get; set; } = null!;
 }

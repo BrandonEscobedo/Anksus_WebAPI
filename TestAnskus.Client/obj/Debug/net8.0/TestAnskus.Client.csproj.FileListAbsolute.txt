@@ -4638,3 +4638,19 @@ C:\Users\brand\source\repos\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\Tes
 C:\Users\brand\source\repos\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\refint\TestAnskus.Client.dll
 C:\Users\brand\source\repos\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\TestAnskus.Client.pdb
 C:\Users\brand\source\repos\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\ref\TestAnskus.Client.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\wwwroot\_framework\AutoMapper.wasm
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\wwwroot\_framework\AutoMapper.wasm.gz
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\webcil\AutoMapper.wasm
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\compressed\ydmc59b6f6.gz
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\wwwroot\_framework\MediatR.Contracts.wasm
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\wwwroot\_framework\MediatR.wasm
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\wwwroot\_framework\MediatR.wasm.gz
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\wwwroot\_framework\MediatR.Contracts.wasm.gz
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\MediatR.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\webcil\MediatR.wasm
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\webcil\MediatR.Contracts.wasm
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\compressed\1kj1ixbrpa.gz
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\compressed\lfw5uaigbn.gz
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\libman.json

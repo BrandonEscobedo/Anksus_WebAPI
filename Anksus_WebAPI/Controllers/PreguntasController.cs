@@ -10,6 +10,8 @@ using anskus.Application.DTOs.Cuestionarios;
 using AutoMapper;
 using anskus.Application.Services;
 using anskus.Application.DTOs.Response;
+using anskus.Application.DTOs.Response.Cuestionarios;
+using anskus.Domain.Cuestionarios;
 
 namespace Anksus_WebAPI.Server.Controllers
 {
@@ -86,8 +88,15 @@ namespace Anksus_WebAPI.Server.Controllers
         // POST: api/Preguntas
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<GeneralResponse> CreatePreguntas(PreguntasDTO _pregunta) =>
-            await _preguntasRepository.Add(_pregunta);
+        public async Task CreatePreguntas(Pregunta _pregunta)
+        {
+
+            //if (_pregunta == null)
+            //    return StatusCode(503);
+            //var preg = await _preguntasRepository.Add(_pregunta);
+            //return Ok(new PreguntasResponse(_pregunta, true, ""));
+        }
+           
             //var responseAPI = new ResponseAPI<int>();
             //try
             //{

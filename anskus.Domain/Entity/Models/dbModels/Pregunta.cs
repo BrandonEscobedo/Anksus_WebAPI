@@ -14,21 +14,17 @@ public partial class Pregunta
     [Column("id_pregunta")]
     public int IdPregunta { get; set; }
 
-    [Column("id_cuestionario")]
+ 
+    [ForeignKey("id_cuestionario")]
     public int IdCuestionario { get; set; }
 
     [Column("pregunta")]
     [StringLength(400)]
     [Unicode(false)]
-    public string Pregunta1 { get; set; } = null!;
-
-    [Column("estado")]
-    public bool Estado { get; set; }
-
+    public string pregunta { get; set; } = null!;
     [ForeignKey("IdCuestionario")]
     [InverseProperty("Pregunta")]
-    public virtual Cuestionario IdCuestionarioNavigation { get; set; } = null!;
-
+    public virtual Cuestionario? cuestionario { get; set; }
     [InverseProperty("IdPreguntaNavigation")]
-    public virtual ICollection<Respuesta> Respuesta { get; set; } = new List<Respuesta>();
+    public virtual ICollection<Respuesta>? Respuesta { get; set; } = new List<Respuesta>();
 }

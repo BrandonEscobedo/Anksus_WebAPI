@@ -35,13 +35,15 @@ namespace anskus.Infrastructure.Repository
         {
             try
             {
-
+                
+                
                 var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtSecurityKey"]!));
                 var creds = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
                 var userClaims = new[]
                 {
                     new Claim(ClaimTypes.Name,user.Email!),
-                    new Claim(ClaimTypes.Email,user.Email),
+                    new Claim(ClaimTypes.Email,user.Email!),
+                    new Claim(ClaimTypes.NameIdentifier,user.Email),
                    
                 };
                 var expiry = DateTime.Now.AddDays(1);

@@ -7,11 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\Response\NewFolder\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <!--<PackageReference Include="BlazingComponents.Authentication" Version="29062019.1.0" />-->
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="MediatR" Version="12.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="8.0.4" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.0-preview.3.24172.9" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.0-preview.3.24172.9" />
@@ -21,6 +19,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\anskus.Domain\anskus.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Cuestionarios\GetAll\" />
+    <Folder Include="Cuestionarios\Update\" />
+    <Folder Include="DTOs\Request\Cuestionarios\" />
   </ItemGroup>
 
 </Project>

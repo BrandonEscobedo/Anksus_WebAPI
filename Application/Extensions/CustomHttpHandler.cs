@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using anskus.Application.DTOs.Request.Account;
 namespace anskus.Application.Extensions
 {
-    internal class CustomHttpHandler(LocalStorageServices localStorageServices,
+    public class CustomHttpHandler(LocalStorageServices localStorageServices,
         NavigationManager navigationManager, IAccountServices accountServices) : DelegatingHandler
     {
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken)
@@ -38,7 +38,7 @@ namespace anskus.Application.Extensions
             catch { return null!; }
 
         }
-        private async Task<string> GetRefreshToken(string refreshToken)
+        public async Task<string> GetRefreshToken(string refreshToken)
         {
             try
             {

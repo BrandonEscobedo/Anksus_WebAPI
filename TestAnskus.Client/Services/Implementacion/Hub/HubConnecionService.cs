@@ -46,13 +46,13 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
                    ?? throw new Exception("Error al encontrar el cuestionario");
             if (Cuestionario != null)
             {
-                List<PreguntasDTO> preguntas = [.. Cuestionario.Pregunta];
-                
-                bool result = await _hubConnection.
-                    InvokeAsync<bool>("CreateRoom", codigo, preguntas,Cuestionario.Titulo);
-                _stateConteiner.titulo = Cuestionario!.Titulo!;
-                await _stateConteiner.SetCuestionario(Cuestionario, codigo);
-               
+                //List<PreguntasDTO> preguntas = [.. Cuestionario];
+
+                //bool result = await _hubConnection.
+                //    InvokeAsync<bool>("CreateRoom", codigo, preguntas,Cuestionario.Titulo);
+                //_stateConteiner.titulo = Cuestionario!.Titulo!;
+                //await _stateConteiner.SetCuestionario(Cuestionario, codigo);
+                bool result = false;
                 if (result)
                 {
                     navigationManager.NavigateTo($"/Lobby/{codigo}");

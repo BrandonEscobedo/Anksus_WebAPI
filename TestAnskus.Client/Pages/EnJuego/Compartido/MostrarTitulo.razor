@@ -1,5 +1,7 @@
 ﻿@page "/Titulo"
 @inject IStateConteiner _StateContainer
+@using TestAnskus.Client.Services.Interfaces
+
 @layout ComponentsBase.ComponentBaseLogin
 @inject NavigationManager navigationManager
 <h2>@_StateContainer.titulo</h2>

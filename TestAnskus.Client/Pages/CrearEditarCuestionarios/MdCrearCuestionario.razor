@@ -1,8 +1,8 @@
-﻿@inject ICuestionarioService _CuestionarioService
+﻿@inject anskus.Application.Cuestionarios.ICuestionarioService _CuestionarioService
 @inject IDialogService DialogService
-@inject IIdContainer IdContainer
+@inject anskus.Application.Cuestionarios.IIdContainer IdContainer
 @using System.Security.Claims
-@using anskus.Application.Cuestionarios
+@using MediatR
 <MudDialog>
 <DialogContent>
     <MudInputLabel>Titulo</MudInputLabel>
@@ -22,6 +22,7 @@
 @code {
     [CascadingParameter] MudDialogInstance MudDialog { get; set; }
     void Cancel() => MudDialog.Cancel();
+    private ISender? _mediator;
     [Inject] AuthenticationStateProvider? AuthStateProvider { get; set; }
 
 
@@ -29,6 +30,7 @@
     public List<CategoriasDTO> listaCategorias = new List<CategoriasDTO>();
     protected override async Task OnInitializedAsync()
     {
+        cuestionarioDTO.IdCuestionario = IdContainer.idCuestionario;
         var authState = await AuthStateProvider?.GetAuthenticationStateAsync()!;
         var user = authState.User;
 
@@ -41,8 +43,20 @@
     }
     public async Task GuardarEditarCuestionario()
     {
+        if (IdContainer.idCuestionario == 0)
+        {
+            var result = await _CuestionarioService.Add(cuestionarioDTO);
+            if (result !=0)
+            {
+                IdContainer.SetIdCuestionario(result);
+                cuestionarioDTO.IdCuestionario = IdContainer.idCuestionario;
+            }
 
-        await _CuestionarioService.Add(cuestionarioDTO);
-        IdContainer.SetIdCuestionario();
+        }
+        else
+        {
+            await _CuestionarioService.Update(cuestionarioDTO);
+        }
+
     }
 }

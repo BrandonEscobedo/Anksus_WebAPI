@@ -17,13 +17,11 @@ public partial class CuestionarioActivo
     public int Codigo { get; set; }
 
     public string? IdUsuario { get; set; }
-
+    [ForeignKey("IdUsuario")]
+    [InverseProperty("CuestionarioActivo")] 
+    public virtual ApplicationUser IdUsuarioNavigation { get; set; } = null!;
     [ForeignKey("IdCuestionario")]
     [InverseProperty("CuestionarioActivo")]
     public virtual Cuestionario IdCuestionarioNavigation { get; set; } = null!;
-
-    [ForeignKey("IdUsuario")]
-    [InverseProperty("CuestionarioActivo")]
-    public virtual ApplicationUser IdUsuarioNavigation { get; set; } = null!;
 
 }

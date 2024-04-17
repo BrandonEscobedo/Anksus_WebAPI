@@ -1,9 +1,10 @@
 ﻿@page "/CrearCuestionario"
 @inject IPreguntasService _preguntasService
 @inject IDialogService DialogService
-@inject IIdContainer _IdConteiner
-@inject IRespuestasService _RespuestasService
 
+@inject anskus.Application.Cuestionarios.IIdContainer _IdConteiner
+@* @inject IRespuestasService _RespuestasService
+ *@
 <MudButton @onclick="OpenDialog" Variant="Variant.Filled" Color="Color.Primary">
     Guardar Cuestionario
 </MudButton>
@@ -13,7 +14,7 @@
             <ul id="questionList" class="list-group">
                 @foreach (var pregunta in ListaPreguntas)
                 {
-                      <input type="button" class="form-control" @bind-value="pregunta.Pregunta" />
+                      <input type="button" class="form-control" @bind-value="pregunta.pregunta" />
                       <button @onclick="() => EliminarPregunta(pregunta)">Eliminar</button>                   
                       <button>Editar</button>                   
                 }
@@ -26,7 +27,7 @@
         </div>
         <div class="col-md-10 bg-white p-4">
             <h3>Escribe la pregunta</h3>
-            <input type="text" @bind-value="preguntasDTO.Pregunta" class="form-control" placeholder="Pregunta">
+            <input type="text" @bind-value="preguntasDTO.pregunta" class="form-control" placeholder="pregunta">
                 @foreach (RespuestasDTO respuestas in ListaRespuestasDTOs)
                 {
                     <div class="col-6">
@@ -45,12 +46,13 @@
     </div>
 </div>
 @code {
+    @using MediatR;
     [Parameter]
-   public int id { get; set; } = 0;
+    public int id { get; set; } = 0;
     List<PreguntasDTO> ListaPreguntas { get; set; } = new List<PreguntasDTO>();
     List<RespuestasDTO> ListaRespuestasDTOs { get; set; } = new List<RespuestasDTO> ();
     public PreguntasDTO preguntasDTO { get; set; } = new PreguntasDTO();
-
+   
     private void OpenDialog()
     {
         var options = new DialogOptions { CloseOnEscapeKey = true };
@@ -66,21 +68,16 @@
                 RCorrecta = false
             });
     }  
-    public async Task AgregarPreguntaLista(int id)
-    {
-        var pregunta = await _preguntasService.GetPreguntas(id);
-        ListaPreguntas.Add(pregunta);
-
-    }
+ 
     public async Task GuardarEditarPregunta()
     {
         preguntasDTO.IdCuestionario = _IdConteiner.idCuestionario;
-        var idpregunta = await _preguntasService.CreatePregunta(preguntasDTO);
-        if (idpregunta != 0)
+        var preguntas = await _preguntasService.Add(preguntasDTO);
+        if (preguntas.Pregunta != null)
         {
-            _IdConteiner.SetIdPregunta(idpregunta);
+            _IdConteiner.SetIdPregunta(preguntas.Pregunta.IdPregunta);
+            ListaPreguntas.Add(preguntas.Pregunta);
             await GuardarRespuestas();
-            await AgregarPreguntaLista(idpregunta);
             await CleanRespuestas();
         }
     }
@@ -91,10 +88,10 @@
     public async Task EliminarPregunta(PreguntasDTO pregunta)
     {
         var validacion = await _preguntasService.DeletePregunta(pregunta.IdPregunta);
-        if (validacion != false)
-        {
-            ListaPreguntas.Remove(pregunta);
-        }
+        // if (validacion != false)
+        // {
+        //     ListaPreguntas.Remove(pregunta);
+        // }
     }
     public async Task AgregarRespuesta()
     {
@@ -128,11 +125,9 @@
 
     public async Task GuardarRespuestas()
     {
-        await CambiarID(_IdConteiner.idPregunta);
-        ListaRespuestasDTOs.RemoveAll(r => r.respuesta.Length == 0);
-        await _RespuestasService.CreateRespuestas(ListaRespuestasDTOs);
+        // await CambiarID(_IdConteiner.idPregunta);
+        // ListaRespuestasDTOs.RemoveAll(r => r.respuesta.Length == 0);
+        // await _RespuestasService.CreateRespuestas(ListaRespuestasDTOs);
 
     }
 }
-
-   

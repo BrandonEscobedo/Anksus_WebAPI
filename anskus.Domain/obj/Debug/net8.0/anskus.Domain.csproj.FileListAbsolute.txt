@@ -1,16 +1,3 @@
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\bin\Debug\net8.0\anskus.Domain.deps.json
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\bin\Debug\net8.0\anskus.Domain.dll
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\bin\Debug\net8.0\anskus.Domain.pdb
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\anskus.Domain.csproj.AssemblyReference.cache
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\anskus.Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\anskus.Domain.AssemblyInfoInputs.cache
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\anskus.Domain.AssemblyInfo.cs
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\anskus.Domain.csproj.CoreCompileInputs.cache
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\anskus.Domain.sourcelink.json
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\anskus.Domain.dll
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\refint\anskus.Domain.dll
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\anskus.Domain.pdb
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\ref\anskus.Domain.dll
 C:\Users\brand\source\repos\Anksus_WebAPI\anskus.Domain\bin\Debug\net8.0\anskus.Domain.deps.json
 C:\Users\brand\source\repos\Anksus_WebAPI\anskus.Domain\bin\Debug\net8.0\anskus.Domain.dll
 C:\Users\brand\source\repos\Anksus_WebAPI\anskus.Domain\bin\Debug\net8.0\anskus.Domain.pdb
@@ -24,3 +11,16 @@ C:\Users\brand\source\repos\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\anskus.
 C:\Users\brand\source\repos\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\refint\anskus.Domain.dll
 C:\Users\brand\source\repos\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\anskus.Domain.pdb
 C:\Users\brand\source\repos\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\ref\anskus.Domain.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\bin\Debug\net8.0\anskus.Domain.deps.json
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\bin\Debug\net8.0\anskus.Domain.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\bin\Debug\net8.0\anskus.Domain.pdb
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\anskus.Domain.csproj.AssemblyReference.cache
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\anskus.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\anskus.Domain.AssemblyInfoInputs.cache
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\anskus.Domain.AssemblyInfo.cs
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\anskus.Domain.csproj.CoreCompileInputs.cache
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\anskus.Domain.sourcelink.json
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\anskus.Domain.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\refint\anskus.Domain.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\anskus.Domain.pdb
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\anskus.Domain\obj\Debug\net8.0\ref\anskus.Domain.dll
