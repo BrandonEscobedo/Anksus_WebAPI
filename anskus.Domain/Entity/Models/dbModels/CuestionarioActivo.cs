@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using anskus.Domain.Authentication;
 using Microsoft.EntityFrameworkCore;
 
-namespace Anksus_WebAPI.Models.dbModels;
+namespace anskus.Domain.Models.dbModels;
 
 [Table("cuestionarioActivo")]
 [Index("Codigo", Name = "IX_cuestionarioActivo", IsUnique = true)]

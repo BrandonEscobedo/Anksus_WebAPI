@@ -1,7 +1,6 @@
 ﻿
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using Anksus_WebAPI.Models.dbModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace anskus.Application.DTOs.Cuestionarios

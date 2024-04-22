@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using anskus.Application.Data;
 using anskus.Domain;
+using anskus.Domain.Authentication;
 using anskus.Domain.Entity.Authentication;
 using anskus.Domain.Entity.Tipados;
+using anskus.Domain.Models.dbModels;
 using anskus.Domain.Primitives;
-using anskus.Infrastructure.Configuration;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-namespace Anksus_WebAPI.Models.dbModels;
+namespace anskus.Infrastructure.Data;
 
 public partial class TestAnskusContext : IdentityDbContext<ApplicationUser>, IDbContext,IUnitOfWork
 {
@@ -20,9 +21,6 @@ public partial class TestAnskusContext : IdentityDbContext<ApplicationUser>, IDb
     {
         _publisher = publisher ?? throw new ArgumentException(nameof(_publisher));
     }
-    
-
-
 
     public virtual DbSet<RefreshToken> RefreshToken { get; set; }
     public virtual DbSet<Categoria> Categorias { get; set; }
@@ -36,8 +34,9 @@ public partial class TestAnskusContext : IdentityDbContext<ApplicationUser>, IDb
     public virtual DbSet<Respuesta> Respuestas { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(TestAnskusContext).Assembly);
         base.OnModelCreating(modelBuilder);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(TestAnskusContext).Assembly);
+      
         modelBuilder.Entity<Categoria>(entity =>
         {
             entity.HasKey(e => e.IdCategoria).HasName("PK__categori__8A3D240C8F6227BC");
@@ -62,6 +61,8 @@ public partial class TestAnskusContext : IdentityDbContext<ApplicationUser>, IDb
             .HasConstraintName("FK_cuestionario_categoria");
             e.Property(e => e.Titulo).HasDefaultValue("title")
                   .HasMaxLength(60);
+            e.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.Cuestionario)
+            .HasConstraintName("FK_cuestionario_usuario");
            
     //        e.Property(e => e.IdCuestionario).HasConversion(
     //cuestionarioId => cuestionarioId.Value,

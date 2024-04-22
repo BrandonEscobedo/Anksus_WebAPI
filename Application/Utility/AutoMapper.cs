@@ -1,5 +1,5 @@
-﻿using Anksus_WebAPI.Models.dbModels;
-using anskus.Application.DTOs.Cuestionarios;
+﻿using anskus.Application.DTOs.Cuestionarios;
+using anskus.Domain.Models.dbModels;
 using AutoMapper;
 
 namespace anskus.Application.Utility

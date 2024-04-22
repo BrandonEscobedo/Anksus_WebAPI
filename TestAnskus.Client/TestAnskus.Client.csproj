@@ -26,4 +26,8 @@
     <ProjectReference Include="..\Application\anskus.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\Interfaces\CuestionarioActivo\" />
+  </ItemGroup>
+
 </Project>

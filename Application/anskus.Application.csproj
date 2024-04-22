@@ -11,6 +11,7 @@
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="MediatR" Version="12.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.0-preview.3.24172.9" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.0-preview.3.24172.9" />
     <PackageReference Include="NetcodeHub.Packages.Extensions.LocalStorage" Version="1.0.0" />
@@ -22,9 +23,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Cuestionarios\GetAll\" />
-    <Folder Include="Cuestionarios\Update\" />
     <Folder Include="DTOs\Request\Cuestionarios\" />
+    <Folder Include="Preguntas\GetById\" />
+    <Folder Include="Preguntas\Update\" />
+    <Folder Include="Respuestas\Delete\" />
+    <Folder Include="Respuestas\Update\" />
   </ItemGroup>
 
 </Project>

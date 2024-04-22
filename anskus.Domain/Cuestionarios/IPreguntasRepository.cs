@@ -1,4 +1,4 @@
-﻿using Anksus_WebAPI.Models.dbModels;
+﻿using anskus.Domain.Models.dbModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,7 @@ namespace anskus.Domain.Cuestionarios
 {
     public interface IPreguntasRepository
     {
-          Task Add(Pregunta pregunta);
+          Task<int> Add(Pregunta pregunta);
+          Task<bool> Delete(int id);
     }
 }

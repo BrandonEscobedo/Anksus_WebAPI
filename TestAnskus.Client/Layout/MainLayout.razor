@@ -10,15 +10,15 @@
 <MudDialogProvider />
 <MudSnackbarProvider />
 @code{
-    // [Inject]
-    // HubConnection hubConnection { get; set; }
-    // protected override async Task OnInitializedAsync() => await IniciarHub();
+    [Inject]
+    HubConnection hubConnection { get; set; }
+    protected override async Task OnInitializedAsync() => await IniciarHub();
 
-    // async Task IniciarHub() {
-    //     if (hubConnection == null || hubConnection.State == HubConnectionState.Disconnected)
-    // {
-    //         await hubConnection.StartAsync();
+    async Task IniciarHub() {
+        if (hubConnection == null || hubConnection.State == HubConnectionState.Disconnected)
+    {
+            await hubConnection.StartAsync();
 
-    //     }
-    // }
+        }
+    }
 }

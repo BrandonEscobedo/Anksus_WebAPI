@@ -10,9 +10,11 @@ namespace anskus.Application.Extensions
     {
         public const string BrowserStorageKey = "x=key";
         public const string HttpClientName= "TestAnskusClient";
-        public const string HttpClientHadersSchame = "Beaer";
-        public const string CuestionarioController = "api/Cuestionarios";
-        public const string AddPregunta = "api/Preguntas";
+        public const string HttpClientHadersSchame = "Bearer";
+        public const string CuestionarioRoute = "api/Cuestionarios";
+        public const string CuestionarioActivoRoute = "api/CuestionarioActivo";
+        public const string PreguntasRoute = "api/Preguntas";
+        public const string RespuestasRoute = "api/Respuestas";
         public const string RegisterRoute = "api/account/identity/Create";
         public const string LoginRoute = "api/Account/identity/Login";
         public const string RefreshTokenRoute = "api/Account/identity/Refresh-token";

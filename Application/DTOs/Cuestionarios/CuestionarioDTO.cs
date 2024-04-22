@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using Anksus_WebAPI.Models.dbModels;
 
 namespace anskus.Application.DTOs.Cuestionarios
 {
@@ -8,7 +7,7 @@ namespace anskus.Application.DTOs.Cuestionarios
     {
        public int IdCuestionario { get; set; }
 
-        public int IdUsuario { get; set; }
+        public string? IdUsuario { get; set; }
 
         public int IdCategoria { get; set; }
 

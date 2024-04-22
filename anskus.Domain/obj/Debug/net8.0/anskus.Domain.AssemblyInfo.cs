@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("anskus.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c4a937fd65b10be752b8689a9d255be90f0d730")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4770a320dd0cbcaaff288ab4dbb7da90fd71309a")]
 [assembly: System.Reflection.AssemblyProductAttribute("anskus.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("anskus.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

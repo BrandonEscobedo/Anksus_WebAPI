@@ -1,5 +1,4 @@
-﻿using Anksus_WebAPI.Models.dbModels;
-using anskus.Application.Contracts;
+﻿using anskus.Application.Contracts;
 using anskus.Application.Data;
 using anskus.Application.Services;
 using anskus.Infrastructure.Repository;
@@ -15,6 +14,10 @@ using System.Reflection;
 using anskus.Domain;
 using anskus.Domain.Cuestionarios;
 using anskus.Application.DependencyInjection;
+using anskus.Infrastructure.Data;
+using anskus.Domain.Authentication;
+using anskus.Infrastructure.Repository.CuestionarioActivoServices;
+using anskus.Infrastructure.Repository.RandomCode;
 namespace anskus.Infrastructure.DependencyInjection
 {
     public  static class ServiceContainer
@@ -56,7 +59,10 @@ namespace anskus.Infrastructure.DependencyInjection
             services.AddScoped<IDbContext>(sp=>sp.GetRequiredService<TestAnskusContext>());
             services.AddScoped<IUnitOfWork>(sp=>sp.GetRequiredService<TestAnskusContext>());
             services.AddScoped<ICuestionarioRepository, CuestionarioRepository>();
+            services.AddScoped<ICuestionarioActivoRepository, CuestionarioActivoRepository>();
             services.AddScoped<IPreguntasRepository, PreguntasRepository>();
+            services.AddScoped<IRespuestasRepository, RespuestasRepository>();
+            services.AddScoped<IRandomCodeRepository, RandomCodeRepository>();
             return services;
         }
     }

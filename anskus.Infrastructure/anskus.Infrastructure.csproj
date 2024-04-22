@@ -19,6 +19,7 @@
 
 	</ItemGroup>
 	<ItemGroup>
+	  <Folder Include="EntitiysConfiguration\" />
 	  <Folder Include="Repository\HubConnection\" />
 	</ItemGroup>
 	<ItemGroup>

@@ -1,5 +1,4 @@
-﻿using Anksus_WebAPI.Models.dbModels;
-using anskus.Application.Contracts;
+﻿using anskus.Application.Contracts;
 using anskus.Application.DTOs.Request.Account;
 using anskus.Application.DTOs.Response;
 using Microsoft.AspNetCore.Http;

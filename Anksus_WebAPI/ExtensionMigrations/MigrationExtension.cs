@@ -1,4 +1,4 @@
-﻿using Anksus_WebAPI.Models.dbModels;
+﻿using anskus.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace Anksus_WebAPI.Server.ExtensionMigrations

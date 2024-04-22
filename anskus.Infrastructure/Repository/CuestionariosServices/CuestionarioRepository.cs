@@ -1,13 +1,16 @@
-﻿ using Anksus_WebAPI.Models.dbModels; 
-using anskus.Application.Data;
+﻿using anskus.Application.Data;
 using anskus.Application.DTOs.Cuestionarios;
 using anskus.Application.DTOs.Response;
 using anskus.Application.DTOs.Response.Cuestionarios;
 using anskus.Application.Services;
+using anskus.Domain.Authentication;
 using anskus.Domain.Cuestionarios;
+using anskus.Domain.Models.dbModels;
+using anskus.Infrastructure.Data;
 using AutoMapper;
 using Microsoft.AspNetCore.Identity;
-    using System.Security.Claims;
+using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
     namespace anskus.Infrastructure.Repository.CuestionariosServices
     {
@@ -24,30 +27,21 @@ using Microsoft.AspNetCore.Identity;
             this.userManager = userManager;
             
         }
-        public async Task<int> Add(Cuestionario cuestionario)
+        public async Task<int> Add(Cuestionario cuestionario, string email)
+        {
+            var Userid = userManager.FindByEmailAsync(email);
+            cuestionario.IdUsuario = Userid.Result!.Id;
+            if (!string.IsNullOrEmpty(cuestionario.IdUsuario))
             {
-            //var userid = userManager.FindByEmailAsync(cuestionario!) ?? throw new Exception("NO se encontro el usuario");
-             _context.Cuestionarios.Add(cuestionario);
-            await _context.SaveChangesAsync();
+                _context.Cuestionarios.Add(cuestionario);
+                await _context.SaveChangesAsync();
+            }
+
+           
             return cuestionario.IdCuestionario;
             }
 
-            public void Delete(int id)
-            {
-                throw new NotImplementedException();
-            }
-
-            public Task<IEnumerable<Cuestionario>> GetAllAsync()
-            {
-                throw new NotImplementedException();
-            }
-
-            public Task<Cuestionario> GeyByIdAsync(int id)
-            {
-                throw new NotImplementedException();
-            }
-
-            public async Task<CuestionarioResponse> Update( CuestionarioDTO cuestionario)
+            public async Task<bool> Update( Cuestionario cuestionario)
             {
             if (cuestionario.IdCuestionario != 0)
             {
@@ -58,11 +52,25 @@ using Microsoft.AspNetCore.Identity;
 
                     _context.Cuestionarios.Update(cuest);
                     await _context.SaveChangesAsync();
-                    return new CuestionarioResponse(cuestionario.IdCuestionario,"",true);
+                  return true;
                 }
             }
-            return new CuestionarioResponse(cuestionario.IdCuestionario, "Ha ocurrido un error ", false);
-
+            return false;
             }
+            public Task<List<Cuestionario>> GetbyUser(string email)
+        {
+            var user = userManager.FindByEmailAsync(email);
+            if(user.Result != null)
+            {
+                var cuest = _context.Cuestionarios.Where(x => x.IdUsuario == user.Result.Id).ToListAsync();
+                if (cuest != null)
+                {
+                    return cuest;
+                }
+            }
+            return null;
+
         }
+
     }
+}

@@ -1,8 +1,9 @@
-﻿using Anksus_WebAPI.Models.dbModels;
-using anskus.Application.Contracts;
+﻿using anskus.Application.Contracts;
 using anskus.Application.DTOs.Request.Account;
 using anskus.Application.DTOs.Response;
+using anskus.Domain.Authentication;
 using anskus.Domain.Entity.Authentication;
+using anskus.Infrastructure.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -34,9 +35,7 @@ namespace anskus.Infrastructure.Repository
         private async Task<string> GenerateToken(ApplicationUser user)
         {
             try
-            {
-                
-                
+            {                
                 var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtSecurityKey"]!));
                 var creds = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
                 var userClaims = new[]

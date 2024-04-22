@@ -15,13 +15,13 @@
 </MudSelect> *@
 </DialogContent>
 <DialogActions>
-    <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton OnClick="hide">Cancel</MudButton>
     <MudButton Color="Color.Primary" OnClick="GuardarEditarCuestionario">Ok</MudButton>
 </DialogActions>
 </MudDialog>
 @code {
     [CascadingParameter] MudDialogInstance MudDialog { get; set; }
-    void Cancel() => MudDialog.Cancel();
+    void hide() => MudDialog.Cancel();
     private ISender? _mediator;
     [Inject] AuthenticationStateProvider? AuthStateProvider { get; set; }
 
@@ -30,15 +30,9 @@
     public List<CategoriasDTO> listaCategorias = new List<CategoriasDTO>();
     protected override async Task OnInitializedAsync()
     {
+     
+
         cuestionarioDTO.IdCuestionario = IdContainer.idCuestionario;
-        var authState = await AuthStateProvider?.GetAuthenticationStateAsync()!;
-        var user = authState.User;
-
-        if (user.Identity!.IsAuthenticated)
-        {
-            cuestionarioDTO.Email = user.FindFirst(ClaimTypes.Email)?.Value;
-
-        }
         // listaCategorias = await _CategoriasService.GetAllCategorias();
     }
     public async Task GuardarEditarCuestionario()
@@ -50,12 +44,15 @@
             {
                 IdContainer.SetIdCuestionario(result);
                 cuestionarioDTO.IdCuestionario = IdContainer.idCuestionario;
+                hide();
             }
 
         }
         else
         {
-            await _CuestionarioService.Update(cuestionarioDTO);
+            var result =   await _CuestionarioService.Update(cuestionarioDTO);
+            if (result)
+                hide();
         }
 
     }

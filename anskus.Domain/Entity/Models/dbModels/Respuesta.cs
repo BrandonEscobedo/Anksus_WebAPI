@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace Anksus_WebAPI.Models.dbModels;
+namespace anskus.Domain.Models.dbModels;
 
 [Table("respuestas")]
 [Index("IdPregunta", Name = "IX_respuestas_id_pregunta")]

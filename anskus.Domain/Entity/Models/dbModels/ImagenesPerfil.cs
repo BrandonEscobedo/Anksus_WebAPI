@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 
-namespace Anksus_WebAPI.Models.dbModels;
+namespace anskus.Domain.Models.dbModels;
 
 [Table("imagenes_perfil")]
 public partial class ImagenesPerfil

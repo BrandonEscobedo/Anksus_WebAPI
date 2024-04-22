@@ -1,7 +1,8 @@
 ﻿@page "/IngresarCodigo"
-@inject ICuestionarioAService _CuestionarioAService
+@using anskus.Application.CuestionarioActivo
 @inject NavigationManager NavigationManager
 @inject IIdContainer  _idconteiner
+@inject ICuestionarioActivoService cuestionarioAservice
 @layout ComponentsBase.ComponentBaseLogin
 <link rel="stylesheet" href="css/codigo.css" />
 <div class="code__body">
@@ -24,7 +25,7 @@
     public bool Mostrar = false;
     private async Task IsCodeValid()
     {
-        var result = await _CuestionarioAService.VerificarCodigo(code);
+        var result = await cuestionarioAservice.VerificarCodigoEntrar(code);
         if (result == true)
         {
             NavigationManager.NavigateTo($"/Entrar/{code}");

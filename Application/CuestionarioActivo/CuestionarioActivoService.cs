@@ -1,0 +1,29 @@
+﻿using anskus.Application.Extensions;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http.Json;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace anskus.Application.CuestionarioActivo
+{
+    public class CuestionarioActivoService(HttpClientServices httpClientServices) : ICuestionarioActivoService
+    {
+        private async Task<HttpClient> PrivateClient() => (await httpClientServices.GetPrivateClient());
+        public async Task<int> ActivarCuestionario(int  idcuestionario)
+        {
+            
+            var response = await (await PrivateClient()).PostAsync($"{Constant.CuestionarioActivoRoute}?idcuest={idcuestionario}",null);
+            var result= await response.Content.ReadFromJsonAsync<int>();
+            return result;
+        }
+        public async Task<bool> VerificarCodigoEntrar(int code)
+        {
+           var response = await (await PrivateClient())
+                .GetFromJsonAsync<bool>($"{Constant.CuestionarioActivoRoute}?codigo={code}");         
+            return response;
+        }
+
+    }
+}

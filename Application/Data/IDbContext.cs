@@ -1,4 +1,4 @@
-﻿using Anksus_WebAPI.Models.dbModels;
+﻿using anskus.Domain.Models.dbModels;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

@@ -1,13 +1,14 @@
-﻿using Anksus_WebAPI.Models.dbModels;
-using Anksus_WebAPI.Server.Utilidades;
+﻿using Anksus_WebAPI.Server.Utilidades;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Caching.Distributed;
 using anskus.Application.DTOs.Cuestionarios;
+using anskus.Infrastructure.Data;
 
 namespace Anksus_WebAPI.Server.Hubs
 {
     public class CuestionarioHub : Hub<InotificationClient>
     {
+        
         private readonly TestAnskusContext _context;
         private readonly IDistributedCache _distributedCache;
         public CuestionarioHub(TestAnskusContext context, IDistributedCache distributedCache)
@@ -16,11 +17,16 @@ namespace Anksus_WebAPI.Server.Hubs
 
             _distributedCache = distributedCache;
         }
+        public override async Task OnConnectedAsync()
+        {
+            await Clients.All.MensajePrueba("hola"); 
+
+        }
         public async Task<bool> CreateRoom(int code, List<PreguntasDTO> preguntas, string titulo)
         {
             await _distributedCache.CreateRoomCache(code.ToString());
-            Context.Items["Preguntas"] =preguntas;
-            Context.Items["Titulo"] =titulo;
+            Context.Items["Preguntas"] = preguntas;
+            Context.Items["Titulo"] = titulo;
             Context.Items["Codigo"] = code;
             await Groups.AddToGroupAsync(Context.ConnectionId, code.ToString());
             return true;
@@ -44,15 +50,15 @@ namespace Anksus_WebAPI.Server.Hubs
             var preguntas = (List<PreguntasDTO?>?)Context.Items["Preguntas"];
             if (preguntas != null && preguntas.Count > 0)
             {
-                int? Room =(int?)Context.Items["Codigo"];
-                if (Room != null && Room!=0)
+                int? Room = (int?)Context.Items["Codigo"];
+                if (Room != null && Room != 0)
                 {
                     string? titulo = (string?)Context.Items["Titulo"];
-                    await Clients.Group(Room.ToString()!).SiguientePregunta(preguntas.First()!,titulo);
+                    await Clients.Group(Room.ToString()!).SiguientePregunta(preguntas.First()!, titulo);
                     preguntas.RemoveAt(0);
                     Context.Items["Preguntas"] = preguntas;
                 }
-               
+
             }
 
         }
@@ -62,12 +68,12 @@ namespace Anksus_WebAPI.Server.Hubs
             int? code = (int?)Context.Items["Codigo"];
             if (code != null && code != 0)
             {
-                //var cuestionario = _context.CuestionarioActivos.Where(x => x.Codigo == code).FirstOrDefault();
-                //if (cuestionario != null)
-                //{
-                //    _context.CuestionarioActivos.Remove(cuestionario);
-                //    await _context.SaveChangesAsync();
-                //}
+                var cuestionario = _context.CuestionarioActivos.Where(x => x.Codigo == code).FirstOrDefault();
+                if (cuestionario != null)
+                {
+                    _context.CuestionarioActivos.Remove(cuestionario);
+                    await _context.SaveChangesAsync();
+                }
             }
             else
             {
