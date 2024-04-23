@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using anskus.Domain.Models.dbModels;
 
 namespace anskus.Application.DTOs.Cuestionarios
 {
-    public class CuestionarioDTO
+    public partial class CuestionarioDTO
     {
        public int IdCuestionario { get; set; }
 
@@ -14,8 +15,7 @@ namespace anskus.Application.DTOs.Cuestionarios
         public string? Titulo { get; set; }
 
         public bool Publico { get; set; }
-
-        public string? Email { get; set; }
+        public virtual ICollection<PreguntasDTO> Pregunta { get; set; } = new List<PreguntasDTO>();
 
     }
 }

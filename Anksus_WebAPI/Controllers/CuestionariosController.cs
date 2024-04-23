@@ -6,6 +6,8 @@ using anskus.Application.Cuestionarios.Commands.Create;
 using anskus.Application.Cuestionarios.Commands.Update;
 using anskus.Application.Cuestionarios.Querys.GetById;
 using Microsoft.AspNetCore.Authorization;
+using anskus.Domain.Models.dbModels;
+using anskus.Application.Cuestionarios.Querys.GetByIdCuestionario;
 namespace Anksus_WebAPI.Controllers
 {
     [Authorize]
@@ -40,36 +42,17 @@ namespace Anksus_WebAPI.Controllers
             }
             return StatusCode(503);
         }
-
-        //[")]
-        //public async Task<ActionResult<Cuestionario>> GetCuestionarios(int id)
-        //{
-        //    var responseAPI = new ResponseAPI<CuestionarioDTO>();
-        //    try
-        //    {
-        //        var cuestionarios = _mapper.Map<CuestionarioDTO>(await _context.Cuestionarios
-        //            .Where(e => e.IdCuestionario == id)
-        //            .Include(o => o.Pregunta)
-        //            .ThenInclude(x => x.Respuesta)
-        //            .FirstOrDefaultAsync());
-        //        if (cuestionarios != null)
-        //        {
-        //            return Ok(cuestionarios);
-        //        }
-        //        else
-        //        {
-        //            responseAPI.mensaje = "Este usuario no tiene Cuestionarios Aun.";
-        //            responseAPI.EsCorrecto = false;
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        responseAPI.mensaje = "Ha ocurrido un error de tipo: " + ex.Message;
-        //        responseAPI.EsCorrecto = false;
-        //    }
-
-        //    return Ok();
-        //}
+        [HttpGet("sGetById")]
+        public async Task<ActionResult<Cuestionario>> GetCuestionarios(int id)
+        {
+            if(User.Identity!.IsAuthenticated == true)
+            {
+                var response = await _mediator.Send(new GetCuestionarioByIdQuery(id));
+                if (response != null)
+                    return Ok(response);
+            }
+            return BadRequest();
+        }
 
         // GET: api/Cuestionarios
         [HttpGet("{email}")]

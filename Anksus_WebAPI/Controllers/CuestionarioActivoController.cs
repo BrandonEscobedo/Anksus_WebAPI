@@ -20,7 +20,7 @@ namespace Anksus_WebAPI.Server.Controllers
                 if (email != null)
                 {
                     var result = await _mediator.Send(new CreateCuestionarioActivoCommand(idcuest, email));
-                    if (result != 0)
+                    if (result != null)
                     {
                         return Ok(result);
                     }

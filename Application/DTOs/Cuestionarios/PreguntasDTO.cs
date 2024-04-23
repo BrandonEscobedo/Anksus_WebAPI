@@ -5,13 +5,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace anskus.Application.DTOs.Cuestionarios
 {
-    public class PreguntasDTO
+    public partial class PreguntasDTO
     { 
         public int IdPregunta { get; set; }
         public int IdCuestionario { get; set; }
 
         public string pregunta { get; set; } = null!;
-        public virtual CuestionarioDTO? cuestionario { get; set; }
 
         public virtual ICollection<RespuestasDTO>? Respuesta { get; set; } = new List<RespuestasDTO>();
     }

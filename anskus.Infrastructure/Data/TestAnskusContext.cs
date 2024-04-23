@@ -103,6 +103,7 @@ public partial class TestAnskusContext : IdentityDbContext<ApplicationUser>, IDb
 
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())
     {
+
         var domainEvents = ChangeTracker.Entries<AggregateRoot>()
             .Select(e => e.Entity)
             .Where(e => e.GetDomainEvents().Any())

@@ -1,9 +1,13 @@
-﻿using TestAnskus.Client.Services.Interfaces;
-using anskus.Application.DTOs.Cuestionarios;
+﻿using anskus.Application.DTOs.Cuestionarios;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace TestAnskus.Client.Services.Implementacion
+namespace anskus.Application.HubSignalr.StateContainerHub
 {
-    public class StateConteiner : TestAnskus.Client.Services.Interfaces.IStateConteiner
+    public class StateConteiner:IStateConteiner
     {
         public ParticipanteEnCuestDTO Participante { get; set; } = new();
         public event Action<ParticipanteEnCuestDTO>? OnAgregarUsuario;
@@ -12,10 +16,6 @@ namespace TestAnskus.Client.Services.Implementacion
         public List<ParticipanteEnCuestDTO> participanteEnCuest { get; set; } = new();
         public CuestionarioDTO Cuestionario { get; set; } = new();
         public PreguntasDTO pregunta { get; set; } = new();
-        public StateConteiner()
-        {
-
-        }
         public void AddParticipante(ParticipanteEnCuestDTO participante)
 
         {
@@ -33,11 +33,11 @@ namespace TestAnskus.Client.Services.Implementacion
                 participanteEnCuest.Remove(user);
                 OnAgregarUsuario?.Invoke(participante);
             }
-        } 
+        }
 
         public async Task SetCuestionario(CuestionarioDTO cuestionario, int codigo)
         {
-            Cuestionario = cuestionario;         
+            Cuestionario = cuestionario;
         }
         public CuestionarioDTO GetCuestionario()
         {
@@ -51,6 +51,5 @@ namespace TestAnskus.Client.Services.Implementacion
         {
             Participante = participante;
         }
-
-    }    
+    }
 }

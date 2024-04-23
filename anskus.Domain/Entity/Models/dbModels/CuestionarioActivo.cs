@@ -16,7 +16,8 @@ public partial class CuestionarioActivo
     public int IdCuestionario { get; set; }
 
     public int Codigo { get; set; }
-
+    [NotMapped]
+    public Cuestionario? cuestionario { get; set; } 
     public string? IdUsuario { get; set; }
     [ForeignKey("IdUsuario")]
     [InverseProperty("CuestionarioActivo")] 

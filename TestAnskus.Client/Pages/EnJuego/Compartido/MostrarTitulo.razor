@@ -1,6 +1,5 @@
 ﻿@page "/Titulo"
 @inject IStateConteiner _StateContainer
-@using TestAnskus.Client.Services.Interfaces
 
 @layout ComponentsBase.ComponentBaseLogin
 @inject NavigationManager navigationManager
@@ -16,7 +15,6 @@
     {
         if (timer.Enabled == false) timer.Enabled = true;
         timer.Elapsed += OnTimer;
-
 
     }
 

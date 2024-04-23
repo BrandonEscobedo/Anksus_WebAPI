@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace anskus.Application.DTOs.Cuestionarios
 {
-    public class RespuestasDTO
+    public partial class RespuestasDTO
     {  
         public int IdRespuesta { get; set; }  
         public int IdPregunta { get; set; }

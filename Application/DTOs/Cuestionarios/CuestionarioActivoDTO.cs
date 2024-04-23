@@ -10,5 +10,6 @@ namespace anskus.Application.DTOs.Cuestionarios
     {
         public int idcuestionario { get; set; }
         public int codigo { get; set; }
+        public CuestionarioDTO Cuestionario { get; set; }=new();
     }
 }

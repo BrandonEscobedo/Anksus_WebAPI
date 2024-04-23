@@ -72,5 +72,16 @@ using System.Security.Claims;
 
         }
 
+        public async Task<Cuestionario> GetbyId(int id)
+        {
+                var cuestionario = await _context.Cuestionarios
+                    .Where(x => x.IdCuestionario == id)
+                    .Include(o => o.Pregunta)
+                    .ThenInclude(x => x.Respuesta)
+                    .FirstOrDefaultAsync();
+                if (cuestionario != null)
+                    return cuestionario;           
+            return null;
+        }
     }
 }

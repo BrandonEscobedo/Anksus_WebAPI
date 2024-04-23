@@ -1212,3 +1212,11 @@ C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\obj\
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.pdb
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.genruntimeconfig.cache
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\ref\Anksus_WebAPI.Server.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Features.dll

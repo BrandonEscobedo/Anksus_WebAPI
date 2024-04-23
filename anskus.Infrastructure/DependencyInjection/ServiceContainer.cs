@@ -18,6 +18,7 @@ using anskus.Infrastructure.Data;
 using anskus.Domain.Authentication;
 using anskus.Infrastructure.Repository.CuestionarioActivoServices;
 using anskus.Infrastructure.Repository.RandomCode;
+using anskus.Application.Utility;
 namespace anskus.Infrastructure.DependencyInjection
 {
     public  static class ServiceContainer
@@ -54,7 +55,7 @@ namespace anskus.Infrastructure.DependencyInjection
     });
             services.AddAuthentication();
             services.AddAuthorization();
-            services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            services.AddAutoMapper(typeof(AutoMapperP));
             services.AddScoped<IAccountUser, AccountRepository>();
             services.AddScoped<IDbContext>(sp=>sp.GetRequiredService<TestAnskusContext>());
             services.AddScoped<IUnitOfWork>(sp=>sp.GetRequiredService<TestAnskusContext>());

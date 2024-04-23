@@ -1,10 +1,9 @@
 ﻿using System.Net.Http.Json;
-using TestAnskus.Client.Services.Interfaces;
 using anskus.Application.DTOs.Cuestionarios;
 
 namespace TestAnskus.Client.Services.Implementacion
 {
-    public class CategoriasService : ICategoriaService
+    public class CategoriasService /*ICategoriaService*/
     {
         private readonly HttpClient _httpClient;
         public CategoriasService (HttpClient httpClient) 

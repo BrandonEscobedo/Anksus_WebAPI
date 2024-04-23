@@ -1,4 +1,5 @@
-﻿using System;
+﻿using anskus.Domain.Models.dbModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace anskus.Domain.Cuestionarios
     public interface ICuestionarioActivoRepository
     {
         Task<bool> IsCodeValid(int code);
-        Task<int> ActivarCuestionario(int idcuestionario, string email);
+        Task<CuestionarioActivo> ActivarCuestionario(int idcuestionario, string email);
 
     }
 }

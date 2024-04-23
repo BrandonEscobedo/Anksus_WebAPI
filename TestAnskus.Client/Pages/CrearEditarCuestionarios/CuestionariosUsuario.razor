@@ -1,11 +1,12 @@
 ﻿@page "/MisCuestionarios"
 @using System.Security.Claims
 @using anskus.Application.CuestionarioActivo
+@using anskus.Application.HubSignalr
 @inject ICuestionarioService cuestionarioService
 @inject NavigationManager _NavigationManager;
 @inject AuthenticationStateProvider AuthenticationStateProvider
 @inject ICuestionarioActivoService cuestionarioActivo
-@inject HubConnecionService HubService
+@inject IHubconnectionService HubService
 @if (cuestionarios == null)
 {
     <h1> Cargando Cuestionarios...</h1>
@@ -55,16 +56,9 @@ else
     private async Task IniciarCuestionario(int id )
     {
         var result = await cuestionarioActivo.ActivarCuestionario(id);
-        // if (result.escorrecto == true)
-        // {
-        //     await hubservice.newrom(result.valor!.codigo,result.valor!.idcuestionario);
-        // }
-        // else if (result.escorrecto == false && result.valor?.codigo != 0)
-        // {
-        //     console.writeline("tiene un cuestionario activo");
-        //     _navigationmanager.navigateto("/miscuestionarios");
-
-        // }
-
+        if (result !=null)
+        {
+            await HubService.NewRom(result);
+        }
     }
 }

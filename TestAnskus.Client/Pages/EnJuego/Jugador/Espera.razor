@@ -1,9 +1,8 @@
 ﻿@page "/Sala"
 @inject IStateConteiner StateConteiner
 @implements IAsyncDisposable
-@inject HubConnecionService HubServices
+@inject IHubconnectionService HubServices
 @inject IStateConteiner _StateContainer
-@using TestAnskus.Client.Services.Interfaces
 
 @inject NavigationManager _NavigationManager
 @layout ComponentsBase.ComponentBaseLogin

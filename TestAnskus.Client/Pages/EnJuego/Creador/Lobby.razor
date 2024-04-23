@@ -1,9 +1,7 @@
 ﻿@page "/Lobby/{codigo:int}"
-@inject HubConnecionService HubServices
+@inject IHubconnectionService HubServices
 @inject NavigationManager navigationManager
-@inject IStateConteiner _StateContainer
-@using TestAnskus.Client.Services.Interfaces
-
+@inject anskus.Application.HubSignalr.StateContainerHub.IStateConteiner _StateContainer
 @layout ComponentsBase.ComponentBaseLogin
 <link rel="stylesheet" href="css/codigo.css" />
 <div class="lobby">

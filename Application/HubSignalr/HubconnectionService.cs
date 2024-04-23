@@ -1,19 +1,24 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using anskus.Application.DTOs.Cuestionarios;
+using anskus.Application.Extensions;
+using anskus.Application.HubSignalr.StateContainerHub;
+using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
-using Microsoft.JSInterop;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http.Json;
-using TestAnskus.Client.Services.Interfaces;
-using anskus.Application.DTOs.Cuestionarios;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace TestAnskus.Client.Services.Implementacion.Hub
+namespace anskus.Application.HubSignalr
 {
-    public sealed class HubConnecionService
+    public class HubconnectionService : IHubconnectionService
     {
         HubConnection _hubConnection;
-        public HttpClient _httpClient;
+        public HttpClientServices _httpClient;
         private readonly IStateConteiner _stateConteiner;
         private readonly NavigationManager navigationManager;
-        public HubConnecionService(HttpClient httpClient,
+        public HubconnectionService(HttpClientServices httpClient,
             HubConnection hubConnection,
             NavigationManager navigationManager,
             IStateConteiner stateConteiner
@@ -23,42 +28,39 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
             _hubConnection = hubConnection;
 
             _hubConnection.On<ParticipanteEnCuestDTO>("NewParticipante", OnNewParticipante);
-            _hubConnection.On<PreguntasDTO, string?>("SiguientePregunta",OnSiguientePregunta );
+            _hubConnection.On<PreguntasDTO, string?>("SiguientePregunta", OnSiguientePregunta);
             _hubConnection.On<ParticipanteEnCuestDTO>("RemoveUser", RemoveParticipante);
             this.navigationManager = navigationManager;
             _stateConteiner = stateConteiner;
-
         }
-        private void OnSiguientePregunta(PreguntasDTO idpregunta, string? titulo )
+        private void OnSiguientePregunta(PreguntasDTO idpregunta, string? titulo)
         {
             _stateConteiner.SiguientePregunta(idpregunta, titulo);
         }
         public async Task SiguientePreguntaUsuarios()
-        {             
+        {
             await _hubConnection.InvokeAsync("SiguientePregunta");
         }
+        private async Task<HttpClient> PrivateClient() => (await _httpClient.GetPrivateClient());
         private void OnNewParticipante(ParticipanteEnCuestDTO participante) => _stateConteiner.AddParticipante(participante);
         private void RemoveParticipante(ParticipanteEnCuestDTO participante) => _stateConteiner.RemoveParticipante(participante);
-        public async Task NewRom(int codigo, int idcuestionario)
-        {
-            var Cuestionario = await _httpClient.
-                   GetFromJsonAsync<CuestionarioDTO>($"api/Cuestionarios/{idcuestionario}")
-                   ?? throw new Exception("Error al encontrar el cuestionario");
-            if (Cuestionario != null)
+        public async Task NewRom(CuestionarioActivoDTO cuestionarioActivo)
+        {       
+            if (cuestionarioActivo != null)
             {
-                //List<PreguntasDTO> preguntas = [.. Cuestionario];
+                List<PreguntasDTO> preguntas = [.. cuestionarioActivo.Cuestionario.Pregunta.ToList()];
 
-                //bool result = await _hubConnection.
-                //    InvokeAsync<bool>("CreateRoom", codigo, preguntas,Cuestionario.Titulo);
-                //_stateConteiner.titulo = Cuestionario!.Titulo!;
-                //await _stateConteiner.SetCuestionario(Cuestionario, codigo);
-                bool result = false;
+                bool result = await _hubConnection.
+                    InvokeAsync<bool>("CreateRoom", cuestionarioActivo.codigo, preguntas, cuestionarioActivo.Cuestionario.Titulo);
+                _stateConteiner.titulo = cuestionarioActivo.Cuestionario!.Titulo!;
+                await _stateConteiner.SetCuestionario(cuestionarioActivo.Cuestionario, cuestionarioActivo.codigo);      
                 if (result)
                 {
-                    navigationManager.NavigateTo($"/Lobby/{codigo}");
+                    navigationManager.NavigateTo($"/Lobby/{cuestionarioActivo.codigo}");
                 }
             }
-        }       
+
+        }
         public async Task AddUserToRoom(ParticipanteEnCuestDTO participante)
         {
             bool result = await _hubConnection.
@@ -69,6 +71,5 @@ namespace TestAnskus.Client.Services.Implementacion.Hub
                 navigationManager.NavigateTo("/Sala");
             }
         }
-        public async Task GetUsers(int code) => await _hubConnection.SendAsync("GetUsersByRoom", code);       
     }
 }

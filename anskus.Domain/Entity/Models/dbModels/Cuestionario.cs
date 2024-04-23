@@ -29,5 +29,5 @@ public partial class Cuestionario:AggregateRoot
     [InverseProperty("Cuestionarios")]
     public virtual Categoria? IdCategoriaNavigation { get; set; } = null!;
 
-    public virtual ICollection<Pregunta>? Pregunta { get; set; } = new List<Pregunta>();
+    public virtual ICollection<Pregunta> Pregunta { get; set; } = new List<Pregunta>();
 }
