@@ -3,35 +3,34 @@ using anskus.Application.Extensions;
 using anskus.Application.HubSignalr.StateContainerHub;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Json;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace anskus.Application.HubSignalr
 {
     public class HubconnectionService : IHubconnectionService
     {
         HubConnection _hubConnection;
-        public HttpClientServices _httpClient;
         private readonly IStateConteiner _stateConteiner;
+        private readonly IHubStateCreador hubStateCreador;
         private readonly NavigationManager navigationManager;
-        public HubconnectionService(HttpClientServices httpClient,
+        public HubconnectionService( 
             HubConnection hubConnection,
             NavigationManager navigationManager,
             IStateConteiner stateConteiner
              )
         {
-            _httpClient = httpClient;
+          
             _hubConnection = hubConnection;
 
             _hubConnection.On<ParticipanteEnCuestDTO>("NewParticipante", OnNewParticipante);
             _hubConnection.On<PreguntasDTO, string?>("SiguientePregunta", OnSiguientePregunta);
             _hubConnection.On<ParticipanteEnCuestDTO>("RemoveUser", RemoveParticipante);
+            _hubConnection.On<ParticipanteEnCuestDTO>("PreguntaContestada", OnPreguntaContestada);
             this.navigationManager = navigationManager;
             _stateConteiner = stateConteiner;
+        }
+        private void OnPreguntaContestada(ParticipanteEnCuestDTO participante)
+        {
+            hubStateCreador.AddParticipantePuntos(participante);
         }
         private void OnSiguientePregunta(PreguntasDTO idpregunta, string? titulo)
         {
@@ -68,6 +67,11 @@ namespace anskus.Application.HubSignalr
                 _stateConteiner.SetParticipante(participante);
                 navigationManager.NavigateTo("/Sala");
             }
+        }
+
+        public async Task ContestarPregunta(ParticipanteEnCuestDTO participante )
+        {
+            await _hubConnection.InvokeAsync("ContestarPregunta", participante);
         }
     }
 }

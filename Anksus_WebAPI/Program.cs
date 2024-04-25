@@ -1,8 +1,5 @@
 using Anksus_WebAPI.Server.ExtensionMigrations;
 using Anksus_WebAPI.Server.Hubs;
-using Anksus_WebAPI.Server.Hubs.Notificaciones;
-using anskus.Application.DependencyInjection;
-using anskus.Application.Extensions;
 using anskus.Infrastructure.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 

@@ -35,6 +35,7 @@ namespace anskus.Application.HubSignalr.StateContainerHub
             }
         }
 
+
         public async Task SetCuestionario(CuestionarioDTO cuestionario, int codigo)
         {
             Cuestionario = cuestionario;

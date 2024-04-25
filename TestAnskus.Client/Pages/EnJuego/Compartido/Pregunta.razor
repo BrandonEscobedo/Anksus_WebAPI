@@ -1,35 +1,38 @@
 ﻿@page "/Pregunta"
 @layout ComponentsBase.ComponentBaseLogin
 @inject IStateConteiner _StateContainer
-@inject NavigationManager _NavigationManager
-<p>@pregunta.pregunta</p>
+<p> Pregunta: @pregunta.pregunta</p>
 @foreach (var preguntas in pregunta.Respuesta!)
 {
-    <button type="button"  @onclick="(e=> ValidarRespuesta(preguntas.IdRespuesta))" class="btn btn-success">respuesta: @preguntas.respuesta</button>
+    <button type="button" @onclick="(e=> ValidarRespuesta(preguntas.IdRespuesta))" class="@preguntas.ClaseCSS">respuesta: @preguntas.respuesta</button>
 }
 <p>@segundos</p>
-<p>puntos:@puntos</p>
 @code {
-@using System.Timers
-    public int puntos = 0;
-
+    @using System.Timers
     private PreguntasDTO pregunta = new();
+    private ComponentObjectPreguntas Datospreguntas = new();
     private Timer Timer = new Timer(1000);
     private int segundos = 10;
     [Parameter]
     public EventCallback OnSiguiente { get; set; }
-    protected override async Task OnInitializedAsync()
+    [Parameter]
+    public EventCallback<ComponentObjectPreguntas> OnPreguntaContestada { get; set; }
+    private bool eventCallPreguntaContestada = false;
+    protected override void OnInitialized()
     {
         pregunta = _StateContainer.pregunta;
         if (Timer.Enabled == false) Timer.Enabled = true;
         Timer.Elapsed += TimerEvent;
     }
-    private void ValidarRespuesta(int idrespuesta)
+    private async void ValidarRespuesta(int idrespuesta)
     {
-        if (pregunta!.Respuesta!.Where(x => x.RCorrecta == true).FirstOrDefault()!.IdRespuesta == idrespuesta)
+        if (pregunta?.Respuesta?.Where(x => x.RCorrecta == true).FirstOrDefault()?.IdRespuesta == idrespuesta)
         {
-            puntos = segundos * 13;   
+            Datospreguntas.puntos = segundos * 13;
+            Datospreguntas.esCorrecto = true;
         }
+        await OnPreguntaContestada.InvokeAsync(Datospreguntas);
+        eventCallPreguntaContestada = true;
     }
     private async void TimerEvent(object source, System.Timers.ElapsedEventArgs e)
     {
@@ -38,9 +41,17 @@
         {
             Timer.Enabled = false;
             Timer.Dispose();
-            await OnSiguiente.InvokeAsync();                                   
-        }
+            foreach (var resp in pregunta!.Respuesta!)
+            {
+                if (resp.RCorrecta)
+                {
+                    resp.ClaseCSS = "btn btn-success";
+                }
+            }
+            if (!eventCallPreguntaContestada) await OnPreguntaContestada.InvokeAsync(Datospreguntas);
 
+            await OnSiguiente.InvokeAsync();
+        }
         StateHasChanged();
     }
 

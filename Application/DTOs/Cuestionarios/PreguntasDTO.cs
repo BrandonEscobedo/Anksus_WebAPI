@@ -11,7 +11,6 @@ namespace anskus.Application.DTOs.Cuestionarios
         public int IdCuestionario { get; set; }
 
         public string pregunta { get; set; } = null!;
-
         public virtual ICollection<RespuestasDTO>? Respuesta { get; set; } = new List<RespuestasDTO>();
     }
 }

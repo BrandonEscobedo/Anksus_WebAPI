@@ -40,6 +40,16 @@ namespace Anksus_WebAPI.Server.Hubs
             }
             return resultado;
         }
+        public async Task ContestarPregunta(ParticipanteEnCuestDTO participante)
+        {
+            
+            await Clients.Group(participante.codigo.ToString()).PreguntaContestada(participante);
+
+            //Agregar puntos del cuestionario al usuario
+            //Agregar usuario a lista
+            //Mostrar Ranking de lista
+            //Todos los oyentes reciven la lista, cuando la preguntatermino en componte Ranking
+        }
         public async Task SiguientePregunta()
         {
             var preguntas = (List<PreguntasDTO?>?)Context.Items["Preguntas"];
@@ -55,6 +65,7 @@ namespace Anksus_WebAPI.Server.Hubs
                 }
             }
         }
+
         public override async Task OnDisconnectedAsync(Exception? exception)
         {
             int? code = (int?)Context.Items["Codigo"];
@@ -83,6 +94,7 @@ namespace Anksus_WebAPI.Server.Hubs
 }
 public interface InotificationClient
 {
+    Task PreguntaContestada(ParticipanteEnCuestDTO participante);
     Task IniciarCuestionario(List<PreguntasDTO> cuestionarios);
     Task SiguientePregunta(PreguntasDTO pregunta, string? titulo);
     Task MensajePrueba(string mensaje);

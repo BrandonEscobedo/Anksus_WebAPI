@@ -1,11 +1,14 @@
 ﻿@page "/PreguntaActual"
 @layout ComponentsBase.ComponentBaseLogin
 @inject NavigationManager _navigationManager
+@inject IStateConteiner _StateContainer
 <h3>PreguntaCreador</h3>
 <Pregunta OnSiguiente="@Siguiente">
 
 </Pregunta>
-<p>@segundos</p>
+<p>  Siguiente </p> @* Boton para mandar lista del hub a los clientes mediante evento en componente Ranking(Componente siguiente) *@
+<p>usuarios contestados:</p>
+
 @code {
     @using System.Timers
     private Timer TimerSiguiente = new Timer(1000);
@@ -17,6 +20,7 @@
     private async Task Siguiente()
     {
         TimerSiguiente.Enabled = true;
+
     }   
     private async void TimerEv2ent(object source, System.Timers.ElapsedEventArgs e)
     {
@@ -26,8 +30,10 @@
             TimerSiguiente.Enabled = false;
             _navigationManager.NavigateTo("/RankingCreador");
             TimerSiguiente.Dispose();
+
         }
         StateHasChanged();
 
     }
+
 }

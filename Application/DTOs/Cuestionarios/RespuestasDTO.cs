@@ -1,6 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using Microsoft.EntityFrameworkCore;
 
 namespace anskus.Application.DTOs.Cuestionarios
 {
@@ -8,6 +6,7 @@ namespace anskus.Application.DTOs.Cuestionarios
     {  
         public int IdRespuesta { get; set; }  
         public int IdPregunta { get; set; }
+        public string? ClaseCSS { get; set; } = "btn btn-primary";
 
         public string respuesta { get; set; } = null!;
 

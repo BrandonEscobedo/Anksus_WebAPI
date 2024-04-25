@@ -31,6 +31,7 @@ namespace anskus.Application.DependencyInjection
             services.AddScoped<IHubconnectionService, HubconnectionService>();
             services.AddScoped<IIdContainer, IdContainer>();
             services.AddScoped<IStateConteiner, StateConteiner>();
+            services.AddScoped<IHubStateCreador, HubStateCreador>();
             services.AddScoped<IPreguntasService, PreguntasService>();
             services.AddScoped<IRespuestasServices, RespuestasServices>();
             services.AddTransient<CustomHttpHandler>();

@@ -1,0 +1,55 @@
+﻿@page "/Playing"
+@layout ComponentsBase.ComponentBaseLogin
+@inject NavigationManager _navigationManager
+@inject IStateConteiner _StateContainer
+@inject IHubconnectionService hubConnectionService
+@if (MostrarRespuesta)
+{
+    <Pregunta OnSiguiente="Siguiente" OnPreguntaContestada="PreguntaContestada">
+    </Pregunta>
+}
+<h3>seccion Validacion de respuesta</h3>
+<p>@preguntaValid</p>
+<p>@DatosPreguntas.esCorrecto</p>
+
+<p>@DatosPreguntas.puntos</p>
+
+@code {
+@using System.Timers
+    int segundos = 0;
+   
+    private string preguntaValid = "";
+    ComponentObjectPreguntas DatosPreguntas { get; set; } = new();
+    private Timer TimerSiguiente = new Timer(1000);
+    private bool MostrarRespuesta = true;
+    protected override void OnInitialized()
+    {
+        TimerSiguiente.Elapsed += TimerEv2ent;
+    }
+    private async void PreguntaContestada(ComponentObjectPreguntas DatosPreg )
+    {
+        _StateContainer.Participante.PuntosAnteriores += _StateContainer.Participante.PuntosActuales;
+        _StateContainer.Participante.PuntosActuales += DatosPreg.puntos;
+        if (DatosPreg.esCorrecto) _StateContainer.Participante.CantidadPacertadas += 1;
+        await hubConnectionService.ContestarPregunta(_StateContainer.Participante); 
+        this.DatosPreguntas.esCorrecto = DatosPreguntas.esCorrecto;
+        preguntaValid = "Validando Respuesta...";
+    }
+    private void  Siguiente()
+    {
+        TimerSiguiente.Enabled = true;       
+    }
+    private async void TimerEv2ent(object source, System.Timers.ElapsedEventArgs e)
+    {    
+        segundos = segundos - 1;
+        if (segundos == 0)
+        {
+            TimerSiguiente.Enabled = false;
+            _navigationManager.NavigateTo("/Ranking/Usuarios");
+            TimerSiguiente.Dispose();
+
+        }
+        StateHasChanged();
+
+    }
+}
