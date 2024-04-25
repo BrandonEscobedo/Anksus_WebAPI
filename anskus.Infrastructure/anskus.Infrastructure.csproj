@@ -5,6 +5,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="EntitiysConfiguration\**" />
+    <EmbeddedResource Remove="EntitiysConfiguration\**" />
+    <None Remove="EntitiysConfiguration\**" />
+  </ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="AutoMapper" Version="13.0.1" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.3" />
@@ -19,7 +25,6 @@
 
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="EntitiysConfiguration\" />
 	  <Folder Include="Repository\HubConnection\" />
 	</ItemGroup>
 	<ItemGroup>

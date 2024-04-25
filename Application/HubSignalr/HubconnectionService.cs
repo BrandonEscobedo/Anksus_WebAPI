@@ -41,7 +41,6 @@ namespace anskus.Application.HubSignalr
         {
             await _hubConnection.InvokeAsync("SiguientePregunta");
         }
-        private async Task<HttpClient> PrivateClient() => (await _httpClient.GetPrivateClient());
         private void OnNewParticipante(ParticipanteEnCuestDTO participante) => _stateConteiner.AddParticipante(participante);
         private void RemoveParticipante(ParticipanteEnCuestDTO participante) => _stateConteiner.RemoveParticipante(participante);
         public async Task NewRom(CuestionarioActivoDTO cuestionarioActivo)
@@ -59,7 +58,6 @@ namespace anskus.Application.HubSignalr
                     navigationManager.NavigateTo($"/Lobby/{cuestionarioActivo.codigo}");
                 }
             }
-
         }
         public async Task AddUserToRoom(ParticipanteEnCuestDTO participante)
         {

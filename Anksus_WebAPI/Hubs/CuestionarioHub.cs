@@ -7,20 +7,15 @@ using anskus.Infrastructure.Data;
 namespace Anksus_WebAPI.Server.Hubs
 {
     public class CuestionarioHub : Hub<InotificationClient>
-    {
-        
+    {       
         private readonly TestAnskusContext _context;
         private readonly IDistributedCache _distributedCache;
+
         public CuestionarioHub(TestAnskusContext context, IDistributedCache distributedCache)
         {
             _context = context;
 
             _distributedCache = distributedCache;
-        }
-        public override async Task OnConnectedAsync()
-        {
-            await Clients.All.MensajePrueba("hola"); 
-
         }
         public async Task<bool> CreateRoom(int code, List<PreguntasDTO> preguntas, string titulo)
         {
@@ -31,6 +26,7 @@ namespace Anksus_WebAPI.Server.Hubs
             await Groups.AddToGroupAsync(Context.ConnectionId, code.ToString());
             return true;
         }
+
         public async Task<bool> AddUserToRoom(ParticipanteEnCuestDTO participante)
         {
             bool resultado = await _distributedCache.AddUserToRoomCache(participante.codigo.ToString(), participante);
@@ -43,7 +39,6 @@ namespace Anksus_WebAPI.Server.Hubs
                 await Groups.AddToGroupAsync(Context.ConnectionId, participante.codigo.ToString());
             }
             return resultado;
-
         }
         public async Task SiguientePregunta()
         {
@@ -58,11 +53,8 @@ namespace Anksus_WebAPI.Server.Hubs
                     preguntas.RemoveAt(0);
                     Context.Items["Preguntas"] = preguntas;
                 }
-
             }
-
         }
-
         public override async Task OnDisconnectedAsync(Exception? exception)
         {
             int? code = (int?)Context.Items["Codigo"];
@@ -87,8 +79,6 @@ namespace Anksus_WebAPI.Server.Hubs
             }
             Context.Items.Clear();
         }
-
-
     }
 }
 public interface InotificationClient

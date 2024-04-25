@@ -22,8 +22,7 @@ namespace anskus.Application.DependencyInjection
             services.AddScoped<IAccountServices, AccountServices>();
             services.AddAuthorizationCore();
             services.AddNetcodeHubLocalStorageService();
-            services.AddAutoMapper(Assembly.GetExecutingAssembly());
-         
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());         
             services.AddScoped<Extensions.LocalStorageServices>();
             services.AddScoped<HttpClientServices>();
             services.AddScoped<AuthenticationStateProvider, CustomAuthenticationProvider>();

@@ -1,11 +1,23 @@
 ﻿ @page "/Ranking"
  @layout ComponentsBase.ComponentBaseLogin
 <h3>Rankings de Jugadores</h3>
+<style>
+    li {
+        background-color:blue;
+        transition:all linear 2s
+    }
+    li:nth-child(2n){
+        background-color: white;
+    }
+</style>
 <ul>
 
     @foreach (var jugador in Jugadores.OrderByDescending(j => j.Puntaje))
     {
-        <li>@jugador.Nombre: @jugador.Puntaje</li>
+        
+        <li  >@jugador.Nombre: @jugador.Puntaje</li>
+
+        
     }
 </ul>
 

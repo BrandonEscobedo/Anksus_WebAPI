@@ -4654,3 +4654,19 @@ C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\refint\TestAnskus.Client.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\TestAnskus.Client.pdb
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\ref\TestAnskus.Client.dll
+C:\Users\brand\source\repos\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\wwwroot\_framework\AutoMapper.wasm
+C:\Users\brand\source\repos\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\wwwroot\_framework\MediatR.Contracts.wasm
+C:\Users\brand\source\repos\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\wwwroot\_framework\MediatR.wasm
+C:\Users\brand\source\repos\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\wwwroot\_framework\MediatR.Contracts.wasm.gz
+C:\Users\brand\source\repos\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\wwwroot\_framework\MediatR.wasm.gz
+C:\Users\brand\source\repos\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\wwwroot\_framework\AutoMapper.wasm.gz
+C:\Users\brand\source\repos\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\libman.json
+C:\Users\brand\source\repos\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\brand\source\repos\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\MediatR.dll
+C:\Users\brand\source\repos\Anksus_WebAPI\TestAnskus.Client\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\brand\source\repos\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\webcil\AutoMapper.wasm
+C:\Users\brand\source\repos\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\webcil\MediatR.wasm
+C:\Users\brand\source\repos\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\webcil\MediatR.Contracts.wasm
+C:\Users\brand\source\repos\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\compressed\kgkrn60god.gz
+C:\Users\brand\source\repos\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\compressed\3330ofus3b.gz
+C:\Users\brand\source\repos\Anksus_WebAPI\TestAnskus.Client\obj\Debug\net8.0\compressed\1ixpyxvel7.gz

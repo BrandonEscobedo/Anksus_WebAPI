@@ -24,7 +24,7 @@ namespace anskus.Application.Respuestas.Create
                 var respuesta = new Respuesta
                 {
                     respuesta = respuestaDto.respuesta,
-                    RCorrecta = false,
+                    RCorrecta = respuestaDto.RCorrecta,
                     IdPregunta=respuestaDto.IdPregunta
                 };
 
