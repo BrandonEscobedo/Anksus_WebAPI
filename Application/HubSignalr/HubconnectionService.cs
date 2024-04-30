@@ -10,12 +10,13 @@ namespace anskus.Application.HubSignalr
     {
         HubConnection _hubConnection;
         private readonly IStateConteiner _stateConteiner;
-        private readonly IHubStateCreador hubStateCreador;
+        private readonly IHubStateCreador _hubStateCreador;
         private readonly NavigationManager navigationManager;
         public HubconnectionService( 
             HubConnection hubConnection,
             NavigationManager navigationManager,
-            IStateConteiner stateConteiner
+            IStateConteiner stateConteiner,
+            IHubStateCreador hubStateCreador
              )
         {
           
@@ -24,13 +25,21 @@ namespace anskus.Application.HubSignalr
             _hubConnection.On<ParticipanteEnCuestDTO>("NewParticipante", OnNewParticipante);
             _hubConnection.On<PreguntasDTO, string?>("SiguientePregunta", OnSiguientePregunta);
             _hubConnection.On<ParticipanteEnCuestDTO>("RemoveUser", RemoveParticipante);
+            _hubConnection.On<List<ParticipanteEnCuestDTO>>("ListaRanking", OnListaRanking);
             _hubConnection.On<ParticipanteEnCuestDTO>("PreguntaContestada", OnPreguntaContestada);
             this.navigationManager = navigationManager;
+            _hubStateCreador = hubStateCreador;
             _stateConteiner = stateConteiner;
         }
+
+        private void OnListaRanking(List<ParticipanteEnCuestDTO> list)
+        {
+            _stateConteiner.SetListaRanking(list);
+        }
+
         private void OnPreguntaContestada(ParticipanteEnCuestDTO participante)
         {
-            hubStateCreador.AddParticipantePuntos(participante);
+            _hubStateCreador.AddParticipantePuntos(participante);
         }
         private void OnSiguientePregunta(PreguntasDTO idpregunta, string? titulo)
         {
@@ -57,6 +66,12 @@ namespace anskus.Application.HubSignalr
                     navigationManager.NavigateTo($"/Lobby/{cuestionarioActivo.codigo}");
                 }
             }
+        }
+        public async Task EnviarRanking()
+        {
+            
+        await _hubConnection.InvokeAsync("EnviarRankingUsuarios", _hubStateCreador.ListaPuntos);
+            
         }
         public async Task AddUserToRoom(ParticipanteEnCuestDTO participante)
         {

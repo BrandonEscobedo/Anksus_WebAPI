@@ -2,32 +2,48 @@
 @layout ComponentsBase.ComponentBaseLogin
 @inject NavigationManager _navigationManager
 @inject IStateConteiner _StateContainer
-<h3>PreguntaCreador</h3>
+@inject IHubconnectionService connectionService
+@inject IHubStateCreador _stateCreador
+<section class="preguntas__body">
+
 <Pregunta OnSiguiente="@Siguiente">
 
 </Pregunta>
-<p>  Siguiente </p> @* Boton para mandar lista del hub a los clientes mediante evento en componente Ranking(Componente siguiente) *@
+    <button @onclick=EnviarRanking>Siguiente </button>
 <p>usuarios contestados:</p>
+<p>UsuariosContestados:@usuariosContestados</p>
+  </section>
 
 @code {
-    @using System.Timers
+@using System.Timers
+    int usuariosContestados = 0;
     private Timer TimerSiguiente = new Timer(1000);
     private int segundos = 5;
     protected override async Task OnInitializedAsync()
     {
+        _stateCreador.OnListaPuntos += OnUsuarioContesto;
         TimerSiguiente.Elapsed += TimerEv2ent;
     }
     private async Task Siguiente()
     {
         TimerSiguiente.Enabled = true;
-
     }   
+    private void OnUsuarioContesto()
+    {
+        usuariosContestados++;
+        StateHasChanged();
+    }
+    private async Task EnviarRanking()
+    {
+        await  connectionService.EnviarRanking();
+    }
     private async void TimerEv2ent(object source, System.Timers.ElapsedEventArgs e)
     {
         segundos = segundos - 1;
         if (segundos == 0)
         {
             TimerSiguiente.Enabled = false;
+            await EnviarRanking();
             _navigationManager.NavigateTo("/RankingCreador");
             TimerSiguiente.Dispose();
 

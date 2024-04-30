@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JoxY01NTAunDDI5uoMf/VHEi4hwQARWIOiK7LIb8vfY=",
+  "Hash": "pr4fwpjKCFMm4DDFxHOY44xZ/l8FP9Mh7tdmpoJ9FWs=",
   "Source": "TestAnskus.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -9420,6 +9420,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\index.css"
+    },
+    {
+      "Identity": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\css\\Preguntas.css",
+      "SourceId": "TestAnskus.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/Preguntas.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Preguntas.css"
     },
     {
       "Identity": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\favicon.png",

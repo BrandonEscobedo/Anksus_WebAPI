@@ -1,13 +1,27 @@
 ﻿@page "/Pregunta"
 @layout ComponentsBase.ComponentBaseLogin
 @inject IStateConteiner _StateContainer
-<p> Pregunta: @pregunta.pregunta</p>
-@foreach (var preguntas in pregunta.Respuesta!)
-{
-    <button type="button" @onclick="(e=> ValidarRespuesta(preguntas.IdRespuesta))" class="@preguntas.ClaseCSS">respuesta: @preguntas.respuesta</button>
-}
-<p>@segundos</p>
+<link rel="stylesheet" href="css/Preguntas.css" />
+    <h2 class="title">
+
+  @pregunta.pregunta
+    </h2>
+   <section class="botones">
+       
+        @foreach (var preguntas in pregunta.Respuesta!)
+        {
+            
+        <button @onclick="(e=> ValidarRespuesta(preguntas.IdRespuesta))" class="btn two  b+@cont"> @preguntas.respuesta</button>
+        cont = cont + 1;
+    }
+
+        <p>@segundos</p>
+
+    </section>
+
+
 @code {
+    int cont = 1;
     @using System.Timers
     private PreguntasDTO pregunta = new();
     private ComponentObjectPreguntas Datospreguntas = new();

@@ -3,6 +3,8 @@
 @inject NavigationManager _navigationManager
 @inject IStateConteiner _StateContainer
 @inject IHubconnectionService hubConnectionService
+   <section class="preguntas__body">
+
 @if (MostrarRespuesta)
 {
     <Pregunta OnSiguiente="Siguiente" OnPreguntaContestada="PreguntaContestada">
@@ -13,11 +15,12 @@
 <p>@DatosPreguntas.esCorrecto</p>
 
 <p>@DatosPreguntas.puntos</p>
+</section>
 
 @code {
 @using System.Timers
-    int segundos = 0;
-   
+    int segundos = 5;
+
     private string preguntaValid = "";
     ComponentObjectPreguntas DatosPreguntas { get; set; } = new();
     private Timer TimerSiguiente = new Timer(1000);
@@ -25,6 +28,12 @@
     protected override void OnInitialized()
     {
         TimerSiguiente.Elapsed += TimerEv2ent;
+        _StateContainer.OnRankingRecibido += recibirListaRanking;
+    }
+    private void recibirListaRanking()
+    {
+        StateHasChanged();
+        _navigationManager.NavigateTo("/Ranking/Usuarios");
     }
     private async void PreguntaContestada(ComponentObjectPreguntas DatosPreg )
     {
@@ -45,7 +54,6 @@
         if (segundos == 0)
         {
             TimerSiguiente.Enabled = false;
-            _navigationManager.NavigateTo("/Ranking/Usuarios");
             TimerSiguiente.Dispose();
 
         }

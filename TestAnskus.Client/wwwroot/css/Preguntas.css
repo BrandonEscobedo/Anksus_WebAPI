@@ -1,0 +1,160 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.preguntas__body {
+    width: 100dvw;
+    min-height: 100dvh;
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2dvh;
+    padding-right: 40px;
+    padding-left: 40px;
+    gap: 20px;
+    background: radial-gradient(circle at 60% 40%, #efa3ff 25%, transparent 26%),radial-gradient(circle at 40% 60%, #efa3ff80 25%, transparent 26%);
+    background-size: 12em 12em; /**/
+    background-color: #f0ffa4;
+    opacity: 1
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+    .links h3 {
+        background-color: aquamarine;
+        padding: 8px;
+        border-radius: 3px;
+        border: 1px solid black;
+    }
+
+.tablero {
+    width: 50%;
+    padding: 20px 5vw;
+    border-radius: 10px;
+    border: 2px solid black;
+    display: grid;
+    background-color: rgba(245, 245, 220, 0.777);
+    grid-template-columns: repeat(3, minmax(0,1fr));
+}
+
+.title {
+    background-color: rgba(245, 245, 220, 0.777);
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 2em;
+}
+
+.title__tablero {
+    width: 100%;
+    grid-column: 1/ 4;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+    .title__tablero h3 {
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+    }
+
+.content__tablero {
+    width: 100%;
+    grid-column: 1/ 4;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+}
+
+[data-ida="w12"] {
+    background-color: rgba(0, 0, 0, .5);
+    color: blue;
+}
+
+.content__tablero:nth-child(N+1) {
+}
+
+.content__tablero h3 {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.content__tablero:last-of-type {
+    border: 1px solid black;
+    border-top: 0;
+}
+
+.content__tablero h3:first-child {
+    width: 40%;
+}
+
+
+
+/*Estilos Btns*/
+
+.botones {
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    margin-top: 30px;
+    padding: 40px;
+    margin-bottom: 40px;
+    background-color: rgba(245, 245, 220, 0.777);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.btn {
+    width: 720px;
+    height: 180px;
+    display: block;
+    font-size: 30px;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 30px;
+    color: black;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: all .1s ease-in;
+    border: 2px solid black;
+}
+
+    .btn:hover {
+        transform: translateY(-5%);
+    }
+
+    .btn.b1 {
+        background-color: #efa3ff;
+    }
+
+    .btn.b2 {
+        background-color: #ff28f1;
+    }
+
+    .btn.b3 {
+        background-color: #2889ff;
+    }
+
+    .btn.b4 {
+        background-color: #a3ffab;
+    }
+
+    .btn.b5 {
+        background-color: #ffa3a3;
+    }
+
+    .btn.b6 {
+        background-color: #ffeea3;
+    }

@@ -10,7 +10,7 @@ namespace Anksus_WebAPI.Server.Hubs
     {       
         private readonly TestAnskusContext _context;
         private readonly IDistributedCache _distributedCache;
-
+     
         public CuestionarioHub(TestAnskusContext context, IDistributedCache distributedCache)
         {
             _context = context;
@@ -33,8 +33,9 @@ namespace Anksus_WebAPI.Server.Hubs
 
             if (resultado)
             {
+                
                 Context.Items["UserData"] = participante;
-
+                await Clients.Clients(participante.Nombre).NewParticipante(participante);
                 await Clients.Group(participante.codigo.ToString()).NewParticipante(participante);
                 await Groups.AddToGroupAsync(Context.ConnectionId, participante.codigo.ToString());
             }
@@ -42,7 +43,7 @@ namespace Anksus_WebAPI.Server.Hubs
         }
         public async Task ContestarPregunta(ParticipanteEnCuestDTO participante)
         {
-            
+            await Clients.Clients(participante.Nombre).PreguntaContestada(participante);
             await Clients.Group(participante.codigo.ToString()).PreguntaContestada(participante);
 
             //Agregar puntos del cuestionario al usuario
@@ -63,6 +64,14 @@ namespace Anksus_WebAPI.Server.Hubs
                     preguntas.RemoveAt(0);
                     Context.Items["Preguntas"] = preguntas;
                 }
+            }
+        }
+        public async Task EnviarRankingUsuarios(List<ParticipanteEnCuestDTO> participantes)
+        {
+            int? Room = (int?)Context.Items["Codigo"];
+            if(Room!=null  && Room != 0)
+            {
+                await Clients.Groups(Room.ToString()!).ListaRanking(participantes);
             }
         }
 
@@ -94,6 +103,7 @@ namespace Anksus_WebAPI.Server.Hubs
 }
 public interface InotificationClient
 {
+    Task ListaRanking(List<ParticipanteEnCuestDTO> participantes);
     Task PreguntaContestada(ParticipanteEnCuestDTO participante);
     Task IniciarCuestionario(List<PreguntasDTO> cuestionarios);
     Task SiguientePregunta(PreguntasDTO pregunta, string? titulo);

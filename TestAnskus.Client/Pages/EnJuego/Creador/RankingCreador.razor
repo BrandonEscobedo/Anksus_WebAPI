@@ -2,6 +2,7 @@
 @inject IHubconnectionService hubConnectionServices
 @inject IStateConteiner _StateContainer
 @inject NavigationManager _NavigationManager
+@inject IHubStateCreador _stateCreador
 @layout ComponentsBase.ComponentBaseLogin
 
 <button @onclick="SiguientePregunta" >Siguiente</button>
@@ -18,6 +19,7 @@
     {
         _StateContainer.pregunta = pregunta;
         _NavigationManager.NavigateTo("/Pregunta");
+        _stateCreador.ListaPuntos.Clear();
     }
     private async Task SiguientePregunta()
     {

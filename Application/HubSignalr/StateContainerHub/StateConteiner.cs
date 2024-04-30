@@ -16,6 +16,7 @@ namespace anskus.Application.HubSignalr.StateContainerHub
         public List<ParticipanteEnCuestDTO> participanteEnCuest { get; set; } = new();
         public CuestionarioDTO Cuestionario { get; set; } = new();
         public PreguntasDTO pregunta { get; set; } = new();
+        public event Action? OnRankingRecibido;
         public void AddParticipante(ParticipanteEnCuestDTO participante)
 
         {
@@ -34,7 +35,11 @@ namespace anskus.Application.HubSignalr.StateContainerHub
                 OnAgregarUsuario?.Invoke(participante);
             }
         }
-
+        public async Task SetListaRanking(List<ParticipanteEnCuestDTO> participantes)
+        {
+            participanteEnCuest = participantes;
+            OnRankingRecibido?.Invoke();
+        }
 
         public async Task SetCuestionario(CuestionarioDTO cuestionario, int codigo)
         {

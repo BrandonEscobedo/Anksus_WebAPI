@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\ComponentsBase\ComponentBasePregunta.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Layout\MainLayout.razor.css" />
     <None Remove="Layout\NavMenu.razor.css" />
   </ItemGroup>
@@ -24,6 +28,18 @@
   <ItemGroup>
 
     <ProjectReference Include="..\Application\anskus.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\ComponentsBase\ComponentBasePregunta.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\ComponentsBase\ComponentBasePregunta.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\ComponentsBase\ComponentBasePregunta.razor" />
   </ItemGroup>
 
 </Project>

@@ -7,6 +7,7 @@ namespace anskus.Application.HubSignalr
         Task AddUserToRoom(ParticipanteEnCuestDTO participante);
         Task NewRom(CuestionarioActivoDTO cuestionarioActivo);
         Task SiguientePreguntaUsuarios();
+        Task EnviarRanking();
         Task ContestarPregunta(ParticipanteEnCuestDTO participante );
     }
 }

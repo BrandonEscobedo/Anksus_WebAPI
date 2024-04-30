@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("anskus.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b9ae595ed45a30ba7a227f58a117b795b97e7b4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a90dfe44d89020e33e6649bbf37097844fff9f61")]
 [assembly: System.Reflection.AssemblyProductAttribute("anskus.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("anskus.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

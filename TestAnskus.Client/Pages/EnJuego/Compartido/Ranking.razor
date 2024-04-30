@@ -1,5 +1,6 @@
 ﻿ @page "/Ranking"
  @layout ComponentsBase.ComponentBaseLogin
+ @inject IStateConteiner _stateContainer
 <h3>Rankings de Jugadores</h3>
 <style>
     li {
@@ -17,7 +18,11 @@
         <li  >@jugador.Nombre: @jugador.Puntaje</li>
     }
 </ul>
-
+@foreach(var participante in _stateContainer.participanteEnCuest)
+{
+    <p>@participante.Nombre</p>
+    <p>@participante.PuntosActuales</p>
+}
 @code{
     @using System.Timers;
     private Timer Timer = new Timer(1000);

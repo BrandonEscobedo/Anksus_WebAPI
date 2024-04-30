@@ -6,7 +6,7 @@ namespace anskus.Application.HubSignalr.StateContainerHub
     {
         List<ParticipanteEnCuestDTO> ListaPuntos { get; set; }
 
-        event Action<List<ParticipanteEnCuestDTO>>? OnListaPuntos;
+        public event Action? OnListaPuntos;
 
         void AddParticipantePuntos(ParticipanteEnCuestDTO participante);
     }

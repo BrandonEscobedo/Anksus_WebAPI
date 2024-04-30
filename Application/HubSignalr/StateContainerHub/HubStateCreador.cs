@@ -10,11 +10,12 @@ namespace anskus.Application.HubSignalr.StateContainerHub
     public class HubStateCreador : IHubStateCreador
     {
         public List<ParticipanteEnCuestDTO> ListaPuntos { get; set; } = new();
-        public event Action<List<ParticipanteEnCuestDTO>>? OnListaPuntos;
+        public event Action? OnListaPuntos;
 
         public void AddParticipantePuntos(ParticipanteEnCuestDTO participante)
         {
             ListaPuntos.Add(participante);
+            OnListaPuntos?.Invoke();
         }
 
     }
