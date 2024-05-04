@@ -3,24 +3,25 @@
 @inject NavigationManager _navigationManager
 @inject IStateConteiner _StateContainer
 @inject IHubconnectionService hubConnectionService
+<link rel="stylesheet" href="css/Preguntas.css" />
+
    <section class="preguntas__body">
 
 @if (MostrarRespuesta)
 {
-    <Pregunta OnSiguiente="Siguiente" OnPreguntaContestada="PreguntaContestada">
+    <Pregunta    OnSiguiente="Siguiente" OnPreguntaContestada="PreguntaContestada">
     </Pregunta>
 }
+
+</section>
 <h3>seccion Validacion de respuesta</h3>
 <p>@preguntaValid</p>
 <p>@DatosPreguntas.esCorrecto</p>
 
 <p>@DatosPreguntas.puntos</p>
-</section>
-
 @code {
 @using System.Timers
     int segundos = 5;
-
     private string preguntaValid = "";
     ComponentObjectPreguntas DatosPreguntas { get; set; } = new();
     private Timer TimerSiguiente = new Timer(1000);
@@ -41,7 +42,7 @@
         _StateContainer.Participante.PuntosActuales += DatosPreg.puntos;
         if (DatosPreg.esCorrecto) _StateContainer.Participante.CantidadPacertadas += 1;
         await hubConnectionService.ContestarPregunta(_StateContainer.Participante); 
-        this.DatosPreguntas.esCorrecto = DatosPreguntas.esCorrecto;
+        this.DatosPreguntas.esCorrecto = DatosPreg.esCorrecto;
         preguntaValid = "Validando Respuesta...";
     }
     private void  Siguiente()

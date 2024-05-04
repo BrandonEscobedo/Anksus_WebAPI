@@ -6,7 +6,7 @@ namespace anskus.Application.DTOs.Cuestionarios
     {  
         public int IdRespuesta { get; set; }  
         public int IdPregunta { get; set; }
-        public string? ClaseCSS { get; set; } = "btn btn-primary";
+        public string? ClaseCSS { get; set; } = "";
 
         public string respuesta { get; set; } = null!;
 

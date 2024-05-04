@@ -49,7 +49,7 @@ namespace Anksus_WebAPI.Server.Hubs
             //Agregar puntos del cuestionario al usuario
             //Agregar usuario a lista
             //Mostrar Ranking de lista
-            //Todos los oyentes reciven la lista, cuando la preguntatermino en componte Ranking
+            //Todos los oyentes reciben la lista, cuando la pregunta termino en componte Ranking
         }
         public async Task SiguientePregunta()
         {

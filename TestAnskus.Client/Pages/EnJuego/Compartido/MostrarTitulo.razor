@@ -1,10 +1,17 @@
 ﻿@page "/Titulo"
 @inject IStateConteiner _StateContainer
-
 @layout ComponentsBase.ComponentBaseLogin
 @inject NavigationManager navigationManager
-<h2>@_StateContainer.titulo</h2>
-<p>@segundos</p>
+<link rel="stylesheet" href="css/Preguntas.css" />
+<section class="title_boddy">
+    <h2 class="title">
+        @_StateContainer.titulo
+    </h2>
+    <h2 class="title">
+        @segundos
+    </h2>
+</section>
+
 @code {
 @using System.Timers;
     private int segundos = 3;

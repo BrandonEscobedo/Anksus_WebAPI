@@ -1,20 +1,13 @@
-﻿using anskus.Application.Data;
-using anskus.Application.DTOs.Cuestionarios;
-using anskus.Application.DTOs.Response;
-using anskus.Application.DTOs.Response.Cuestionarios;
-using anskus.Application.Services;
-using anskus.Domain.Authentication;
+﻿using anskus.Domain.Authentication;
 using anskus.Domain.Cuestionarios;
 using anskus.Domain.Models.dbModels;
 using anskus.Infrastructure.Data;
-using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System.Security.Claims;
 
-    namespace anskus.Infrastructure.Repository.CuestionariosServices
-    {
-        internal sealed class CuestionarioRepository : ICuestionarioRepository
+namespace anskus.Infrastructure.Repository.CuestionariosServices
+{
+    internal sealed class CuestionarioRepository : ICuestionarioRepository
         {
         
         private readonly TestAnskusContext _context;

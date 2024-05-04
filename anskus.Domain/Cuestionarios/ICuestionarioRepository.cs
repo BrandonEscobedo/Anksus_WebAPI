@@ -1,9 +1,4 @@
 ﻿using anskus.Domain.Models.dbModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 namespace anskus.Domain.Cuestionarios
 {
     public interface ICuestionarioRepository
@@ -11,6 +6,6 @@ namespace anskus.Domain.Cuestionarios
           Task<int> Add(Cuestionario cuestionario,string email);
           Task<List<Cuestionario>> GetbyUser(string email);
           Task<Cuestionario> GetbyId(int id);
-          Task<bool> Update(Cuestionario cuestionario );
+          Task<bool> Update(Cuestionario cuestionario);
     }
 }
