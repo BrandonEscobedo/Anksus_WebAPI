@@ -24,14 +24,10 @@
     void hide() => MudDialog.Cancel();
     private ISender? _mediator;
     [Inject] AuthenticationStateProvider? AuthStateProvider { get; set; }
-
-
     public CuestionarioDTO cuestionarioDTO { get; set; } = new CuestionarioDTO();
     public List<CategoriasDTO> listaCategorias = new List<CategoriasDTO>();
     protected override async Task OnInitializedAsync()
-    {
-     
-
+    {    
         cuestionarioDTO.IdCuestionario = IdContainer.idCuestionario;
         // listaCategorias = await _CategoriasService.GetAllCategorias();
     }
@@ -46,7 +42,6 @@
                 cuestionarioDTO.IdCuestionario = IdContainer.idCuestionario;
                 hide();
             }
-
         }
         else
         {

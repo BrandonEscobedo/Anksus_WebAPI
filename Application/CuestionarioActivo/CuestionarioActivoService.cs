@@ -1,12 +1,6 @@
 ﻿using anskus.Application.DTOs.Cuestionarios;
 using anskus.Application.Extensions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http.Json;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace anskus.Application.CuestionarioActivo
 {
     public class CuestionarioActivoService(HttpClientServices httpClientServices) : ICuestionarioActivoService

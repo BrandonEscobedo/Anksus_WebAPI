@@ -74,6 +74,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXJFZGl0YXJDdWVzdGlvbmFyaW9zXEN1ZXN0aW9uYXJpb3NVc3VhcmlvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/brand/source/repos/Anksus_WebAPI/TestAnskus.Client/Pages/CrearEditarCuestionarios/EditarCuestionario.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXJFZGl0YXJDdWVzdGlvbmFyaW9zXEVkaXRhckN1ZXN0aW9uYXJpby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/brand/source/repos/Anksus_WebAPI/TestAnskus.Client/Pages/CrearEditarCuestionarios/MdCrearCuestionario.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXJFZGl0YXJDdWVzdGlvbmFyaW9zXE1kQ3JlYXJDdWVzdGlvbmFyaW8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

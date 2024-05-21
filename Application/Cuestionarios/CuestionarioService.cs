@@ -1,15 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Json;
-using System.Text;
-using System.Threading.Tasks;
-using anskus.Application.Data;
+﻿using System.Net.Http.Json;
 using anskus.Application.DTOs.Cuestionarios;
-using anskus.Application.DTOs.Response;
-using anskus.Application.DTOs.Response.Cuestionarios;
 using anskus.Application.Extensions;
-using MediatR;
 namespace anskus.Application.Cuestionarios
 {
     public class CuestionarioService:ICuestionarioService
@@ -17,8 +8,7 @@ namespace anskus.Application.Cuestionarios
         private readonly HttpClientServices _httpClientServices;
         public CuestionarioService(HttpClientServices httpClientServices )
         {
-            _httpClientServices = httpClientServices;
-            
+            _httpClientServices = httpClientServices;            
         }
         private async Task<HttpClient> PrivateClient() => (await _httpClientServices.GetPrivateClient());
         private static string CheckResponseStatus(HttpResponseMessage response)
@@ -36,8 +26,6 @@ namespace anskus.Application.Cuestionarios
             if (data == 0)
                 return 0;
             return data;
-
-
         }
         public async Task<bool> Update(CuestionarioDTO cuestionario)
         {
@@ -46,7 +34,12 @@ namespace anskus.Application.Cuestionarios
 
             return response;
         }
-
+        public async Task<CuestionarioDTO> GetCuestionarioById(int id)
+        {
+            var result = await (await PrivateClient()).GetAsync($"{Constant.CuestionarioRoute}/GetById?id={id}");
+            var response = await result.Content.ReadFromJsonAsync<CuestionarioDTO>();
+            return response;
+        }
         public async Task<List<CuestionarioDTO>> GetAllCuestionarios(string email)
         {
             var response = await (await PrivateClient()).GetFromJsonAsync<List<CuestionarioDTO>>($"{Constant.CuestionarioRoute}/{email}");

@@ -5,9 +5,6 @@
 @inject IHubconnectionService connectionService
 @inject IHubStateCreador _stateCreador
 <link rel="stylesheet" href="css/Preguntas.css" />
-
-<section class="preguntas__body">
-
 <Pregunta OnSiguiente="@Siguiente">
 
 </Pregunta>
@@ -16,7 +13,6 @@
        <h2>@usuariosContestados</h2>
     </div>
 
-  </section>
 
 @code {
 @using System.Timers

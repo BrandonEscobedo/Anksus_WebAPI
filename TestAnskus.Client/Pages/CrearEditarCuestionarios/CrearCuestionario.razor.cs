@@ -1,23 +1,16 @@
-﻿using System.Net.NetworkInformation;
-using static System.Net.Mime.MediaTypeNames;
-using MediatR;
-using anskus.Application.Preguntas;
-using Microsoft.AspNetCore.Components;
+﻿using Microsoft.AspNetCore.Components;
 using anskus.Application.DTOs.Cuestionarios;
 using MudBlazor;
 namespace TestAnskus.Client.Pages.CrearEditarCuestionarios
 {
-
-    public partial class CrearCuestionario
+   public partial class CrearCuestionario
     {
-
-
         [Parameter]
         public int id { get; set; } = 0;
+       
         List<PreguntasDTO> ListaPreguntas { get; set; } = new();
         List<RespuestasDTO> ListaRespuestasDTOs { get; set; } = new List<RespuestasDTO>();
         public PreguntasDTO preguntasDTO { get; set; } = new PreguntasDTO();
-
         private void OpenDialog()
         {
             var options = new DialogOptions { CloseOnEscapeKey = true };
@@ -33,11 +26,11 @@ namespace TestAnskus.Client.Pages.CrearEditarCuestionarios
                 RCorrecta = false
             });
         }
-
         public async Task GuardarEditarPregunta()
         {
             var nuevapregunta = new PreguntasDTO()
             {
+                
                 IdCuestionario = _IdConteiner.idCuestionario,
                 pregunta = preguntasDTO.pregunta
             };
@@ -45,6 +38,7 @@ namespace TestAnskus.Client.Pages.CrearEditarCuestionarios
             var idpreg = await _preguntasService.Add(nuevapregunta);
             if (idpreg != 0)
             {
+                
                 _IdConteiner.SetIdPregunta(idpreg);
                 nuevapregunta.IdPregunta = idpreg;
                 ListaPreguntas.Add(nuevapregunta);

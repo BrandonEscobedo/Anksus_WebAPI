@@ -8,6 +8,7 @@ using anskus.Application.Cuestionarios.Querys.GetById;
 using Microsoft.AspNetCore.Authorization;
 using anskus.Domain.Models.dbModels;
 using anskus.Application.Cuestionarios.Querys.GetByIdCuestionario;
+
 namespace Anksus_WebAPI.Controllers
 {
     [Authorize]
@@ -42,7 +43,7 @@ namespace Anksus_WebAPI.Controllers
             }
             return StatusCode(503);
         }
-        [HttpGet("sGetById")]
+        [HttpGet("GetById")]
         public async Task<ActionResult<Cuestionario>> GetCuestionarios(int id)
         {
             if(User.Identity!.IsAuthenticated == true)

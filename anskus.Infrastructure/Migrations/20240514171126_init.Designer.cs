@@ -12,8 +12,8 @@ using anskus.Infrastructure.Data;
 namespace anskus.Infrastructure.Migrations
 {
     [DbContext(typeof(TestAnskusContext))]
-    [Migration("20240430192417_lap")]
-    partial class lap
+    [Migration("20240514171126_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

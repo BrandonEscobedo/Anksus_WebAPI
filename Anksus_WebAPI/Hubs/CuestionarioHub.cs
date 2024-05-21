@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Caching.Distributed;
 using anskus.Application.DTOs.Cuestionarios;
 using anskus.Infrastructure.Data;
-
 namespace Anksus_WebAPI.Server.Hubs
 {
     public class CuestionarioHub : Hub<InotificationClient>

@@ -11,7 +11,8 @@ namespace anskus.Application.Cuestionarios
 {
     public interface ICuestionarioService
     {
-        public  Task<int> Add(CuestionarioDTO cuestionario);
+          Task<CuestionarioDTO> GetCuestionarioById(int id);
+        public Task<int> Add(CuestionarioDTO cuestionario);
         public  Task<bool> Update(CuestionarioDTO cuestionario);
         public  Task<List<CuestionarioDTO>> GetAllCuestionarios(string email);
     }
