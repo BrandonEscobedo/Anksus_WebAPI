@@ -1,91 +1,91 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\5fi61uhxj9.gz",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\obj\\Debug\\net8.0\\compressed\\b3hr5b8rfj.gz",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\appsettings.Development.json",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\wwwroot\\appsettings.Development.json",
       "PackagePath": "staticwebassets\\appsettings.Development.json"
     },
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\appsettings.json",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\wwwroot\\appsettings.json",
       "PackagePath": "staticwebassets\\appsettings.json"
     },
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\css\\Preguntas.css",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\wwwroot\\css\\Preguntas.css",
       "PackagePath": "staticwebassets\\css\\Preguntas.css"
     },
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\css\\app.css",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\css\\codigo.css",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\wwwroot\\css\\codigo.css",
       "PackagePath": "staticwebassets\\css\\codigo.css"
     },
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\css\\index.css",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\wwwroot\\css\\index.css",
       "PackagePath": "staticwebassets\\css\\index.css"
     },
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\icon-192.png",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\img\\EmpiezaYa1.png",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\wwwroot\\img\\EmpiezaYa1.png",
       "PackagePath": "staticwebassets\\img\\EmpiezaYa1.png"
     },
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\img\\EmpiezaYa2.png",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\wwwroot\\img\\EmpiezaYa2.png",
       "PackagePath": "staticwebassets\\img\\EmpiezaYa2.png"
     },
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\img\\Logo.png",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\wwwroot\\img\\Logo.png",
       "PackagePath": "staticwebassets\\img\\Logo.png"
     },
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\img\\bgCode.png",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\wwwroot\\img\\bgCode.png",
       "PackagePath": "staticwebassets\\img\\bgCode.png"
     },
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\img\\fondo-sala.jpg",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\wwwroot\\img\\fondo-sala.jpg",
       "PackagePath": "staticwebassets\\img\\fondo-sala.jpg"
     },
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\img\\user.png",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\wwwroot\\img\\user.png",
       "PackagePath": "staticwebassets\\img\\user.png"
     },
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\index.html",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\js\\Alerts.js",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\wwwroot\\js\\Alerts.js",
       "PackagePath": "staticwebassets\\js\\Alerts.js"
     },
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\js\\js.js",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\wwwroot\\js\\js.js",
       "PackagePath": "staticwebassets\\js\\js.js"
     },
     {
-      "Id": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\TestAnskus.Client\\wwwroot\\sample-data\\weather.json",
+      "Id": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\TestAnskus.Client\\wwwroot\\sample-data\\weather.json",
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },
     {

@@ -28,6 +28,8 @@ namespace anskus.Application.Cuestionarios.Commands.Update
                 Cuestionario cuestionario = new Cuestionario();
                 cuestionario.IdCuestionario = request.Cuestionario.IdCuestionario;
                 cuestionario.Titulo = request.Cuestionario.Titulo;
+                cuestionario.Pregunta = (ICollection<Pregunta>)request.Cuestionario.Pregunta;
+              
                 var response = await _repository.Update(cuestionario);
                 await _unitOfWork.SaveChangesAsync();
                 return response;

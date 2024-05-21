@@ -21,6 +21,12 @@ namespace anskus.Application.Preguntas
             return response;
 
         }
+       public async Task<bool> UpdatePregunta(PreguntasDTO preguntas)
+        {
+            var result = await (await PrivateClient()).PutAsJsonAsync(Constant.PreguntasRoute, preguntas);
+            var response = await result.Content.ReadFromJsonAsync<bool>();
+            return response;
+        }
 
         public Task<PreguntasResponse> GetPreguntas(int pregunta)
         {

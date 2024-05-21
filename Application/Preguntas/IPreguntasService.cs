@@ -9,6 +9,7 @@ namespace anskus.Application.Preguntas
         Task<int> Add(PreguntasDTO pregunta);
         Task<PreguntasResponse> GetPreguntas(int pregunta);
         Task<bool> DeletePregunta(int pregunta);
+        public  Task<bool> UpdatePregunta(PreguntasDTO preguntas);
 
     }
 

@@ -1,24 +1,29 @@
-﻿@page "/EditarCuestionario/"
+﻿@page "/EditarCuestionario/{idcuestionario:int}"
 @inject anskus.Application.Preguntas.IPreguntasService _preguntasService
 @inject IDialogService DialogService
 @inject IRespuestasServices respuestasService
+@inject ICuestionarioService cuestionarioService
 @inject anskus.Application.Cuestionarios.IIdContainer _IdConteiner
 <MudButton @onclick="OpenDialog" Variant="Variant.Filled" Color="Color.Primary">
     Guardar Cuestionario
 </MudButton>
+<input    @bind-value="@cuestionario.Titulo"/>
+<button @onclick="GuardarEditarPregunta">
+    Actualizar 
+</button>
 <div class="container-fluid m-0">
     <div class="row">
         <div class="col-md-2 bg-white custom-left-section p-3">
             <ul id="questionList" class="list-group">
                 @foreach (var pregunta in cuestionario.Pregunta)
                 {
-                    <input type="button" class="form-control" @bind-value="pregunta.pregunta" />
+                    <input type="button" class="form-control" @onclick="()=>CambiarPregunta(pregunta.IdPregunta)" @bind-value="pregunta.pregunta" />
                     <button @onclick="() => EliminarPregunta(pregunta)">Eliminar</button>
                 }
             </ul>
             <div class="mt-3">
                 <div class="mt-3">
-                    <button id="addFunctionButton" @onclick="GuardarEditarPregunta" class="btn btn-primary mt-2">Agregar Pregunta</button>
+                    <button id="addFunctionButton"  class="btn btn-primary mt-2">Agregar Pregunta</button>
                 </div>
             </div>
         </div>
@@ -27,7 +32,7 @@
             <input type="text" @bind-value="preguntasDTO.pregunta" class="form-control" placeholder="pregunta">
             @foreach (var pregunta in cuestionario.Pregunta)
             {
-                @foreach (var respuestas in pregunta?.Respuesta.Where(x => x.IdPregunta == _IdConteiner.idPregunta))
+                @foreach (var respuestas in pregunta.Respuesta.Where(x => x.IdPregunta == _IdConteiner.idPregunta))
                 {
                     <div class="col-6">
                         <div class="input-group">
@@ -46,11 +51,11 @@
     </div>
 </div>
 
-@code{
-    public int id = 0;
+@code {
     [Parameter]
+    public int idcuestionario { get; set; }
+
     public CuestionarioDTO cuestionario { get; set; } = new();
-    List<PreguntasDTO> ListaPreguntas { get; set; } = new();
     List<RespuestasDTO> ListaRespuestasDTOs { get; set; } = new List<RespuestasDTO>();
     public PreguntasDTO preguntasDTO { get; set; } = new PreguntasDTO();
     private void OpenDialog()
@@ -60,7 +65,10 @@
     }
     protected override async Task OnInitializedAsync()
     {
-        _IdConteiner.idCuestionario = id;
+        cuestionario = await cuestionarioService.GetCuestionarioById(idcuestionario);
+        _IdConteiner.idCuestionario = idcuestionario;
+        _IdConteiner.idPregunta = cuestionario.Pregunta.First().IdPregunta;
+        preguntasDTO = cuestionario.Pregunta.First();
         ListaRespuestasDTOs.Add(new RespuestasDTO
             {
                 IdPregunta = 0,
@@ -68,24 +76,23 @@
                 RCorrecta = false
             });
     }
+    public async void CambiarPregunta(int idpregunta)
+    {
+        _IdConteiner.idPregunta = idpregunta;
 
+    }
     public async Task GuardarEditarPregunta()
     {
+        await GuardarRespuestas();
         var nuevapregunta = new PreguntasDTO()
-            {
-                IdCuestionario = _IdConteiner.idCuestionario,
-                pregunta = preguntasDTO.pregunta
+            {     
+                pregunta = preguntasDTO.pregunta,
+                Respuesta=ListaRespuestasDTOs
             };
         preguntasDTO.IdCuestionario = _IdConteiner.idCuestionario;
-        var idpreg = await _preguntasService.Add(nuevapregunta);
-        if (idpreg != 0)
-        {
-            _IdConteiner.SetIdPregunta(idpreg);
-            nuevapregunta.IdPregunta = idpreg;
-            ListaPreguntas.Add(nuevapregunta);
-            await GuardarRespuestas();
-            await CleanRespuestas();
-        }
+        await _preguntasService.UpdatePregunta(preguntasDTO);
+        await cuestionarioService.Update(cuestionario);
+
     }
     public void EliminarRespuesta(RespuestasDTO respuesta)
     {
@@ -96,7 +103,7 @@
         var result = await _preguntasService.DeletePregunta(pregunta.IdPregunta);
         if (result)
         {
-            ListaPreguntas.Remove(pregunta);
+            cuestionario.Pregunta.Remove(pregunta);
         }
 
     }
@@ -131,7 +138,6 @@
     {
         await CambiarID(_IdConteiner.idPregunta);
         ListaRespuestasDTOs.RemoveAll(r => r.respuesta.Length == 0);
-        await respuestasService.Add(ListaRespuestasDTOs);
+      
     }
-
-                            }
+}

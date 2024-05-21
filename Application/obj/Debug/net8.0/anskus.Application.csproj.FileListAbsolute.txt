@@ -30,3 +30,19 @@ C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Application\obj\De
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Application\obj\Debug\net8.0\refint\anskus.Application.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Application\obj\Debug\net8.0\anskus.Application.pdb
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Application\obj\Debug\net8.0\ref\anskus.Application.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Application\bin\Debug\net8.0\anskus.Application.deps.json
+C:\Users\jesus\OneDrive\Desktop\ansk\Application\bin\Debug\net8.0\anskus.Application.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Application\bin\Debug\net8.0\anskus.Application.pdb
+C:\Users\jesus\OneDrive\Desktop\ansk\Application\bin\Debug\net8.0\anskus.Domain.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Application\bin\Debug\net8.0\anskus.Domain.pdb
+C:\Users\jesus\OneDrive\Desktop\ansk\Application\obj\Debug\net8.0\anskus.Application.csproj.AssemblyReference.cache
+C:\Users\jesus\OneDrive\Desktop\ansk\Application\obj\Debug\net8.0\anskus.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jesus\OneDrive\Desktop\ansk\Application\obj\Debug\net8.0\anskus.Application.AssemblyInfoInputs.cache
+C:\Users\jesus\OneDrive\Desktop\ansk\Application\obj\Debug\net8.0\anskus.Application.AssemblyInfo.cs
+C:\Users\jesus\OneDrive\Desktop\ansk\Application\obj\Debug\net8.0\anskus.Application.csproj.CoreCompileInputs.cache
+C:\Users\jesus\OneDrive\Desktop\ansk\Application\obj\Debug\net8.0\anskus.Application.sourcelink.json
+C:\Users\jesus\OneDrive\Desktop\ansk\Application\obj\Debug\net8.0\anskus.Application.csproj.CopyComplete
+C:\Users\jesus\OneDrive\Desktop\ansk\Application\obj\Debug\net8.0\anskus.Application.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Application\obj\Debug\net8.0\refint\anskus.Application.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Application\obj\Debug\net8.0\anskus.Application.pdb
+C:\Users\jesus\OneDrive\Desktop\ansk\Application\obj\Debug\net8.0\ref\anskus.Application.dll

@@ -4,6 +4,7 @@
 @inject IIdContainer  _idconteiner
 @inject ICuestionarioActivoService cuestionarioAservice
 @layout ComponentsBase.ComponentBaseLogin
+@inject ISnackbar snackbar
 <link rel="stylesheet" href="css/codigo.css" />
 <div class="code__body">
     <img src="./img/Logo.png" alt="">
@@ -14,13 +15,11 @@
         <input type="text" @bind-value="code" placeholder="Codigo">
         <input   type="submit" @onclick="IsCodeValid" value="Aceptar">
     </div>
-
-
     <a href="#">¿No sabes tu codigo?</a>
     <h1>Haz click arriba o pregunta al creador del juego para que te unas a la diversion</h1>
 </div>
 @code {
-    
+
     public int code;
     public bool Mostrar = false;
     private async Task IsCodeValid()
@@ -29,6 +28,10 @@
         if (result == true)
         {
             NavigationManager.NavigateTo($"/Entrar/{code}");
+        }
+        else
+        {
+            snackbar.Add("Este nombre ya esta en uso", Severity.Info);
         }
     }
 }

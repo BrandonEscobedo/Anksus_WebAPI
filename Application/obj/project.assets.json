@@ -1993,19 +1993,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\brand\\.nuget\\packages\\": {}
+    "C:\\Users\\jesus\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\Application\\anskus.Application.csproj",
+      "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\Application\\anskus.Application.csproj",
       "projectName": "anskus.Application",
-      "projectPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\Application\\anskus.Application.csproj",
-      "packagesPath": "C:\\Users\\brand\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\Application\\obj\\",
+      "projectPath": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\Application\\anskus.Application.csproj",
+      "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\Application\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\brand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2019,8 +2024,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj": {
-              "projectPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj"
+            "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\anskus.Domain\\anskus.Domain.csproj": {
+              "projectPath": "C:\\Users\\jesus\\OneDrive\\Desktop\\ansk\\anskus.Domain\\anskus.Domain.csproj"
             }
           }
         }

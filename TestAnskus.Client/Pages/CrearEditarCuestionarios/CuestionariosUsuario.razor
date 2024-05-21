@@ -24,7 +24,7 @@
                 <a href="#" class="card-link"><i class="fas fa-pencil-alt"></i></a>
                 <a href="#" class="card-link"><i class="fas fa-trash-alt"></i></a>
                         <a href="#" @onclick="async()=> await IniciarCuestionario(cuestionario.IdCuestionario)" class="btn btn-success">Comenzar</a>
-                        <a href="#" @onclick="async ()=>await  EditarCuestionario(cuestionario.IdCuestionario)" class="btn btn-secondary">Editar</a>
+                        <a @onclick=" ()=>  EditarCuestionario(cuestionario.IdCuestionario)" class="btn btn-secondary">Editar</a>
                  </div>
              </div>
         </div>
@@ -53,10 +53,10 @@
             }
 
         }
-        private async Task EditarCuestionario(int idcuestionario)
+        private void  EditarCuestionario(int idcuestionario)
         {
-         var result=   await cuestionarioService.GetCuestionarioById(idcuestionario);
-        _NavigationManager.NavigateTo($"/EditarCuestionario/{result}");
+      
+        _NavigationManager.NavigateTo($"/EditarCuestionario/{idcuestionario}");
         }
         private async Task IniciarCuestionario(int id )
         {

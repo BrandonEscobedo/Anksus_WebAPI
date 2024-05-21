@@ -25,7 +25,6 @@
   <ItemGroup>
     <Folder Include="DTOs\Request\Cuestionarios\" />
     <Folder Include="Preguntas\GetById\" />
-    <Folder Include="Preguntas\Update\" />
     <Folder Include="Respuestas\Delete\" />
     <Folder Include="Respuestas\Update\" />
   </ItemGroup>

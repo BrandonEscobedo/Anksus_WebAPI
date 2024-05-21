@@ -26,17 +26,18 @@
                 Puntuacion
             </h3>
         </div>
-        @foreach (var jugador in Jugadores.OrderByDescending(j => j.Puntaje))
+       
+        @foreach (var jugador in _stateContainer.participanteEnCuest.OrderByDescending(j => j.PuntosAnteriores))
         {
             <div class="content__tablero">
                 <h3>
-                    No.
+                 No.
                 </h3>
                 <h3>
                     @jugador.Nombre
                 </h3>
                 <h3>
-                    @jugador.Puntaje
+                    @jugador.PuntosAnteriores
                 </h3>
             </div>
         }
@@ -47,51 +48,56 @@
 <ul>
 
 </ul>
-@foreach(var participante in _stateContainer.participanteEnCuest)
-{
-    <p>@participante.Nombre</p>
-    <p>@participante.PuntosActuales</p>
-}
+
 @code{
-    @using System.Timers;
-    private Timer Timer = new Timer(1000);
-    private int segundos = 10;
+    private Ranking rankingComponent;
     protected override async Task OnInitializedAsync()
     {
-           Jugadores = new List<Jugador>
-        {
-            new Jugador { Nombre = "Jugador1", Puntaje = 100 },
-            new Jugador { Nombre = "Jugador2", Puntaje = 90 },
-            new Jugador { Nombre = "Jugador3", Puntaje = 80 },
-            new Jugador { Nombre = "Jugador4", Puntaje = 70 }
-        };
+        
         await ActualizarPuntajes();
 
     }
 
-    private List<Jugador> Jugadores { get; set; }
     private async Task ActualizarPuntajes()
     {
-        while (true)
+        while (!TodosAlcanzaronPuntosActuales())
         {
-            await Task.Delay(100); // Esperamos 2 segundos
+            await Task.Delay(60);
 
-            // Actualizamos los puntajes de los jugadores
-            foreach (var jugador in Jugadores)
+            foreach (var participante in _stateContainer.participanteEnCuest)
             {
-                jugador.Puntaje += new Random().Next(1, 11);
-                if (jugador.Puntaje >= 1000) break;
-            }
 
-            // Actualizamos la interfaz de usuario
+
+              
+                if (participante.PuntosAnteriores < participante.PuntosActuales)
+                {
+                    participante.PuntosAnteriores += 1;
+                  
+                }
+           
+               
+            }
             StateHasChanged();
         }
     }
-
-    // Definimos la clase Jugador
-    public class Jugador
+    private bool TodosAlcanzaronPuntosActuales()
     {
-        public string Nombre { get; set; } = "";
-        public int Puntaje { get; set; }
+        foreach (var participante in _stateContainer.participanteEnCuest)
+        {
+            if (participante.PuntosAnteriores < participante.PuntosActuales)
+            {
+                return false; // Todavía hay participantes que no han alcanzado sus puntos actuales
+            }
+        }
+        return true; // Todos los participantes han alcanzado sus puntos actuales
     }
+    public async ValueTask DisposeAsync()
+    {
+        // Limpia cualquier recurso relacionado con el componente Ranking
+        if (rankingComponent != null)
+        {
+            await rankingComponent.DisposeAsync();
+        }
+    }
+    
 }

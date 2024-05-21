@@ -97,8 +97,6 @@ public partial class TestAnskusContext : IdentityDbContext<ApplicationUser>, IDb
 
         OnModelCreatingPartial(modelBuilder);
 
-
-
     }
 
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())

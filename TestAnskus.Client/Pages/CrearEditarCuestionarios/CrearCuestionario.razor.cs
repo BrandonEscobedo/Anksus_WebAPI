@@ -44,6 +44,7 @@ namespace TestAnskus.Client.Pages.CrearEditarCuestionarios
                 ListaPreguntas.Add(nuevapregunta);
                 await GuardarRespuestas();
                 await CleanRespuestas();
+                preguntasDTO = new();
             }
         }
         public void EliminarRespuesta(RespuestasDTO respuesta)

@@ -14,6 +14,7 @@ using anskus.Domain.Cuestionarios;
 using MediatR;
 using anskus.Application.Preguntas.Create;
 using anskus.Application.Preguntas.Delete;
+using anskus.Application.Preguntas.Update;
 
 namespace Anksus_WebAPI.Server.Controllers
 {
@@ -38,9 +39,13 @@ namespace Anksus_WebAPI.Server.Controllers
         [HttpPut]
         public async Task<IActionResult> PutPregunta( PreguntasDTO PreguntaDTO)
         {
-           
 
-            return Ok();
+            if (PreguntaDTO != null)
+            {
+                var result = await _mediator.Send(new UpdatePreguntaCommand(PreguntaDTO));
+                return Ok(result);
+            }
+            return BadRequest();
         }
 
         // POST: api/Preguntas

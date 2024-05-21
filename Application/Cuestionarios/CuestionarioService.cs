@@ -34,6 +34,10 @@ namespace anskus.Application.Cuestionarios
 
             return response;
         }
+        public async Task UpdateAllCuestionario()
+        {
+
+        }
         public async Task<CuestionarioDTO> GetCuestionarioById(int id)
         {
             var result = await (await PrivateClient()).GetAsync($"{Constant.CuestionarioRoute}/GetById?id={id}");

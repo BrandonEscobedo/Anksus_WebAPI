@@ -11,5 +11,6 @@ namespace anskus.Domain.Cuestionarios
     {
           Task<int> Add(Pregunta pregunta);
           Task<bool> Delete(int id);
+        public  Task<bool> UpdateAsnyc(Pregunta pregunta);
     }
 }

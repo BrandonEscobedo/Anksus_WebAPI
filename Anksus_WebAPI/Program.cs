@@ -2,7 +2,6 @@ using Anksus_WebAPI.Server.ExtensionMigrations;
 using Anksus_WebAPI.Server.Hubs;
 using anskus.Infrastructure.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSignalR();
 

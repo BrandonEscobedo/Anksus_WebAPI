@@ -23,6 +23,16 @@ namespace anskus.Infrastructure.Repository.CuestionariosServices
             _context = testAnskusContext;
 
         }
+        public async Task<bool> UpdateAsnyc(Pregunta pregunta)
+        {
+            if (pregunta.IdCuestionario != 0)
+            {
+                _context.Preguntas.Update(pregunta);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            return false;
+        }
 
         public async Task<int> Add(Pregunta pregunta)
         {

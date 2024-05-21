@@ -5,7 +5,7 @@
 @inject IHubStateCreador _stateCreador
 @layout ComponentsBase.ComponentBaseLogin
 
-<button @onclick="SiguientePregunta" >Siguiente</button>
+<button @onclick="AvanzarSiguientePregunta">Siguiente</button>
 <Ranking></Ranking>
 @code {
 
@@ -19,10 +19,12 @@
     {
         _StateContainer.pregunta = pregunta;
         _NavigationManager.NavigateTo("/Pregunta");
+   
         _stateCreador.ListaPuntos.Clear();
     }
-    private async Task SiguientePregunta()
+    private async Task AvanzarSiguientePregunta()
     {
+      
         await hubConnectionServices.SiguientePreguntaUsuarios();
     }
 
