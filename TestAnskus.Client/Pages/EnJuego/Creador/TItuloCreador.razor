@@ -1,0 +1,9 @@
+﻿@page "/Titulo/Creador"
+@inject NavigationManager navigationManager
+@layout ComponentsBase.ComponentBaseLogin
+<MostrarTitulo OnTimerOff="@OnTimerOff">
+
+</MostrarTitulo>
+@code {
+    public async Task OnTimerOff() => navigationManager.NavigateTo("/PreguntaActual");
+}

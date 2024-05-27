@@ -1,188 +1,94 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Anksus_WebAPI.Models.dbModels;
-using Microsoft.AspNetCore.Identity;
-using Anksus_WebAPI.Models.DTO;
-using TestAnskus.Shared;
+﻿using Microsoft.AspNetCore.Mvc;
+using anskus.Application.DTOs.Cuestionarios;
+using MediatR;
 using System.Security.Claims;
-using AutoMapper;
+using anskus.Application.Cuestionarios.Commands.Create;
+using anskus.Application.Cuestionarios.Commands.Update;
+using anskus.Application.Cuestionarios.Querys.GetById;
+using Microsoft.AspNetCore.Authorization;
+using anskus.Domain.Models.dbModels;
+using anskus.Application.Cuestionarios.Querys.GetByIdCuestionario;
 
 namespace Anksus_WebAPI.Controllers
 {
+    [Authorize]
     [Route("api/Cuestionarios")]
     [ApiController]
-    public class CuestionariosController : ControllerBase
+    public class CuestionariosController(ISender _mediator) : ControllerBase
     {
-        private readonly TestAnskusContext _context;
-        private readonly UserManager<AplicationUser> _userManager;
-        private readonly IMapper _mapper;
-        public CuestionariosController(TestAnskusContext context,UserManager<AplicationUser> userManager,IMapper mapper)
-        {
-            _mapper=mapper;
-            _userManager = userManager;
-            _context = context;
-        }
-        [HttpGet("{id}")]
-        public async Task<ActionResult<IEnumerable<Cuestionario>>> GetCuestionarios(int id)
-        {
-            var responseAPI = new ResponseAPI<List<CuestionarioDTO>>();
-            try
-            {          
-                var cuestionarios = _mapper.Map<List<CuestionarioDTO>>(await _context.Cuestionarios
-                    .Where(e => e.IdCuestionario == id)
-                    .Include(o => o.Pregunta)
-                    .ThenInclude(x=>x.Respuesta)                   
-                    .ToListAsync());
-                if (cuestionarios != null)
-                {
-                    responseAPI.Valor = cuestionarios;
-                    responseAPI.EsCorrecto = true;
-                }
-                else
-                {
-                    responseAPI.mensaje = "Este usuario no tiene Cuestionarios Aun.";
-                    responseAPI.EsCorrecto = false;
-                }
-            }
-            catch (Exception ex)
+        [HttpPost]
+        public async Task<IActionResult> CreateCuestionario(CuestionarioDTO cuestionario)
+        {     
+            if (User.Identity?.IsAuthenticated==true)
             {
-                responseAPI.mensaje = "Ha ocurrido un error de tipo: " + ex.Message;
-                responseAPI.EsCorrecto = false;
-            }
+                var userEmail = User.FindFirst(ClaimTypes.Email)?.Value;
 
-            return Ok(responseAPI);
+                if (userEmail != null)
+                {
+                    var result = await _mediator.Send(new CreateCuestionarioCommand(cuestionario, userEmail));
+                    return Ok(result);
+                }         
+            }
+            return StatusCode(503);       
+        }
+        // PUT: api/Cuestionarios/5
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPut]
+        public async Task<IActionResult> EditCuestionario(CuestionarioDTO cuestionarioDTO)
+        {
+            if(cuestionarioDTO!=null && User.Identity?.IsAuthenticated == true)
+            {
+                var result = await _mediator.Send(new UpdateCuestionarioCommand(cuestionarioDTO));
+                return Ok(result);
+            }
+            return StatusCode(503);
+        }
+        [HttpGet("GetById")]
+        public async Task<ActionResult<Cuestionario>> GetCuestionarios(int id)
+        {
+            if(User.Identity!.IsAuthenticated == true)
+            {
+                var response = await _mediator.Send(new GetCuestionarioByIdQuery(id));
+                if (response != null)
+                    return Ok(response);
+            }
+            return BadRequest();
         }
 
         // GET: api/Cuestionarios
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Cuestionario>>> GetCuestionarios()
+        [HttpGet("{email}")]
+        public async Task<ActionResult<List<CuestionarioDTO>>> GetCuestionarios(string email)
         {
-            var responseAPI = new ResponseAPI<List<CuestionarioDTO>>();
-            try
+            var result = await _mediator.Send(new GetCuestionarioByUserQuery(email));
+            if (result != null)
             {
-                var email = User.Identity?.Name;
-                var user = await _userManager.FindByEmailAsync(email!);
-                var cuestionarios = _mapper.Map<List<CuestionarioDTO>>(await _context.Cuestionarios
-                    .Where(e => e.IdUsuario == user!.Id)
-                    .Include(o=>o.Pregunta).ToListAsync());
-                if (cuestionarios != null)
-                {
-                    responseAPI.Valor = cuestionarios;
-                    responseAPI.EsCorrecto = true;
-                }
-                else
-                {
-                    responseAPI.mensaje = "Este usuario no tiene Cuestionarios Aun.";
-                    responseAPI.EsCorrecto = false;
-                }
+                return Ok(result);
             }
-            catch (Exception ex)
-            {
-                responseAPI.mensaje = "Ha ocurrido un error de tipo: " + ex.Message;
-                responseAPI.EsCorrecto = false;
-            }
-
-            return Ok(responseAPI);
+            return BadRequest();
         }
 
-        // PUT: api/Cuestionarios/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> EditCuestionario(int id, CuestionarioDTO cuestionarioDTO)
-        {
-            var responseAPI = new ResponseAPI<int>();
-            try
-            {
-                var Cuestionario = await _context.Cuestionarios.FirstOrDefaultAsync(e => e.IdCuestionario==id);
-                if (Cuestionario != null) 
-                {
-                    Cuestionario.Titulo=cuestionarioDTO.Titulo;
-                    Cuestionario.IdCategoria = cuestionarioDTO.IdCategoria;
-                    Cuestionario.Publico = cuestionarioDTO.Publico;
-                    _context.Update(Cuestionario);
-                    await _context.SaveChangesAsync();
-                    responseAPI.EsCorrecto = true;
-                    responseAPI.Valor = Cuestionario.IdCuestionario;
-                }
-                else
-                {
-                    responseAPI.EsCorrecto = false;
-                    responseAPI.mensaje = "Cuestionario no encontrado";
-                }
-            }
-            catch (Exception ex)
-            {
-                responseAPI.EsCorrecto = false;
-                responseAPI.mensaje = "Error al actualizar de tipo: "+ex.Message;
-            }
-
-            return Ok(responseAPI);
-        }
-        [HttpPost]
-        public async Task<IActionResult> CreateCuestionario(CuestionarioDTO cuestionario)
-        {
-            var responseAPI = new ResponseAPI<int>();
-            try
-            {
-                var email = User.Identity?.Name;
-                var user = await _userManager.FindByEmailAsync(email!);
-                var user2 = await _userManager.GetUserAsync(User);
-                Cuestionario cuest = new Cuestionario()
-                {
-                    IdCategoria = cuestionario.IdCategoria,
-                    IdUsuario = user!.Id,
-                    Estado = cuestionario.Estado,
-                    Publico = cuestionario.Publico,
-                    Titulo = cuestionario.Titulo
-                };
-                _context.Cuestionarios.Add(cuest);
-                await _context.SaveChangesAsync();
-                if (cuest.IdCuestionario != 0)
-                {
-                    responseAPI.EsCorrecto = true;
-                    responseAPI.Valor = cuest.IdCuestionario;
-                }
-                else
-                {
-                    responseAPI.EsCorrecto = true;
-                    responseAPI.mensaje = "No guardado";
-                }
-            }
-            catch(Exception ex)
-            {
-                responseAPI.EsCorrecto = false;
-                responseAPI.mensaje = ex.Message;
-            }
-            return Ok(responseAPI);
-          
-        }
-
+      
         // DELETE: api/Cuestionarios/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCuestionario(int id)
         {
-            var responseAPI = new ResponseAPI<int>();
-            try
-            {
-        var cuestionario = await _context.Cuestionarios.FindAsync(id);
-                    if (cuestionario != null)
-                    {
-                   _context.Cuestionarios.Remove(cuestionario);
-                    await _context.SaveChangesAsync();
-                    }
+        //    var responseAPI = new ResponseAPI<int>();
+        //    try
+        //    {
+        //var cuestionario = await _context.Cuestionarios.FindAsync(id);
+        //            if (cuestionario != null)
+        //            {
+        //           _context.Cuestionarios.Remove(cuestionario);
+        //            await _context.SaveChangesAsync();
+        //            }
 
                    
-            }
-            catch(Exception ex)
-            {
-                responseAPI.EsCorrecto = false;
-                responseAPI.mensaje="Hubo un error al eliminar el cuestionario de tipo: " +ex.Message;
-            }
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        responseAPI.EsCorrecto = false;
+        //        responseAPI.mensaje="Hubo un error al eliminar el cuestionario de tipo: " +ex.Message;
+        //    }
             
 
             return NoContent();

@@ -1,0 +1,142 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.code__body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/bgCode.png);
+    background-repeat: repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+    .code__body * {
+        margin: 10px;
+    }
+
+.code__body__title {
+    font-size: 50px;
+}
+
+.code__body a {
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+}
+
+.code__body h1 {
+    max-width: 40ch;
+    font-size: 14px;
+    text-align: center;
+}
+
+.code__body .FormConteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .code__body .FormConteiner input {
+        padding: 20px;
+        border: 2px solid rgb(65, 201, 156);
+        border-radius: 5px;
+        font-size: 18px;
+        background-color: rgb(219, 255, 244);
+    }
+
+        .code__body .FormConteiner input[type='submit'] {
+            border: 2px solid rgb(0, 26, 255);
+            color: white;
+            padding: 12px;
+            background-color: rgb(42, 0, 231);
+        }
+
+        .code__body .FormConteiner input::placeholder {
+            font-size: 22px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+.lobby {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(0, 174, 255);
+    background: linear-gradient(148deg, rgba(0, 174, 255, 0.8896009087228641) 0%, rgba(255, 177, 0, 0.8559874633447129) 100%);
+}
+
+    .lobby * {
+        padding: 10px;
+    }
+
+.lobby__info {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.5);
+    align-items: center;
+    border-radius: 4px;
+}
+
+.lobby__status {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+}
+
+.lobby__actions .cancelar {
+    background-color: rgb(214, 5, 5);
+    color: white;
+    border: 1px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s all ease;
+    margin-right: 20px;
+}
+
+.lobby__actions .comenzar {
+    background-color: rgb(38, 151, 0);
+    color: white;
+    border: 1px solid green;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s all ease;
+}
+
+.lobby__actions button:hover {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+}
+
+.lobby__status .player__counter img {
+    width: 50px;
+}
+
+.player__counter {
+    display: flex;
+    align-items: center;
+}
+
+.activePlayers {
+    text-align: center;
+}
+
+.activePlayers__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+    .activePlayers__grid .jugador {
+        margin: 20px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 8px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+    }

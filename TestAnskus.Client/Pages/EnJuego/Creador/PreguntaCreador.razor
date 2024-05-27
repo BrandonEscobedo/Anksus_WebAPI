@@ -1,0 +1,57 @@
+﻿@page "/PreguntaActual"
+@layout ComponentsBase.ComponentBaseLogin
+@inject NavigationManager _navigationManager
+@inject IStateConteiner _StateContainer
+@inject IHubconnectionService connectionService
+@inject IHubStateCreador _stateCreador
+<link rel="stylesheet" href="css/Preguntas.css" />
+<section class="preguntas__body">
+<Pregunta OnSiguiente="@Siguiente">
+   
+</Pregunta>
+@*     <button @onclick=EnviarRanking>Siguiente </button>
+ *@    <div class="container_Datos">
+    <h2>usuarios Contestados:@usuariosContestados</h2>
+</div>
+
+</section>
+
+@code {
+@using System.Timers
+    int usuariosContestados = 0;
+    private Timer TimerSiguiente = new Timer(1000);
+    private int segundos = 5;
+    protected override async Task OnInitializedAsync()
+    {
+        _stateCreador.OnListaPuntos += OnUsuarioContesto;
+        TimerSiguiente.Elapsed += TimerEv2ent;
+    }
+    private async Task Siguiente()
+    {
+        TimerSiguiente.Enabled = true;
+    }   
+    private void OnUsuarioContesto()
+    {
+        usuariosContestados++;
+        StateHasChanged();
+    }
+    private async Task EnviarRanking()
+    {
+        await  connectionService.EnviarRanking();
+    }
+    private async void TimerEv2ent(object source, System.Timers.ElapsedEventArgs e)
+    {
+        segundos = segundos - 1;
+        if (segundos == 0)
+        {
+            TimerSiguiente.Enabled = false;
+            await EnviarRanking();
+            _navigationManager.NavigateTo("/RankingCreador");
+            TimerSiguiente.Dispose();
+
+        }
+        StateHasChanged();
+
+    }
+
+}

@@ -1,0 +1,19 @@
+﻿@page "/Ranking/Usuarios"
+@inject IStateConteiner _StateContainer
+@inject NavigationManager _NavigationManager
+
+@layout ComponentsBase.ComponentBaseLogin
+<Ranking></Ranking>
+@code {
+    protected override void OnInitialized()
+    {
+        _StateContainer.OnSiguientePregunta += SiguientePregunta;
+     
+    }
+    private void SiguientePregunta(PreguntasDTO pregunta, string? titulo)
+    {
+        _StateContainer.pregunta = pregunta;
+        _NavigationManager.NavigateTo("/Pregunta");
+    }
+
+}

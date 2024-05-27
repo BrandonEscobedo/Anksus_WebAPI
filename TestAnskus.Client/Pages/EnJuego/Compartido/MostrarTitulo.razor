@@ -1,0 +1,40 @@
+﻿@page "/Titulo"
+@inject IStateConteiner _StateContainer
+@layout ComponentsBase.ComponentBaseLogin
+@inject NavigationManager navigationManager
+<link rel="stylesheet" href="css/Preguntas.css" />
+<section class="title_boddy">
+    <h2 class="title">
+        @_StateContainer.titulo
+    </h2>
+    <h2 class="title">
+        @segundos
+    </h2>
+</section>
+
+@code {
+@using System.Timers;
+    private int segundos = 3;
+    [Parameter]
+    public EventCallback OnTimerOff { get; set; }
+    Timer timer = new Timer(1000);
+    protected override void OnInitialized()
+    {
+        if (timer.Enabled == false) timer.Enabled = true;
+        timer.Elapsed += OnTimer;
+
+    }
+
+    private async void OnTimer(object source, ElapsedEventArgs e)
+    {
+        segundos = segundos - 1;
+        if (segundos == 0){
+            timer.Enabled = false;
+            timer.Dispose();
+            await OnTimerOff.InvokeAsync();
+            
+        }
+        StateHasChanged();
+
+}
+}

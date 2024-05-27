@@ -5,10 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Anksus_WebAPI.Models.dbModels;
-using Anksus_WebAPI.Models.DTO;
-using TestAnskus.Shared;
+using anskus.Application.DTOs.Cuestionarios;
 using AutoMapper;
+using MediatR;
+using anskus.Application.Respuestas.Create;
+using anskus.Domain.Models.dbModels;
+using anskus.Infrastructure.Data;
 
 namespace Anksus_WebAPI.Server.Controllers
 {
@@ -18,10 +20,12 @@ namespace Anksus_WebAPI.Server.Controllers
     {
         private readonly TestAnskusContext _context;
         private readonly IMapper _mapper;
-        public RespuestasController(TestAnskusContext context, IMapper mapper)
+        private readonly ISender _mediator;
+        public RespuestasController(TestAnskusContext context, IMapper mapper, ISender mediator)
         {
-            _mapper= mapper;
+            _mapper = mapper;
             _context = context;
+            _mediator = mediator;
         }
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Respuesta>>> GetRespuestas()
@@ -70,28 +74,9 @@ namespace Anksus_WebAPI.Server.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateRespuestas( List<RespuestasDTO> respuestaDTO)
         {
-            var responseAPI = new ResponseAPI<int>();
-            try
-            {
-                var respuestaS = _mapper.Map<List<Respuesta>>(respuestaDTO);
-                _context.Respuestas.AddRange(respuestaS);
-                await _context.SaveChangesAsync();
-                responseAPI.EsCorrecto=true;
-                
 
-            }
-            catch (DbUpdateException)
-            {
-                responseAPI.EsCorrecto = false;
-                responseAPI.mensaje = "Error al guardar los datos";
-            }
-            catch(Exception Ex)
-            {
-                responseAPI.EsCorrecto = false;
-                responseAPI.mensaje = "No guardado " + Ex.Message;
-            }
-            return Ok(responseAPI);
-            
+        var response= await _mediator.Send( new CreateRespuestasCommand(respuestaDTO));
+            return Ok(response);
 
          
         }

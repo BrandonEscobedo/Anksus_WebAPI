@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
+  "Hash": "EFFA7H1tLB2HgtyJkalqQJPWGporGh/MjXdtGtt0nPI=",
+=======
   "Hash": "6yKE6WS+y9aKIOI43j5Kgs33smm92AybuegSiPi2zMc=",
+>>>>>>> master
   "Source": "Anksus_WebAPI.Server",
   "BasePath": "_content/Anksus_WebAPI.Server",
   "Mode": "Default",
@@ -9,6 +13,9 @@
   "DiscoveryPatterns": [],
   "Assets": [
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\brand\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\8.0.1\\staticwebassets\\V5\\css\\site.css",
+=======
       "Identity": "C:\\Users\\jesus\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
       "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
       "SourceType": "Package",
@@ -48,6 +55,7 @@
     },
     {
       "Identity": "C:\\Users\\jesus\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\8.0.1\\staticwebassets\\V5\\css\\site.css",
+>>>>>>> master
       "SourceId": "Microsoft.AspNetCore.Identity.UI",
       "SourceType": "Package",
       "ContentRoot": "C:\\Users\\jesus\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\8.0.1\\staticwebassets\\V5\\",
@@ -1184,6 +1192,9 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
+      "OriginalItemSpec": "C:\\Users\\brand\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\8.0.1\\staticwebassets\\V5\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+=======
       "OriginalItemSpec": "C:\\Users\\jesus\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\8.0.1\\staticwebassets\\V5\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
@@ -1204,6 +1215,7 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\Anksus_WebAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Anksus_WebAPI.Server.styles.css"
+>>>>>>> master
     }
   ]
 }

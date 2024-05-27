@@ -1,7 +1,31 @@
-﻿@page "/Lobby/{code:int}/{id}"
-@page "/Lobby/{code:int}"
-@inject HubConnecionService HubServices
+﻿@page "/Lobby/{codigo:int}"
+@inject IHubconnectionService HubServices
 @inject NavigationManager navigationManager
+<<<<<<< HEAD
+@inject anskus.Application.HubSignalr.StateContainerHub.IStateConteiner _StateContainer
+@layout ComponentsBase.ComponentBaseLogin
+<link rel="stylesheet" href="css/codigo.css" />
+<div class="lobby">
+    <div class="lobby__info">
+        <h2>Codigo de la partida</h2>
+            <p>@codigo</p>       
+    </div>
+    <ListaUsuarios></ListaUsuarios>
+        
+        <p>Titulo: @cuestionario.Titulo</p>
+    
+    <div class="lobby__status">
+        <div class="player__counter">
+            <img src="./img/user.png" alt="">
+        </div>
+        <div class="lobby__actions">
+            <button  @onclick="Salir" class="cancelar">Salir</button>
+            <button @onclick="Iniciar"  class="comenzar">Comenzar</button>
+        </div>
+    </div>
+</div>
+
+=======
 <h1>Participantes: @ParticipantesCount</h1>
 @foreach (var participante in participantesActivos)
 {
@@ -41,3 +65,4 @@
     }
 
 }
+>>>>>>> master

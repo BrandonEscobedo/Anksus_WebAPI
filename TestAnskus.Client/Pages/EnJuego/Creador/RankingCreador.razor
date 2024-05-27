@@ -1,0 +1,31 @@
+﻿@page "/RankingCreador"
+@inject IHubconnectionService hubConnectionServices
+@inject IStateConteiner _StateContainer
+@inject NavigationManager _NavigationManager
+@inject IHubStateCreador _stateCreador
+@layout ComponentsBase.ComponentBaseLogin
+
+<button @onclick="AvanzarSiguientePregunta">Siguiente</button>
+<Ranking></Ranking>
+@code {
+
+    protected override void OnInitialized()
+    {
+        _StateContainer.OnSiguientePregunta += SiguientePregunta;
+
+    }
+
+    private void SiguientePregunta(PreguntasDTO pregunta, string? titulo)
+    {
+        _StateContainer.pregunta = pregunta;
+        _NavigationManager.NavigateTo("/Pregunta");
+   
+        _stateCreador.ListaPuntos.Clear();
+    }
+    private async Task AvanzarSiguientePregunta()
+    {
+      
+        await hubConnectionServices.SiguientePreguntaUsuarios();
+    }
+
+}

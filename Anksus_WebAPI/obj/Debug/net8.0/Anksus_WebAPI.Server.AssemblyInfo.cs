@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Anksus_WebAPI.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f9cd3440c0af3f2c86354fe435790ab72c0f8f8b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ac593856ff782eaa9a9ef26b4515f196352e739")]
 [assembly: System.Reflection.AssemblyProductAttribute("Anksus_WebAPI.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Anksus_WebAPI.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

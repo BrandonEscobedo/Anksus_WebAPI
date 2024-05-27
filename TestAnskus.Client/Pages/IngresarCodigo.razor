@@ -1,20 +1,37 @@
 ﻿@page "/IngresarCodigo"
-@inject HubConnecionService _IHubConnectionService
+@using anskus.Application.CuestionarioActivo
 @inject NavigationManager NavigationManager
 @inject IIdContainer  _idconteiner
-<input type="text"class="" @bind-value="code" placeholder="Ingresa el Codigo"/>
-<button @onclick="IsCodeValid"> Aceptar </button>
-
-
+@inject ICuestionarioActivoService cuestionarioAservice
+@layout ComponentsBase.ComponentBaseLogin
+@inject ISnackbar snackbar
+<link rel="stylesheet" href="css/codigo.css" />
+<div class="code__body">
+    <img src="./img/Logo.png" alt="">
+    <h3 class="code__body__title">
+        Inserta un codigo
+    </h3>
+    <div class="FormConteiner">
+        <input type="text" @bind-value="code" placeholder="Codigo">
+        <input   type="submit" @onclick="IsCodeValid" value="Aceptar">
+    </div>
+    <a href="#">¿No sabes tu codigo?</a>
+    <h1>Haz click arriba o pregunta al creador del juego para que te unas a la diversion</h1>
+</div>
 @code {
-    public int code = 0;
+
+    public int code;
     public bool Mostrar = false;
     private async Task IsCodeValid()
     {
-        var result= await _IHubConnectionService.VerificarCodigo(code);
+        var result = await cuestionarioAservice.VerificarCodigoEntrar(code);
         if (result == true)
         {
             NavigationManager.NavigateTo($"/Entrar/{code}");
+        }
+        else
+        {
+            snackbar.Add("Este nombre ya esta en uso", Severity.Info);
         }
     }
 }
