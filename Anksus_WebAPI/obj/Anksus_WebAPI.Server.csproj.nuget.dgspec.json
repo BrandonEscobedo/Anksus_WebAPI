@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj",
         "packagesPath": "C:\\Users\\brand\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\Anksus_WebAPI\\obj\\",
+=======
+    "C:\\Users\\brand\\Source\\Repos\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\brand\\Source\\Repos\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\brand\\Source\\Repos\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj",
+        "projectName": "Anksus_WebAPI.Server",
+        "projectPath": "C:\\Users\\brand\\Source\\Repos\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj",
+        "packagesPath": "C:\\Users\\brand\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\brand\\Source\\Repos\\Anksus_WebAPI\\Anksus_WebAPI\\obj\\",
+>>>>>>> 37a164631e251f3c6f2c69ce0f3de1ebc46db754
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\brand\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +42,13 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Infrastructure\\anskus.Infrastructure.csproj": {
                 "projectPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Infrastructure\\anskus.Infrastructure.csproj"
+=======
+              "C:\\Users\\brand\\Source\\Repos\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj": {
+                "projectPath": "C:\\Users\\brand\\Source\\Repos\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj"
+>>>>>>> 37a164631e251f3c6f2c69ce0f3de1ebc46db754
               }
             }
           }
@@ -106,6 +125,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -114,6 +134,16 @@
         "projectPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj",
         "packagesPath": "C:\\Users\\brand\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\brand\\Source\\Repos\\Anksus_WebAPI\\anskus.Domain\\obj\\",
+=======
+    "C:\\Users\\brand\\Source\\Repos\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\brand\\Source\\Repos\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj",
+        "projectName": "TestAnskus.Shared",
+        "projectPath": "C:\\Users\\brand\\Source\\Repos\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj",
+        "packagesPath": "C:\\Users\\brand\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\brand\\Source\\Repos\\Anksus_WebAPI\\TestAnskus.Shared\\obj\\",
+>>>>>>> 37a164631e251f3c6f2c69ce0f3de1ebc46db754
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\brand\\AppData\\Roaming\\NuGet\\NuGet.Config",
