@@ -1,12 +1,16 @@
 {
   "mainAssemblyName": "TestAnskus.Client",
   "resources": {
+<<<<<<< HEAD
     "hash": "sha256-HkwNksT03VG2JD7326O0tFoERdcOSv7v+P8XbG9H2qo=",
+=======
+    "hash": "sha256-tztL3K0DYBY41vAp+YUPYpkGZGtmi0hG/IaAx2RKL7k=",
+>>>>>>> master
     "jsModuleNative": {
-      "dotnet.native.8.0.1.02iwsoi8yp.js": "sha256-SGOlISx+3G4kkvpC9Uq3qoPGsnjxGmW61QBev0lyI5U="
+      "dotnet.native.8.0.1.np5vrdlscf.js": "sha256-SGOlISx+3G4kkvpC9Uq3qoPGsnjxGmW61QBev0lyI5U="
     },
     "jsModuleRuntime": {
-      "dotnet.runtime.8.0.1.xqvt9yzq1h.js": "sha256-HZOoaGpz9ekMa/oSmeApSKp3DXNdVUq2UBqsTIIiN8A="
+      "dotnet.runtime.8.0.1.1p2j3r20ia.js": "sha256-HZOoaGpz9ekMa/oSmeApSKp3DXNdVUq2UBqsTIIiN8A="
     },
     "wasmNative": {
       "dotnet.native.wasm": "sha256-dqpunZywlYy86b4O6ZjONasmG+4FH0P17FZ0OIf/lIg="
@@ -243,6 +247,7 @@
       "mscorlib.wasm": "sha256-EpWTfh4m/hEcXRFYMCR9YeYHwdUJgcm1laBaxWfq2S4=",
       "netstandard.wasm": "sha256-2kH24/YfHmU3B4eYRyRmiwebYROM4+B9eDWKvMnUdP8=",
       "System.Private.CoreLib.wasm": "sha256-CsySKiP7HYY1pS8LTDE60EkqiX5oHb3WoEZHDNd1yK0=",
+<<<<<<< HEAD
       "anskus.Application.wasm": "sha256-QBznz03y81C+X82nHKEpwcn0OZBkgKn5rJvGFMgDfpo=",
       "anskus.Domain.wasm": "sha256-I12IO1a8vNhYePD1A+E8xNItt66YcddK0HHFnrGksd4=",
       "TestAnskus.Client.wasm": "sha256-Heb7ujuW61VZ11U3H8FPw06rj8/ErhS0XzJMs6OpSRc="
@@ -251,6 +256,14 @@
       "anskus.Application.pdb": "sha256-IoVcstlaWn1T2Lo8EZxbNWs9w4sVDsScbCP/l8hKbWY=",
       "anskus.Domain.pdb": "sha256-oNZfRcfVwVC7F1Ish8RgatkGnubezAeSO3gzJzgaw+Y=",
       "TestAnskus.Client.pdb": "sha256-QhC8e/xlUkNaQFW+BWxQvu5MpTOyKa2aD91/jcCkKqA="
+=======
+      "TestAnskus.Shared.wasm": "sha256-of3JDYUmJ+E+4f++3Xl2neK6sBtt7mvbOOtKgIJj3fA=",
+      "TestAnskus.Client.wasm": "sha256-L1nAzToax7rl4A+A0Mua2sr09nQ4k9LrbxAwGdhB2g4="
+    },
+    "pdb": {
+      "TestAnskus.Shared.pdb": "sha256-ZtLl4pZtb90eUrk6zLkrC7WP1fPaY+KIvGWpeS/mM8A=",
+      "TestAnskus.Client.pdb": "sha256-ytiMmZZP8UJpDxkmAdtb7cS/ptf68SCdzdlnUM4VR4c="
+>>>>>>> master
     }
   },
   "cacheBootResources": true,

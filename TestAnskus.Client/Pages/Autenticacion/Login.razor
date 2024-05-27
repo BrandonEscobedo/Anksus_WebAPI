@@ -1,5 +1,6 @@
 ﻿@page "/login"
 @using TestAnskus.Client.Pages.ComponentsBase
+<<<<<<< HEAD
 @inject NavigationManager NavigationManager
 @layout ComponentBaseLogin
 @inject IAccountServices accountservices
@@ -11,6 +12,17 @@
     </div>
 }
 <div class="d-flex align-items-center bg-secondary vh-100">
+=======
+@inject IAuthService AuthService
+@inject NavigationManager NavigationManager
+@layout Base
+    @if (ShowErrors)
+    {
+        <div class="alert alert-danger" role="alert">
+            <p>@Error</p>
+        </div>
+    }
+>>>>>>> master
     <div class="container d-flex justify-content-center">
         <div class="card p-4 rounded" style="width: 30rem;">
             <h1 class="display-1 text-center text-primary pb-5"><a class="text-decoration-none" href="/">!¿Ansks Us?!</a></h1>
@@ -40,7 +52,11 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
 </div>
+=======
+
+>>>>>>> master
 @code {
     public LoginDTO loginModel { get; set; } = new();
     private bool ShowErrors = false;

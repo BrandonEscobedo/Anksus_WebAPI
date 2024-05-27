@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj": {}
   },
   "projects": {
@@ -12,9 +13,26 @@
         "projectPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj",
         "packagesPath": "C:\\Users\\brand\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\Anksus_WebAPI\\obj\\",
+=======
+    "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj",
+        "projectName": "Anksus_WebAPI.Server",
+        "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj",
+        "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\Anksus_WebAPI\\obj\\",
+>>>>>>> master
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\brand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +46,13 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Infrastructure\\anskus.Infrastructure.csproj": {
                 "projectPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Infrastructure\\anskus.Infrastructure.csproj"
+=======
+              "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj": {
+                "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj"
+>>>>>>> master
               }
             }
           }
@@ -106,6 +129,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -114,9 +138,23 @@
         "projectPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Domain\\anskus.Domain.csproj",
         "packagesPath": "C:\\Users\\brand\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\brand\\source\\repos\\Anksus_WebAPI\\anskus.Domain\\obj\\",
+=======
+    "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj",
+        "projectName": "TestAnskus.Shared",
+        "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj",
+        "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Shared\\obj\\",
+>>>>>>> master
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\brand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

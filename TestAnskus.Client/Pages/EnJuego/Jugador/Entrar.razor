@@ -20,12 +20,17 @@
 @code{
     [Parameter]
     public int code{ get; set; }
-
+    int p = 0;
     public ParticipanteEnCuestDTO participante { get; set; } = new();
     private async Task EntrarSesion()
     {
         participante.codigo = code;
         await HubService.AddUserToRoom(participante);
+        HubService.OnUpdateCount += countUsers;
+    }
+    void countUsers(int count){
+        p = count+1;
+        StateHasChanged();
     }
     
 }
