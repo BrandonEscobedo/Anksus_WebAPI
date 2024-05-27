@@ -8963,24 +8963,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jesus\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\brand\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj",
+      "projectUniqueName": "C:\\Users\\brand\\Source\\Repos\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj",
       "projectName": "Anksus_WebAPI.Server",
-      "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj",
-      "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\Anksus_WebAPI\\obj\\",
+      "projectPath": "C:\\Users\\brand\\Source\\Repos\\Anksus_WebAPI\\Anksus_WebAPI\\Anksus_WebAPI.Server.csproj",
+      "packagesPath": "C:\\Users\\brand\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\brand\\Source\\Repos\\Anksus_WebAPI\\Anksus_WebAPI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\brand\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8994,8 +8989,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj": {
-              "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\programas c#\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj"
+            "C:\\Users\\brand\\Source\\Repos\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj": {
+              "projectPath": "C:\\Users\\brand\\Source\\Repos\\Anksus_WebAPI\\TestAnskus.Shared\\TestAnskus.Shared.csproj"
             }
           }
         }
