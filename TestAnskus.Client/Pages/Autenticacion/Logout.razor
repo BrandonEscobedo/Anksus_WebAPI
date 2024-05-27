@@ -1,13 +1,15 @@
-﻿@using TestAnskus.Client.Services.Interfaces.Autenticacion﻿
-@page "/logout"
-@inject IAuthService AuthService
+﻿@page "/logout"
 @inject NavigationManager NavigationManager
-
+@inject IAccountServices accountservices
+@inject AuthenticationStateProvider AuthStateProvider
 @code {
+    @using Microsoft.AspNetCore.Components.Authorization;
 
     protected override async Task OnInitializedAsync()
     {
-        await AuthService.Logout();
+        var customAuthStateProvider = (CustomAuthenticationProvider)AuthStateProvider;
+        await customAuthStateProvider.UpdateAthenticationState(new LocalStorageDTO());
+
         NavigationManager.NavigateTo("/");
     }
 

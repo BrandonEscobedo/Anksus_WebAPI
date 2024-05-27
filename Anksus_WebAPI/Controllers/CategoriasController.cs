@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Anksus_WebAPI.Models.dbModels;
-using TestAnskus.Shared;
+using anskus.Application.DTOs.Cuestionarios;
+using anskus.Domain.Models.dbModels;
+using anskus.Infrastructure.Data;
 
 namespace Anksus_WebAPI.Server.Controllers
 {
@@ -50,15 +51,8 @@ namespace Anksus_WebAPI.Server.Controllers
                     responseAPI.mensaje = "Ha ocurrido un error de tipo: " + ex.Message;
                 }
                 return Ok(responseAPI);
-
-
-
             }
         }
-
-
-
-
 
     }
 }

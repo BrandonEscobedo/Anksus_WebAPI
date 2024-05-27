@@ -1,0 +1,87 @@
+﻿@page "/Playing"
+@layout ComponentsBase.ComponentBaseLogin
+@inject NavigationManager _navigationManager
+@inject IStateConteiner _StateContainer
+@implements IDisposable
+@inject IHubconnectionService hubConnectionService
+<link rel="stylesheet" href="css/Preguntas.css" />
+
+<section class="preguntas__body">
+
+  
+        @if (MostrarRespuesta)
+        {
+            <Pregunta OnSiguiente="Siguiente"
+                      OnPreguntaContestada="PreguntaContestada">
+            </Pregunta>
+        }
+        else
+        {
+            <h2 class="title"> Revisando tu respuesta...</h2>
+        }
+
+
+
+    <h2 class="titlePuntos">
+        Puntos:@DatosPreguntas.puntos
+        </h2>
+
+</section>
+
+<h3>seccion Validacion de respuesta</h3>
+<p>@preguntaValid</p>
+<p>@_StateContainer.Participante.PuntosActuales</p>
+
+
+@code {
+@using System.Timers
+    int segundos = 5;
+    bool timeOver = false;
+    private string preguntaValid = "";
+    ComponentObjectPreguntas DatosPreguntas { get; set; } = new();
+    private Timer TimerSiguiente = new Timer(1000);
+    private bool MostrarRespuesta = true;
+    protected override void OnInitialized()
+    {
+        MostrarRespuesta = true;
+        TimerSiguiente.Elapsed += TimerEv2ent;
+        _StateContainer.OnRankingRecibido += recibirListaRanking;
+    }
+    public void Dispose()
+    {
+        TimerSiguiente?.Dispose();
+    }
+    private void recibirListaRanking()
+    {
+        StateHasChanged();
+        _navigationManager.NavigateTo("/Ranking/Usuarios");
+    }
+    private async void PreguntaContestada(ComponentObjectPreguntas DatosPreg )
+    {
+        MostrarRespuesta = false;
+        _StateContainer.Participante.PuntosAnteriores += _StateContainer.Participante.PuntosActuales;
+        _StateContainer.Participante.PuntosActuales += DatosPreg.puntos;
+        if (DatosPreg.esCorrecto) _StateContainer.Participante.CantidadPacertadas += 1;
+        await hubConnectionService.ContestarPregunta(_StateContainer.Participante); 
+        this.DatosPreguntas.esCorrecto = DatosPreg.esCorrecto;
+
+
+    }
+    private void  Siguiente()
+    {
+        MostrarRespuesta = true;
+        TimerSiguiente.Enabled = true;       
+    }
+    private async void TimerEv2ent(object source, System.Timers.ElapsedEventArgs e)
+    {    
+        segundos = segundos - 1;
+        if (segundos == 0)
+        {
+            TimerSiguiente.Enabled = false;
+            TimerSiguiente.Dispose();
+
+        }
+        StateHasChanged();
+
+    }
+}

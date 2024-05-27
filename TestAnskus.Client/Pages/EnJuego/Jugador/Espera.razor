@@ -1,5 +1,48 @@
 ﻿@page "/Sala"
+@inject IStateConteiner StateConteiner
+@implements IAsyncDisposable
+@inject IHubconnectionService HubServices
+@inject IStateConteiner _StateContainer
 
-@code {
+@inject NavigationManager _NavigationManager
+@layout ComponentsBase.ComponentBaseLogin
+<link rel="stylesheet" href="css/codigo.css" />
+<div class="lobby">
 
+    <div class="lobby__info">
+        <h2>Codigo de la partida</h2>
+        <p>@StateConteiner.Participante.codigo</p>
+    </div>
+    <h3>Esperando inicio...</h3>
+
+    <div class="SinglePlayer">
+        <div class="activePlayers__grid">
+            <h3 class="jugador">
+                @StateConteiner.Participante.Nombre
+            </h3>
+        </div>
+    </div>
+</div>
+@code{
+    protected override void OnInitialized()
+    {
+        _StateContainer.OnSiguientePregunta += OnA;
+    }
+    private void OnA(PreguntasDTO pregunta, string? titulo)
+    {
+        _StateContainer.pregunta = pregunta;
+        if (titulo != null)
+        {
+            _StateContainer.titulo = titulo;
+
+        }
+        _NavigationManager.NavigateTo("/Titulo/Jugador");
+
+    }
+
+
+    public async ValueTask DisposeAsync()
+    {
+       
+    }
 }

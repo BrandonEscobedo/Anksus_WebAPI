@@ -1,0 +1,107 @@
+﻿@page "/Pregunta"
+@layout ComponentsBase.ComponentBaseLogin
+@implements IDisposable
+
+@inject IStateConteiner _StateContainer
+<link rel="stylesheet" href="css/Preguntas.css" />
+
+    <h2 class="title">
+
+        @pregunta.pregunta
+    </h2>
+    <section class="botones">
+
+        @{
+        int contador = 1;
+        }
+        @foreach (var preguntas in pregunta.Respuesta!)
+        {
+
+            <button @onclick="(e=> ValidarRespuesta(preguntas.IdRespuesta))" class="btn  b@(contador) @(preguntas.ClaseCSS)"> @preguntas.respuesta</button>
+            contador++;
+        }
+
+    </section>
+    <h2 class="title">@segundos</h2>
+
+
+
+
+
+@code {
+  
+    public bool PuedeContestar = true;
+    int cont = 1;
+    @using System.Timers
+    private PreguntasDTO pregunta = new();
+    private ComponentObjectPreguntas Datospreguntas = new();
+    private Timer Timer = new Timer(1000);
+    private int segundos = 10;
+    [Parameter]
+    public EventCallback OnSiguiente { get; set; }
+    [Parameter]
+    public EventCallback<ComponentObjectPreguntas> OnPreguntaContestada { get; set; }
+    private bool eventCallPreguntaContestada = false;
+    protected override void OnInitialized()
+    {
+
+        pregunta = _StateContainer.pregunta;
+        if (Timer.Enabled == false) Timer.Enabled = true;
+        Timer.Elapsed += TimerEvent;
+    }
+    private async void ValidarRespuesta(int idrespuesta)
+    {
+        if (PuedeContestar)
+        {
+            if (pregunta?.Respuesta?.Where(x => x.RCorrecta == true).FirstOrDefault()?.IdRespuesta == idrespuesta)
+            {
+                Datospreguntas.puntos = segundos * 13;
+                Datospreguntas.esCorrecto = true;
+
+            }
+            foreach (var resp in pregunta!.Respuesta!)
+            {
+                resp.ClaseCSS = "espera";
+
+            }
+
+            await OnPreguntaContestada.InvokeAsync(Datospreguntas);
+            eventCallPreguntaContestada = true;
+
+        }
+
+        PuedeContestar = false;
+    }
+    public void Dispose()
+    {
+        Timer?.Dispose();
+    }
+    private async void TimerEvent(object source, System.Timers.ElapsedEventArgs e)
+    {
+        segundos = segundos - 1;
+        if (segundos == 0)
+        {
+
+            Timer.Enabled = false;
+            Timer.Dispose();
+            foreach (var resp in pregunta!.Respuesta!)
+            {
+                if (resp.RCorrecta)
+                {
+                    resp.ClaseCSS = "correct";
+                }
+
+            }
+
+            if (!eventCallPreguntaContestada)
+            {
+                await OnPreguntaContestada.InvokeAsync(Datospreguntas);
+            }
+
+            PuedeContestar = false;
+            await OnSiguiente.InvokeAsync();
+        }
+        StateHasChanged();
+    }
+
+}

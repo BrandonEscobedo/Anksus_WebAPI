@@ -1,0 +1,103 @@
+﻿ @page "/Ranking"
+ @layout ComponentsBase.ComponentBaseLogin
+ @inject IStateConteiner _stateContainer
+<link rel="stylesheet" href="css/Preguntas.css" />
+<section class="preguntas__body">
+    <h2 class="title">
+        Ranking de jugadores
+    </h2>
+    <div class="links">
+        <h3>
+            Tabla de Respuestas
+        </h3>
+        <h3>
+            Tabla de Puntuacion
+        </h3>
+    </div>
+    <div class="tablero">
+        <div class="content__tablero" data-ida="w12">
+            <h3>
+                Posicion
+            </h3>
+            <h3>
+                Jugador
+            </h3>
+            <h3>
+                Puntuacion
+            </h3>
+        </div>
+       
+        @foreach (var jugador in _stateContainer.participanteEnCuest.OrderByDescending(j => j.PuntosAnteriores))
+        {
+            <div class="content__tablero">
+                <h3>
+                 No.
+                </h3>
+                <h3>
+                    @jugador.Nombre
+                </h3>
+                <h3>
+                    @jugador.PuntosAnteriores
+                </h3>
+            </div>
+        }
+
+    </div>
+
+</section>
+<ul>
+
+</ul>
+
+@code{
+    private Ranking rankingComponent;
+    protected override async Task OnInitializedAsync()
+    {
+        
+        await ActualizarPuntajes();
+
+    }
+
+    private async Task ActualizarPuntajes()
+    {
+        while (!TodosAlcanzaronPuntosActuales())
+        {
+            await Task.Delay(60);
+
+            foreach (var participante in _stateContainer.participanteEnCuest)
+            {
+
+
+              
+                if (participante.PuntosAnteriores < participante.PuntosActuales)
+                {
+                    participante.PuntosAnteriores += 1;
+                  
+                }
+           
+               
+            }
+            StateHasChanged();
+        }
+    }
+    private bool TodosAlcanzaronPuntosActuales()
+    {
+        foreach (var participante in _stateContainer.participanteEnCuest)
+        {
+            if (participante.PuntosAnteriores < participante.PuntosActuales)
+            {
+                return false; // Todavía hay participantes que no han alcanzado sus puntos actuales
+            }
+        }
+        return true; // Todos los participantes han alcanzado sus puntos actuales
+    }
+    public async ValueTask DisposeAsync()
+    {
+        // Limpia cualquier recurso relacionado con el componente Ranking
+        if (rankingComponent != null)
+        {
+            await rankingComponent.DisposeAsync();
+        }
+    }
+    
+}

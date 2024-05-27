@@ -5,60 +5,33 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Anksus_WebAPI.Models.dbModels;
-using Anksus_WebAPI.Models.DTO;
-using TestAnskus.Shared;
+using anskus.Application.DTOs.Cuestionarios;
 using AutoMapper;
+using anskus.Application.Services;
+using anskus.Application.DTOs.Response;
+using anskus.Application.DTOs.Response.Cuestionarios;
+using anskus.Domain.Cuestionarios;
+using MediatR;
+using anskus.Application.Preguntas.Create;
+using anskus.Application.Preguntas.Delete;
+using anskus.Application.Preguntas.Update;
 
 namespace Anksus_WebAPI.Server.Controllers
 {
     [Route("api/Preguntas")]
     [ApiController]
-    public class PreguntasController : ControllerBase
+    public class PreguntasController(ISender _mediator) : ControllerBase
     {
-        private readonly TestAnskusContext _context;
-        private readonly IMapper _mapper;
-        public PreguntasController(TestAnskusContext context,IMapper mapper)
-        {
-            _mapper=mapper;
-            _context = context;
-        }
+    
 
         // GET: api/Preguntas
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Pregunta>>> GetPreguntas()
-        {
-            return await _context.Preguntas.ToListAsync();
-        }
 
         // GET: api/Preguntas/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPregunta(int id)
         {
-            var responseAPi = new ResponseAPI<PreguntasDTO>();
-            try
-            {
-                
-                var pregunta = await _context.Preguntas.FindAsync(id);
-                if (pregunta != null)
-                {
-                    var preguntaDTO = _mapper.Map<PreguntasDTO>(pregunta);
-                    responseAPi.EsCorrecto = true;
-                    responseAPi.Valor = preguntaDTO;
-                }
-                else
-                {
-                    responseAPi.EsCorrecto = false;
-                    responseAPi.mensaje = "Error al obtener pregunta";
-                }
-                
-            }
-            catch (Exception ex)
-            {
-                responseAPi.EsCorrecto = false;
-                responseAPi.mensaje = "Error al obtener pregunta generado por: "+ex.Message;
-            }
-            return Ok(responseAPi);
+        
+            return Ok();
         }
 
         // PUT: api/Preguntas/5
@@ -66,91 +39,39 @@ namespace Anksus_WebAPI.Server.Controllers
         [HttpPut]
         public async Task<IActionResult> PutPregunta( PreguntasDTO PreguntaDTO)
         {
-            var responseAPI = new ResponseAPI<int>();
-            try
-            {
-                var pregunta = _context.Preguntas.Find(PreguntaDTO.IdPregunta);
-                if(pregunta != null)
-                {
-                    pregunta.Pregunta1 = PreguntaDTO.Pregunta;
-                    _context.Preguntas.Update(pregunta);
-                    await _context.SaveChangesAsync();
-                    responseAPI.EsCorrecto = true;
-                }
-                else { responseAPI.EsCorrecto = false; responseAPI.mensaje = "Ocurrio un error al encontrar la pregunta."; }
-            }
-            catch (Exception ex)
-            {
-                responseAPI.mensaje = "error al editar pregunta en :" + ex.Message;
-            }
 
-            return Ok(responseAPI);
+            if (PreguntaDTO != null)
+            {
+                var result = await _mediator.Send(new UpdatePreguntaCommand(PreguntaDTO));
+                return Ok(result);
+            }
+            return BadRequest();
         }
 
         // POST: api/Preguntas
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-            [HttpPost]
-            public async Task<IActionResult>  CreatePreguntas(PreguntasDTO _pregunta)
+        [HttpPost]
+        public async Task<IActionResult> CreatePreguntas(PreguntasDTO _pregunta)
+        {
+            if (User.Identity!.IsAuthenticated == true)
             {
-            var responseAPI = new ResponseAPI<int>();
-            try
-            {
-            Pregunta pregunta = new Pregunta()
-            {
-            IdCuestionario = _pregunta.IdCuestionario,
-            Pregunta1 = _pregunta.Pregunta,
-            Estado = false
+              var result=await  _mediator.Send(new CreatePreguntaCommand(  _pregunta));
+                return Ok(result);
+            }
+            return BadRequest();
 
-            };
-            _context.Preguntas.Add(pregunta);
-            await _context.SaveChangesAsync();
-            if (pregunta.IdPregunta != 0)
-            {
-            responseAPI.EsCorrecto = true;
-            responseAPI.Valor = pregunta.IdPregunta;
-            }
-            else
-            {
-            responseAPI.EsCorrecto = true;
-            responseAPI.mensaje = "No guardado";
-            }
-            }
-            catch(Exception ex)
-            {
-            responseAPI.EsCorrecto = false;
-            responseAPI.mensaje = "No guardado "  +ex.Message;
-
-            }
-            return Ok(responseAPI);
 
         }
-
-            // DELETE: api/Preguntas/5
+           
             [HttpDelete("{id}")]
             public async Task<IActionResult> DeletePregunta(int id)
             {
-                var responseAPI = new ResponseAPI<int>();
-            try
+                if(User.Identity!.IsAuthenticated == true)
             {
-                var pregunta = await _context.Preguntas.FindAsync(id);
-                if(pregunta != null )
-                {
-                    _context.Remove(pregunta);
-                    await _context.SaveChangesAsync();
-                    responseAPI.EsCorrecto = true;
-                }
-                else
-                {
-                    responseAPI.EsCorrecto = false;
-                    responseAPI.mensaje = "Pregunta no encontrada";
-                }
+            var result =await _mediator.Send(new DeletePreguntaCommand(  id));
+            return Ok(result);
             }
-            catch (Exception ex)
-            {
-                responseAPI.EsCorrecto = false;
-                responseAPI.mensaje = "Error generado por "  +ex.Message;
-            }
-            return Ok(responseAPI);  
-            }
+                return BadRequest();
+        }
         }
 }

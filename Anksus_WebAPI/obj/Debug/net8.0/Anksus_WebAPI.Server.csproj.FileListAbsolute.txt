@@ -580,8 +580,323 @@ C:\Users\brand\OneDrive\Documentos\proyecto anskus\Anksus_WebAPI\bin\Debug\net8.
 C:\Users\brand\OneDrive\Documentos\proyecto anskus\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Owin.dll
 C:\Users\brand\OneDrive\Documentos\proyecto anskus\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Owin.Security.dll
 C:\Users\brand\OneDrive\Documentos\proyecto anskus\Anksus_WebAPI\bin\Debug\net8.0\Owin.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\appsettings.json
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugHost.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugHost.runtimeconfig.json
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugProxy.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.FileFormats.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.NET.WebAssembly.Webcil.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.SymbolStore.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\Newtonsoft.Json.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Anksus_WebAPI.Server.staticwebassets.runtime.json
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Anksus_WebAPI.Server.exe
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Anksus_WebAPI.Server.deps.json
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Anksus_WebAPI.Server.runtimeconfig.json
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Anksus_WebAPI.Server.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Anksus_WebAPI.Server.pdb
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Humanizer.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Mapster.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Mapster.Core.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Build.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Build.Framework.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Features.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.Elfie.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.Features.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.DiaSymReader.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Http.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.JSInterop.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Owin.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Owin.Security.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\dotnet-aspnet-codegenerator-design.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\NetcodeHub.Packages.Extensions.LocalStorage.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\NuGet.Common.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\NuGet.Configuration.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\NuGet.DependencyResolver.Core.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\NuGet.Frameworks.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\NuGet.LibraryModel.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\NuGet.Packaging.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\NuGet.ProjectModel.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\NuGet.Protocol.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\NuGet.Versioning.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Owin.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\StackExchange.Redis.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Composition.Convention.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Composition.Hosting.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Composition.Runtime.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\af\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ar\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\az\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\bg\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\bn-BD\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\cs\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\da\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\de\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\el\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\es\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\fa\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\fi-FI\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\fr\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\fr-BE\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\he\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\hr\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\hu\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\hy\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\id\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\is\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\it\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ja\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ko-KR\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ku\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\lv\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ms-MY\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\mt\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\nb\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\nb-NO\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\nl\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\pl\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\pt\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ro\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ru\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\sk\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\sl\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\sr\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\sr-Latn\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\sv\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\th-TH\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\tr\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\uk\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\uz-Cyrl-UZ\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\uz-Latn-UZ\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\vi\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\zh-CN\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\zh-Hans\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\zh-Hant\Humanizer.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\anskus.Application.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\anskus.Domain.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\anskus.Infrastructure.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\anskus.Infrastructure.pdb
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\anskus.Application.pdb
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\anskus.Domain.pdb
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.csproj.AssemblyReference.cache
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.AssemblyInfoInputs.cache
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.AssemblyInfo.cs
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.csproj.CoreCompileInputs.cache
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.sourcelink.json
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\staticwebassets\msbuild.Anksus_WebAPI.Server.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\staticwebassets\msbuild.build.Anksus_WebAPI.Server.props
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Anksus_WebAPI.Server.props
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Anksus_WebAPI.Server.props
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\scopedcss\bundle\Anksus_WebAPI.Server.styles.css
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.csproj.CopyComplete
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\refint\Anksus_WebAPI.Server.dll
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.pdb
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.genruntimeconfig.cache
+C:\Users\brand\Source\Repos\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\ref\Anksus_WebAPI.Server.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\appsettings.json
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\libman.json
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugHost.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugHost.runtimeconfig.json
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugProxy.dll
@@ -600,20 +915,19 @@ C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Anksus_WebAPI.Server.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Anksus_WebAPI.Server.pdb
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\AutoMapper.dll
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Humanizer.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Mapster.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Mapster.Core.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\MediatR.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\MediatR.Contracts.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNet.SignalR.Core.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.dll
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.dll
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Components.WebAssembly.Server.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Authorization.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -639,14 +953,27 @@ C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Http.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Identity.Client.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
@@ -670,6 +997,7 @@ C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\NetcodeHub.Packages.Extensions.LocalStorage.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\NuGet.Common.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\NuGet.Configuration.dll
@@ -681,6 +1009,8 @@ C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\NuGet.Protocol.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\NuGet.Versioning.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Owin.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\StackExchange.Redis.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -691,6 +1021,7 @@ C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Composition.Runtime.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Composition.TypedParts.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Drawing.Common.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Memory.Data.dll
@@ -698,6 +1029,8 @@ C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Runtime.Caching.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\System.Windows.Extensions.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\af\Humanizer.resources.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\ar\Humanizer.resources.dll
@@ -848,9 +1181,14 @@ C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\TestAnskus.Shared.dll
-C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\TestAnskus.Shared.pdb
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\anskus.Application.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\anskus.Domain.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\anskus.Infrastructure.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\anskus.Infrastructure.pdb
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\anskus.Application.pdb
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\anskus.Domain.pdb
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.csproj.AssemblyReference.cache
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.AssemblyInfoInputs.cache
@@ -873,3 +1211,347 @@ C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\obj\
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.pdb
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.genruntimeconfig.cache
 C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\obj\Debug\net8.0\ref\Anksus_WebAPI.Server.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\jesus\OneDrive\Documentos\programas c#\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
+C:\Users\brand\source\repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\libman.json
+C:\Users\brand\source\repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\MediatR.dll
+C:\Users\brand\source\repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\brand\source\repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\brand\source\repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\brand\source\repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\brand\source\repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\brand\source\repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\brand\source\repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\brand\source\repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\brand\source\repos\Anksus_WebAPI\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\appsettings.json
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugHost.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugHost.runtimeconfig.json
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugProxy.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.FileFormats.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.NET.WebAssembly.Webcil.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.SymbolStore.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\BlazorDebugProxy\Newtonsoft.Json.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\libman.json
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Anksus_WebAPI.Server.staticwebassets.runtime.json
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Anksus_WebAPI.Server.exe
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Anksus_WebAPI.Server.deps.json
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Anksus_WebAPI.Server.runtimeconfig.json
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Anksus_WebAPI.Server.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Anksus_WebAPI.Server.pdb
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Humanizer.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Mapster.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Mapster.Core.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\MediatR.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Build.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Build.Framework.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Features.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.Elfie.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.Features.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.DiaSymReader.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Http.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.JSInterop.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Owin.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Owin.Security.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\dotnet-aspnet-codegenerator-design.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\NetcodeHub.Packages.Extensions.LocalStorage.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\NuGet.Common.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\NuGet.Configuration.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\NuGet.DependencyResolver.Core.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\NuGet.Frameworks.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\NuGet.LibraryModel.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\NuGet.Packaging.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\NuGet.ProjectModel.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\NuGet.Protocol.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\NuGet.Versioning.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Owin.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\StackExchange.Redis.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\System.Composition.Convention.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\System.Composition.Hosting.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\System.Composition.Runtime.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\af\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ar\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\az\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\bg\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\bn-BD\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\cs\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\da\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\de\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\el\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\es\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\fa\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\fi-FI\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\fr\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\fr-BE\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\he\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\hr\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\hu\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\hy\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\id\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\is\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\it\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ja\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ko-KR\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ku\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\lv\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ms-MY\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\mt\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\nb\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\nb-NO\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\nl\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\pl\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\pt\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ro\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ru\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\sk\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\sl\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\sr\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\sr-Latn\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\sv\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\th-TH\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\tr\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\uk\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\uz-Cyrl-UZ\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\uz-Latn-UZ\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\vi\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\zh-CN\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\zh-Hans\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\zh-Hant\Humanizer.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\anskus.Application.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\anskus.Domain.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\anskus.Infrastructure.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\anskus.Infrastructure.pdb
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\anskus.Application.pdb
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\bin\Debug\net8.0\anskus.Domain.pdb
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.csproj.AssemblyReference.cache
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.AssemblyInfoInputs.cache
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.AssemblyInfo.cs
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.csproj.CoreCompileInputs.cache
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.sourcelink.json
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\staticwebassets\msbuild.Anksus_WebAPI.Server.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\staticwebassets\msbuild.build.Anksus_WebAPI.Server.props
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Anksus_WebAPI.Server.props
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Anksus_WebAPI.Server.props
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\scopedcss\bundle\Anksus_WebAPI.Server.styles.css
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.csproj.CopyComplete
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\refint\Anksus_WebAPI.Server.dll
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.pdb
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\Anksus_WebAPI.Server.genruntimeconfig.cache
+C:\Users\jesus\OneDrive\Desktop\ansk\Anksus_WebAPI\obj\Debug\net8.0\ref\Anksus_WebAPI.Server.dll

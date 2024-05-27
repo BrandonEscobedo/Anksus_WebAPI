@@ -1,0 +1,11 @@
+﻿@inherits LayoutComponentBase
+<link rel="stylesheet" href="css/Preguntas.css" />
+
+<div>
+    @Body
+</div>
+<script type="text/javascript">
+    window.addEventListener('beforeunload', (e) => {
+        e.returnValue = 'Estas seguro';
+    });
+</script>

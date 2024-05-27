@@ -1,39 +1,47 @@
-﻿using Anksus_WebAPI.Models.dbModels;
+﻿using anskus.Application.Contracts;
+using anskus.Application.DTOs.Request.Account;
+using anskus.Application.DTOs.Response;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal;
 using Microsoft.AspNetCore.Identity.UI.V5.Pages.Account.Internal;
 using Microsoft.AspNetCore.Mvc;
-using TestAnskus.Shared;
-using TestAnskus.Shared.AutorizacionDTO;
+using anskus.Application.DTOs.Cuestionarios;
 namespace Anksus_WebAPI.Server.Controllers
 {
     [Route("api/Account")]
     [ApiController]
-    public class AccountController : ControllerBase
+    public class AccountController(IAccountUser account   ) : ControllerBase
     {
-      
-        public readonly UserManager<AplicationUser> _userManager;
-        public AccountController(UserManager<AplicationUser> userManager)
+     
+
+        [HttpPost("identity/create")]
+        public async Task<ActionResult<GeneralResponse>> Crear(CreateAccountDTO model)
         {
-      
-            _userManager = userManager;
+            
+            if (!ModelState.IsValid) 
+                return BadRequest("El modelo no puede ser nulo");
+
+            return Ok(await account.CreateAccountAsync(model));
+
+        } [HttpPost("identity/Login")]
+        public async Task<ActionResult<GeneralResponse>> LoginAccount(LoginDTO model)
+        {
+            if (!ModelState.IsValid) 
+                return BadRequest("El modelo no puede ser nulo");
+
+            return Ok(await account.LoginAccountAsync(model));
+
+        }  
+    [HttpPost("identity/Refresh-token")]
+        public async Task<ActionResult<GeneralResponse>> RefreshTOken(RefreshTokenDTO model)
+        {
+            if (!ModelState.IsValid) 
+                return BadRequest("El modelo no puede ser nulo");
+
+            return Ok(await account.RefreshTokenAsync(model));
+
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Crear([FromBody] RegisterModelA model)
-        {
-            var newUser = new AplicationUser { UserName = model.Email, Email = model.Email, IdImagenPerfil = 1 };
-            var result = await _userManager.CreateAsync(newUser, model.Password!);
-            if (!result.Succeeded)
-            {
-                
-                var errors = result.Errors.Select(x => x.Description);
-                return Ok(new RegisterResult { Successful = false, Errors = errors });
-            }
-            return Ok(new RegisterResult { Successful = true });
-
-
-        }
     }
 }

@@ -1,0 +1,9 @@
+﻿@page "/Titulo/Jugador"
+@layout ComponentsBase.ComponentBaseLogin
+@inject NavigationManager navigationManager
+<MostrarTitulo OnTimerOff="@OnTimerOff" >
+
+</MostrarTitulo>
+@code {
+    public async Task OnTimerOff() => navigationManager.NavigateTo("/Playing");
+}
