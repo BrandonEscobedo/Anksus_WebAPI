@@ -12,7 +12,7 @@ using anskus.Infrastructure.Data;
 namespace anskus.Infrastructure.Migrations
 {
     [DbContext(typeof(TestAnskusContext))]
-    [Migration("20240521030242_init")]
+    [Migration("20240521211822_init")]
     partial class init
     {
         /// <inheritdoc />
